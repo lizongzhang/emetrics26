@@ -27,16 +27,14 @@ title: "第1章"
 
 <img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px">[如何申请免费的Eviews12学生版？](https://www.bilibili.com/video/BV1Sd4y1371P/)
     
-# 教学视频  
-
-<img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px">[Excel数据清洗](https://www.bilibili.com/video/BV1uc41177Mn/)
+# 拓展学习  
 
 <img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px">[如何从中国知网下载统计数据？](https://www.bilibili.com/video/BV19m4y1F7FE/)
 
 
 # 课堂小调查
 
-**电子产品消费调查：<https://www.wjx.top/vm/e3AyWsR.aspx#>**
+**电子产品消费调查：<https://v.wjx.cn/vm/rMN4ASP.aspx#>**
 
 # 数据资源
 
