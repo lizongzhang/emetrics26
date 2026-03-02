@@ -4,7 +4,7 @@ title: "第2章"
 
 # 第2章 古典线性回归模型
 
-<img src="img/teacher.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[讲义](https://lizongzhang.github.io/ee4/chap2.html)
+<img src="img/teacher.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[讲义](https://lizongzhang.github.io/emetrics26/chap2slide.html)
 
 # Eviews教学视频
 

@@ -2,7 +2,7 @@
 title: "第1章"
 ---
 
-<img src="img/link.png" style="width: 24px; height: 24px;margin-right: 10px">[讲义](https://lizongzhang.github.io/ee4/chap1.html)
+<img src="img/link.png" style="width: 24px; height: 24px;margin-right: 10px">[讲义](https://lizongzhang.github.io/emetrics26/chap1slide.html)
 
 
 # 课堂讨论

@@ -4,7 +4,7 @@ title: "第5章"
 
 # 第5章 函数形式变换
 
-<img src="img/teacher.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[讲义](https://lizongzhang.github.io/ee4/chap5.html)
+<img src="img/teacher.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[讲义](https://lizongzhang.github.io/emetrics26/chap5slide.html)
 
 #  Eviews操作
 
