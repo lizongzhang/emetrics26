@@ -64,6 +64,12 @@ about:
 
 -   <img src="img/download.png" style="width: 24px; height: 24px;margin-right: 10px">[百度网盘] <https://pan.baidu.com/s/1ZtOu4_WJEAhUqnFlArKhPQ?pwd=6666>  
 
+# 教学平台
+
+<img src="img/link.png" style="width: 24px; height: 24px;margin-right: 10px"/>[91速课](https://www.91suke.com)：考勤
+
+<img src="img/link.png" style="width: 24px; height: 24px;margin-right: 10px"/>[在91速课中设置姓名和学号的方法](https://lizongzhang.github.io/stat/91.html)
+
 -   QQ群：提交作业，提问答疑
 
 # 课程考核
