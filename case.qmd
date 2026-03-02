@@ -1,0 +1,83 @@
+---
+title: "小组作业与实验报告"
+---
+
+**提交分组信息：<https://www.wjx.top/vm/e3AyWsR.aspx#> **
+
+
+<img src="img/link.png" style="width: 24px; height: 24px;margin-right: 10px">[要求](https://lizongzhang.github.io/emetrics26/casereq.html)
+    
+# 学生习作演示文稿
+
+ <img src="img/link.png" style="width: 24px; height: 24px;margin-right: 10px">[星巴克门店数量分析](https://lizongzhang.github.io/ee4/stu1.html)
+
+<img src="img/link.png" style="width: 24px; height: 24px;margin-right: 10px">[小米之家门店数量分析](https://lizongzhang.github.io/ee4/stu2.html)
+
+<img src="img/link.png" style="width: 24px; height: 24px;margin-right: 10px">[小米手机价格分析](https://lizongzhang.github.io/ee4/stu3.html)
+
+<img src="img/link.png" style="width: 24px; height: 24px;margin-right: 10px">[永辉超市门店数量分析](https://lizongzhang.github.io/ee4/stu4.html)
+
+# 网络资源
+
+狗熊会(微信公众号)： <https://www.xiong99.com.cn>
+
+
+# 学生习作视频及点评
+
+<img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px">[第6章虚拟变量小组作业讲评--20国贸](https://www.bilibili.com/video/BV1A44y1D73Q/)
+
+<img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px">[第7-9章小组作业讲评 20经济](https://www.bilibili.com/video/BV1pM411U7DH/)
+
+# 讨论/汇报
+
+## 第1次讨论课(第3周)
+
+选题/数据收集/可行性/模型设定
+
+## 第2次讨论课(第7周)
+
+-   运用第4，5，6章方法
+
+-   准备的文件：
+
+    -   EViews Workfile 工作文件
+
+    -   PPT文件
+
+        -   数据来源
+
+        -   变量含义
+
+        -   尝试的回归方程估计结果截图
+        
+        -   哪个模型最好，为什么？
+
+        -   主要结论
+
+## 第3次讨论课(第13周)
+
+-   运用第7, 8, 9章方法
+
+-   准备的文件：
+
+    -   EViews Workfile 工作文件
+
+    -   PPT文件
+
+        -   对模型进行诊断和改进
+
+        -   设定误差的检验
+
+        -   多重共线性诊断
+        
+        -   异方差的诊断和改进
+
+        -   主要结论
+
+## 课堂汇报(第15周)
+
+
+
+
+
+

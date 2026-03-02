@@ -1,0 +1,50 @@
+---
+title: "第1章"
+---
+
+<img src="img/link.png" style="width: 24px; height: 24px;margin-right: 10px">[讲义](https://lizongzhang.github.io/ee4/chap1.html)
+
+
+# 课堂讨论
+
+讨论题1 阅读下述推文
+
+<img src="img/link.png" style="width: 24px; height: 24px;margin-right: 10px">[微信公众号狗熊会>案例图书>精品案例>No.2线性回归>短视频点赞量影响因素分析](https://mp.weixin.qq.com/s/D87xeFDCRqOIrIA4utLGeg)
+
+<img src="img/link.png" style="width: 24px; height: 24px;margin-right: 10px">[微信公众号狗熊会>案例图书>精品案例>No.2线性回归>北京二手房房价影响因素](https://mp.weixin.qq.com/s/Mu8TBVBKd6BEWCfwVD7yzw)
+
+- 数据来源？
+
+- 样本容量？
+
+- 研究中使用了哪些变量？
+
+- 文中利用经济计量分析得出了什么结论？
+
+# 软件准备
+
+<img src="img/link.png" style="width: 24px; height: 24px;margin-right: 10px">申请Eviews12 学生版序列号 <http://register1.eviews.com/Lite/>
+
+<img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px">[如何申请免费的Eviews12学生版？](https://www.bilibili.com/video/BV1Sd4y1371P/)
+    
+# 教学视频  
+
+<img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px">[Excel数据清洗](https://www.bilibili.com/video/BV1uc41177Mn/)
+
+<img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px">[如何从中国知网下载统计数据？](https://www.bilibili.com/video/BV19m4y1F7FE/)
+    
+# 数据资源
+
+<img src="img/link.png" style="width: 24px; height: 24px;margin-right: 10px">CSMAR 国泰安经济金融数据库<http://www.gtarsc.com/Home>
+    
+<img src="img/link.png" style="width: 24px; height: 24px;margin-right: 10px">中国家庭追踪调查 CFPS <http://www.isss.pku.edu.cn/cfps/>
+
+<img src="img/link.png" style="width: 24px; height: 24px;margin-right: 10px">中国家庭金融调查数据 CHFS  <https://chfs.swufe.edu.cn>
+
+<img src="img/link.png" style="width: 24px; height: 24px;margin-right: 10px">中国健康与养老数据追踪调查数据CHARLS <http://charls.pku.edu.cn>
+
+<img src="img/link.png" style="width: 24px; height: 24px;margin-right: 10px">暨南大学社会调查中心  <https://sdc-iesr.jnu.edu.cn>
+
+<img src="img/link.png" style="width: 24px; height: 24px;margin-right: 10px"> Kaggle  <https://www.kaggle.com/datasets>
+
+

@@ -1,0 +1,27 @@
+---
+title: "第13章"
+---
+
+<h1 style="color: #044875;"> 第13章 时间序列 </h1>
+
+<img src="img/teacher.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[讲义](https://lizongzhang.github.io/stat/chap13.html)
+
+<h3 style="color: #044875;"> 教学视频 </h3>
+
+<img src="img/video.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[Excel指数平滑法--规划求解](https://www.bilibili.com/video/BV1c5411p7ob/)    
+
+<img src="img/video.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[Excel趋势型序列的预测](https://www.bilibili.com/video/BV1nK411M7k6/) 
+        
+<img src="img/video.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[ExcelEXCEL 散点图添加非线性回归方程](https://www.bilibili.com/video/BV1nv41147VE/) 
+        
+<img src="img/video.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[Excel复合型时间序列分解预测之一：季度数据](https://www.bilibili.com/video/BV19V411h7aV/)
+
+<img src="img/video.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[复合型时间序列分解预测之二：月度数据](https://www.bilibili.com/video/BV1Ry4y1v7Et/)
+
+<h3 style="color: #044875;"> 习题讲评 </h3>
+
+<img src="img/video.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[教材第13章习题讲评](https://www.bilibili.com/video/BV13c41137ym/)
+
+<h3 style="color: #044875;"> 拓展资源 </h3>
+
+在线词云图工具 <https://www.wordclouds.com/>

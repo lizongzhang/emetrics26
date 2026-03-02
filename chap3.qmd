@@ -1,0 +1,20 @@
+---
+title: "第3章"
+---
+
+# 第3章 一元回归
+
+<img src="img/teacher.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[讲义](https://lizongzhang.github.io/ee4/chap3.html)
+
+
+#  Eviews操作
+
+<img src="img/video.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[Eviews series的操作](https://www.bilibili.com/video/BV1Fi4y177Tp/)
+
+<img src="img/video.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[Eviews group的操作](https://www.bilibili.com/video/BV1ei4y177Zr/)
+
+<img src="img/video.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[Eviews 导入EXCEL文件](https://www.bilibili.com/video/BV1ch41197Ad/)
+    
+<img src="img/video.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[Eviews 绘制散点图](https://www.bilibili.com/video/BV1t54y1k7Gu/) 
+
+<img src="img/video.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[Eviews 估计回归方程](https://www.bilibili.com/video/BV1NT4y1F7V9/) 

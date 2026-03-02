@@ -1,19 +1,92 @@
 ---
-title: "About Me"
+title: ""
+id: ppc
 about:
-  id: me
-  template: broadside
-  image: img/profile.png
+  template: marquee
+  #image: img/cover_3d.jpg
+  links:
+    - text: R语言与统计应用课程网站
+      icon: globe2
+      href: https://lizongzhang.github.io/r24/
+    - text: B站主页
+      icon: globe2
+      href: https://space.bilibili.com/590872906
+    - text: Email   
+      icon: envelope
+      href: mailto:lizongzhang9@qq.com
 ---
 
-:::{#me}
-
-## Goals
-
-## Education
-
-## Experience
+:::{#ppc style="color:#044875"}
+欢迎访问《经济计量学》课程网站！
 
 :::
 
-Thanks for checking out my web site!
+# 教材
+
+-   古扎拉蒂，经济计量学精要(第4版), 机械工业出版社, 2010.
+
+-   Gujarati, Damodar N. Essentials of econometrics, the 4th edition. McGraw-Hill/Irwin, 2009.
+
+<img src="img/download.png" style="width: 24px; height: 24px;margin-right: 10px">[下载教材及数据文件](https://pan.baidu.com/s/10NhrQ18BG0888OkKMV6U-g?pwd=6666)
+
+#  教学软件
+
+## 基础必修
+
+-   <img src="img/link.png"  style="width: 24px; height: 24px;margin-right: 10px"> Eviews  <https://eviews.com/home.html>
+
+## 进阶选修
+
+-   <img src="img/link.png"  style="width: 24px; height: 24px;margin-right: 10px"> R  <https://www.r-project.org/>{target="_blank"}
+
+-   <img src="img/link.png"  style="width: 24px; height: 24px;margin-right: 10px">R Studio <https://posit.co/download/rstudio-desktop/>{target="_blank"}
+
+
+#  软件准备
+
+## Eviews12学生版下载
+
+<img src="img/link.png" style="width: 24px; height: 24px;margin-right: 10px">申请Eviews12学生版序列号 <http://register1.eviews.com/Lite/>
+
+<img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px">[如何申请免费的Eviews12学生版？](https://www.bilibili.com/video/BV1Sd4y1371P/)
+
+## R和R Studio的的安装
+
+<img src="img/video.png"  style="width: 24px; height: 24px;margin-right: 10px">[R和R Studio的下载](https://www.bilibili.com/video/BV1334y1y7U5/){target="_blank"}
+
+<img src="img/video.png"  style="width: 24px; height: 24px;margin-right: 10px">[R和RStudio的安装](https://www.bilibili.com/video/BV1eR4y1V7uW/){target="_blank"}
+
+<img src="img/video.png"  style="width: 24px; height: 24px;margin-right: 10px">[不用安装就能用的RStudio------RStudio
+                Cloud](https://www.bilibili.com/video/BV1zY4y1M7HX/){target="_blank"}(若无法安装R和R Studio, 请看此视频)
+
+
+#   参考书
+
+-   <img src="img/download.png" style="width: 24px; height: 24px;margin-right: 10px">[百度网盘] <https://pan.baidu.com/s/1ZtOu4_WJEAhUqnFlArKhPQ?pwd=6666>  
+
+-   QQ群：提交作业，提问答疑
+
+# 课程考核
+
+-   平时成绩：50%
+
+    -   个人作业：20%
+    
+    -   小组作业：15%  
+
+    -   测验：5%    
+
+    -   考勤： 10%
+
+-   期末考试：50%
+
+<div style="text-align: center;">![](img/bili_up.jpg){width=10%}</div>
+
+<div style="position: fixed; bottom: 10px; right: 70px; z-index: 1000;">
+
+   <a href='http://www.freevisitorcounters.com'>click here</a> <script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=a1b2bcf47de785ab152ba2b2353aa09bd4f80670'></script>
+  <script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/1174168/t/5"></script>
+
+</div>
+
+

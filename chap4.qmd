@@ -1,0 +1,18 @@
+---
+title: "第4章"
+---
+
+# 第4章 多元回归
+
+<img src="img/teacher.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[讲义](https://lizongzhang.github.io/ee4/chap4.html)
+
+<img src="img/teacher.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[案例](https://lizongzhang.github.io/ee4/case1.html)
+
+#  Eviews操作
+
+<img src="img/video.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[Eviews 多元回归](https://www.bilibili.com/video/BV1Zi4y1j7Xf/)
+
+<img src="img/video.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[Eviews 受限最小二乘](https://www.bilibili.com/video/BV1pp4y1k7xx/)
+    
+<img src="img/video.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[Eviews 输出结果数值显示格式的设置](https://www.bilibili.com/video/BV1tZ4y1V7Rb/)  
+

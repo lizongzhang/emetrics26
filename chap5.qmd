@@ -1,0 +1,27 @@
+---
+title: "第5章"
+---
+
+# 第5章 函数形式变换
+
+<img src="img/teacher.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[讲义](https://lizongzhang.github.io/ee4/chap5.html)
+
+#  Eviews操作
+
+<img src="img/video.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[Eviews中双对数模型的估计](https://www.bilibili.com/video/BV1sG4y1t7Wh/) 
+    
+<img src="img/video.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[Eviews中对数-线性模型的估计](https://www.bilibili.com/video/BV1RP411F7yG/) 
+    
+<img src="img/video.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[Eviews中如何计算Y的估计值？](https://www.bilibili.com/video/BV1Jd4y1F7ze) 
+    
+
+<img src="img/video.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[Eviews时间序列趋势分析——对数线性模型和线性趋势模型](https://www.bilibili.com/video/BV1684y1v7xb/)
+    
+    
+<img src="img/video.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[Eviews 多项式、双对数、倒数模型](https://www.bilibili.com/video/BV1xT4y1F7oS/) 
+    
+        
+
+    
+    
+

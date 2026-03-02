@@ -1,0 +1,20 @@
+---
+title: "第9章"
+---
+
+# 第9章 异方差
+
+<img src="img/teacher.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[讲义](https://lizongzhang.github.io/ee4/chap9.html)
+
+
+
+# Eviews操作
+
+<img src="img/video.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[Eviews 残差的图形诊断](https://www.bilibili.com/video/BV1RV411y7hS/) 
+    
+<img src="img/video.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[Eviews 异方差检验](https://www.bilibili.com/video/BV1zT4y1F75Q/)     
+    
+<img src="img/video.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[Eviews 加权最小二乘](https://www.bilibili.com/video/BV1uf4y1q7vD/)     
+    
+<img src="img/video.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[Eviews 怀特异方差校正值](https://www.bilibili.com/video/BV1wf4y1q7YQ/)     
+    

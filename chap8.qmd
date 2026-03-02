@@ -1,0 +1,14 @@
+---
+title: "第8章"
+---
+
+# 第8章 多重共线性
+
+<img src="img/teacher.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[讲义](https://lizongzhang.github.io/ee4/chap8.html)
+
+
+
+# Eviews操作
+
+<img src="img/video.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[Eviews 多重共线性](https://www.bilibili.com/video/BV1di4y157ZG/) 
+    

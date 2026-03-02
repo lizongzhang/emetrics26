@@ -1,0 +1,27 @@
+---
+title: "第2章"
+---
+
+# 第2章 古典线性回归模型
+
+<img src="img/teacher.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[讲义](https://lizongzhang.github.io/ee4/chap2.html)
+
+# Eviews教学视频
+
+<img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px">[Eviews12 如何录入数据](https://www.bilibili.com/video/BV1e24y1o7Ac)
+
+<img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px">[Eviews 12 如何导入Excel文件](https://www.bilibili.com/video/BV1KP411p7WM)
+
+<img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px">[Eviews 12 主界面](https://www.bilibili.com/video/BV1gg411m7JP)
+    
+<img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px">[Eviews12 绘制散点图](https://www.bilibili.com/video/BV1Yt4y1P7zf)
+
+
+<img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px">[Eviews12  矩阵散点图和气泡图](https://www.bilibili.com/video/BV1K14y187Hh) 
+
+<img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px">[Eviews12  回归方程的估计](https://www.bilibili.com/video/BV1Ge411T7cV) 
+
+<img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px">[Eviews12 如何在散点图上添加回归线和回归方程？](https://www.bilibili.com/video/BV1ge4y1B7Cj)
+
+<img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px">[Eviews12 如何修改坐标轴字体、添加网格线、设置边框？](https://www.bilibili.com/video/BV1YG411J7Je)  
+
