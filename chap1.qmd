@@ -2,12 +2,12 @@
 title: "第1章"
 ---
 
-<img src="img/link.png" style="width: 24px; height: 24px;margin-right: 10px">[讲义](https://lizongzhang.github.io/emetrics26/chap1slide.html)
+<img src="img/teacher.png" style="width: 24px; height: 24px;margin-right: 10px">[讲义](https://lizongzhang.github.io/emetrics26/chap1slide.html)
 
 
 # 课堂讨论
 
-讨论题1 阅读下述推文
+阅读下述推文:
 
 <img src="img/link.png" style="width: 24px; height: 24px;margin-right: 10px">[微信公众号狗熊会>案例图书>精品案例>No.2线性回归>短视频点赞量影响因素分析](https://mp.weixin.qq.com/s/D87xeFDCRqOIrIA4utLGeg)
 
@@ -27,10 +27,6 @@ title: "第1章"
 
 <img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px">[如何申请免费的Eviews12学生版？](https://www.bilibili.com/video/BV1Sd4y1371P/)
     
-# 拓展学习  
-
-<img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px">[如何从中国知网下载统计数据？](https://www.bilibili.com/video/BV19m4y1F7FE/)
-
 
 # 课堂小调查
 
@@ -49,5 +45,16 @@ title: "第1章"
 <img src="img/link.png" style="width: 24px; height: 24px;margin-right: 10px">暨南大学社会调查中心  <https://sdc-iesr.jnu.edu.cn>
 
 <img src="img/link.png" style="width: 24px; height: 24px;margin-right: 10px"> Kaggle  <https://www.kaggle.com/datasets>
+
+# 拓展素材
+
+<img src="img/video.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[如何从中国知网下载统计数据？](https://www.bilibili.com/video/BV19m4y1F7FE/){target="_blank"}
+
+<img src="img/video.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[八爪鱼客户端抓取网页数据？](https://www.bilibili.com/video/BV18u411D7GM/){target="_blank"}
+
+<img src="img/video.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[Excel问卷调查数据清洗](https://www.bilibili.com/video/BV1WH4y1N7eW){target="_blank"}
+
+<img src="img/video.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[如何用Excel整理提取的网页数据？](https://www.bilibili.com/video/BV1HL411N7BG/){target="_blank"}
+
 
 

@@ -66,11 +66,11 @@ about:
 
 # 教学平台
 
-<img src="img/link.png" style="width: 24px; height: 24px;margin-right: 10px"/>[91速课](https://www.91suke.com)：考勤
+- QQ群：提交作业，提问答疑
 
-<img src="img/link.png" style="width: 24px; height: 24px;margin-right: 10px"/>[在91速课中设置姓名和学号的方法](https://lizongzhang.github.io/stat/91.html)
+<img src="img/link.png" style="width: 24px; height: 24px;margin-right: 10px">91速课(<https://www.91suke.com>)：测验，考勤等
 
--   QQ群：提交作业，提问答疑
+<img src="img/link.png" style="width: 24px; height: 24px;margin-right: 10px">[在91速课中设置姓名和学号的方法](https://lizongzhang.github.io/stat/91.html)
 
 # 课程考核
 
