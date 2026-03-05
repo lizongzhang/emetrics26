@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>第2章 – Econometrics26</title>
+<title>Econometrics26</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -33,7 +33,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-b53751a350365c71b6c909e95f209ed1.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
@@ -69,35 +68,6 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 </head>
 
@@ -119,7 +89,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
+    <a class="nav-link active" href="./index.html" aria-current="page"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
@@ -127,7 +97,7 @@ window.Quarto = {
 <span class="menu-text">第1章</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./chap2.html" aria-current="page"> 
+    <a class="nav-link" href="./chap2.html"> 
 <span class="menu-text">第2章</span></a>
   </li>  
   <li class="nav-item">
@@ -182,302 +152,141 @@ window.Quarto = {
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">On this page</h2>
-   
   <ul>
-  <li><a href="#讲义" id="toc-讲义" class="nav-link active" data-scroll-target="#讲义">讲义</a></li>
-  <li><a href="#eviews实操习题" id="toc-eviews实操习题" class="nav-link" data-scroll-target="#eviews实操习题">Eviews实操习题</a>
+  <li><a href="#教材" id="toc-教材" class="nav-link active" data-scroll-target="#教材">教材</a></li>
+  <li><a href="#教学软件" id="toc-教学软件" class="nav-link" data-scroll-target="#教学软件">教学软件</a>
   <ul class="collapse">
-  <li><a href="#任务1-教材p32-例2-5" id="toc-任务1-教材p32-例2-5" class="nav-link" data-scroll-target="#任务1-教材p32-例2-5">任务1: 教材P32 例2-5</a></li>
-  <li><a href="#任务2-二手车价格分析" id="toc-任务2-二手车价格分析" class="nav-link" data-scroll-target="#任务2-二手车价格分析">任务2: 二手车价格分析</a></li>
+  <li><a href="#基础必修" id="toc-基础必修" class="nav-link" data-scroll-target="#基础必修">基础必修</a></li>
+  <li><a href="#进阶选修" id="toc-进阶选修" class="nav-link" data-scroll-target="#进阶选修">进阶选修</a></li>
   </ul></li>
-  <li><a href="#eviews教学视频" id="toc-eviews教学视频" class="nav-link" data-scroll-target="#eviews教学视频">Eviews教学视频</a>
+  <li><a href="#软件准备" id="toc-软件准备" class="nav-link" data-scroll-target="#软件准备">软件准备</a>
   <ul class="collapse">
-  <li><a href="#基础操作与数据管理" id="toc-基础操作与数据管理" class="nav-link" data-scroll-target="#基础操作与数据管理">基础操作与数据管理</a></li>
-  <li><a href="#数据可视化" id="toc-数据可视化" class="nav-link" data-scroll-target="#数据可视化">数据可视化</a></li>
-  <li><a href="#模型估计" id="toc-模型估计" class="nav-link" data-scroll-target="#模型估计">模型估计</a></li>
+  <li><a href="#eviews12学生版下载" id="toc-eviews12学生版下载" class="nav-link" data-scroll-target="#eviews12学生版下载">Eviews12学生版下载</a></li>
+  <li><a href="#r和r-studio的的安装" id="toc-r和r-studio的的安装" class="nav-link" data-scroll-target="#r和r-studio的的安装">R和R Studio的的安装</a></li>
+  </ul></li>
+  <li><a href="#参考书" id="toc-参考书" class="nav-link" data-scroll-target="#参考书">参考书</a></li>
+  <li><a href="#教学平台" id="toc-教学平台" class="nav-link" data-scroll-target="#教学平台">教学平台</a></li>
+  <li><a href="#课程考核" id="toc-课程考核" class="nav-link" data-scroll-target="#课程考核">课程考核</a>
+  <ul class="collapse">
+  <li><a href="#计量经济学理论课3学分" id="toc-计量经济学理论课3学分" class="nav-link" data-scroll-target="#计量经济学理论课3学分">计量经济学理论课(3学分)</a></li>
+  <li><a href="#计量经济学实验课1学分" id="toc-计量经济学实验课1学分" class="nav-link" data-scroll-target="#计量经济学实验课1学分">计量经济学实验课(1学分)</a></li>
   </ul></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<div class="quarto-about-marquee">
+  <div class="about-image-container">
+  </div>
+  <div class="about-contents">
+    <header id="title-block-header" class="quarto-title-block"></header> <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">第2章</h1>
+<div id="ppc" style="color:#044875">
+<p>欢迎访问《经济计量学》课程网站！</p>
+</div>
+<section id="教材" class="level1">
+<h1>教材</h1>
+<ul>
+<li><p>古扎拉蒂，经济计量学精要(第4版), 机械工业出版社, 2010.</p></li>
+<li><p>Gujarati, Damodar N. Essentials of econometrics, the 4th edition. McGraw-Hill/Irwin, 2009.</p></li>
+</ul>
+<p><img src="img/download.png" style="width: 24px; height: 24px;margin-right: 10px"><a href="https://pan.baidu.com/s/10NhrQ18BG0888OkKMV6U-g?pwd=6666">下载教材及数据文件</a></p>
+</section>
+<section id="教学软件" class="level1">
+<h1>教学软件</h1>
+<section id="基础必修" class="level2">
+<h2 data-anchor-id="基础必修">基础必修</h2>
+<ul>
+<li><img src="img/link.png" style="width: 24px; height: 24px;margin-right: 10px"> Eviews <a href="https://eviews.com/home.html" class="uri">https://eviews.com/home.html</a></li>
+</ul>
+</section>
+<section id="进阶选修" class="level2">
+<h2 data-anchor-id="进阶选修">进阶选修</h2>
+<ul>
+<li><p><img src="img/link.png" style="width: 24px; height: 24px;margin-right: 10px"> R <a href="https://www.r-project.org/" target="_blank">https://www.r-project.org/</a></p></li>
+<li><p><img src="img/link.png" style="width: 24px; height: 24px;margin-right: 10px">R Studio <a href="https://posit.co/download/rstudio-desktop/" target="_blank">https://posit.co/download/rstudio-desktop/</a></p></li>
+</ul>
+</section>
+</section>
+<section id="软件准备" class="level1">
+<h1>软件准备</h1>
+<section id="eviews12学生版下载" class="level2">
+<h2 data-anchor-id="eviews12学生版下载">Eviews12学生版下载</h2>
+<p><img src="img/link.png" style="width: 24px; height: 24px;margin-right: 10px">申请Eviews12学生版序列号 <a href="http://register1.eviews.com/Lite/" class="uri">http://register1.eviews.com/Lite/</a></p>
+<p><img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px"><a href="https://www.bilibili.com/video/BV1Sd4y1371P/">如何申请免费的Eviews12学生版？</a></p>
+</section>
+<section id="r和r-studio的的安装" class="level2">
+<h2 data-anchor-id="r和r-studio的的安装">R和R Studio的的安装</h2>
+<p><img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px"><a href="https://www.bilibili.com/video/BV1334y1y7U5/" target="_blank">R和R Studio的下载</a></p>
+<p><img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px"><a href="https://www.bilibili.com/video/BV1eR4y1V7uW/" target="_blank">R和RStudio的安装</a></p>
+<p><img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px"><a href="https://www.bilibili.com/video/BV1zY4y1M7HX/" target="_blank">不用安装就能用的RStudio——RStudio Cloud</a>(若无法安装R和R Studio, 请看此视频)</p>
+</section>
+</section>
+<section id="参考书" class="level1">
+<h1>参考书</h1>
+<ul>
+<li><img src="img/download.png" style="width: 24px; height: 24px;margin-right: 10px">[百度网盘] <a href="https://pan.baidu.com/s/1ZtOu4_WJEAhUqnFlArKhPQ?pwd=6666" class="uri">https://pan.baidu.com/s/1ZtOu4_WJEAhUqnFlArKhPQ?pwd=6666</a></li>
+</ul>
+</section>
+<section id="教学平台" class="level1">
+<h1>教学平台</h1>
+<ul>
+<li>QQ群：提交作业，提问答疑</li>
+</ul>
+<p><img src="img/link.png" style="width: 24px; height: 24px;margin-right: 10px">91速课(<a href="https://www.91suke.com" class="uri">https://www.91suke.com</a>)：测验，考勤等</p>
+<p><img src="img/link.png" style="width: 24px; height: 24px;margin-right: 10px"><a href="https://lizongzhang.github.io/stat/91.html">在91速课中设置姓名和学号的方法</a></p>
+</section>
+<section id="课程考核" class="level1">
+<h1>课程考核</h1>
+<section id="计量经济学理论课3学分" class="level2">
+<h2 data-anchor-id="计量经济学理论课3学分">计量经济学理论课(3学分)</h2>
+<ul>
+<li><p>平时成绩：50%</p>
+<ul>
+<li><p>个人作业：20%</p></li>
+<li><p>小组作业：15%</p></li>
+<li><p>测验：10%</p></li>
+<li><p>考勤： 5%</p></li>
+</ul></li>
+<li><p>期末考试：50%</p></li>
+</ul>
+</section>
+<section id="计量经济学实验课1学分" class="level2">
+<h2 data-anchor-id="计量经济学实验课1学分">计量经济学实验课(1学分)</h2>
+<ul>
+<li>实验报告 + 小组作业</li>
+</ul>
+<div style="text-align: center;">
+<img src="img/bili_up.jpg" class="img-fluid" style="width:10.0%">
+</div>
+<div style="position: fixed; bottom: 10px; right: 70px; z-index: 1000;">
+<a href="http://www.freevisitorcounters.com">click here</a>
+<script type="text/javascript" src="https://www.freevisitorcounters.com/auth.php?id=a1b2bcf47de785ab152ba2b2353aa09bd4f80670"></script>
+<script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/1174168/t/5"></script>
 </div>
 
 
-
-<div class="quarto-title-meta">
-
-    
-  
-    
+</section>
+</section>
+</main> 
+    <div class="about-footer"><div class="about-links">
+  <a href="https://lizongzhang.github.io/r24/" class="about-link" rel="" target="">
+    <i class="bi bi-globe2"></i>
+     <span class="about-link-text">R语言与统计应用课程网站</span>
+  </a>
+  <a href="https://space.bilibili.com/590872906" class="about-link" rel="" target="">
+    <i class="bi bi-globe2"></i>
+     <span class="about-link-text">B站主页</span>
+  </a>
+  <a href="mailto:lizongzhang9@qq.com" class="about-link" rel="" target="">
+    <i class="bi bi-envelope"></i>
+     <span class="about-link-text">Email</span>
+  </a>
+</div>
+</div>
   </div>
-  
-
-
-</header>
-
-
-<section id="讲义" class="level1">
-<h1>讲义</h1>
-<p><img src="img/teacher.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px"><a href="https://lizongzhang.github.io/emetrics26/chap2slide.html">第2章 古典线性回归模型</a></p>
-</section>
-<section id="eviews实操习题" class="level1">
-<h1>Eviews实操习题</h1>
-<section id="任务1-教材p32-例2-5" class="level2">
-<h2 class="anchored" data-anchor-id="任务1-教材p32-例2-5">任务1: 教材P32 例2-5</h2>
-<details>
-<p>数据文件Table 2_14.xls</p>
-<ol type="1">
-<li><p>报告 price, age 和bidders的描述性统计量（均值、中位数、标准差、最大/最小值）。</p></li>
-<li><p>绘制price的直方图和箱线图，观察price的分布特征。</p></li>
-<li><p>绘制price与age的散点图，在散点图上添加回归线。</p></li>
-<li><p>绘制price与bidders的散点图，在散点图上添加回归线。</p></li>
-<li><p>报告price, age和bidders之间的相关系数矩阵。</p></li>
-<li><p>估计price和age之间的回归方程，报告回归结果。</p></li>
-<li><p>估计price和bidders之间的回归方程，报告回归结果。</p></li>
-<li><p>估计price与age和bidders之间的二元回归方程，并报告回归结果。</p></li>
-<li><p>修改第3题和第4题中散点的颜色，回归线的颜色和样式。</p></li>
-</ol>
-</details>
-</section>
-<section id="任务2-二手车价格分析" class="level2">
-<h2 class="anchored" data-anchor-id="任务2-二手车价格分析">任务2: 二手车价格分析</h2>
-<details>
-<p>从某二手车交易平台收集了 30 辆同款型号二手车的交易数据，研究<strong>行驶里程 (Mileage)</strong> 以及 <strong>保养记录次数 (Service_Records)</strong> 如何影响 <strong>二手车售价 (Price)</strong>。</p>
-<p>样本容量 <span class="math inline">\(n=30\)</span></p>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 12%">
-<col style="width: 12%">
-<col style="width: 12%">
-<col style="width: 12%">
-<col style="width: 12%">
-<col style="width: 12%">
-<col style="width: 12%">
-<col style="width: 12%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>编号</th>
-<th>Price (万元)</th>
-<th>Mileage (万公里)</th>
-<th>Service_Records (次)</th>
-<th>编号</th>
-<th>Price (万元)</th>
-<th>Mileage (万公里)</th>
-<th>Service_Records (次)</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>1</strong></td>
-<td>18.5</td>
-<td>1.2</td>
-<td>3</td>
-<td><strong>16</strong></td>
-<td>12.1</td>
-<td>6.8</td>
-<td>4</td>
-</tr>
-<tr class="even">
-<td><strong>2</strong></td>
-<td>17.2</td>
-<td>2.5</td>
-<td>4</td>
-<td><strong>17</strong></td>
-<td>11.5</td>
-<td>7.2</td>
-<td>3</td>
-</tr>
-<tr class="odd">
-<td><strong>3</strong></td>
-<td>16.8</td>
-<td>3.1</td>
-<td>2</td>
-<td><strong>18</strong></td>
-<td>10.8</td>
-<td>8.5</td>
-<td>5</td>
-</tr>
-<tr class="even">
-<td><strong>4</strong></td>
-<td>15.5</td>
-<td>4.0</td>
-<td>5</td>
-<td><strong>19</strong></td>
-<td>10.2</td>
-<td>9.1</td>
-<td>2</td>
-</tr>
-<tr class="odd">
-<td><strong>5</strong></td>
-<td>14.9</td>
-<td>4.8</td>
-<td>3</td>
-<td><strong>20</strong></td>
-<td>9.5</td>
-<td>10.5</td>
-<td>4</td>
-</tr>
-<tr class="even">
-<td><strong>6</strong></td>
-<td>14.2</td>
-<td>5.2</td>
-<td>4</td>
-<td><strong>21</strong></td>
-<td>18.0</td>
-<td>1.5</td>
-<td>4</td>
-</tr>
-<tr class="odd">
-<td><strong>7</strong></td>
-<td>13.5</td>
-<td>6.0</td>
-<td>6</td>
-<td><strong>22</strong></td>
-<td>16.5</td>
-<td>2.8</td>
-<td>3</td>
-</tr>
-<tr class="even">
-<td><strong>8</strong></td>
-<td>12.8</td>
-<td>6.5</td>
-<td>2</td>
-<td><strong>23</strong></td>
-<td>15.8</td>
-<td>3.5</td>
-<td>5</td>
-</tr>
-<tr class="odd">
-<td><strong>9</strong></td>
-<td>11.9</td>
-<td>7.8</td>
-<td>4</td>
-<td><strong>24</strong></td>
-<td>14.5</td>
-<td>4.5</td>
-<td>4</td>
-</tr>
-<tr class="even">
-<td><strong>10</strong></td>
-<td>10.5</td>
-<td>9.2</td>
-<td>5</td>
-<td><strong>25</strong></td>
-<td>13.2</td>
-<td>5.8</td>
-<td>6</td>
-</tr>
-<tr class="odd">
-<td><strong>11</strong></td>
-<td>9.8</td>
-<td>10.1</td>
-<td>3</td>
-<td><strong>26</strong></td>
-<td>12.5</td>
-<td>6.2</td>
-<td>3</td>
-</tr>
-<tr class="even">
-<td><strong>12</strong></td>
-<td>8.9</td>
-<td>11.5</td>
-<td>4</td>
-<td><strong>27</strong></td>
-<td>11.2</td>
-<td>7.5</td>
-<td>4</td>
-</tr>
-<tr class="odd">
-<td><strong>13</strong></td>
-<td>8.2</td>
-<td>12.2</td>
-<td>2</td>
-<td><strong>28</strong></td>
-<td>10.4</td>
-<td>8.8</td>
-<td>5</td>
-</tr>
-<tr class="even">
-<td><strong>14</strong></td>
-<td>7.5</td>
-<td>13.5</td>
-<td>5</td>
-<td><strong>29</strong></td>
-<td>9.2</td>
-<td>11.0</td>
-<td>2</td>
-</tr>
-<tr class="odd">
-<td><strong>15</strong></td>
-<td>6.8</td>
-<td>15.0</td>
-<td>3</td>
-<td><strong>30</strong></td>
-<td>8.5</td>
-<td>12.5</td>
-<td>4</td>
-</tr>
-</tbody>
-</table>
-<ol type="1">
-<li><strong>基础统计</strong>
-<ul>
-<li>报告 <code>Price</code>, <code>Mileage</code> 和 <code>Service_Records</code> 的均值、中位数、标准差、最小值、最大值等描述性统计量。</li>
-<li>报告三个变量之间的相关系数矩阵。</li>
-</ul></li>
-<li><strong>数据分布观察</strong>
-<ul>
-<li>绘制 <code>Price</code> 的直方图，观察其分布特征。</li>
-</ul></li>
-<li><strong>一元线性回归与图形美化</strong>
-<ul>
-<li>绘制 <code>Price</code> 与 <code>Mileage</code> 的散点图。</li>
-<li><strong>自定义要求</strong>：将散点设置为你喜欢的颜色，添加回归趋势线，并显示回归方程。</li>
-<li>在 EViews 中估计回归方程： <span class="math display">\[Price = B_0 + B_1 Mileage + u\]</span></li>
-<li>绘制 <code>Price</code> 与 <code>Service_Records</code> 的散点图。</li>
-<li><strong>自定义要求</strong>：将散点设置为你喜欢的颜色，添加回归趋势线，并显示回归方程。</li>
-<li>在 EViews 中估计回归方程： <span class="math display">\[Price = B_0 + B_1 Service\_Records + u\]</span></li>
-</ul></li>
-<li><strong>二元回归</strong>
-<ul>
-<li>估计二元回归模型： <span class="math display">\[Price = B_0 + B_1 Mileage + B_2 Service\_Records + u\]</span></li>
-</ul></li>
-<li>比较上述三个回归模型，哪个模型最好？</li>
-</ol>
-</details>
-<hr>
-</section>
-</section>
-<section id="eviews教学视频" class="level1">
-<h1>Eviews教学视频</h1>
-<section id="基础操作与数据管理" class="level2">
-<h2 class="anchored" data-anchor-id="基础操作与数据管理">基础操作与数据管理</h2>
-<p><img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px"><a href="https://www.bilibili.com/video/BV1gg411m7JP">Eviews 12 主界面</a></p>
-<p><img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px"><a href="https://www.bilibili.com/video/BV1KP411p7WM">Eviews 12 如何导入Excel文件</a></p>
-<p><img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px"><a href="https://www.bilibili.com/video/BV1e24y1o7Ac">Eviews12 如何录入数据</a></p>
-</section>
-<section id="数据可视化" class="level2">
-<h2 class="anchored" data-anchor-id="数据可视化">数据可视化</h2>
-<p><img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px"><a href="https://www.bilibili.com/video/BV1Yt4y1P7zf">Eviews12 绘制散点图</a></p>
-<p><img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px"><a href="https://www.bilibili.com/video/BV1K14y187Hh">Eviews12 矩阵散点图和气泡图</a></p>
-<p><img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px"><a href="https://www.bilibili.com/video/BV1YG411J7Je">Eviews12 如何修改坐标轴字体、添加网格线、设置边框？</a></p>
-</section>
-<section id="模型估计" class="level2">
-<h2 class="anchored" data-anchor-id="模型估计">模型估计</h2>
-<p><img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px"><a href="https://www.bilibili.com/video/BV1Ge411T7cV">Eviews12 回归方程的估计</a></p>
-<p><img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px"><a href="https://www.bilibili.com/video/BV1ge4y1B7Cj">Eviews12 如何在散点图上添加回归线和回归方程？</a></p>
-
-
-</section>
-</section>
-
-</main> <!-- /main -->
+</div>
+ <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -642,13 +451,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   } else {
     toggleColorMode(false);
   }
-  const icon = "";
-  const anchorJS = new window.AnchorJS();
-  anchorJS.options = {
-    placement: 'right',
-    icon: icon
-  };
-  anchorJS.add('.anchored');
   const isCodeAnnotation = (el) => {
     for (const clz of el.classList) {
       if (clz.startsWith('code-annotation-')) {                     

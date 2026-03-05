@@ -32,7 +32,7 @@
     "href": "chap2.html",
     "title": "第2章",
     "section": "",
-    "text": "第2章 古典线性回归模型\n讲义\n\n\nEviews教学视频\nEviews12 如何录入数据\nEviews 12 如何导入Excel文件\nEviews 12 主界面\nEviews12 绘制散点图\nEviews12 矩阵散点图和气泡图\nEviews12 回归方程的估计\nEviews12 如何在散点图上添加回归线和回归方程？\nEviews12 如何修改坐标轴字体、添加网格线、设置边框？"
+    "text": "第2章 古典线性回归模型"
   },
   {
     "objectID": "chap1.html",
@@ -719,5 +719,47 @@
     "title": "Chapter 7 Model Selection: Criteria and Tests",
     "section": "",
     "text": "注意：本讲义供学习交流使用，请勿用于商业用途"
+  },
+  {
+    "objectID": "chap2.html#任务1-p32-例2-5",
+    "href": "chap2.html#任务1-p32-例2-5",
+    "title": "第2章",
+    "section": "任务1: P32 例2-5",
+    "text": "任务1: P32 例2-5\n\n\n报告 price, age 和bidders的描述性统计量（均值、中位数、标准差、最大/最小值）。\n绘制price的直方图和箱线图，观察price的分布特征。\n绘制price与age的散点图，在散点图上添加回归线。\n绘制price与bidders的散点图，在散点图上添加回归线。\n报告price, age和bidders之间的相关系数矩阵。\n估计price和age之间的回归方程，报告回归结果。\n估计price和bidders之间的回归方程，报告回归结果。\n估计price与age和bidders之间的二元回归方程，并报告回归结果。\n修改第3题和第4题中散点的颜色，回归线的颜色和样式。"
+  },
+  {
+    "objectID": "chap2.html#任务2-二手车价格分析",
+    "href": "chap2.html#任务2-二手车价格分析",
+    "title": "第2章",
+    "section": "任务2: 二手车价格分析",
+    "text": "任务2: 二手车价格分析\n\n从某二手车交易平台收集了 30 辆同款型号二手车的交易数据，研究行驶里程 (Mileage) 以及 保养记录次数 (Service_Records) 如何影响 二手车售价 (Price)。\n样本容量 \\(n=30\\)\n\n\n\n\n\n\n\n\n\n\n\n\n\n编号\nPrice (万元)\nMileage (万公里)\nService_Records (次)\n编号\nPrice (万元)\nMileage (万公里)\nService_Records (次)\n\n\n\n\n1\n18.5\n1.2\n3\n16\n12.1\n6.8\n4\n\n\n2\n17.2\n2.5\n4\n17\n11.5\n7.2\n3\n\n\n3\n16.8\n3.1\n2\n18\n10.8\n8.5\n5\n\n\n4\n15.5\n4.0\n5\n19\n10.2\n9.1\n2\n\n\n5\n14.9\n4.8\n3\n20\n9.5\n10.5\n4\n\n\n6\n14.2\n5.2\n4\n21\n18.0\n1.5\n4\n\n\n7\n13.5\n6.0\n6\n22\n16.5\n2.8\n3\n\n\n8\n12.8\n6.5\n2\n23\n15.8\n3.5\n5\n\n\n9\n11.9\n7.8\n4\n24\n14.5\n4.5\n4\n\n\n10\n10.5\n9.2\n5\n25\n13.2\n5.8\n6\n\n\n11\n9.8\n10.1\n3\n26\n12.5\n6.2\n3\n\n\n12\n8.9\n11.5\n4\n27\n11.2\n7.5\n4\n\n\n13\n8.2\n12.2\n2\n28\n10.4\n8.8\n5\n\n\n14\n7.5\n13.5\n5\n29\n9.2\n11.0\n2\n\n\n15\n6.8\n15.0\n3\n30\n8.5\n12.5\n4\n\n\n\n\n基础统计\n\n报告 Price, Mileage 和 Service_Records 的均值、中位数、标准差、最小值、最大值等描述性统计量。\n报告三个变量之间的相关系数矩阵。\n\n数据分布观察\n\n绘制 Price 的直方图，观察其分布特征。\n\n一元线性回归与图形美化\n\n绘制 Price 与 Mileage 的散点图。\n自定义要求：将散点设置为你喜欢的颜色，添加回归趋势线，并显示回归方程。\n在 EViews 中估计回归方程： \\[Price = B_0 + B_1 Mileage + u\\]\n绘制 Price 与 Service_Records 的散点图。\n自定义要求：将散点设置为你喜欢的颜色，添加回归趋势线，并显示回归方程。\n在 EViews 中估计回归方程： \\[Price = B_0 + B_1 Service\\_Records + u\\]\n\n二元回归\n\n估计二元回归模型： \\[Price = B_0 + B_1 Mileage + B_2 Service\\_Records + u\\]\n\n比较上述三个回归模型，哪个模型最好？"
+  },
+  {
+    "objectID": "chap2.html#基础操作与数据管理",
+    "href": "chap2.html#基础操作与数据管理",
+    "title": "第2章",
+    "section": "基础操作与数据管理",
+    "text": "基础操作与数据管理\nEviews 12 主界面\nEviews 12 如何导入Excel文件\nEviews12 如何录入数据"
+  },
+  {
+    "objectID": "chap2.html#数据可视化",
+    "href": "chap2.html#数据可视化",
+    "title": "第2章",
+    "section": "数据可视化",
+    "text": "数据可视化\nEviews12 绘制散点图\nEviews12 矩阵散点图和气泡图\nEviews12 如何修改坐标轴字体、添加网格线、设置边框？"
+  },
+  {
+    "objectID": "chap2.html#模型估计",
+    "href": "chap2.html#模型估计",
+    "title": "第2章",
+    "section": "模型估计",
+    "text": "模型估计\nEviews12 回归方程的估计\nEviews12 如何在散点图上添加回归线和回归方程？"
+  },
+  {
+    "objectID": "chap2.html#任务1-教材p32-例2-5",
+    "href": "chap2.html#任务1-教材p32-例2-5",
+    "title": "第2章",
+    "section": "任务1: 教材P32 例2-5",
+    "text": "任务1: 教材P32 例2-5\n\n数据文件Table 2_14.xls\n\n报告 price, age 和bidders的描述性统计量（均值、中位数、标准差、最大/最小值）。\n绘制price的直方图和箱线图，观察price的分布特征。\n绘制price与age的散点图，在散点图上添加回归线。\n绘制price与bidders的散点图，在散点图上添加回归线。\n报告price, age和bidders之间的相关系数矩阵。\n估计price和age之间的回归方程，报告回归结果。\n估计price和bidders之间的回归方程，报告回归结果。\n估计price与age和bidders之间的二元回归方程，并报告回归结果。\n修改第3题和第4题中散点的颜色，回归线的颜色和样式。"
   }
 ]
