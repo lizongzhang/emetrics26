@@ -7,7 +7,7 @@ about:
   links:
     - text: R语言与统计应用课程网站
       icon: globe2
-      href: https://lizongzhang.github.io/r24/
+      href: https://lizongzhang.github.io/r25/
     - text: B站主页
       icon: globe2
       href: https://space.bilibili.com/590872906
@@ -27,13 +27,13 @@ about:
 
 -   Gujarati, Damodar N. Essentials of econometrics, the 4th edition. McGraw-Hill/Irwin, 2009.
 
-<img src="img/download.png" style="width: 24px; height: 24px;margin-right: 10px">[下载教材及数据文件](https://pan.baidu.com/s/10NhrQ18BG0888OkKMV6U-g?pwd=6666)
+<img src="img/download.png" style="width: 24px; height: 24px;margin-right: 10px">[下载教材及数据文件](https://pan.baidu.com/s/10NhrQ18BG0888OkKMV6U-g?pwd=6666){target="_blank"}
 
 #  教学软件
 
 ## 基础必修
 
--   <img src="img/link.png"  style="width: 24px; height: 24px;margin-right: 10px"> Eviews  <https://eviews.com/home.html>
+-   <img src="img/link.png"  style="width: 24px; height: 24px;margin-right: 10px"> Eviews  <https://eviews.com/home.html>{target="_blank"}
 
 ## 进阶选修
 
@@ -46,9 +46,9 @@ about:
 
 ## Eviews12学生版下载
 
-<img src="img/link.png" style="width: 24px; height: 24px;margin-right: 10px">申请Eviews12学生版序列号 <http://register1.eviews.com/Lite/>
+<img src="img/link.png" style="width: 24px; height: 24px;margin-right: 10px">申请Eviews12学生版序列号 <http://register1.eviews.com/Lite/>{target="_blank"}
 
-<img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px">[如何申请免费的Eviews12学生版？](https://www.bilibili.com/video/BV1Sd4y1371P/)
+<img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px">[如何申请免费的Eviews12学生版？](https://www.bilibili.com/video/BV1Sd4y1371P/){target="_blank"}
 
 ## R和R Studio的的安装
 
@@ -60,17 +60,17 @@ about:
                 Cloud](https://www.bilibili.com/video/BV1zY4y1M7HX/){target="_blank"}(若无法安装R和R Studio, 请看此视频)
 
 
-#   参考书
+# 参考书
 
--   <img src="img/download.png" style="width: 24px; height: 24px;margin-right: 10px">[百度网盘] <https://pan.baidu.com/s/1ZtOu4_WJEAhUqnFlArKhPQ?pwd=6666>  
+-   <img src="img/download.png" style="width: 24px; height: 24px;margin-right: 10px">[下载] <https://pan.baidu.com/s/1ZtOu4_WJEAhUqnFlArKhPQ?pwd=6666>{target="_blank"}  
 
 # 教学平台
 
 - QQ群：提交作业，提问答疑
 
-<img src="img/link.png" style="width: 24px; height: 24px;margin-right: 10px">91速课(<https://www.91suke.com>)：测验，考勤等
+<img src="img/link.png" style="width: 24px; height: 24px;margin-right: 10px">91速课(<https://www.91suke.com>){target="_blank"}：测验，考勤等
 
-<img src="img/link.png" style="width: 24px; height: 24px;margin-right: 10px">[在91速课中设置姓名和学号的方法](https://lizongzhang.github.io/stat/91.html)
+<img src="img/link.png" style="width: 24px; height: 24px;margin-right: 10px">[在91速课中设置姓名和学号的方法](https://lizongzhang.github.io/stat/91.html){target="_blank"}
 
 # 课程考核
 
@@ -92,6 +92,10 @@ about:
 
 -   实验报告 + 小组作业
 
+# 教学互动
+
+<img src="img/link.png" style="width: 24px; height: 24px;margin-right: 10px;">[匿名提问与教学节奏反馈](https://v.wjx.cn/vm/QFUwVuy.aspx#){target="_blank"}
+
 <div style="text-align: center;">![](img/bili_up.jpg){width=10%}</div>
 
 <div style="position: fixed; bottom: 10px; right: 70px; z-index: 1000;">
@@ -100,5 +104,6 @@ about:
   <script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/1174168/t/5"></script>
 
 </div>
+
 
 
