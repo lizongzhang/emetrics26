@@ -72,6 +72,8 @@ about:
 
 <img src="img/link.png" style="width: 24px; height: 24px;margin-right: 10px">[在91速课中设置姓名和学号的方法](https://lizongzhang.github.io/stat/91.html){target="_blank"}
 
+<img src="img/link.png" style="width: 24px; height: 24px;margin-right: 10px;">[考勤](https://v.wjx.cn/vm/tUedfE9.aspx#){target="_blank"}
+
 # 课程考核
 
 ## 计量经济学理论课(3学分)
