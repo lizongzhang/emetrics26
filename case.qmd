@@ -1,5 +1,8 @@
 ---
 title: "小组任务"
+author: "Li Zongzhang"
+date: today
+date-format: "YYYY-MM-DD"
 ---
 
 **提交分组信息：<https://www.wjx.top/vm/rXASrvi.aspx#> **
@@ -146,7 +149,7 @@ title: "小组任务"
 
 ## 撰写实验报告(第10-15周)
 
-<img src="img/link.png" style="width: 24px; height: 24px;margin-right: 10px">[实验报告写作要求](to be updated)
+<img src="img/link.png" style="width: 24px; height: 24px;margin-right: 10px">[实验报告写作要求](https://lizongzhang.github.io/emetrics26/report.html)
 
 实验报告提交时限：第17周理论课的最后一节课
     
@@ -160,6 +163,20 @@ title: "小组任务"
 
 <img src="img/link.png" style="width: 24px; height: 24px;margin-right: 10px">[永辉超市门店数量分析](https://lizongzhang.github.io/ee4/stu4.html)
 
+<details>
+<summary style="cursor: pointer; font-weight: bold;">视频点赞分析--20金融3陈瑞祺(点击展开)</summary>
+
+<p>如果想在新窗口打开 PDF，请点这里： <a href="img/crq.pdf" target="_blank" rel="noopener">在新标签页中查看 PDF</a></p>
+
+<iframe src="img/crq.pdf" width="100%" height="800" style="border: none;" allowfullscreen>
+  <!-- 备用内容（若浏览器不支持 iframe） -->
+  <p>你的浏览器无法嵌入 PDF，请 <a href="img/crq.pdf" target="_blank" rel="noopener">点此下载/查看 PDF</a>.</p>
+</iframe>
+
+</details>
+
+
+
 
 # 往届学生习作点评
 
@@ -167,8 +184,8 @@ title: "小组任务"
 
 <img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px">[第7-9章小组作业讲评 20经济](https://www.bilibili.com/video/BV1pM411U7DH/)
 
-
-
+#  实验报告
+<img src="img/link.png" style="width: 24px; height: 24px;margin-right: 10px">[实验报告要求](https://lizongzhang.github.io/emetrics26/report.html)
 
 
 
