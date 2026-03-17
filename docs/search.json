@@ -67,7 +67,7 @@
     "href": "case.html#讨论与汇报安排",
     "title": "小组任务",
     "section": "讨论与汇报安排",
-    "text": "讨论与汇报安排\n\n第一次讨论课 (第3-6周)：选题论证\n提交选题信息问卷：https://v.wjx.cn/vm/rXTAiul.aspx#\n\n\n点击展开\n\n\n核心任务：确立选题方向，通过初步数据探索验证模型逻辑的可行性。\n学生准备事项（需提交/展示）：\n\n填写选题信息问卷(请在讨论课前完成)：https://v.wjx.cn/vm/rXTAiul.aspx#\n数据文件： 展示已获取的数据概况，确保截面数据有效样本 \\(n \\ge 60\\)（5人组 \\(n \\ge 90\\)）。\n数据清洗：\n\n变量命名的规范化 (Variable Naming)\n\n全英文/拼音：变量名必须以英文字母开头。严禁使用中文、空格或特殊符号。\n禁用字符：不能包含中划线/短横线（-）、小圆点（.）。\n蛇形命名（snake_case）：所有字母小写，单词之间用下划线（_）连接。\n见名知意： 用 wage 而不是Y，用 edu 而不是 X2。\n\n异常值处理\n\n可视化检查：对定量变量绘制直方图或箱线图。\nIQR法：超出1.5倍IQR视为异常值，建议删除。\n\n定性变量分类优化：\n\n合并原则：若某个分类下的个案数量少于 10 个，建议进行合并。\n逻辑合并：合并应基于逻辑相似性（如：将“硕士”和“博士”合并为“研究生”），严禁将互不相关的类别强行扔进“其他”类。\n\n初步相关性分析：\n\n报告 \\(Y\\) 与各定量解释变量 \\(X\\) 之间的相关系数矩阵（以截图或规范表格展示）。\n核心解释变量与 \\(Y\\) 的相关系数绝对值 \\(|r| &gt; 0.3\\)。\n确保变量间存在基本关联，避免后期回归模型因相关性太弱导致“全盘不显著”。\n\n\n\n\n&lt;&gt;\n\n\n\n第二次讨论课 (第7-9周)：基础建模\n\n\n点击展开\n\n\n应用方法：运用教材 第 4、5、6 章 的分析方法。\n需准备的文件：\n\n清洗后的数据文件(Excel文件格式)。\n汇报内容：\n\n数据来源：详细说明采集渠道。\n变量含义：每个 \\(X\\) 变量的含义、单位。\n估计结果：尝试不同回归方程的估计结果截图。\n模型择优：对比不同函数形式，阐述哪个模型最好及理由。\n主要结论：汇报初步发现的结论。\n\n\n\n&lt;&gt;\n\n\n\n第三次讨论课 (第 10-13 周)：模型诊断与完善\n\n\n点击展开\n\n\n应用方法：运用教材 第 7、8、9 章 的方法。\n需准备的文件：\n\nEViews Workfile：包含所有诊断检验过程的最新版本。\nPPT 汇报演示：\n\n诊断与改进：汇报针对初始模型的优化路径。\n设定误差检验：是否存在遗漏变量或函数形式设定错误。\n多重共线性：VIF 检验及处理方案。\n异方差诊断：White 检验/BP 检验及加权最小二乘法等改进措施。\n最终结论：基于稳健模型得到的最终实证结论 [cite: 2026-01-31]。\n\n\n\n&lt;&gt;"
+    "text": "讨论与汇报安排\n\n第一次讨论课 (第3-6周)：选题论证和数据收集\n提交选题信息问卷：https://v.wjx.cn/vm/rXTAiul.aspx#\n\n\n点击展开\n\n\n核心任务：确立选题方向，通过初步数据探索验证模型逻辑的可行性。\n学生准备事项（需提交/展示）：\n\n填写选题信息问卷(请在讨论课前完成)：https://v.wjx.cn/vm/rXTAiul.aspx#\n数据文件： 展示已获取的数据概况，确保截面数据有效样本 \\(n \\ge 60\\)（5人组 \\(n \\ge 90\\)）。\n数据清洗：\n\n变量命名的规范化 (Variable Naming)\n\n全英文/拼音：变量名必须以英文字母开头。严禁使用中文、空格或特殊符号。\n禁用字符：不能包含中划线/短横线（-）、小圆点（.）。\n蛇形命名（snake_case）：所有字母小写，单词之间用下划线（_）连接（如 laptop_price）。\n见名知意： 严禁使用 \\(X1, Y\\) 等无意义符号，确保代码可读性。用 wage 而不是Y，用 edu 而不是 X1。\n\n异常值处理\n\n可视化检查：对定量变量绘制直方图或箱线图。\n优先采用 \\(3 \\times IQR\\) 规则 剔除极端值，以保留更多信息；若数据依然分布极度不均，再考虑 \\(1.5 \\times IQR\\)。 (注：剔除数值大于 \\(Q3 + 3 \\times IQR\\) 或小于 \\(Q1 - 3 \\times IQR\\) 的个案)。\n逻辑检查：务必剔除如“价格为0”、“年龄为负”等逻辑错误的个案。\n\n定性变量分类优化：\n\n合并原则：若某个分类下的个案数量少于 10 个，建议合并。合并后建议每组样本数 \\(&gt; 20\\)。\n逻辑合并：合并应基于逻辑相似性（如：将“硕士”和“博士”合并为“研究生”）。\n\n初步相关性分析：\n\n报告 \\(Y\\) 与各定量解释变量 \\(X\\) 之间的相关系数矩阵。\n核心解释变量与 \\(Y\\) 的相关系数绝对值 \\(|r| &gt; 0.2-0.3\\)。\n确保变量间存在基本关联，避免后期回归模型因相关性太弱导致“全盘不显著”。\n估计全变量的回归模型，若 \\(p\\) 值普遍较大且 \\(R^2\\) 极低。需要重新考虑定量变量的测度，重新选取样本。\n\n\n\n\n&lt;&gt;\n\n\n\n第二次讨论课 (第7-9周)：基础建模\n\n\n点击展开\n\n\n应用方法：运用教材 第 4、5、6 章 的分析方法。\n需准备的文件：\n\n清洗后的数据文件(Excel文件格式)。\n汇报内容：\n\n数据来源：详细说明采集渠道。\n变量含义：每个 \\(X\\) 变量的含义、单位。\n估计结果：尝试不同回归方程的估计结果截图。\n模型择优：对比不同函数形式，阐述哪个模型最好及理由。\n主要结论：汇报初步发现的结论。\n\n\n\n&lt;&gt;\n\n\n\n第三次讨论课 (第 10-13 周)：模型诊断与完善\n\n\n点击展开\n\n\n应用方法：运用教材 第 7、8、9 章 的方法。\n需准备的文件：\n\nEViews Workfile：包含所有诊断检验过程的最新版本。\nPPT 汇报演示：\n\n诊断与改进：汇报针对初始模型的优化路径。\n设定误差检验：是否存在遗漏变量或函数形式设定错误。\n多重共线性：VIF 检验及处理方案。\n异方差诊断：White 检验/BP 检验及加权最小二乘法等改进措施。\n最终结论：基于稳健模型得到的最终实证结论 [cite: 2026-01-31]。\n\n\n\n&lt;&gt;"
   },
   {
     "objectID": "case.html#课堂汇报第15-16周",
@@ -82,5 +82,404 @@
     "title": "小组任务",
     "section": "撰写实验报告(第10-15周)",
     "text": "撰写实验报告(第10-15周)\n实验报告写作要求\n实验报告提交时限：第17周理论课的最后一节课"
+  },
+  {
+    "objectID": "case2code.html",
+    "href": "case2code.html",
+    "title": "case2 code based on Chap 7 and Chap 8",
+    "section": "",
+    "text": "library(tidyverse) data(mpg)\nlibrary(ggstatsplot)\ngghistostats(mpg, cty, test.value = 16, ggtheme = theme_bw)"
+  },
+  {
+    "objectID": "casetips.html#r读取excel文件时excel中的数值变成了字符串",
+    "href": "casetips.html#r读取excel文件时excel中的数值变成了字符串",
+    "title": "《R语言与统计应用》实验报告常见问题",
+    "section": "R读取Excel文件时，Excel中的数值变成了字符串",
+    "text": "R读取Excel文件时，Excel中的数值变成了字符串\n\n某列中混有非数字字符, 如空格、文字、符号等\nExcel 中该列被显式设置为了“文本”格式\n如果前几行的数据不具代表性（如缺失、为字符串等），类型推断就可能失误"
+  },
+  {
+    "objectID": "casetips.html#数据框中的定量变量以字符串的形式保存",
+    "href": "casetips.html#数据框中的定量变量以字符串的形式保存",
+    "title": "《R语言与统计应用》实验报告常见问题",
+    "section": "数据框中的定量变量以字符串的形式保存",
+    "text": "数据框中的定量变量以字符串的形式保存\n\ndf &lt;- data.frame(\n  name = c(\"Tom\", \"Jerry\", \"Mickey\", \"Donald\", \"Goofy\"),\n  height = c(\"170\", \"172\", \"183\", \"185\", \"177\"),\n  weight = c(\"73\", \"78\", \"85\", \"92\", \"70\")\n)\n\nmean(df$height)\n\nWarning in mean.default(df$height): argument is not numeric or logical:\nreturning NA\n\n\n[1] NA\n\n# 把height, weight转换为数值型\n\ndf &lt;- df %&gt;%\n  mutate(across(c(height, weight), as.numeric))\n\nmean(df$height)\n\n[1] 177.4"
+  },
+  {
+    "objectID": "casetips.html#帕累托图",
+    "href": "casetips.html#帕累托图",
+    "title": "《R语言与统计应用》实验报告常见问题",
+    "section": "帕累托图",
+    "text": "帕累托图\n\n条形按降序排列\n标注频数"
+  },
+  {
+    "objectID": "casetips.html#帕累托图-1",
+    "href": "casetips.html#帕累托图-1",
+    "title": "《R语言与统计应用》实验报告常见问题",
+    "section": "帕累托图",
+    "text": "帕累托图\n\nmpg %&gt;% \n  ggplot(aes(fct_infreq(class))) + \n  geom_bar(col = \"cyan\", fill = \"cyan\")+\n  labs(title = \"Pareto Diagram\", x = \"Manufacturer\") +\n    geom_text(stat = \"count\",\n            aes(label = after_stat(count)), \n            vjust = -0.5)+     \n  guides(x = guide_axis(angle = 45))+\n  labs(title = \"Pareto Diagram\", x = \"Manufacturer\") +\n  scale_y_continuous(limits = c(0, 70))"
+  },
+  {
+    "objectID": "casetips.html#饼图-扇区按百分比降序排列",
+    "href": "casetips.html#饼图-扇区按百分比降序排列",
+    "title": "《R语言与统计应用》实验报告常见问题",
+    "section": "饼图 – 扇区按百分比降序排列",
+    "text": "饼图 – 扇区按百分比降序排列\n\n# 准备数据：按频数降序排列\ndf &lt;- mpg %&gt;%\n  count(class) %&gt;%\n  arrange(desc(n)) %&gt;%\n  mutate(pct = round(100 * n / sum(n), 0),\n         label = paste0(class, \"\\n\", pct, \"%\"),\n         class = factor(class, levels = class) # 按频数降序设置因子顺序\n  )\n\ncolors &lt;- colorRampPalette(c(\"lightblue\", \"blue\", \"darkblue\"))(nrow(df))\n\n# 绘制饼图（极坐标 + 降序排列）\nggplot(df, aes(x = \"\", y = n, fill = class)) +\n  geom_bar(stat = \"identity\", width = 1) +\n  scale_fill_manual(values = colors) +\n  coord_polar(theta = \"y\", direction = -1) +  # 逆时针方向排列\n  geom_text(aes(label = label), \n            col = \"white\",\n            position = position_stack(vjust = 0.5), size = 5) +\n  theme_void() +\n  theme(legend.position = \"none\")"
+  },
+  {
+    "objectID": "casetips.html#合并小类减少扇区",
+    "href": "casetips.html#合并小类减少扇区",
+    "title": "《R语言与统计应用》实验报告常见问题",
+    "section": "合并小类，减少扇区",
+    "text": "合并小类，减少扇区\n\ndf &lt;- mpg %&gt;%\n  mutate(class = fct_lump_n(class, 5)) %&gt;% \n  count(class) %&gt;%\n  arrange(desc(n)) %&gt;%\n  mutate(pct = round(100 * n / sum(n), 0),\n         label = paste0(class, \"\\n\", pct, \"%\"),\n         class = factor(class, levels = class) # 按频数降序设置因子顺序\n  )\n\ncolors &lt;- colorRampPalette(c(\"lightblue\", \"blue\", \"darkblue\"))(nrow(df))\n\n# 绘制饼图（极坐标 + 降序排列）\nggplot(df, aes(x = \"\", y = n, fill = class)) +\n  geom_bar(stat = \"identity\", width = 1) +\n  scale_fill_manual(values = colors) +\n  coord_polar(theta = \"y\", direction = -1) +  # 逆时针方向排列\n  geom_text(aes(label = label), \n            col = \"white\",\n            position = position_stack(vjust = 0.5), size = 5) +\n  theme_void() +\n  theme(legend.position = \"none\")"
+  },
+  {
+    "objectID": "casetips.html#合并小类分组箱线图",
+    "href": "casetips.html#合并小类分组箱线图",
+    "title": "《R语言与统计应用》实验报告常见问题",
+    "section": "合并小类，分组箱线图",
+    "text": "合并小类，分组箱线图\n\nmpg %&gt;%\n  mutate(class = fct_lump_n(class, 5)) %&gt;% \n  ggplot(aes(reorder(class,displ),displ,\n             col = class))+\n  geom_boxplot()+\n  guides(x = guide_axis(n.dodge = 3)) +\n  theme(legend.position = \"none\")"
+  },
+  {
+    "objectID": "casetips.html#独立性检验-适用条件",
+    "href": "casetips.html#独立性检验-适用条件",
+    "title": "《R语言与统计应用》实验报告常见问题",
+    "section": "独立性检验 —— 适用条件",
+    "text": "独立性检验 —— 适用条件\n\nchisq.test(mpg$class, mpg$drv)\n\nWarning in chisq.test(mpg$class, mpg$drv): Chi-squared approximation may be\nincorrect\n\n\n\n    Pearson's Chi-squared test\n\ndata:  mpg$class and mpg$drv\nX-squared = 221.6, df = 12, p-value &lt; 2.2e-16"
+  },
+  {
+    "objectID": "casetips.html#独立性检验-合并小类降低列联表纬度",
+    "href": "casetips.html#独立性检验-合并小类降低列联表纬度",
+    "title": "《R语言与统计应用》实验报告常见问题",
+    "section": "独立性检验 —— 合并小类，降低列联表纬度",
+    "text": "独立性检验 —— 合并小类，降低列联表纬度\n\ndf &lt;- mpg %&gt;% \n  mutate(class = fct_lump_n(class, 3),\n         drv = fct_lump_n(drv, 1))\n\ntable(df$class, df$drv)\n\n         \n           f Other\n  compact 35    12\n  midsize 38     3\n  suv      0    62\n  Other   33    51"
+  },
+  {
+    "objectID": "casetips.html#独立性检验-查看期望频数",
+    "href": "casetips.html#独立性检验-查看期望频数",
+    "title": "《R语言与统计应用》实验报告常见问题",
+    "section": "独立性检验 —— 查看期望频数",
+    "text": "独立性检验 —— 查看期望频数\n\nchisq.test(df$class, df$drv)\n\n\n    Pearson's Chi-squared test\n\ndata:  df$class and df$drv\nX-squared = 105.86, df = 3, p-value &lt; 2.2e-16\n\nchisq.test(df$class, df$drv)$expected\n\n         df$drv\ndf$class         f    Other\n  compact 21.29060 25.70940\n  midsize 18.57265 22.42735\n  suv     28.08547 33.91453\n  Other   38.05128 45.94872"
+  },
+  {
+    "objectID": "casetips.html#计算行列百分比-提炼研究结论",
+    "href": "casetips.html#计算行列百分比-提炼研究结论",
+    "title": "《R语言与统计应用》实验报告常见问题",
+    "section": "计算行/列百分比 —— 提炼研究结论",
+    "text": "计算行/列百分比 —— 提炼研究结论\n\n\n         \n            f Other\n  compact  74    26\n  midsize  93     7\n  suv       0   100\n  Other    39    61\n\n\n         \n           f Other\n  compact 33     9\n  midsize 36     2\n  suv      0    48\n  Other   31    40"
+  },
+  {
+    "objectID": "casetips.html#单因素方差分析-分类数太多导致有些组别的样本量太小",
+    "href": "casetips.html#单因素方差分析-分类数太多导致有些组别的样本量太小",
+    "title": "《R语言与统计应用》实验报告常见问题",
+    "section": "单因素方差分析 – 分类数太多，导致有些组别的样本量太小",
+    "text": "单因素方差分析 – 分类数太多，导致有些组别的样本量太小\n\n# 单因素方差分析\nggbetweenstats(\n  data = mpg,\n  x = class,\n  y = displ,\n  type = \"parametric\",        \n  palette = \"Accent\", \n  violin.args = list(width = 0),\n  title = \"Suv, Midsize, Compact, Subcompact, Other五个组别的排量比较\",\n  xlab = \"Class\",\n  ylab = \"发动机排量\",\n  bf.message = FALSE,\n  digits = 3L\n)"
+  },
+  {
+    "objectID": "casetips.html#单因素方差分析-合并小类-排序",
+    "href": "casetips.html#单因素方差分析-合并小类-排序",
+    "title": "《R语言与统计应用》实验报告常见问题",
+    "section": "单因素方差分析 – 合并小类, 排序",
+    "text": "单因素方差分析 – 合并小类, 排序\n\n# 按中位数对 class 重新排序\ndf &lt;- mpg %&gt;%\n  mutate(\n    class = fct_lump(class, n = 4),\n    class = fct_reorder(class, displ, \n                        .fun = median, .desc = TRUE)\n  )\n\n# 单因素方差分析\nggbetweenstats(\n  data = df,\n  x = class,\n  y = displ,\n  type = \"parametric\",        \n  palette = \"Accent\", \n  violin.args = list(width = 0),\n  title = \"Suv, Midsize, Compact, Subcompact, Other五个组别的排量比较\",\n  xlab = \"Class\",\n  ylab = \"发动机排量\",\n  bf.message = FALSE,\n  digits = 3L\n)"
+  },
+  {
+    "objectID": "case1pre.html",
+    "href": "case1pre.html",
+    "title": "广州6大品牌奶茶店消费价格分析",
+    "section": "",
+    "text": "数据来源：大众点评网，广州六大品牌奶茶店\n样本容量：336\n数据来源：大众点评网，广州6大奶茶品牌\n零售价格: retail.price\n团购价格：group.price\n品牌： brand\n区位：area\n市区：荔湾，越秀，天河，海珠\n近郊：白云，番禺，黄埔\n远郊：花都，从化，南沙，增城"
+  },
+  {
+    "objectID": "case1pre.html#数据和变量",
+    "href": "case1pre.html#数据和变量",
+    "title": "广州6大品牌奶茶店消费价格分析",
+    "section": "",
+    "text": "数据来源：大众点评网，广州六大品牌奶茶店\n样本容量：336\n数据来源：大众点评网，广州6大奶茶品牌\n零售价格: retail.price\n团购价格：group.price\n品牌： brand\n区位：area\n市区：荔湾，越秀，天河，海珠\n近郊：白云，番禺，黄埔\n远郊：花都，从化，南沙，增城"
+  },
+  {
+    "objectID": "case1pre.html#图形工具",
+    "href": "case1pre.html#图形工具",
+    "title": "广州6大品牌奶茶店消费价格分析",
+    "section": "2 图形工具",
+    "text": "2 图形工具\n2.1 帕累托图\n2.2 分组条形图\n2.3 分组直方图\n2.4 分组箱线图\n2.5 散点图"
+  },
+  {
+    "objectID": "case1pre.html#帕累托图",
+    "href": "case1pre.html#帕累托图",
+    "title": "广州6大品牌奶茶店消费价格分析",
+    "section": "2.1 帕累托图",
+    "text": "2.1 帕累托图\n\nlibrary(tidyverse)\nlibrary(readxl)\ndata  &lt;- read_excel(\"data/top6.xlsx\")\n\nlibrary(forcats)\ndata %&gt;% ggplot(aes(fct_infreq(brand), fill = brand)) + \n  geom_bar() +\n  geom_text(stat = \"count\", aes(label = after_stat(count)), vjust = -0.5)+ \n  scale_y_continuous(limits = c(0,100))+\n  guides(x = guide_axis(angle = 45)) +\n  labs(x = \"品牌\", fill = \"品牌\") +\n  theme_bw() +\n  theme(text = element_text(size = 15),\n        legend.position = \"bottom\",\n        legend.text = element_text(size = 10))"
+  },
+  {
+    "objectID": "case1pre.html#分组条形图",
+    "href": "case1pre.html#分组条形图",
+    "title": "广州6大品牌奶茶店消费价格分析",
+    "section": "2.2 分组条形图",
+    "text": "2.2 分组条形图\n\ndata %&gt;%\n  group_by(area, brand) %&gt;%\n  summarise(count = n(), .groups = \"drop\") %&gt;% \n  mutate(brand_order = paste(brand, area, rank(-count), sep = \"_\"))  %&gt;% \n  ggplot(aes(reorder(brand_order, -count),\n             count, fill = brand)) +\n  geom_col()+\n  facet_wrap(~ area, scales = \"free_x\", ncol = 3) +\n  geom_text(aes(label = count), vjust = -0.5) +\n  scale_x_discrete(labels = function(x) gsub(\"_.+$\", \"\", x)) + # 移除排序编号\n  scale_y_continuous(limits = c(0, 42)) +\n  labs(x = \"品牌\", y = \"数量\") +\n  theme(axis.text.x = element_text(angle = 42, hjust = 1), \n        legend.position = \"none\")"
+  },
+  {
+    "objectID": "case1pre.html#分组直方图",
+    "href": "case1pre.html#分组直方图",
+    "title": "广州6大品牌奶茶店消费价格分析",
+    "section": "2.3 分组直方图",
+    "text": "2.3 分组直方图\n\n#按单个定性变量分组\ndata %&gt;% \n  ggplot(aes(retail.price, fill = brand))+\n  geom_histogram(breaks = seq(6, 38, 2))+\n  facet_wrap(~brand, ncol = 2) +\n  scale_y_continuous(limits = c(0,60))+\n  scale_fill_brewer(palette  = \"Set1\") +\n  labs(title = \"零售价直方图\",\n       x = \"零售价\",\n       y = \"频数\") +\n  scale_x_continuous(breaks = seq(6, 36, 4),\n                     labels = seq(6, 36, 4)) +\n  theme_bw() +\n  theme(text = element_text(size = 15),\n        legend.position = \"bottom\",\n        legend.text = element_text(size = 10))\n\n\n\n\n\n\n\n\n零售价格：喜茶&gt;茶百道&gt;TANNING&gt;CoCo都可&gt;书亦烧仙草&gt;益禾堂"
+  },
+  {
+    "objectID": "case1pre.html#分组箱线图",
+    "href": "case1pre.html#分组箱线图",
+    "title": "广州6大品牌奶茶店消费价格分析",
+    "section": "2.4 分组箱线图",
+    "text": "2.4 分组箱线图\n\ndata %&gt;% \n  ggplot(aes(retail.price, reorder(brand, retail.price, FUN = median),\n             col = brand))+\n  geom_boxplot()+\n  labs(title =\"六大奶茶品牌零售价格\",\n       x = \"零售价格\",\n       y = \"品牌\", fill = \"品牌\")+\n  theme_bw() +\n  theme(text = element_text(size = 15),\n        legend.position = \"bottom\",\n        legend.text = element_text(size = 10))\n\n\n\n\n\n\n\n\n零售价格：喜茶&gt;茶百道&gt;TANNING&gt;CoCo都可&gt;书亦烧仙草&gt;益禾堂"
+  },
+  {
+    "objectID": "case1pre.html#散点图",
+    "href": "case1pre.html#散点图",
+    "title": "广州6大品牌奶茶店消费价格分析",
+    "section": "2.5 散点图",
+    "text": "2.5 散点图\n\ndata %&gt;% \n  ggplot(aes(retail.price, groupbuy.price,col = brand))+\n  geom_point()+\n  geom_jitter()+\n  geom_smooth(method = lm, se = F) +\n  labs(title = \"零售价格与团购价散点图\",\n       x = \"零售价\",\n       y = \"团购价\") +\n  theme_bw() +\n    theme(text = element_text(size = 15),\n        legend.position = \"bottom\",\n        legend.text = element_text(size = 10))\n\n\n\n\n\n\n\n\n无论在市区、近郊、远郊，同一品牌的团购价格相同。"
+  },
+  {
+    "objectID": "case1pre.html#全样本",
+    "href": "case1pre.html#全样本",
+    "title": "广州6大品牌奶茶店消费价格分析",
+    "section": "3.1 全样本",
+    "text": "3.1 全样本\n\nlibrary(psych)\n\ndata %&gt;% \n  select(retail.price, groupbuy.price, comment.num) %&gt;%\n  describe() %&gt;% \n  select(n, mean, sd, median, min, max, skew, kurtosis)\n\n                 n   mean      sd median min   max skew kurtosis\nretail.price   336  15.60    5.26   15.0   7    35 1.53     1.72\ngroupbuy.price 301  10.85    4.00   10.5   6    18 0.22    -1.15\ncomment.num    336 564.28 1027.57  281.0  13 10598 5.24    36.47"
+  },
+  {
+    "objectID": "case1pre.html#表格中添加分布图像",
+    "href": "case1pre.html#表格中添加分布图像",
+    "title": "广州6大品牌奶茶店消费价格分析",
+    "section": "表格中添加分布图像",
+    "text": "表格中添加分布图像\n{gtExtras}\n\nlibrary(gtExtras)\n\ndata %&gt;% \n  select(retail.price, groupbuy.price) %&gt;%\n  gt_plt_summary()\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.\n\n\n336 rows x 2 cols\n\n\n\nColumn\nPlot Overview\nMissing\nMean\nMedian\nSD\n\n\n\n\n\n\n\nretail.price\n\n\n\n      \n\n0.0%\n15.6\n15.0\n5.3\n\n\n\n\n\ngroupbuy.price\n\n\n\n      \n\n10.4%\n10.9\n10.5\n4.0"
+  },
+  {
+    "objectID": "case1pre.html#表格中添加分布图像-1",
+    "href": "case1pre.html#表格中添加分布图像-1",
+    "title": "广州6大品牌奶茶店消费价格分析",
+    "section": "表格中添加分布图像",
+    "text": "表格中添加分布图像\n{gtExtras}\n\nretail_group &lt;- data %&gt;% \n  select(brand, retail.price) %&gt;%\n  group_by(brand) %&gt;%\n  summarize(mean = mean(retail.price) %&gt;% round(3),\n            median = median(retail.price)%&gt;% round(3),\n            sd = sd(retail.price)%&gt;% round(3),\n            retail_t = list(retail.price))\n\n\nretail_group %&gt;%\n  arrange(desc(mean)) %&gt;% \n  gt() %&gt;% \n  gt_plt_dist(retail_t,\n              type = \"histogram\",\n              line_color = \"purple\",\n              fill_color = \"green\",\n              bw = 1)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nbrand\nmean\nmedian\nsd\nretail_t\n\n\n\n\n喜茶\n27.930\n28\n1.818\n\n\n\n   \n\n\n\n茶百道\n15.603\n16\n1.154\n\n\n\n   \n\n\n\nTANING手挞柠檬茶\n15.023\n15\n1.067\n\n\n\n   \n\n\n\nCoCo都可\n14.391\n14\n2.013\n\n\n\n   \n\n\n\n书亦烧仙草\n13.415\n13\n1.770\n\n\n\n   \n\n\n\n益禾堂\n10.067\n10\n1.286"
+  },
+  {
+    "objectID": "case1pre.html#分品牌零售价格比较",
+    "href": "case1pre.html#分品牌零售价格比较",
+    "title": "广州6大品牌奶茶店消费价格分析",
+    "section": "3.2 分品牌零售价格比较",
+    "text": "3.2 分品牌零售价格比较\n\ndata %&gt;%\n  group_by(brand) %&gt;%\n  summarize(n(),\n            min = min(retail.price),\n            q1 = quantile(retail.price, 0.25),\n            median = median(retail.price),\n            mean = mean(retail.price),\n            q3 = quantile(retail.price, 0.75),\n            max = max(retail.price),\n            sd = sd(retail.price)) %&gt;% \n  arrange(desc(median))\n\n# A tibble: 6 × 9\n  brand            `n()`   min    q1 median  mean    q3   max    sd\n  &lt;chr&gt;            &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n1 喜茶                43    24  27       28  27.9  29      35  1.82\n2 茶百道              58    13  15       16  15.6  16      19  1.15\n3 TANING手挞柠檬茶    44    13  14.8     15  15.0  16      18  1.07\n4 CoCo都可            64    11  13       14  14.4  15      23  2.01\n5 书亦烧仙草          82    10  12       13  13.4  14.8    21  1.77\n6 益禾堂              45     7   9       10  10.1  11      13  1.29\n\n\n零售价格：喜茶&gt;茶百道&gt;TANNING&gt;CoCo都可&gt;书亦烧仙草&gt;益禾堂"
+  },
+  {
+    "objectID": "case1pre.html#分区域零售价格比较",
+    "href": "case1pre.html#分区域零售价格比较",
+    "title": "广州6大品牌奶茶店消费价格分析",
+    "section": "3.3 分区域零售价格比较",
+    "text": "3.3 分区域零售价格比较\n\nlibrary(psych)\n\ndata %&gt;%\n  group_by(area) %&gt;%\n  summarize(n(),\n            min = min(retail.price),\n            q1 = quantile(retail.price, 0.25),\n            median = median(retail.price),\n            mean = mean(retail.price),\n            q3 = quantile(retail.price, 0.75),\n            max = max(retail.price),\n            sd = sd(retail.price))%&gt;% \n  arrange(desc(median))\n\n# A tibble: 3 × 9\n  area  `n()`   min    q1 median  mean    q3   max    sd\n  &lt;chr&gt; &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n1 市区    168     8    13     15  16.5  16.2    35  5.90\n2 近郊    138     7    13     14  14.7  16      30  4.20\n3 远郊     30     8    11     14  14.5  16      28  5.06\n\n\n零售价格：市区&gt;近郊&gt;远郊"
+  },
+  {
+    "objectID": "case1pre.html#section",
+    "href": "case1pre.html#section",
+    "title": "广州6大品牌奶茶店消费价格分析",
+    "section": "",
+    "text": "Thanks for your attention！"
+  },
+  {
+    "objectID": "case1code.html",
+    "href": "case1code.html",
+    "title": "Case 1 based on Chap 3 and Chap 4",
+    "section": "",
+    "text": "library(tidyverse)\n\n\nlibrary(readxl)\ndata  &lt;- read_excel(\"data/top6.xlsx\")\n\n\n#加载fct_infreq包\nlibrary(forcats)\ndata %&gt;% ggplot(aes(fct_infreq(brand))) + \n  geom_bar(col = 6, fill = 6) +\n  facet_wrap(~area) +\n  guides(x = guide_axis(angle = 45)) +\n  labs(x = \"品牌\")\n\n\n\n\n\n\n\ndata %&gt;% ggplot(aes(fct_infreq(area))) + \n  geom_bar(col = 1, fill = \"cyan\")+\n  facet_wrap(~brand)+\n  guides(x = guide_axis(angle = 45)) +\n  labs(x = \"品牌\")"
+  },
+  {
+    "objectID": "case1code.html#直方图",
+    "href": "case1code.html#直方图",
+    "title": "Case 1 based on Chap 3 and Chap 4",
+    "section": "直方图",
+    "text": "直方图\n\n普通直方图\n\ndata %&gt;% \n  ggplot(aes(retail.price))+\n  geom_histogram(col = 1, fill = 5, breaks = seq(2, 38, 2)) +\n  labs(title = \"零售价直方图\",\n       x = \"团购价格\",\n       y = \"频数\") +\n  scale_x_continuous(breaks = seq(2, 38, 2),\n                     labels = seq(2, 38, 2)) +\n  theme(text = element_text(size = 15)) \n\n\n\n\n\n\n\ndata %&gt;%\n  filter(!is.na(groupbuy.price)) %&gt;% \n  ggplot(aes(groupbuy.price))+\n  geom_histogram(col = 1, fill = 5, breaks = seq(2, 38, 2)) +\n  labs(title = \"团购价直方图\",\n       x = \"团购价\",\n       y = \"频数\") +\n  scale_x_continuous(breaks = seq(2, 38, 2),\n                     labels = seq(2, 38, 2)) +\n  theme(text = element_text(size = 15)) \n\n\n\n\n\n\n\n\n\n\n分组直方图\n\n#按单个定性变量分组\ndata %&gt;% \n  ggplot(aes(retail.price, fill = area))+\n  geom_histogram()+\n  facet_wrap(~area, ncol = 1) +\n  labs(title = \"零售价直方图\",\n       x = \"零售价\",\n       y = \"频数\") +\n  theme(text = element_text(size = 15)) \n\n`stat_bin()` using `bins = 30`. Pick better value `binwidth`.\n\n\n\n\n\n\n\n\ndata %&gt;% \n  ggplot(aes(retail.price, fill = area))+\n  geom_density()+\n  facet_wrap(~area, ncol = 1) +\n  labs(title = \"零售价直方图\",\n       x = \"零售价\",\n       y = \"概率密度\") +\n  theme(text = element_text(size = 15)) \n\n\n\n\n\n\n\ndata %&gt;% \n  ggplot(aes(retail.price, color = brand, fill = brand))+\n  geom_histogram()+\n  facet_wrap(~brand, ncol = 1)+\n  labs(title = \"零售价直方图\",\n       x = \"零售价\",\n       y = \"频数\") +\n  theme(text = element_text(size = 15)) \n\n`stat_bin()` using `bins = 30`. Pick better value `binwidth`.\n\n\n\n\n\n\n\n\n#按两个定性变量分组后的直方图\ndata %&gt;% \n  ggplot(aes(retail.price, fill = brand))+\n  geom_histogram(breaks = seq(2, 38, 2))+\n  facet_grid(vars(brand), vars(area)) +\n  labs(title = \"零售价直方图\",\n       x = \"零售价\",\n       y = \"频数\") +\n  theme(text = element_text(size = 10),\n        legend.position = \"bottom\") \n\n\n\n\n\n\n\n\n\n\n概率密度曲线\n\ndata %&gt;% \n  ggplot(aes(retail.price, color = area))+\n  geom_histogram(aes(y = ..density..,\n                 fill = area), breaks = seq(2, 38, 1))+\n  geom_density(lwd = 1, linetype = 1)+\n  facet_wrap(~area,ncol=1)\n\nWarning: The dot-dot notation (`..density..`) was deprecated in ggplot2 3.4.0.\nℹ Please use `after_stat(density)` instead."
+  },
+  {
+    "objectID": "case1code.html#频数折线图",
+    "href": "case1code.html#频数折线图",
+    "title": "Case 1 based on Chap 3 and Chap 4",
+    "section": "频数折线图",
+    "text": "频数折线图\n\n#分组频数折线图\ndata %&gt;% \n  ggplot(aes(retail.price, col = area))+\n  geom_freqpoly(breaks = seq(2, 38, 1))+\n  facet_wrap(~area, ncol = 1)"
+  },
+  {
+    "objectID": "case1code.html#箱线图",
+    "href": "case1code.html#箱线图",
+    "title": "Case 1 based on Chap 3 and Chap 4",
+    "section": "箱线图",
+    "text": "箱线图\n\n简单箱线图\n\ndata %&gt;% \n  ggplot(aes(retail.price))+\n  geom_boxplot()\n\n\n\n\n\n\n\ndata %&gt;%\n  filter(!is.na(groupbuy.price)) %&gt;% \n  ggplot(aes(groupbuy.price))+\n  geom_boxplot()\n\n\n\n\n\n\n\n\n\n\n分组箱线图\n\n#facet_wrap 切面\n#ncol=1 图形排成1列\ndata %&gt;% \n  ggplot(aes(retail.price,col = area)) +\n  geom_boxplot() +\n  facet_wrap(~area, ncol=1) +\n  labs(title = \"零售价格箱线图\",\n       x = \"零售价格\",\n       y = \"频数\") +\n  theme(text = element_text(size = 15))\n\n\n\n\n\n\n\ndata %&gt;% \n  mutate(brand = reorder(brand, retail.price, FUN = median)) %&gt;%  \n  ggplot(aes(retail.price, col = brand)) +\n  geom_boxplot()+\n  facet_wrap(~brand,ncol=1) +\n  labs(title = \"零售价格箱线图\",\n       x = \"零售价格\",\n       y = \"频数\") +\n  theme(text = element_text(size = 10))\n\n\n\n\n\n\n\n\n\n\n按数值大小将箱线图排序\n\n#分组箱线图，箱体按价格降序排列\n#在aes()中设置X轴映射厂家\n#guides(x = guide_axis(n.dodge = 3)) X轴分类标签错位\ndata %&gt;% \n  ggplot(aes(reorder(brand,-retail.price),\n             retail.price,col = brand))+\n  geom_boxplot()+\n  guides(x = guide_axis(n.dodge = 3))+\n  labs(title =\"六大奶茶品牌零售价格\",\n          x = \"品牌\",Y = \"零售价格\")\n\nIgnoring unknown labels:\n• Y : \"零售价格\"\n\n\n\n\n\n\n\n\ndata %&gt;% \n  ggplot(aes(retail.price,reorder(brand,-retail.price),\n             col = brand))+\n  geom_boxplot()+\n  labs(title =\"六大奶茶品牌零售价格\",\n       x = \"零售价格\",Y = \"品牌\")\n\nIgnoring unknown labels:\n• Y : \"品牌\"\n\n\n\n\n\n\n\n\ndata %&gt;% \n  ggplot(aes(retail.price,reorder(area,-retail.price),\n             col = area))+\n  geom_boxplot()+\n  labs(title =\"六大奶茶品牌零售价格\",\n       x = \"零售价格\",Y = \"区域\")\n\nIgnoring unknown labels:\n• Y : \"区域\""
+  },
+  {
+    "objectID": "case1code.html#全样本描述统计",
+    "href": "case1code.html#全样本描述统计",
+    "title": "Case 1 based on Chap 3 and Chap 4",
+    "section": "全样本描述统计",
+    "text": "全样本描述统计\n\n#描述统计\nlibrary(psych)\n\n\nAttaching package: 'psych'\n\n\nThe following objects are masked from 'package:ggplot2':\n\n    %+%, alpha\n\ndescribe(data)\n\n               vars   n   mean      sd median trimmed    mad min     max\nNo                1 336 168.50   97.14  168.5  168.50 124.54   1   336.0\nID                2 336 406.38  241.82  524.5  405.62 345.45  60   759.0\nbrand*            3 336   3.40    1.72    3.0    3.38   1.48   1     6.0\nbranch*           4 334 144.17   83.62  147.5  144.70 108.97   1   283.0\nstar              5 336   3.73    0.36    3.5    3.69   0.00   3     4.5\ncomment.num       6 336 564.28 1027.57  281.0  342.00 245.37  13 10598.0\nretail.price      7 336  15.60    5.26   15.0   14.78   2.97   7    35.0\ngroupbuy.price    8 301  10.85    4.00   10.5   10.57   5.19   6    18.0\ngroupbuy          9 336   0.90    0.31    1.0    0.99   0.00   0     1.0\nvoucher          10 336   0.27    0.44    0.0    0.21   0.00   0     1.0\ndistrict*        11 336   6.35    2.42    6.0    6.23   2.97   1    11.0\narea*            12 336   1.59    0.65    1.5    1.50   0.74   1     3.0\nurban*           13 336   1.50    0.50    1.5    1.50   0.74   1     2.0\n                 range  skew kurtosis    se\nNo               335.0  0.00    -1.21  5.30\nID               699.0 -0.01    -1.64 13.19\nbrand*             5.0  0.12    -1.22  0.09\nbranch*          282.0 -0.05    -1.26  4.58\nstar               1.5  0.65    -0.14  0.02\ncomment.num    10585.0  5.24    36.47 56.06\nretail.price      28.0  1.53     1.72  0.29\ngroupbuy.price    12.0  0.22    -1.15  0.23\ngroupbuy           1.0 -2.58     4.67  0.02\nvoucher            1.0  1.04    -0.91  0.02\ndistrict*         10.0  0.40    -0.73  0.13\narea*              2.0  0.65    -0.61  0.04\nurban*             1.0  0.00    -2.01  0.03\n\nsummary(data)\n\n       No               ID           brand              branch         \n Min.   :  1.00   Min.   : 60.0   Length:336         Length:336        \n 1st Qu.: 84.75   1st Qu.:180.8   Class :character   Class :character  \n Median :168.50   Median :524.5   Mode  :character   Mode  :character  \n Mean   :168.50   Mean   :406.4                                        \n 3rd Qu.:252.25   3rd Qu.:640.2                                        \n Max.   :336.00   Max.   :759.0                                        \n                                                                       \n      star        comment.num       retail.price  groupbuy.price \n Min.   :3.000   Min.   :   13.0   Min.   : 7.0   Min.   : 6.00  \n 1st Qu.:3.500   1st Qu.:  137.5   1st Qu.:13.0   1st Qu.: 6.00  \n Median :3.500   Median :  281.0   Median :15.0   Median :10.50  \n Mean   :3.729   Mean   :  564.3   Mean   :15.6   Mean   :10.85  \n 3rd Qu.:4.000   3rd Qu.:  481.5   3rd Qu.:16.0   3rd Qu.:13.00  \n Max.   :4.500   Max.   :10598.0   Max.   :35.0   Max.   :18.00  \n                                                  NA's   :35     \n    groupbuy         voucher         district             area          \n Min.   :0.0000   Min.   :0.0000   Length:336         Length:336        \n 1st Qu.:1.0000   1st Qu.:0.0000   Class :character   Class :character  \n Median :1.0000   Median :0.0000   Mode  :character   Mode  :character  \n Mean   :0.8958   Mean   :0.2679                                        \n 3rd Qu.:1.0000   3rd Qu.:1.0000                                        \n Max.   :1.0000   Max.   :1.0000                                        \n                                                                        \n    urban          \n Length:336        \n Class :character  \n Mode  :character"
+  },
+  {
+    "objectID": "case1code.html#分组描述统计",
+    "href": "case1code.html#分组描述统计",
+    "title": "Case 1 based on Chap 3 and Chap 4",
+    "section": "分组描述统计",
+    "text": "分组描述统计\n\n#按area分组,报告retail.price的描述性统计量\ndata %&gt;%\n  group_by(area) %&gt;%\n  summarize(n(),\n            min = min(retail.price),\n            q1 = quantile(retail.price, 0.25),\n            median = median(retail.price),\n            mean = mean(retail.price),\n            q3 = quantile(retail.price, 0.75),\n            max = max(retail.price),\n            sd = sd(retail.price))\n\n# A tibble: 3 × 9\n  area  `n()`   min    q1 median  mean    q3   max    sd\n  &lt;chr&gt; &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n1 市区    168     8    13     15  16.5  16.2    35  5.90\n2 近郊    138     7    13     14  14.7  16      30  4.20\n3 远郊     30     8    11     14  14.5  16      28  5.06\n\n#按area分组,报告retail.price的描述性统计量，表格按mean降序排列\ndistrict_table &lt;- data %&gt;%\n  group_by(district) %&gt;%\n  summarize(n(),\n            min = min(retail.price),\n            q1 = quantile(retail.price, 0.25),\n            median = median(retail.price),\n            mean = mean(retail.price),\n            q3 = quantile(retail.price, 0.75),\n            max = max(retail.price),\n            sd = sd(retail.price)) %&gt;% arrange(desc(mean))\ndistrict_table\n\n# A tibble: 11 × 9\n   district `n()`   min    q1 median  mean    q3   max    sd\n   &lt;chr&gt;    &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n 1 越秀        36    10  14     15    17.1  16      31 5.68 \n 2 海珠        44     8  13     15    16.6  17.2    31 6.09 \n 3 花都         6     9  13.5   15.5  16.5  17.5    28 6.41 \n 4 荔湾        17    11  13     15    16.3  16      29 5.60 \n 5 天河        71     9  13     14    16.3  16      35 6.05 \n 6 南沙         7     8  10.5   14    15.6  19      28 7.04 \n 7 白云        68     9  13     15    15.3  16      30 4.53 \n 8 番禺        48     7  13     14.5  14.8  16      30 4.13 \n 9 增城        15     9  11     14    13.5  14.5    23 3.52 \n10 黄埔        22     8  10.5   12.5  12.6  14.8    16 2.44 \n11 从化         2    11  11.2   11.5  11.5  11.8    12 0.707\n\n#按area分组,报告retail.price的描述性统计量，表格按`n()`降序排列\ndistrict_table &lt;- data %&gt;%\n  group_by(district) %&gt;%\n  summarize(n(),\n            min = min(retail.price),\n            q1 = quantile(retail.price, 0.25),\n            median = median(retail.price),\n            mean = mean(retail.price),\n            q3 = quantile(retail.price, 0.75),\n            max = max(retail.price),\n            sd = sd(retail.price)) %&gt;% arrange(desc(`n()`))\ndistrict_table\n\n# A tibble: 11 × 9\n   district `n()`   min    q1 median  mean    q3   max    sd\n   &lt;chr&gt;    &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n 1 天河        71     9  13     14    16.3  16      35 6.05 \n 2 白云        68     9  13     15    15.3  16      30 4.53 \n 3 番禺        48     7  13     14.5  14.8  16      30 4.13 \n 4 海珠        44     8  13     15    16.6  17.2    31 6.09 \n 5 越秀        36    10  14     15    17.1  16      31 5.68 \n 6 黄埔        22     8  10.5   12.5  12.6  14.8    16 2.44 \n 7 荔湾        17    11  13     15    16.3  16      29 5.60 \n 8 增城        15     9  11     14    13.5  14.5    23 3.52 \n 9 南沙         7     8  10.5   14    15.6  19      28 7.04 \n10 花都         6     9  13.5   15.5  16.5  17.5    28 6.41 \n11 从化         2    11  11.2   11.5  11.5  11.8    12 0.707\n\n#按area分组,报告groupbuy.price的描述性统计量，表格按`n()`降序排列\n#filter(!is.na(groupbuy.price)) 剔除有缺失值的个案\ndistrict_table &lt;- data %&gt;%\n  group_by(area) %&gt;% \n  filter(!is.na(groupbuy.price)) %&gt;% \n  summarize(n(),\n           retail.mean = mean(retail.price),\n           groupbuy.mean = mean(groupbuy.price)) %&gt;% \n           arrange(desc(`n()`))\ndistrict_table\n\n# A tibble: 3 × 4\n  area  `n()` retail.mean groupbuy.mean\n  &lt;chr&gt; &lt;int&gt;       &lt;dbl&gt;         &lt;dbl&gt;\n1 市区    150        16.1         11.7 \n2 近郊    126        14.5         10.2 \n3 远郊     25        15.3          9.36\n\n#按品牌分组,报告retail.price的描述性统计量，表格按`n()`降序排列\n#filter(`n()`&gt;20) 选择分店数量多于20家的品牌\n#MAC：`` option+tilda\nbrand_table &lt;- data %&gt;%\n  group_by(brand) %&gt;%\n  summarize(n(),\n            min = min(retail.price),\n            q1 = quantile(retail.price, 0.25),\n            median = median(retail.price),\n            mean = mean(retail.price),\n            q3 = quantile(retail.price, 0.75),\n            max = max(retail.price),\n            sd = sd(retail.price)) %&gt;% filter(\n              `n()`&gt;20) %&gt;% arrange(desc(mean))\nbrand_table\n\n# A tibble: 6 × 9\n  brand            `n()`   min    q1 median  mean    q3   max    sd\n  &lt;chr&gt;            &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n1 喜茶                43    24  27       28  27.9  29      35  1.82\n2 茶百道              58    13  15       16  15.6  16      19  1.15\n3 TANING手挞柠檬茶    44    13  14.8     15  15.0  16      18  1.07\n4 CoCo都可            64    11  13       14  14.4  15      23  2.01\n5 书亦烧仙草          82    10  12       13  13.4  14.8    21  1.77\n6 益禾堂              45     7   9       10  10.1  11      13  1.29\n\n#按brand, area两个变量分组\n\nbrand_table &lt;- data %&gt;%\n  group_by(brand, area) %&gt;%\n  summarize(n(),\n            min = min(retail.price),\n            q1 = quantile(retail.price, 0.25),\n            median = median(retail.price),\n            mean = mean(retail.price),\n            q3 = quantile(retail.price, 0.75),\n            max = max(retail.price),\n            sd = sd(retail.price)) %&gt;% filter(\n              `n()`&gt;10) %&gt;% arrange(desc(mean))\n\n`summarise()` has grouped output by 'brand'. You can override using the\n`.groups` argument.\n\nbrand_table\n\n# A tibble: 11 × 10\n# Groups:   brand [6]\n   brand            area  `n()`   min    q1 median  mean    q3   max    sd\n   &lt;chr&gt;            &lt;chr&gt; &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n 1 喜茶             市区     32    24  27     27.5  27.9  28.2    35 1.95 \n 2 茶百道           市区     23    13  15     16    15.7  16.5    18 1.27 \n 3 茶百道           近郊     32    14  15     15    15.4  16      19 1.01 \n 4 TANING手挞柠檬茶 市区     26    13  15     15    15.0  15      18 1.08 \n 5 TANING手挞柠檬茶 近郊     16    13  14.8   15    14.9  16      16 0.998\n 6 CoCo都可         近郊     21    12  13     14    14.4  16      20 2.04 \n 7 CoCo都可         市区     37    11  13     14    14.2  15      18 1.59 \n 8 书亦烧仙草       近郊     39    10  12.5   14    13.6  15      16 1.43 \n 9 书亦烧仙草       市区     33    10  12     13    13.2  14      16 1.72 \n10 益禾堂           市区     17     8  10     10    10.4  11      13 1.18 \n11 益禾堂           近郊     21     7   9     10    10    11      13 1.45"
+  },
+  {
+    "objectID": "case1code.html#总体均值的区间估计",
+    "href": "case1code.html#总体均值的区间估计",
+    "title": "Case 1 based on Chap 3 and Chap 4",
+    "section": "总体均值的区间估计",
+    "text": "总体均值的区间估计\n\nt.test(data$retail.price)\n\n\n    One Sample t-test\n\ndata:  data$retail.price\nt = 54.381, df = 335, p-value &lt; 2.2e-16\nalternative hypothesis: true mean is not equal to 0\n95 percent confidence interval:\n 15.03399 16.16244\nsample estimates:\nmean of x \n 15.59821 \n\n# retail.price总体均值的95%的区间估计\nc(t.test(data$retail.price)$conf.int[1],\nt.test(data$retail.price)$conf.int[2])\n\n[1] 15.03399 16.16244"
+  },
+  {
+    "objectID": "case1code.html#总体方差的区间估计",
+    "href": "case1code.html#总体方差的区间估计",
+    "title": "Case 1 based on Chap 3 and Chap 4",
+    "section": "总体方差的区间估计",
+    "text": "总体方差的区间估计\n\nlibrary(EnvStats)\n\n\nAttaching package: 'EnvStats'\n\n\nThe following objects are masked from 'package:stats':\n\n    predict, predict.lm\n\n\nThe following object is masked from 'package:base':\n\n    print.default\n\nvarTest(data$retail.price)\n\n$statistic\nChi-Squared \n   9260.759 \n\n$parameters\n df \n335 \n\n$p.value\n[1] 0\n\n$estimate\nvariance \n27.64406 \n\n$null.value\nvariance \n       1 \n\n$alternative\n[1] \"two.sided\"\n\n$method\n[1] \"Chi-Squared Test on Variance\"\n\n$data.name\n[1] \"data$retail.price\"\n\n$conf.int\n     LCL      UCL \n23.89261 32.35905 \nattr(,\"conf.level\")\n[1] 0.95\n\nattr(,\"class\")\n[1] \"htestEnvStats\"\n\n# retail.price总体方差的95%的区间估计\nc(varTest(data$retail.price)$conf.int[1],\nvarTest(data$retail.price)$conf.int[2])\n\n     LCL      UCL \n23.89261 32.35905"
+  },
+  {
+    "objectID": "case1code.html#总体均值的t检验",
+    "href": "case1code.html#总体均值的t检验",
+    "title": "Case 1 based on Chap 3 and Chap 4",
+    "section": "总体均值的t检验",
+    "text": "总体均值的t检验\n\nmean(data$retail.price)\n\n[1] 15.59821\n\n#检验retail.price总体均值是否大于15.5？\n#右侧检验，显著性水平为0.01\nt.test(data$retail.price,alter = \"greater\", mu = 15.5, conf.level = 0.01)\n\n\n    One Sample t-test\n\ndata:  data$retail.price\nt = 0.34241, df = 335, p-value = 0.3661\nalternative hypothesis: true mean is greater than 15.5\n1 percent confidence interval:\n 16.2687     Inf\nsample estimates:\nmean of x \n 15.59821 \n\n# p-value为0.001,拒绝原假设。"
+  },
+  {
+    "objectID": "case1code.html#总体方差的卡方检验",
+    "href": "case1code.html#总体方差的卡方检验",
+    "title": "Case 1 based on Chap 3 and Chap 4",
+    "section": "总体方差的卡方检验",
+    "text": "总体方差的卡方检验"
+  },
+  {
+    "objectID": "case1code.html#两个总体方差的f检验",
+    "href": "case1code.html#两个总体方差的f检验",
+    "title": "Case 1 based on Chap 3 and Chap 4",
+    "section": "两个总体方差的F检验",
+    "text": "两个总体方差的F检验"
+  },
+  {
+    "objectID": "case1code.html#两个总体均值的t检验",
+    "href": "case1code.html#两个总体均值的t检验",
+    "title": "Case 1 based on Chap 3 and Chap 4",
+    "section": "两个总体均值的t检验",
+    "text": "两个总体均值的t检验"
+  },
+  {
+    "objectID": "projects.html#project-2",
+    "href": "projects.html#project-2",
+    "title": "Projects",
+    "section": "Project 2",
+    "text": "Project 2"
+  },
+  {
+    "objectID": "projects.html#project-3",
+    "href": "projects.html#project-3",
+    "title": "Projects",
+    "section": "Project 3",
+    "text": "Project 3"
+  },
+  {
+    "objectID": "chap1slide.html",
+    "href": "chap1slide.html",
+    "title": "Chapter 1 The Nature and Scope of Econometrics",
+    "section": "",
+    "text": "注意：本讲义供学习交流使用，请勿用于商业用途"
+  },
+  {
+    "objectID": "report.html",
+    "href": "report.html",
+    "title": "实验报告要求",
+    "section": "",
+    "text": "详见👉:小组任务要求"
+  },
+  {
+    "objectID": "report.html#封面",
+    "href": "report.html#封面",
+    "title": "实验报告要求",
+    "section": "封面",
+    "text": "封面\n\n课程名称：计量经济学实验\n学期：2025 - 2026第2学期\n题目：\n小组成员(按学号由小到大排列)\n\n学号1 组员1\n学号2 组员2\n学号3 组员3\n学号4 组员4"
+  },
+  {
+    "objectID": "report.html#选题背景与研究问题",
+    "href": "report.html#选题背景与研究问题",
+    "title": "实验报告要求",
+    "section": "1 选题背景与研究问题",
+    "text": "1 选题背景与研究问题\n\n撰写要求：\n\n简述你观察到的某种经济或社会现象，并说明为什么研究这个现象是有趣且有现实价值的（研究动机）。\n明确本研究试图回答的一个或几个问题(如X1对Y有何影响？)。"
+  },
+  {
+    "objectID": "report.html#理论逻辑与研究假说",
+    "href": "report.html#理论逻辑与研究假说",
+    "title": "实验报告要求",
+    "section": "2 理论逻辑与研究假说",
+    "text": "2 理论逻辑与研究假说\n\n撰写要求：\n\n基于你的直觉判断或经济学常识，阐述变量间的内在影响机制。\n明确提出待检验的科学假说 \\(H_1\\)。\n\n评分要点：\n\n逻辑推演合理，能清晰解释“为什么对变量之间的关系有这样的预期”。\n假说表述具体、可观测、可证伪。"
+  },
+  {
+    "objectID": "report.html#数据概况",
+    "href": "report.html#数据概况",
+    "title": "实验报告要求",
+    "section": "3 数据概况",
+    "text": "3 数据概况\n\n撰写要求：\n\n描述样本选取过程及样本容量。\n描述性统计：报告所有变量的均值、中位数、最小值、最大值、标准差。\n可视化探究：通过直方图、散点图、相关系数矩阵展示变量的分布，变量间的关联。\n\n评分要点：\n\n数据收集过程清晰，变量含义明确，统计量、图形完整。"
+  },
+  {
+    "objectID": "report.html#实证分析模型构建与检验",
+    "href": "report.html#实证分析模型构建与检验",
+    "title": "实验报告要求",
+    "section": "4 实证分析：模型构建与检验",
+    "text": "4 实证分析：模型构建与检验\n\n4.1 模型设定\n\n写出经济计量模型的表达式： \\[Y_{i} = B_0 + B_1 X_{1} +...+ B_2 X_{2} + u_{i}\\]\n选用你认为最合适的模型形式。\n\n\n\n4.2 参数估计结果\n\n按照学术规范列表报告模型估计结果（含系数、标准误/t值、显著性星号等）。\n解释为什么该模型是一个“好的”模型。\n选用你认为最合适的一个或几个模型\n不要写模型的尝试的过程，只写最终的模型设定\n\n\n\n\n4.3 模型诊断（重点）\n\n展示 R 或 EViews 的输出结果截图，并用“人话”简要解释：\n\n残差的图形诊断\n多余或遗漏变量的检验\n多重共线性诊断\n异方差检验\n\n\n\n\n4.4 估计结果解释\n\n显著系数：解释其经济学含义，讨论与现实/猜想是否一致。\n不显著系数：结合现实分析可能的原因（如样本量不足、内生性或确实无影响）。"
+  },
+  {
+    "objectID": "report.html#结论和启示",
+    "href": "report.html#结论和启示",
+    "title": "实验报告要求",
+    "section": "5 结论和启示",
+    "text": "5 结论和启示\n\n结论：概括实证研究最主要的发现，直接响应研究假说。\n启示：基于你的实证发现，提出 1-2 条具有现实意义的建议。"
+  },
+  {
+    "objectID": "report.html#eviews或r代码",
+    "href": "report.html#eviews或r代码",
+    "title": "实验报告要求",
+    "section": "6 EViews或R代码",
+    "text": "6 EViews或R代码\n\nEViews或R代码"
+  },
+  {
+    "objectID": "report.html#心得体会各成员独立完成",
+    "href": "report.html#心得体会各成员独立完成",
+    "title": "实验报告要求",
+    "section": "7 心得体会(各成员独立完成)",
+    "text": "7 心得体会(各成员独立完成)\n\n小组成员1学号 姓名 班级 个人心得体会\n\n本人在小组作业和实验报告中做的具体工作\n遇到过什么困难，如何解决的\n课程建议和感想\n个人心得体会字数不少于500字"
+  },
+  {
+    "objectID": "report.html#评分体系总览",
+    "href": "report.html#评分体系总览",
+    "title": "实验报告要求",
+    "section": "评分体系总览",
+    "text": "评分体系总览\n本实验报告采取百分制，旨在评估学生在经济学逻辑构建、计量模型应用、软件操作规范及学术反思四个维度的综合能力。"
+  },
+  {
+    "objectID": "report.html#详细评分指标",
+    "href": "report.html#详细评分指标",
+    "title": "实验报告要求",
+    "section": "详细评分指标",
+    "text": "详细评分指标\n\n1. 选题价值与变量构建 (20分)\n\n选题意义：研究课题具有明确的现实意义，非随意堆砌数据。\n变量定义：被解释变量、核心解释变量及控制变量选取有理论依据，变量定义准确。\n数据质量：数据来源可靠，样本量、变量的类型和个数满足课程要求。\n\n\n\n2. 理论框架与研究假说 (10分)\n\n逻辑推演：基于经济理论清晰阐述变量间的内在影响机制。\n假说表述：提出明确的待检验科学假说 \\(H_1\\)，要求假说具体、可观测、可证伪。\n\n\n\n3. 数据概览与特征分析 (10分)\n\n描述性统计：报告均值、标准差、最大/最小值等核心统计量，并对异常值进行识别与处理说明。\n可视化呈现：通过直方图、箱线图、散点图展现变量的分布，或变量之间间的关联。\n\n\n\n4. 实证模型与计量分析 (30分)\n\n模型设定：模型形式表达规范\n结果阐释：参数估计值的含义解释准确；显著性水平（p值、t值）标注规范。\n模型诊断：系统进行模型诊断，至少包含以下内容：\n\n残差的图形诊断\n多余或遗漏变量的检验\n多重共线性诊断\n异方差检验\n\n\n\n\n5. 结论提炼与对策建议 (10分)\n\n结论准确性：结论必须直接响应研究假说，严禁脱离实证结果过度推断。\n启示：基于实证发现提出针对性的建议，体现独立思考。\n\n\n\n6. 个人心得与反思 (10分)\n\n要求：各小组成员独立完成，字数不少于 500 字。\n\n\n具体贡献：清晰界定个人在数据收集、建模、代码编写或文档撰写中的具体具体工作。\n问题解决逻辑：详细描述在实验中遇到的具体困难（如软件报错、系数不显著等）以及寻找解决方案的过程。\n课程反馈：对教学内容的应用心得及建设性改进建议。\n\n\n\n7. 报告质量与技术附件 (10分)\n\n规范性：报告结构清晰，图表编号自动关联，语言表达专业。\n可复现性：**必须随报告提交Excel数据文件，以及EViews或R代码，老师运行代码后应能直接复现报告中的所有结果。"
+  },
+  {
+    "objectID": "report.html#加分项r-语言实践激励-额外加分-5-10",
+    "href": "report.html#加分项r-语言实践激励-额外加分-5-10",
+    "title": "实验报告要求",
+    "section": "加分项：R 语言实践激励 (额外加分 5-10%)",
+    "text": "加分项：R 语言实践激励 (额外加分 5-10%)\n为了鼓励学生探索现代数据科学工具，对于主动使用 R 语言 完成实验报告的小组，将在总分基础上获得额外加分。加分标准不仅取决于“使用了 R”，更取决于“如何使用 R”：\n\n基础加分 (5%) —— 技术迁移奖\n\n能够使用 R 完整复现实验报告要求的全部流程（从描述性统计到回归分析与诊断）。\n代码运行无误，注释清晰，输出图表（如 ggplot2 绘制的图形）比 EViews 默认图表更具专业美感。\n\n\n\n进阶加分 (6-10%) —— 技术规范奖\n\n若代码展现出以下高级素养，分值将向 6% - 10% 上浮：\n极致简洁与逻辑化 (Conciseness)：\n避免冗余代码，使用管道符（|&gt; 或 %&gt;%）使处理流程一目了然。\n变量命名规范，代码结构层级分明。\n高质量注释。\n\n\n\n加分后的总分上限不得超过 100 分。"
+  },
+  {
+    "objectID": "report.html#等级换算表",
+    "href": "report.html#等级换算表",
+    "title": "实验报告要求",
+    "section": "等级换算表",
+    "text": "等级换算表\n\n\n\n分数区间\n等级\n说明\n\n\n\n\n90-100\n优秀\n逻辑严密，模型诊断全面，内生性讨论深入，代码规范。\n\n\n80-89\n良好\n步骤完整，统计结果正确，能够独立解决大部分计量问题。\n\n\n70-79\n中等\n字数达标，模型设定基本合理，但分析深度不足。\n\n\n60-69\n及格\n完成基本流程，数据真实，但模型诊断及规范性欠缺。\n\n\n&lt; 60\n不及格\n存在抄袭嫌疑、数据造假或模型设定严重错误。"
+  },
+  {
+    "objectID": "chap10slide.html",
+    "href": "chap10slide.html",
+    "title": "Chapter 10 Autocorrelation",
+    "section": "",
+    "text": "注意：本讲义供学习交流使用，请勿用于商业用途"
   }
 ]
