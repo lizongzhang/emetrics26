@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Li Zongzhang">
-<meta name="dcterms.date" content="2026-03-13">
+<meta name="dcterms.date" content="2026-03-17">
 
 <title>小组任务 – Econometrics26</title>
 <style>
@@ -211,7 +211,7 @@ window.Quarto = {
   <li><a href="#评估核心准则" id="toc-评估核心准则" class="nav-link" data-scroll-target="#评估核心准则">评估核心准则</a></li>
   <li><a href="#讨论与汇报安排" id="toc-讨论与汇报安排" class="nav-link" data-scroll-target="#讨论与汇报安排">讨论与汇报安排</a>
   <ul class="collapse">
-  <li><a href="#第一次讨论课-第3-6周选题论证" id="toc-第一次讨论课-第3-6周选题论证" class="nav-link" data-scroll-target="#第一次讨论课-第3-6周选题论证">第一次讨论课 (第3-6周)：选题论证</a></li>
+  <li><a href="#第一次讨论课-第3-6周选题论证和数据收集" id="toc-第一次讨论课-第3-6周选题论证和数据收集" class="nav-link" data-scroll-target="#第一次讨论课-第3-6周选题论证和数据收集">第一次讨论课 (第3-6周)：选题论证和数据收集</a></li>
   <li><a href="#第二次讨论课-第7-9周基础建模" id="toc-第二次讨论课-第7-9周基础建模" class="nav-link" data-scroll-target="#第二次讨论课-第7-9周基础建模">第二次讨论课 (第7-9周)：基础建模</a></li>
   <li><a href="#第三次讨论课-第-10-13-周模型诊断与完善" id="toc-第三次讨论课-第-10-13-周模型诊断与完善" class="nav-link" data-scroll-target="#第三次讨论课-第-10-13-周模型诊断与完善">第三次讨论课 (第 10-13 周)：模型诊断与完善</a></li>
   </ul></li>
@@ -246,7 +246,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">2026-03-13</p>
+      <p class="date">2026-03-17</p>
     </div>
   </div>
   
@@ -464,8 +464,8 @@ window.Quarto = {
 </section>
 <section id="讨论与汇报安排" class="level2">
 <h2 class="anchored" data-anchor-id="讨论与汇报安排">讨论与汇报安排</h2>
-<section id="第一次讨论课-第3-6周选题论证" class="level3">
-<h3 class="anchored" data-anchor-id="第一次讨论课-第3-6周选题论证">第一次讨论课 (第3-6周)：选题论证</h3>
+<section id="第一次讨论课-第3-6周选题论证和数据收集" class="level3">
+<h3 class="anchored" data-anchor-id="第一次讨论课-第3-6周选题论证和数据收集">第一次讨论课 (第3-6周)：选题论证和数据收集</h3>
 <p><strong>提交选题信息问卷</strong>：<a href="https://v.wjx.cn/vm/rXTAiul.aspx#" class="uri">https://v.wjx.cn/vm/rXTAiul.aspx#</a></p>
 <details>
 <summary>
@@ -483,24 +483,26 @@ window.Quarto = {
 <ul>
 <li>全英文/拼音：变量名必须以英文字母开头。严禁使用中文、空格或特殊符号。</li>
 <li>禁用字符：不能包含中划线/短横线（-）、小圆点（.）。</li>
-<li>蛇形命名（snake_case）：所有字母小写，单词之间用下划线（_）连接。</li>
-<li>见名知意： 用 wage 而不是Y，用 edu 而不是 X2。</li>
+<li>蛇形命名（snake_case）：所有字母小写，单词之间用下划线（_）连接（如 laptop_price）。</li>
+<li>见名知意： 严禁使用 <span class="math inline">\(X1, Y\)</span> 等无意义符号，确保代码可读性。用 wage 而不是Y，用 edu 而不是 X1。</li>
 </ul></li>
 <li><strong>异常值处理</strong>
 <ul>
 <li>可视化检查：对定量变量绘制直方图或箱线图。</li>
-<li>IQR法：超出1.5倍IQR视为异常值，建议删除。</li>
+<li>优先采用 <span class="math inline">\(3 \times IQR\)</span> 规则 剔除极端值，以保留更多信息；若数据依然分布极度不均，再考虑 <span class="math inline">\(1.5 \times IQR\)</span>。 (注：剔除数值大于 <span class="math inline">\(Q3 + 3 \times IQR\)</span> 或小于 <span class="math inline">\(Q1 - 3 \times IQR\)</span> 的个案)。</li>
+<li>逻辑检查：务必剔除如“价格为0”、“年龄为负”等逻辑错误的个案。</li>
 </ul></li>
 <li><strong>定性变量分类优化</strong>：
 <ul>
-<li><strong>合并原则</strong>：若某个分类下的个案数量<strong>少于 10 个</strong>，建议进行合并。</li>
-<li><strong>逻辑合并</strong>：合并应基于逻辑相似性（如：将“硕士”和“博士”合并为“研究生”），严禁将互不相关的类别强行扔进“其他”类。</li>
+<li><strong>合并原则</strong>：若某个分类下的个案数量<strong>少于 10 个</strong>，建议合并。合并后建议每组样本数 <span class="math inline">\(&gt; 20\)</span>。</li>
+<li><strong>逻辑合并</strong>：合并应基于逻辑相似性（如：将“硕士”和“博士”合并为“研究生”）。</li>
 </ul></li>
 <li><strong>初步相关性分析</strong>：
 <ul>
-<li>报告 <span class="math inline">\(Y\)</span> 与各定量解释变量 <span class="math inline">\(X\)</span> 之间的<strong>相关系数矩阵</strong>（以截图或规范表格展示）。</li>
-<li>核心解释变量与 <span class="math inline">\(Y\)</span> 的相关系数绝对值 <span class="math inline">\(|r| &gt; 0.3\)</span>。</li>
+<li>报告 <span class="math inline">\(Y\)</span> 与各定量解释变量 <span class="math inline">\(X\)</span> 之间的<strong>相关系数矩阵</strong>。</li>
+<li>核心解释变量与 <span class="math inline">\(Y\)</span> 的相关系数绝对值 <span class="math inline">\(|r| &gt; 0.2-0.3\)</span>。</li>
 <li>确保变量间存在基本关联，避免后期回归模型因相关性太弱导致“全盘不显著”。</li>
+<li>估计全变量的回归模型，若 <span class="math inline">\(p\)</span> 值普遍较大且 <span class="math inline">\(R^2\)</span> 极低。需要重新考虑定量变量的测度，重新选取样本。</li>
 </ul></li>
 </ul></li>
 </ul></li>
