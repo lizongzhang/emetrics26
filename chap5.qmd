@@ -4,31 +4,31 @@ title: "第5章"
 
 # 第5章 函数形式变换
 
-<img src="img/teacher.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[讲义](https://lizongzhang.github.io/emetrics26/chap5slide.html)
+<img src="img/teacher.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[讲义](https://lizongzhang.github.io/emetrics26/chap5slide.html){target="_blank"}
 
 #  Eviews操作
 
-<img src="img/video.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[Eviews中双对数模型的估计](https://www.bilibili.com/video/BV1sG4y1t7Wh/) 
+<img src="img/video.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[Eviews中双对数模型的估计](https://www.bilibili.com/video/BV1sG4y1t7Wh/){target="_blank"} 
     
-<img src="img/video.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[Eviews中对数-线性模型的估计](https://www.bilibili.com/video/BV1RP411F7yG/) 
+<img src="img/video.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[Eviews中对数-线性模型的估计](https://www.bilibili.com/video/BV1RP411F7yG/){target="_blank"} 
     
-<img src="img/video.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[Eviews中如何计算Y的估计值？](https://www.bilibili.com/video/BV1Jd4y1F7ze) 
+<img src="img/video.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[Eviews中如何计算Y的估计值？](https://www.bilibili.com/video/BV1Jd4y1F7ze){target="_blank"} 
     
 
-<img src="img/video.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[Eviews时间序列趋势分析——对数线性模型和线性趋势模型](https://www.bilibili.com/video/BV1684y1v7xb/)
+<img src="img/video.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[Eviews时间序列趋势分析——对数线性模型和线性趋势模型](https://www.bilibili.com/video/BV1684y1v7xb/){target="_blank"}
     
     
-<img src="img/video.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[Eviews 多项式、双对数、倒数模型](https://www.bilibili.com/video/BV1xT4y1F7oS/) 
+<img src="img/video.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[Eviews 多项式、双对数、倒数模型](https://www.bilibili.com/video/BV1xT4y1F7oS/){target="_blank"} 
 
 # R教学视频
 
-<img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px">[回归分析中的对数变换------双对数模型、半对数模型的估计](https://www.bilibili.com/video/BV1de4y127Ni)
+<img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px">[回归分析中的对数变换------双对数模型、半对数模型的估计](https://www.bilibili.com/video/BV1de4y127Ni){target="_blank"}
 
-<img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px">[如何在回归模型中引入解释变量的平方项？](https://www.bilibili.com/video/BV1ie4y147eH)
+<img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px">[如何在回归模型中引入解释变量的平方项？](https://www.bilibili.com/video/BV1ie4y147eH){target="_blank"}
 
-<img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px">[如何利用回归模型进行预测？predict()函数的运用](https://www.bilibili.com/video/BV1Av4y1D7uq)
+<img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px">[如何利用回归模型进行预测？predict()函数的运用](https://www.bilibili.com/video/BV1Av4y1D7uq){target="_blank"}
 
-<img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px">[R中如何估计过原点的回归模型？](https://www.bilibili.com/video/BV1bP411w7vy/)
+<img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px">[R中如何估计过原点的回归模型？](https://www.bilibili.com/video/BV1bP411w7vy/){target="_blank"}
 
 # 习题答案
 

@@ -4,21 +4,19 @@ title: "第8章"
 
 # 第8章 多重共线性
 
-<img src="img/teacher.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[讲义](https://lizongzhang.github.io/emetrics26/chap8slide.html)
+<img src="img/teacher.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[讲义](https://lizongzhang.github.io/emetrics26/chap8slide.html){target="_blank"}
 
 
 
 # Eviews操作
 
-<img src="img/video.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[Eviews 多重共线性](https://www.bilibili.com/video/BV1di4y157ZG/) 
+<img src="img/video.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[Eviews 多重共线性](https://www.bilibili.com/video/BV1di4y157ZG/){target="_blank"} 
 
 # R教学视频
 
-<img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px">[回归模型的比较------受限模型的F检验](https://www.bilibili.com/video/BV1tg411a7ut)
+<img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px">[多重共线性的诊断在R中的实现------相关系数矩阵cor 和 方差膨胀因子](https://www.bilibili.com/video/BV1s84y1k7Et/){target="_blank"}
 
-<img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px">[多重共线性的诊断在R中的实现------相关系数矩阵cor 和 方差膨胀因子](https://www.bilibili.com/video/BV1s84y1k7Et/)
-
-<img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px">[习题8.14-8.18------多重共线性的诊断和补救](https://www.bilibili.com/video/BV1ZK411R7MS/)
+<img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px">[习题8.14-8.18------多重共线性的诊断和补救](https://www.bilibili.com/video/BV1ZK411R7MS/){target="_blank"}
 
 # 习题答案
 

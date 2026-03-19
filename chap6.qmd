@@ -4,24 +4,24 @@ title: "第6章"
 
 # 第6章 虚拟变量
 
-<img src="img/teacher.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[讲义](https://lizongzhang.github.io/emetrics26/chap6slide.html)
+<img src="img/teacher.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[讲义](https://lizongzhang.github.io/emetrics26/chap6slide.html){target="_blank"}
 
 
 # Eviews操作
 
-<img src="img/video.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[Eviews中如何引入虚拟变量？](https://www.bilibili.com/video/BV18v4y1S7so/) 
+<img src="img/video.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[Eviews中如何引入虚拟变量？](https://www.bilibili.com/video/BV18v4y1S7so/){target="_blank"} 
     
-<img src="img/video.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[Eviews 如何引入虚拟变量和定量变量的交互项？](https://www.bilibili.com/video/BV198411b7UG) 
+<img src="img/video.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[Eviews 如何引入虚拟变量和定量变量的交互项？](https://www.bilibili.com/video/BV198411b7UG){target="_blank"} 
     
-<img src="img/video.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[Eviews 季节分析中的虚拟变量](https://www.bilibili.com/video/BV1va411A7hS/) 
+<img src="img/video.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[Eviews 季节分析中的虚拟变量](https://www.bilibili.com/video/BV1va411A7hS/){target="_blank"} 
 
 # R教学视频
 
-<img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px">[R中如何将字符串变量转换为虚拟变量？](https://www.bilibili.com/video/BV1Tt4y1M7wV)
+<img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px">[R中如何将字符串变量转换为虚拟变量？](https://www.bilibili.com/video/BV1Tt4y1M7wV){target="_blank"}
 
-<img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px">[如何在回归模型中引入虚拟变量与定量变量的交互项？](https://www.bilibili.com/video/BV1Ye4y127Tw)
+<img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px">[如何在回归模型中引入虚拟变量与定量变量的交互项？](https://www.bilibili.com/video/BV1Ye4y127Tw){target="_blank"}
 
-<img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px">[R中如何分析时间序列的季节效应？](https://www.bilibili.com/video/BV1VV4y137Pc)
+<img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px">[R中如何分析时间序列的季节效应？](https://www.bilibili.com/video/BV1VV4y137Pc){target="_blank"}
 
 # 习题答案
 

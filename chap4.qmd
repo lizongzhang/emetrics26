@@ -4,21 +4,21 @@ title: "第4章"
 
 # 第4章 多元回归
 
-<img src="img/teacher.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[讲义](https://lizongzhang.github.io/emetrics26/chap4slide.html)
+<img src="img/teacher.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[讲义](https://lizongzhang.github.io/emetrics26/chap4slide.html){target="_blank"}
 
-<img src="img/teacher.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[案例](https://lizongzhang.github.io/ee4/case1.html)
+<img src="img/teacher.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[案例](https://lizongzhang.github.io/ee4/case1.html){target="_blank"}
 
 #  Eviews操作
 
-<img src="img/video.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[Eviews 多元回归](https://www.bilibili.com/video/BV1Zi4y1j7Xf/)
+<img src="img/video.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[Eviews 多元回归](https://www.bilibili.com/video/BV1Zi4y1j7Xf/){target="_blank"}
 
-<img src="img/video.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[Eviews 受限最小二乘](https://www.bilibili.com/video/BV1pp4y1k7xx/)
+<img src="img/video.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[Eviews 受限最小二乘](https://www.bilibili.com/video/BV1pp4y1k7xx/){target="_blank"}
     
-<img src="img/video.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[Eviews 输出结果数值显示格式的设置](https://www.bilibili.com/video/BV1tZ4y1V7Rb/)  
+<img src="img/video.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[Eviews 输出结果数值显示格式的设置](https://www.bilibili.com/video/BV1tZ4y1V7Rb/){target="_blank"}{target="_blank"}  
 
 # R教学视频
 
-<img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px">[回归模型的比较------受限模型的F检验](https://www.bilibili.com/video/BV1tg411a7ut)
+<img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px">[回归模型的比较------受限模型的F检验](https://www.bilibili.com/video/BV1tg411a7ut){target="_blank"}
 
 # 习题答案
 

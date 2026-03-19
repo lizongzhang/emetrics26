@@ -487,14 +487,14 @@
     "href": "chap8.html",
     "title": "第8章",
     "section": "",
-    "text": "第8章 多重共线性\n讲义\n\n\nEviews操作\nEviews 多重共线性\n\n\nR教学视频\n回归模型的比较——受限模型的F检验\n多重共线性的诊断在R中的实现——相关系数矩阵cor 和 方差膨胀因子\n习题8.14-8.18——多重共线性的诊断和补救\n\n\n习题答案\n\n\n点击展开\n\n\n如果想在新窗口打开 PDF，请点这里： 在新标签页中查看 PDF\n\n\n&lt;!-- 备用内容（若浏览器不支持 iframe） --&gt;\n&lt;p&gt;\n你的浏览器无法嵌入 PDF，请 &lt;a href=\"img/EE4_Ch08_Solutions_Manual.pdf\" target=\"_blank\" rel=\"noopener\"&gt;点此下载/查看 PDF&lt;/a&gt;.\n&lt;/p&gt;"
+    "text": "第8章 多重共线性\n讲义\n\n\nEviews操作\nEviews 多重共线性\n\n\nR教学视频\n多重共线性的诊断在R中的实现——相关系数矩阵cor 和 方差膨胀因子\n习题8.14-8.18——多重共线性的诊断和补救\n\n\n习题答案\n\n\n点击展开\n\n\n如果想在新窗口打开 PDF，请点这里： 在新标签页中查看 PDF\n\n\n&lt;!-- 备用内容（若浏览器不支持 iframe） --&gt;\n&lt;p&gt;\n你的浏览器无法嵌入 PDF，请 &lt;a href=\"img/EE4_Ch08_Solutions_Manual.pdf\" target=\"_blank\" rel=\"noopener\"&gt;点此下载/查看 PDF&lt;/a&gt;.\n&lt;/p&gt;"
   },
   {
     "objectID": "chap9.html",
     "href": "chap9.html",
     "title": "第9章",
     "section": "",
-    "text": "第9章 异方差\n讲义\n\n\nEviews操作\nEviews 残差的图形诊断\nEviews 异方差检验\nEviews 加权最小二乘\nEviews 怀特异方差校正值\n# R教学视频\n异方差——残差的图形诊断在R中的实现\n怀特异方差检验在R中的实现\n加权最小二乘法在R中的实现\n怀特异方差校正后的标准误的计算在R中的实现\n\n\n习题讲评视频\n9.27 Breush-Pagan异方差检验\n9.27 如何应对异方差问题\n9.28 怀特异方差校正后的标准误与OLS标准误的对比\n\n\n习题答案\n\n\n点击展开\n\n\n如果想在新窗口打开 PDF，请点这里： 在新标签页中查看 PDF\n\n\n&lt;!-- 备用内容（若浏览器不支持 iframe） --&gt;\n&lt;p&gt;\n你的浏览器无法嵌入 PDF，请 &lt;a href=\"img/EE4_Ch09_Solutions_Manual.pdf\" target=\"_blank\" rel=\"noopener\"&gt;点此下载/查看 PDF&lt;/a&gt;.\n&lt;/p&gt;"
+    "text": "第9章 异方差\n讲义\n\n\nEviews操作\nEviews 残差的图形诊断\nEviews 异方差检验\nEviews 加权最小二乘\nEviews 怀特异方差校正值\n\n\nR教学视频\n异方差——残差的图形诊断在R中的实现\n怀特异方差检验在R中的实现\n加权最小二乘法在R中的实现\n怀特异方差校正后的标准误的计算在R中的实现\n\n\n习题讲评视频\n9.27 Breush-Pagan异方差检验\n9.27 如何应对异方差问题\n9.28 怀特异方差校正后的标准误与OLS标准误的对比\n\n\n习题答案\n\n\n点击展开\n\n\n如果想在新窗口打开 PDF，请点这里： 在新标签页中查看 PDF\n\n\n&lt;!-- 备用内容（若浏览器不支持 iframe） --&gt;\n&lt;p&gt;\n你的浏览器无法嵌入 PDF，请 &lt;a href=\"img/EE4_Ch09_Solutions_Manual.pdf\" target=\"_blank\" rel=\"noopener\"&gt;点此下载/查看 PDF&lt;/a&gt;.\n&lt;/p&gt;"
   },
   {
     "objectID": "chap3slide.html",
@@ -830,7 +830,7 @@
     "href": "chap4.html",
     "title": "第4章",
     "section": "",
-    "text": "第4章 多元回归\n讲义\n案例\n\n\nEviews操作\nEviews 多元回归\nEviews 受限最小二乘\nEviews 输出结果数值显示格式的设置\n\n\nR教学视频\n回归模型的比较——受限模型的F检验\n\n\n习题答案\n\n\n点击展开\n\n\n如果想在新窗口打开 PDF，请点这里： 在新标签页中查看 PDF\n\n\n&lt;!-- 备用内容（若浏览器不支持 iframe） --&gt;\n&lt;p&gt;\n你的浏览器无法嵌入 PDF，请 &lt;a href=\"img/EE4_Ch04_Solutions_Manual.pdf\" target=\"_blank\" rel=\"noopener\"&gt;点此下载/查看 PDF&lt;/a&gt;.\n&lt;/p&gt;"
+    "text": "第4章 多元回归\n讲义\n案例\n\n\nEviews操作\nEviews 多元回归\nEviews 受限最小二乘\nEviews 输出结果数值显示格式的设置{target=“_blank”}\n\n\nR教学视频\n回归模型的比较——受限模型的F检验\n\n\n习题答案\n\n\n点击展开\n\n\n如果想在新窗口打开 PDF，请点这里： 在新标签页中查看 PDF\n\n\n&lt;!-- 备用内容（若浏览器不支持 iframe） --&gt;\n&lt;p&gt;\n你的浏览器无法嵌入 PDF，请 &lt;a href=\"img/EE4_Ch04_Solutions_Manual.pdf\" target=\"_blank\" rel=\"noopener\"&gt;点此下载/查看 PDF&lt;/a&gt;.\n&lt;/p&gt;"
   },
   {
     "objectID": "chap7slide.html",

@@ -4,36 +4,38 @@ title: "第9章"
 
 # 第9章 异方差
 
-<img src="img/teacher.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[讲义](https://lizongzhang.github.io/emetrics26/chap9slide.html)
+<img src="img/teacher.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[讲义](https://lizongzhang.github.io/emetrics26/chap9slide.html){target="_blank"}
 
 
 
 # Eviews操作
 
-<img src="img/video.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[Eviews 残差的图形诊断](https://www.bilibili.com/video/BV1RV411y7hS/) 
+<img src="img/video.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[Eviews 残差的图形诊断](https://www.bilibili.com/video/BV1RV411y7hS/){target="_blank"} 
     
-<img src="img/video.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[Eviews 异方差检验](https://www.bilibili.com/video/BV1zT4y1F75Q/)     
+<img src="img/video.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[Eviews 异方差检验](https://www.bilibili.com/video/BV1zT4y1F75Q/){target="_blank"}     
     
-<img src="img/video.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[Eviews 加权最小二乘](https://www.bilibili.com/video/BV1uf4y1q7vD/)     
+<img src="img/video.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[Eviews 加权最小二乘](https://www.bilibili.com/video/BV1uf4y1q7vD/){target="_blank"}     
     
-<img src="img/video.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[Eviews 怀特异方差校正值](https://www.bilibili.com/video/BV1wf4y1q7YQ/)     
+<img src="img/video.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[Eviews 怀特异方差校正值](https://www.bilibili.com/video/BV1wf4y1q7YQ/){target="_blank"}
+
+
 # R教学视频
 
-<img src="img/video.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[异方差------残差的图形诊断在R中的实现](https://www.bilibili.com/video/BV1oP4y1X7cU/)
+<img src="img/video.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[异方差------残差的图形诊断在R中的实现](https://www.bilibili.com/video/BV1oP4y1X7cU/){target="_blank"}
 
-<img src="img/video.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[怀特异方差检验在R中的实现](https://www.bilibili.com/video/BV1zG4y197Bf/)
+<img src="img/video.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[怀特异方差检验在R中的实现](https://www.bilibili.com/video/BV1zG4y197Bf/){target="_blank"}
 
-<img src="img/video.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[加权最小二乘法在R中的实现](https://www.bilibili.com/video/BV1R44y1D7EY/)
+<img src="img/video.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[加权最小二乘法在R中的实现](https://www.bilibili.com/video/BV1R44y1D7EY/){target="_blank"}
 
-<img src="img/video.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[怀特异方差校正后的标准误的计算在R中的实现](https://www.bilibili.com/video/BV1fd4y1x7Z7/)
+<img src="img/video.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[怀特异方差校正后的标准误的计算在R中的实现](https://www.bilibili.com/video/BV1fd4y1x7Z7/){target="_blank"}
 
 # 习题讲评视频
 
-<img src="img/video.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[9.27 Breush-Pagan异方差检验](https://www.bilibili.com/video/BV1AG411T7CT/)
+<img src="img/video.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[9.27 Breush-Pagan异方差检验](https://www.bilibili.com/video/BV1AG411T7CT/){target="_blank"}
 
-<img src="img/video.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[9.27 如何应对异方差问题](https://www.bilibili.com/video/BV1QG4y1G7R9/)
+<img src="img/video.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[9.27 如何应对异方差问题](https://www.bilibili.com/video/BV1QG4y1G7R9/){target="_blank"}
 
-<img src="img/video.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[9.28 怀特异方差校正后的标准误与OLS标准误的对比](https://www.bilibili.com/video/BV1u841157eV/)
+<img src="img/video.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[9.28 怀特异方差校正后的标准误与OLS标准误的对比](https://www.bilibili.com/video/BV1u841157eV/){target="_blank"}
 
 # 习题答案
 

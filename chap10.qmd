@@ -4,22 +4,22 @@ title: "第10章"
 
 # 第10章 自相关
 
-<img src="img/teacher.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[讲义](https://lizongzhang.github.io/emetrics26/chap10slide.html)
+<img src="img/teacher.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[讲义](https://lizongzhang.github.io/emetrics26/chap10slide.html){target="_blank"}
 
 
 # Eviews操作
 
-<img src="img/video.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[Eviews 自相关的图形诊断](https://www.bilibili.com/video/BV1nV41117rt/) 
+<img src="img/video.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[Eviews 自相关的图形诊断](https://www.bilibili.com/video/BV1nV41117rt/){target="_blank"} 
     
-<img src="img/video.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[Eviews 自相关LM检验](https://www.bilibili.com/video/BV1dy4y1z7KQ/)     
+<img src="img/video.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[Eviews 自相关LM检验](https://www.bilibili.com/video/BV1dy4y1z7KQ/){target="_blank"}     
     
-<img src="img/video.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[Eviews 广义差分变换](https://www.bilibili.com/video/BV1Ji4y1L7GJ/)     
+<img src="img/video.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[Eviews 广义差分变换](https://www.bilibili.com/video/BV1Ji4y1L7GJ/){target="_blank"}     
     
-<img src="img/video.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[Eviews 自相关下标准误的Neway-West校正](https://www.bilibili.com/video/BV1FT4y1c7ve/)    
+<img src="img/video.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[Eviews 自相关下标准误的Neway-West校正](https://www.bilibili.com/video/BV1FT4y1c7ve/){target="_blank"}    
 
 # R教学视频
 
-<img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px">[回归模型的比较------受限模型的F检验](https://www.bilibili.com/video/BV1tg411a7ut)
+<img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px">[回归模型的比较------受限模型的F检验](https://www.bilibili.com/video/BV1tg411a7ut){target="_blank"}
 
 <img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px">[自相关的图形诊断]<to be updated>
 
