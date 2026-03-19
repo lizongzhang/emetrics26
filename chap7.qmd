@@ -15,3 +15,41 @@ title: "第7章"
     
         
 <img src="img/video.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[Eviews reset检验](https://www.bilibili.com/video/BV1aD4y197wf/) 
+
+# R教学视频
+
+<img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px">[R中如何实现回归方程设定误差检验(Ramsey RESET)?](https://www.bilibili.com/video/BV1UD4y1x7KV)
+
+<img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px">[R中的for循环](https://www.bilibili.com/video/BV1Tt4y1M7wV)
+
+<img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px">[循环语句for loop在回归分析中的运用](https://www.bilibili.com/video/BV1n14y1W79R)
+
+<img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px">[R中的数据结构转换：宽型转长形--pivot_longer函数的运用](https://www.bilibili.com/video/BV1rG411F7yM)
+
+<img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px">[R中如何简洁地表达多元回归方程的设定？](https://www.bilibili.com/video/BV1kg411s7bA)
+
+# 习题讲评视频
+
+<img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px">[例题7.7.4讲评](https://www.bilibili.com/video/BV1h24y1C7aW/)
+
+<img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px">[教材习题7.11 + 7.16讲评](https://www.bilibili.com/video/BV1rW4y1H76b/)
+
+<img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px">[教材习题7.14讲评](https://www.bilibili.com/video/BV1r44y1D7fL/)
+
+<img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px">[10个城市人口模型之循环语句讲评](https://www.bilibili.com/video/BV1EY411d7xD/)
+
+<img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px">[10个城市人口模型之绘图讲评](https://www.bilibili.com/video/BV1v44y1D7j8/)
+
+# 习题答案
+
+<details>
+<summary style="cursor: pointer; font-weight: bold;">点击展开</summary>
+
+<p>如果想在新窗口打开 PDF，请点这里： <a href="img/EE4_Ch07_Solutions_Manual.pdf" target="_blank" rel="noopener">在新标签页中查看 PDF</a></p>
+
+<iframe src="img/EE4_Ch07_Solutions_Manual.pdf" width="100%" height="800" style="border: none;" allowfullscreen>
+  <!-- 备用内容（若浏览器不支持 iframe） -->
+  <p>你的浏览器无法嵌入 PDF，请 <a href="img/EE4_Ch07_Solutions_Manual.pdf" target="_blank" rel="noopener">点此下载/查看 PDF</a>.</p>
+</iframe>
+
+</details>

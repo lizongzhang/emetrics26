@@ -14,5 +14,27 @@ title: "第6章"
 <img src="img/video.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[Eviews 如何引入虚拟变量和定量变量的交互项？](https://www.bilibili.com/video/BV198411b7UG) 
     
 <img src="img/video.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[Eviews 季节分析中的虚拟变量](https://www.bilibili.com/video/BV1va411A7hS/) 
+
+# R教学视频
+
+<img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px">[R中如何将字符串变量转换为虚拟变量？](https://www.bilibili.com/video/BV1Tt4y1M7wV)
+
+<img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px">[如何在回归模型中引入虚拟变量与定量变量的交互项？](https://www.bilibili.com/video/BV1Ye4y127Tw)
+
+<img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px">[R中如何分析时间序列的季节效应？](https://www.bilibili.com/video/BV1VV4y137Pc)
+
+# 习题答案
+
+<details>
+<summary style="cursor: pointer; font-weight: bold;">点击展开</summary>
+
+<p>如果想在新窗口打开 PDF，请点这里： <a href="img/EE4_Ch06_Solutions_Manual.pdf" target="_blank" rel="noopener">在新标签页中查看 PDF</a></p>
+
+<iframe src="img/EE4_Ch06_Solutions_Manual.pdf" width="100%" height="800" style="border: none;" allowfullscreen>
+  <!-- 备用内容（若浏览器不支持 iframe） -->
+  <p>你的浏览器无法嵌入 PDF，请 <a href="img/EE4_Ch06_Solutions_Manual.pdf" target="_blank" rel="noopener">点此下载/查看 PDF</a>.</p>
+</iframe>
+
+</details>
     
 

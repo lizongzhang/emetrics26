@@ -21,7 +21,7 @@ website:
       - case.qmd
     tools:
       - icon: envelope
-        href: lizongzhang9@qq.com
+        href: "mailto: lizongzhang9@qq.com"
   page-footer:
     right: "Data puzzles; econometrics solves."
     left: "&copy; Copyright 2026, Li Zongzhang"

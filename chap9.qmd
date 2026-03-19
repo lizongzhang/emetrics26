@@ -17,4 +17,34 @@ title: "第9章"
 <img src="img/video.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[Eviews 加权最小二乘](https://www.bilibili.com/video/BV1uf4y1q7vD/)     
     
 <img src="img/video.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[Eviews 怀特异方差校正值](https://www.bilibili.com/video/BV1wf4y1q7YQ/)     
-    
+# R教学视频
+
+<img src="img/video.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[异方差------残差的图形诊断在R中的实现](https://www.bilibili.com/video/BV1oP4y1X7cU/)
+
+<img src="img/video.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[怀特异方差检验在R中的实现](https://www.bilibili.com/video/BV1zG4y197Bf/)
+
+<img src="img/video.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[加权最小二乘法在R中的实现](https://www.bilibili.com/video/BV1R44y1D7EY/)
+
+<img src="img/video.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[怀特异方差校正后的标准误的计算在R中的实现](https://www.bilibili.com/video/BV1fd4y1x7Z7/)
+
+# 习题讲评视频
+
+<img src="img/video.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[9.27 Breush-Pagan异方差检验](https://www.bilibili.com/video/BV1AG411T7CT/)
+
+<img src="img/video.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[9.27 如何应对异方差问题](https://www.bilibili.com/video/BV1QG4y1G7R9/)
+
+<img src="img/video.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[9.28 怀特异方差校正后的标准误与OLS标准误的对比](https://www.bilibili.com/video/BV1u841157eV/)
+
+# 习题答案
+
+<details>
+<summary style="cursor: pointer; font-weight: bold;">点击展开</summary>
+
+<p>如果想在新窗口打开 PDF，请点这里： <a href="img/EE4_Ch09_Solutions_Manual.pdf" target="_blank" rel="noopener">在新标签页中查看 PDF</a></p>
+
+<iframe src="img/EE4_Ch09_Solutions_Manual.pdf" width="100%" height="800" style="border: none;" allowfullscreen>
+  <!-- 备用内容（若浏览器不支持 iframe） -->
+  <p>你的浏览器无法嵌入 PDF，请 <a href="img/EE4_Ch09_Solutions_Manual.pdf" target="_blank" rel="noopener">点此下载/查看 PDF</a>.</p>
+</iframe>
+
+</details>    

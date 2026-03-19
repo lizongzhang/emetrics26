@@ -19,6 +19,30 @@ title: "第5章"
     
     
 <img src="img/video.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[Eviews 多项式、双对数、倒数模型](https://www.bilibili.com/video/BV1xT4y1F7oS/) 
+
+# R教学视频
+
+<img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px">[回归分析中的对数变换------双对数模型、半对数模型的估计](https://www.bilibili.com/video/BV1de4y127Ni)
+
+<img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px">[如何在回归模型中引入解释变量的平方项？](https://www.bilibili.com/video/BV1ie4y147eH)
+
+<img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px">[如何利用回归模型进行预测？predict()函数的运用](https://www.bilibili.com/video/BV1Av4y1D7uq)
+
+<img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px">[R中如何估计过原点的回归模型？](https://www.bilibili.com/video/BV1bP411w7vy/)
+
+# 习题答案
+
+<details>
+<summary style="cursor: pointer; font-weight: bold;">点击展开</summary>
+
+<p>如果想在新窗口打开 PDF，请点这里： <a href="img/EE4_Ch05_Solutions_Manual.pdf" target="_blank" rel="noopener">在新标签页中查看 PDF</a></p>
+
+<iframe src="img/EE4_Ch05_Solutions_Manual.pdf" width="100%" height="800" style="border: none;" allowfullscreen>
+  <!-- 备用内容（若浏览器不支持 iframe） -->
+  <p>你的浏览器无法嵌入 PDF，请 <a href="img/EE4_Ch05_Solutions_Manual.pdf" target="_blank" rel="noopener">点此下载/查看 PDF</a>.</p>
+</iframe>
+
+</details>
     
         
 

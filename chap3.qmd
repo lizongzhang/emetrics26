@@ -18,3 +18,25 @@ title: "第3章"
 <img src="img/video.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[Eviews 绘制散点图](https://www.bilibili.com/video/BV1t54y1k7Gu/) 
 
 <img src="img/video.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[Eviews 估计回归方程](https://www.bilibili.com/video/BV1NT4y1F7V9/) 
+
+# R教学视频
+
+<img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px">[如何将R的回归分析结果以表格形式输出到WORD文档中？](https://www.bilibili.com/video/BV1J24y197LB)
+
+<img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px">[R中如何对回归方程的残差进行图形诊断？](https://www.bilibili.com/video/BV19V4y157KP)
+
+<img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px">[回归方程残差的正态性检验](https://www.bilibili.com/video/BV1ft4y1F7cJ)
+
+# 习题答案
+
+<details>
+<summary style="cursor: pointer; font-weight: bold;">点击展开</summary>
+
+<p>如果想在新窗口打开 PDF，请点这里： <a href="img/EE4_Ch03_Solutions_Manual.pdf" target="_blank" rel="noopener">在新标签页中查看 PDF</a></p>
+
+<iframe src="img/EE4_Ch03_Solutions_Manual.pdf" width="100%" height="800" style="border: none;" allowfullscreen>
+  <!-- 备用内容（若浏览器不支持 iframe） -->
+  <p>你的浏览器无法嵌入 PDF，请 <a href="img/EE4_Ch03_Solutions_Manual.pdf" target="_blank" rel="noopener">点此下载/查看 PDF</a>.</p>
+</iframe>
+
+</details>

@@ -107,5 +107,24 @@ title: "第2章"
 
 <img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px">[Eviews12 如何在散点图上添加回归线和回归方程？](https://www.bilibili.com/video/BV1ge4y1B7Cj)
 
+# R教学视频
+
+<img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px">[lm()函数的运用](https://www.bilibili.com/video/BV1zg411o7Kp)
+
+<img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px">[如何在散点图中添加回归方程](https://www.bilibili.com/video/BV1u841147DK)
+
+# 习题答案
+
+<details>
+<summary style="cursor: pointer; font-weight: bold;">点击展开</summary>
+
+<p>如果想在新窗口打开 PDF，请点这里： <a href="img/EE4_Ch02_Solutions_Manual.pdf" target="_blank" rel="noopener">在新标签页中查看 PDF</a></p>
+
+<iframe src="img/EE4_Ch02_Solutions_Manual.pdf" width="100%" height="800" style="border: none;" allowfullscreen>
+  <!-- 备用内容（若浏览器不支持 iframe） -->
+  <p>你的浏览器无法嵌入 PDF，请 <a href="img/EE4_Ch02_Solutions_Manual.pdf" target="_blank" rel="noopener">点此下载/查看 PDF</a>.</p>
+</iframe>
+
+</details>
 
 
