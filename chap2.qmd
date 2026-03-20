@@ -127,4 +127,27 @@ title: "第2章"
 
 </details>
 
+# 数据清洗
+
+<img src="img/download.png" style="width: 24px; height: 24px;margin-right: 10px"><a href="data/wjx_data_clean.xlsx" download>点击下载：问卷星原始数据文件 (Excel)</a>
+
+完成下列任务：
+
+1. 变量重命名：将所有变量名统一修改为简洁的英文。
+
+2. 将 Q1（性别）的代码（1=男，2=女）分别转换为 "male" 和 "female"。
+
+3. 将 Q6（用户类型）的四个分类，根据逻辑合并为“performance”与“lite”两类。。
+
+4. 将Q7品牌偏好的代码1-4转换为有具体含义的品牌类型。
+
+5. 识别并剔除含有明显逻辑错误（如年龄>100）或极端数值（如收入异常）的样本个案。
+
+提交要求：将清洗后的数据用“问卷星_学号_姓名”命名，提交到雨课堂。 
+
+
+
+
+
+<img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px">[问卷星原始数据清洗：编码转换、小类合并，异常值识别](https://www.bilibili.com/video/BV1U4AEztEQC/){target="_blank"}
 

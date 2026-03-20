@@ -198,6 +198,7 @@ window.Quarto = {
   </ul></li>
   <li><a href="#r教学视频" id="toc-r教学视频" class="nav-link" data-scroll-target="#r教学视频">R教学视频</a></li>
   <li><a href="#习题答案" id="toc-习题答案" class="nav-link" data-scroll-target="#习题答案">习题答案</a></li>
+  <li><a href="#数据清洗" id="toc-数据清洗" class="nav-link" data-scroll-target="#数据清洗">数据清洗</a></li>
   </ul>
 </nav>
     </div>
@@ -497,6 +498,20 @@ window.Quarto = {
 </p>
 </iframe>
 </details>
+</section>
+<section id="数据清洗" class="level1">
+<h1>数据清洗</h1>
+<p><img src="img/download.png" style="width: 24px; height: 24px;margin-right: 10px"><a href="data/wjx_data_clean.xlsx" download="">点击下载：问卷星原始数据文件 (Excel)</a></p>
+<p>完成下列任务：</p>
+<ol type="1">
+<li><p>变量重命名：将所有变量名统一修改为简洁的英文。</p></li>
+<li><p>将 Q1（性别）的代码（1=男，2=女）分别转换为 “male” 和 “female”。</p></li>
+<li><p>将 Q6（用户类型）的四个分类，根据逻辑合并为“performance”与“lite”两类。。</p></li>
+<li><p>将Q7品牌偏好的代码1-4转换为有具体含义的品牌类型。</p></li>
+<li><p>识别并剔除含有明显逻辑错误（如年龄&gt;100）或极端数值（如收入异常）的样本个案。</p></li>
+</ol>
+<p>提交要求：将清洗后的数据用“问卷星_学号_姓名”命名，提交到雨课堂。</p>
+<p><img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px"><a href="https://www.bilibili.com/video/BV1U4AEztEQC/" target="_blank">问卷星原始数据清洗：编码转换、小类合并，异常值识别</a></p>
 
 
 </section>
