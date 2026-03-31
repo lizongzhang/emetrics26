@@ -43,6 +43,12 @@ title: "第5章"
 </iframe>
 
 </details>
+
+# 习题讲评视频
+
+<img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px">[教材习题5.17+5.25+5.26](https://www.bilibili.com/video/BV1ey4y1W75g){target="_blank"}
+
+
     
         
 

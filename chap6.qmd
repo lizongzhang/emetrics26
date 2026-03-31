@@ -36,5 +36,18 @@ title: "第6章"
 </iframe>
 
 </details>
+
+# 习题讲评视频
+
+<img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px">[教材习题6.3-6.7](https://www.bilibili.com/video/BV1ey4y1W75g){target="_blank"}
+
+<img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px">[教材习题6.8](https://www.bilibili.com/video/BV1ey4y1W75g){target="_blank"}
+
+<img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px">[教材习题6.11-6.12](https://www.bilibili.com/video/BV1ey4y1W75g){target="_blank"}
+
+<img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px">[教材习题6.27](https://www.bilibili.com/video/BV1ey4y1W75g){target="_blank"}
+
+
+<img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px">[教材习题6.28](https://www.bilibili.com/video/BV1ey4y1W75g){target="_blank"}
     
 

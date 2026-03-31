@@ -40,3 +40,7 @@ title: "第3章"
 </iframe>
 
 </details>
+
+# 习题讲评视频
+
+<img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px">[教材习题3.8+3.10+3.11](https://www.bilibili.com/video/BV1ey4y1W75g){target="_blank"}

@@ -32,5 +32,18 @@ title: "第10章"
 <img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px">[Newey-West校正后的标准误]<to be updated>
 
 
+# 习题讲评视频
+
+<img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px">[教材习题10.10](https://www.bilibili.com/video/BV1ey4y1W75g){target="_blank"}
+
+<img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px">[教材习题10.12](https://www.bilibili.com/video/BV1ey4y1W75g){target="_blank"}
+
+<img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px">[教材习题10.13](https://www.bilibili.com/video/BV1ey4y1W75g){target="_blank"}
+
+<img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px">[教材习题10.17](https://www.bilibili.com/video/BV1ey4y1W75g){target="_blank"}
+
+<img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px">[教材习题10.21](https://www.bilibili.com/video/BV1ey4y1W75g){target="_blank"}
+
+
     
 

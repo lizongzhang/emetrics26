@@ -31,4 +31,10 @@ title: "第8章"
 </iframe>
 
 </details>
+
+# 习题讲评视频
+
+<img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px">[教材习题8.14-8.18](https://www.bilibili.com/video/BV1ey4y1W75g){target="_blank"}
+
+<img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px">[教材习题8.26+8.31](https://www.bilibili.com/video/BV1ey4y1W75g){target="_blank"}
     

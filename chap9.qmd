@@ -50,3 +50,13 @@ title: "第9章"
 </iframe>
 
 </details>    
+
+# 习题讲评视频
+
+<img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px">[教材习题9.6+9.7+9.8](https://www.bilibili.com/video/BV1ey4y1W75g){target="_blank"}
+
+<img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px">[教材习题9.9](https://www.bilibili.com/video/BV1ey4y1W75g){target="_blank"}
+
+<img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px">[教材习题9.14](https://www.bilibili.com/video/BV1ey4y1W75g){target="_blank"}
+
+<img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px">[教材习题9.28](https://www.bilibili.com/video/BV1ey4y1W75g){target="_blank"}

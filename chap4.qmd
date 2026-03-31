@@ -34,3 +34,9 @@ title: "第4章"
 
 </details>
 
+# 习题讲评视频
+
+<img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px">[教材习题4.9+4.11+4.12](https://www.bilibili.com/video/BV1ey4y1W75g){target="_blank"}
+
+
+<img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px">[教材习题4.14+4.18+4.22](https://www.bilibili.com/video/BV1ey4y1W75g){target="_blank"}
