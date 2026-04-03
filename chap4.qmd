@@ -20,6 +20,11 @@ title: "第4章"
 
 <img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px">[回归模型的比较------受限模型的F检验](https://www.bilibili.com/video/BV1tg411a7ut){target="_blank"}
 
+
+<img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px">[统计检验/回归模型的结果解释，还在手写吗？report()自动生成](https://www.bilibili.com/video/BV1GaouYAEvP/){target="_blank"}
+
+<img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px">[R如何快速创建学术论文表1 样本统计特征 tbl_summary()](https://www.bilibili.com/video/BV1c64y1p7as){target="_blank"}
+
 # 习题答案
 
 <details>
