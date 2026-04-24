@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Li Zongzhang">
-<meta name="dcterms.date" content="2026-04-03">
+<meta name="dcterms.date" content="2026-04-24">
 
 <title>小组任务 – Econometrics26</title>
 <style>
@@ -212,10 +212,10 @@ window.Quarto = {
   <li><a href="#第1轮讨论课-第3-6周选题论证和数据收集" id="toc-第1轮讨论课-第3-6周选题论证和数据收集" class="nav-link" data-scroll-target="#第1轮讨论课-第3-6周选题论证和数据收集">第1轮讨论课 (第3-6周)：选题论证和数据收集</a>
   <ul class="collapse">
   <li><a href="#任务1-提交选题信息问卷" id="toc-任务1-提交选题信息问卷" class="nav-link" data-scroll-target="#任务1-提交选题信息问卷"><strong>任务1: 提交选题信息问卷</strong></a></li>
-  <li><a href="#任务2-数据预处理和初步回归" id="toc-任务2-数据预处理和初步回归" class="nav-link" data-scroll-target="#任务2-数据预处理和初步回归"><strong>任务2: 数据预处理和初步回归</strong></a></li>
   </ul></li>
-  <li><a href="#第2轮讨论课-第7-9周基础建模" id="toc-第2轮讨论课-第7-9周基础建模" class="nav-link" data-scroll-target="#第2轮讨论课-第7-9周基础建模">第2轮讨论课 (第7-9周)：基础建模</a></li>
-  <li><a href="#第3轮讨论课-第-10-13-周模型诊断与完善" id="toc-第3轮讨论课-第-10-13-周模型诊断与完善" class="nav-link" data-scroll-target="#第3轮讨论课-第-10-13-周模型诊断与完善">第3轮讨论课 (第 10-13 周)：模型诊断与完善</a></li>
+  <li><a href="#第2轮讨论课-第6-7周数据预处理和初步回归" id="toc-第2轮讨论课-第6-7周数据预处理和初步回归" class="nav-link" data-scroll-target="#第2轮讨论课-第6-7周数据预处理和初步回归">第2轮讨论课 (第6-7周)：数据预处理和初步回归</a></li>
+  <li><a href="#第3轮讨论课-第10周模型函数形式变换虚拟变量的引入" id="toc-第3轮讨论课-第10周模型函数形式变换虚拟变量的引入" class="nav-link" data-scroll-target="#第3轮讨论课-第10周模型函数形式变换虚拟变量的引入">第3轮讨论课 (第10周)：模型函数形式变换、虚拟变量的引入</a></li>
+  <li><a href="#第4轮讨论课-第-12-周模型诊断与完善" id="toc-第4轮讨论课-第-12-周模型诊断与完善" class="nav-link" data-scroll-target="#第4轮讨论课-第-12-周模型诊断与完善">第4轮讨论课 (第 12 周)：模型诊断与完善</a></li>
   <li><a href="#课堂汇报第15-16周" id="toc-课堂汇报第15-16周" class="nav-link" data-scroll-target="#课堂汇报第15-16周">课堂汇报(第15-16周)</a></li>
   <li><a href="#撰写实验报告第10-15周" id="toc-撰写实验报告第10-15周" class="nav-link" data-scroll-target="#撰写实验报告第10-15周">撰写实验报告(第10-15周)</a></li>
   </ul></li>
@@ -247,7 +247,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">2026-04-03</p>
+      <p class="date">2026-04-24</p>
     </div>
   </div>
   
@@ -511,8 +511,9 @@ window.Quarto = {
 <p>&lt;&gt;</p>
 <hr>
 </details></section>
-<section id="任务2-数据预处理和初步回归" class="level3">
-<h3 class="anchored" data-anchor-id="任务2-数据预处理和初步回归"><strong>任务2: 数据预处理和初步回归</strong></h3>
+</section>
+<section id="第2轮讨论课-第6-7周数据预处理和初步回归" class="level2">
+<h2 class="anchored" data-anchor-id="第2轮讨论课-第6-7周数据预处理和初步回归">第2轮讨论课 (第6-7周)：数据预处理和初步回归</h2>
 <details>
 <summary>
 点击展开
@@ -523,7 +524,7 @@ window.Quarto = {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-任务目标
+Important
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -580,7 +581,7 @@ window.Quarto = {
 <td><strong>均值、中位数、标准差、最小值、最大值</strong> 、定量变量的直方图</td>
 </tr>
 <tr class="odd">
-<td><strong><code>col</code></strong></td>
+<td><strong><code>cor</code></strong></td>
 <td>相关系数矩阵</td>
 <td><span class="math inline">\(Y\)</span> 与定量 <span class="math inline">\(X\)</span> 的 Pearson 相关系数</td>
 </tr>
@@ -607,33 +608,77 @@ Note
 <p>&lt;&gt;</p>
 <hr>
 </details></section>
-</section>
-<section id="第2轮讨论课-第7-9周基础建模" class="level2">
-<h2 class="anchored" data-anchor-id="第2轮讨论课-第7-9周基础建模">第2轮讨论课 (第7-9周)：基础建模</h2>
+<section id="第3轮讨论课-第10周模型函数形式变换虚拟变量的引入" class="level2">
+<h2 class="anchored" data-anchor-id="第3轮讨论课-第10周模型函数形式变换虚拟变量的引入">第3轮讨论课 (第10周)：模型函数形式变换、虚拟变量的引入</h2>
 <details>
 <summary>
 点击展开
 </summary>
+<p>分析方法：教材第5-6章关于函数形式变换、虚拟变量的引入</p>
+<p>核心任务：针对同一被解释变量，依次尝试并对比以下四类扩展模型：</p>
 <ul>
-<li><strong>应用方法</strong>：运用教材 <strong>第 4、5、6 章</strong> 的分析方法。</li>
-<li><strong>需准备的文件</strong>：
-<ol type="1">
-<li>清洗后的数据文件(Excel文件格式)。</li>
-<li><strong>汇报内容</strong>：
-<ul>
-<li><strong>数据来源</strong>：详细说明采集渠道。</li>
-<li><strong>变量含义</strong>：每个 <span class="math inline">\(X\)</span> 变量的含义、单位。</li>
-<li><strong>估计结果</strong>：尝试不同回归方程的估计结果截图。</li>
-<li><strong>模型择优</strong>：对比不同函数形式，阐述哪个模型最好及理由。</li>
-<li><strong>主要结论</strong>：汇报初步发现的结论。</li>
-</ul></li>
-</ol></li>
+<li><p>虚拟变量模型：引入定性变量。</p></li>
+<li><p>双对数模型：探究因变量与自变量之间的弹性关系。</p></li>
+<li><p>平方项模型：检验是否存在非线性趋势（如边际效应递减）。</p></li>
+<li><p>交互项模型：检验某个解释变量是否对另一个变量具有调节效应。</p></li>
 </ul>
+<p>思考问题：在对比上述模型后，基于统计显著性（Stars）、系数的符号是否符合预期，拟合优度（<span class="math inline">\(R^2\)</span>），你认为哪个模型最合适？请简述理由。</p>
+<p>提交物要求</p>
+<p>请提交一个名为 <strong><code>组号_组长姓名_研究主题_chap5-6.xlsx</code></strong> 的 Excel 文件。该文件必须严格包含以下四个命名的表单（Sheet）：</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>表单名称</th>
+<th>内容要求</th>
+<th>包含指标</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong><code>data</code></strong></td>
+<td>清洗后的数据</td>
+<td>表头为规范化的英文变量名</td>
+</tr>
+<tr class="even">
+<td><strong><code>var</code></strong></td>
+<td>变量的含义及单位</td>
+<td>列出变量名称，变量含义及单位，定性变量的频数分布表</td>
+</tr>
+<tr class="odd">
+<td><strong><code>reg</code></strong></td>
+<td>回归模型</td>
+<td>所有尝试过的回归模型的估计结果</td>
+</tr>
+<tr class="even">
+<td><strong><code>best</code></strong></td>
+<td>最优模型</td>
+<td>选择该模型的理由</td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>注意：严禁合并表单或随意更改 Sheet 名称。</p>
+</div>
+</div>
 <p>&lt;&gt;</p>
 <hr>
 </details></section>
-<section id="第3轮讨论课-第-10-13-周模型诊断与完善" class="level2">
-<h2 class="anchored" data-anchor-id="第3轮讨论课-第-10-13-周模型诊断与完善">第3轮讨论课 (第 10-13 周)：模型诊断与完善</h2>
+<section id="第4轮讨论课-第-12-周模型诊断与完善" class="level2">
+<h2 class="anchored" data-anchor-id="第4轮讨论课-第-12-周模型诊断与完善">第4轮讨论课 (第 12 周)：模型诊断与完善</h2>
 <details>
 <summary>
 点击展开
@@ -654,6 +699,7 @@ Note
 </ol></li>
 </ul>
 <p>&lt;&gt;</p>
+<hr>
 </details></section>
 <section id="课堂汇报第15-16周" class="level2">
 <h2 class="anchored" data-anchor-id="课堂汇报第15-16周">课堂汇报(第15-16周)</h2>
