@@ -18,7 +18,7 @@
     "href": "chap6.html",
     "title": "第6章",
     "section": "",
-    "text": "第6章 虚拟变量\n讲义\n习题讲评\n\n\nEviews操作\nEviews中如何引入虚拟变量？\nEviews 如何引入虚拟变量和定量变量的交互项？\nEviews 季节分析中的虚拟变量\n\n\nR教学视频\nR中如何将字符串变量转换为虚拟变量？\n如何在回归模型中引入虚拟变量与定量变量的交互项？\nR中如何分析时间序列的季节效应？\n\n\n习题答案\n\n\n点击展开\n\n\n如果想在新窗口打开 PDF，请点这里： 在新标签页中查看 PDF\n\n\n&lt;!-- 备用内容（若浏览器不支持 iframe） --&gt;\n&lt;p&gt;\n你的浏览器无法嵌入 PDF，请 &lt;a href=\"img/EE4_Ch06_Solutions_Manual.pdf\" target=\"_blank\" rel=\"noopener\"&gt;点此下载/查看 PDF&lt;/a&gt;.\n&lt;/p&gt;\n\n\n\n\n习题讲评视频\n教材习题6.3-6.7\n教材习题6.8\n教材习题6.11-6.12\n教材习题6.27\n教材习题6.28"
+    "text": "第6章 虚拟变量\n讲义\n案例\n习题讲评\n\n\nEviews操作\nEviews中如何引入虚拟变量？\nEviews 如何引入虚拟变量和定量变量的交互项？\nEviews 季节分析中的虚拟变量\n\n\nR教学视频\nR中如何将字符串变量转换为虚拟变量？\n如何在回归模型中引入虚拟变量与定量变量的交互项？\nR中如何分析时间序列的季节效应？\n\n\n习题答案\n\n\n点击展开\n\n\n如果想在新窗口打开 PDF，请点这里： 在新标签页中查看 PDF\n\n\n&lt;!-- 备用内容（若浏览器不支持 iframe） --&gt;\n&lt;p&gt;\n你的浏览器无法嵌入 PDF，请 &lt;a href=\"img/EE4_Ch06_Solutions_Manual.pdf\" target=\"_blank\" rel=\"noopener\"&gt;点此下载/查看 PDF&lt;/a&gt;.\n&lt;/p&gt;\n\n\n\n\n习题讲评视频\n教材习题6.3-6.7\n教材习题6.8\n教材习题6.11-6.12\n教材习题6.27\n教材习题6.28"
   },
   {
     "objectID": "chap3.html",
@@ -891,44 +891,44 @@
   {
     "objectID": "mobile.html#定量变量",
     "href": "mobile.html#定量变量",
-    "title": "手机消费行为分析",
+    "title": "mobile",
     "section": "2.1 定量变量",
-    "text": "2.1 定量变量\n\n\nCode\nlibrary(modelsummary)\ndatasummary(laptop + expense + mobile + usage_month ~ \n                     N + Mean + SD + Median + Min + Max, \n                   data = df, \n                   fmt = 3, \n                   output = 'flextable') %&gt;%\n  theme_apa() %&gt;%              \n  autofit() %&gt;%               \n  font(fontname = \"Times New Roman\", part = \"all\")\n\n\n NMeanSDMedianMinMaxlaptop1426260.6272362.1716000.0001800.00013000.000expense1422100.077672.0722000.000800.0005000.000mobile1425329.8242828.3705299.5001200.00013999.000usage_month14215.69710.25416.0001.00062.000"
+    "text": "2.1 定量变量\n\n\ncode\nlibrary(modelsummary)\ndatasummary(laptop + cost + mobile + usage_month ~ \n                     N + Mean + SD + Median + Min + Max, \n                   data = df, \n                   fmt = 3, \n                   output = 'flextable') %&gt;%\n  theme_apa() %&gt;%              \n  autofit() %&gt;%               \n  font(fontname = \"Times New Roman\", part = \"all\")\n\n\n NMeanSDMedianMinMaxlaptop1426260.6272362.1716000.0001800.00013000.000cost1422100.077672.0722000.000800.0005000.000mobile1425329.8242828.3705299.5001200.00013999.000usage_month14215.69710.25416.0001.00062.000"
   },
   {
     "objectID": "mobile.html#定性变量",
     "href": "mobile.html#定性变量",
-    "title": "手机消费行为分析",
+    "title": "mobile",
     "section": "2.2 定性变量",
-    "text": "2.2 定性变量\n\n\nCode\ndatasummary(gender + demand_level + brand_preference ~ \n            N + Percent() + laptop * (Mean + Median + SD + Min + Max), \n            data = df, \n            fmt = 2, \n            output = 'flextable') %&gt;%\n  theme_apa() %&gt;%\n  autofit() %&gt;%\n  font(fontname = \"Times New Roman\", part = \"all\")\n\n\n   NPercentMeanMedianSDMinMaxgenderfemale10876.065865.745550.002262.621800.0013000.00male3423.947514.977149.502260.612599.0012999.00demand_levellite9063.385733.385550.002120.691800.0012499.00performance5236.627173.176894.502497.742300.0013000.00brand_preferencegaming2114.798042.247800.001947.865400.0013000.00mainstream8157.045800.215600.002078.701800.0012999.00premium1812.687578.336857.502639.923599.0012499.00value2215.495177.055000.002244.662000.0010000.00"
+    "text": "2.2 定性变量\n\n\ncode\ndatasummary(gender + demand_type + brand_prefer ~ \n            N + Percent() + laptop * (Mean + Median + SD + Min + Max), \n            data = df, \n            fmt = 2, \n            output = 'flextable') %&gt;%\n  theme_apa() %&gt;%\n  autofit() %&gt;%\n  font(fontname = \"Times New Roman\", part = \"all\")\n\n\n   NPercentMeanMedianSDMinMaxgenderfemale10876.065865.745550.002262.621800.0013000.00male3423.947514.977149.502260.612599.0012999.00demand_typelite9063.385733.385550.002120.691800.0012499.00performance5236.627173.176894.502497.742300.0013000.00brand_prefergaming2114.798042.247800.001947.865400.0013000.00mainstream8157.045800.215600.002078.701800.0012999.00premium1812.687578.336857.502639.923599.0012499.00value2215.495177.055000.002244.662000.0010000.00"
   },
   {
     "objectID": "mobile.html#section",
     "href": "mobile.html#section",
-    "title": "手机消费行为分析",
+    "title": "mobile",
     "section": "",
     "text": "Thanks for your attention！"
   },
   {
     "objectID": "mobile.html#数据和变量",
     "href": "mobile.html#数据和变量",
-    "title": "手机消费行为分析",
-    "section": "1 数据和变量",
-    "text": "1 数据和变量\n数据来源：mobile.xlsx\n样本容量：142\nlaptop: 笔记本电脑价格\nexpense: 月生活费\nmobile: 手机价格\nmobile: 笔记本电脑使用时长\ngender: 性别\ndemand_level: performance/lite\nbrand_preference: gaming/mainstream/premium/value"
+    "title": "mobile",
+    "section": "",
+    "text": "数据来源：mobile.xlsx\n样本容量：142\nlaptop: 笔记本电脑价格(元)\nexpense: 月生活费(元)\nmobile: 手机价格(元)\nmobile: 笔记本电脑使用时长(月)\ngender: 性别\ndemand_level: performance/lite\nbrand_preference: gaming/mainstream/premium/value"
   },
   {
     "objectID": "mobile.html#描述性统计分析",
     "href": "mobile.html#描述性统计分析",
-    "title": "手机消费行为分析",
+    "title": "mobile",
     "section": "2 描述性统计分析",
-    "text": "2 描述性统计分析\n2.1 定量变量\n\n\nCode\nlibrary(modelsummary)\ndatasummary(laptop + expense + mobile + usage_month ~ \n                     N + Mean + SD + Median + Min + Max, \n                   data = df, \n                   fmt = 3, \n                   output = 'flextable') %&gt;%\n  theme_apa() %&gt;%              \n  autofit() %&gt;%               \n  font(fontname = \"Times New Roman\", part = \"all\")\n\n\n NMeanSDMedianMinMaxlaptop1426260.6272362.1716000.0001800.00013000.000expense1422100.077672.0722000.000800.0005000.000mobile1425329.8242828.3705299.5001200.00013999.000usage_month14215.69710.25416.0001.00062.000"
+    "text": "2 描述性统计分析\n\n2.1 定量变量\n\n\ncode\nlibrary(modelsummary)\ndatasummary(laptop + expense + mobile + usage_month ~ \n                     N + Mean + SD + Median + Min + Max, \n                   data = df, \n                   fmt = 3, \n                   output = 'flextable') %&gt;%\n  theme_apa() %&gt;%              \n  autofit() %&gt;%               \n  font(fontname = \"Times New Roman\", part = \"all\")\n\n\n NMeanSDMedianMinMaxlaptop1426260.6272362.1716000.0001800.00013000.000expense1422100.077672.0722000.000800.0005000.000mobile1425329.8242828.3705299.5001200.00013999.000usage_month14215.69710.25416.0001.00062.000\n\n\n\n\n\n2.2 定性变量\n\n\ncode\ndatasummary(gender + demand_level + brand_preference ~ \n            N + Percent() + laptop * (Mean + Median + SD + Min + Max), \n            data = df, \n            fmt = 2, \n            output = 'flextable') %&gt;%\n  theme_apa() %&gt;%\n  autofit() %&gt;%\n  font(fontname = \"Times New Roman\", part = \"all\")\n\n\n   NPercentMeanMedianSDMinMaxgenderfemale10876.065865.745550.002262.621800.0013000.00male3423.947514.977149.502260.612599.0012999.00demand_levellite9063.385733.385550.002120.691800.0012499.00performance5236.627173.176894.502497.742300.0013000.00brand_preferencegaming2114.798042.247800.001947.865400.0013000.00mainstream8157.045800.215600.002078.701800.0012999.00premium1812.687578.336857.502639.923599.0012499.00value2215.495177.055000.002244.662000.0010000.00"
   },
   {
     "objectID": "mobile.html#回归分析",
     "href": "mobile.html#回归分析",
-    "title": "手机消费行为分析",
+    "title": "mobile",
     "section": "3 回归分析",
-    "text": "3 回归分析"
+    "text": "3 回归分析\n\n3.1 Model 1\n\n\ncode\nlibrary(broom)\nm1 &lt;- lm(laptop ~ expense + mobile + usage_month, data = df)\n\nmodels_list &lt;- list(\"Model 1\" = m1)\n\nmodelsummary(\n  list(\"Model 1\" = m1), \n  fmt = 3, \n  stars = TRUE, \n  gof_omit = 'AIC|BIC|Log.Lik|F|statistic', \n  output = \"flextable\"\n) %&gt;% \n  theme_apa() %&gt;%\n  fontsize(size = 18, part = \"all\") %&gt;%      \n  padding(padding = 5, part = \"all\") %&gt;%\n  autofit() %&gt;%\n  font(fontname = \"Times New Roman\", part = \"all\")\n\n\nModel 1 Regression Analysis Model 1(Intercept)4689.049***(654.061)expense0.399(0.289)mobile0.291***(0.069)usage_month-52.193**(17.250)Num.Obs.142R20.230R2 Adj.0.213RMSE2065.51+ p &lt; 0.1, * p &lt; 0.05, ** p &lt; 0.01, *** p &lt; 0.001\n\n\n\\[\n\\operatorname{\\widehat{laptop}} = 4689.049 + 0.399(\\operatorname{\\expense}) + 0.291(\\operatorname{mobile}) - 52.193(\\operatorname{usage\\_month})\n\\]\n\n\n\n3.2 Model 2\n\n\ncode\nlibrary(broom)\nm2 &lt;- lm(log(laptop) ~ log(expense) + log(mobile) + usage_month, data = df)\n\nmodels_list &lt;- list(\"Model 2 (Y=log(laptop))\" = m2)\n\nmodelsummary(\n  models_list, \n  fmt = 3, \n  stars = TRUE,  \n  gof_omit = 'AIC|BIC|Log.Lik|F|statistic', \n  output = \"flextable\"\n) %&gt;% \n  theme_apa() %&gt;% \n  autofit() %&gt;%\n  font(fontname = \"Times New Roman\", part = \"all\")\n\n\nModel 2 Regression Analysis Model 2 (Y=log(laptop))(Intercept)5.785***(0.735)log(expense)0.110(0.103)log(mobile)0.258***(0.056)usage_month-0.008**(0.003)Num.Obs.142R20.229R2 Adj.0.213RMSE0.35+ p &lt; 0.1, * p &lt; 0.05, ** p &lt; 0.01, *** p &lt; 0.001\n\n\n\\[\n\\operatorname{\\widehat{log(laptop)}} = 5.785 + 0.11(\\operatorname{\\log(\\expense)}) + 0.258(\\operatorname{\\log(mobile)}) - 0.008(\\operatorname{usage\\_month})\n\\]\n\n\n\n3.3 Model 3\n\n\ncode\nm3 &lt;- lm(laptop ~ expense + mobile + usage_month + gender, data = df)\n\nmodels_list &lt;- list(\"Model 3\" = m3)\n\nmodelsummary(\n  models_list, \n  fmt = 3, \n  stars = TRUE,  \n  gof_omit = 'AIC|BIC|Log.Lik|F|statistic', \n  output = \"flextable\"\n) %&gt;% \n  theme_apa() %&gt;% \n  autofit() %&gt;%\n  font(fontname = \"Times New Roman\", part = \"all\")\n\n\nRegression Analysis Model 3(Intercept)3905.511***(638.666)expense0.424(0.272)mobile0.317***(0.065)usage_month-40.910*(16.386)gendermale1745.878***(393.317)Num.Obs.142R20.327R2 Adj.0.307RMSE1931.29+ p &lt; 0.1, * p &lt; 0.05, ** p &lt; 0.01, *** p &lt; 0.001\n\n\n\\[\n\\operatorname{\\widehat{laptop}} = 3905.511 + 0.424(\\operatorname{\\expense}) + 0.317(\\operatorname{mobile}) - 40.91(\\operatorname{usage\\_month}) + 1745.878(\\operatorname{gender}_{\\operatorname{male}})\n\\]"
   },
   {
     "objectID": "case.html#第3轮讨论课-第10周模型函数形式变换虚拟变量的引入",
@@ -957,5 +957,61 @@
     "title": "Chapter 6 Solutions",
     "section": "",
     "text": "注意：本讲义供学习交流使用，请勿用于商业用途"
+  },
+  {
+    "objectID": "mobile.html",
+    "href": "mobile.html",
+    "title": "mobile",
+    "section": "",
+    "text": "数据来源：mobile.xlsx\n样本容量：142\nlaptop: 笔记本电脑价格(元)\ncost: 月生活费(元)\nmobile: 手机价格(元)\nmobile: 笔记本电脑使用时长(月)\ngender: 性别\ndemand_type: 需求类型(性能-performance/轻量-lite)\nbrand_prefer: 品牌偏好(高端设计-premium/主流商务-mainstream/专业游戏-gaming/高性价比-value)"
+  },
+  {
+    "objectID": "mobile.html#model-1",
+    "href": "mobile.html#model-1",
+    "title": "mobile",
+    "section": "3.1 Model 1",
+    "text": "3.1 Model 1\n\n\ncode\nlibrary(broom)\nm1 &lt;- lm(laptop ~ cost + mobile + usage_month, data = df)\n\nmodels_list &lt;- list(\"Model 1\" = m1)\n\nmodelsummary(\n  list(\"Model 1\" = m1), \n  fmt = 3, \n  stars = TRUE, \n  gof_omit = 'AIC|BIC|Log.Lik|F|statistic', \n  output = \"flextable\"\n) %&gt;% \n  theme_apa() %&gt;%\n  fontsize(size = 18, part = \"all\") %&gt;%      \n  padding(padding = 5, part = \"all\") %&gt;%\n  autofit() %&gt;%\n  font(fontname = \"Times New Roman\", part = \"all\")\n\n\nModel 1 Regression Analysis Model 1(Intercept)4689.049***(654.061)cost0.399(0.289)mobile0.291***(0.069)usage_month-52.193**(17.250)Num.Obs.142R20.230R2 Adj.0.213RMSE2065.51+ p &lt; 0.1, * p &lt; 0.05, ** p &lt; 0.01, *** p &lt; 0.001\n\n\n\\[\n\\operatorname{\\widehat{laptop}} = 4689.049 + 0.399(\\operatorname{cost}) + 0.291(\\operatorname{mobile}) - 52.193(\\operatorname{usage\\_month})\n\\]"
+  },
+  {
+    "objectID": "mobile.html#model-2",
+    "href": "mobile.html#model-2",
+    "title": "mobile",
+    "section": "3.2 Model 2",
+    "text": "3.2 Model 2\n\n\ncode\nlibrary(broom)\nm2 &lt;- lm(log(laptop) ~ log(cost) + log(mobile) + usage_month, data = df)\n\nmodels_list &lt;- list(\"Model 2 (Y=log(laptop))\" = m2)\n\nmodelsummary(\n  models_list, \n  fmt = 3, \n  stars = TRUE,  \n  gof_omit = 'AIC|BIC|Log.Lik|F|statistic', \n  output = \"flextable\"\n) %&gt;% \n  theme_apa() %&gt;% \n  autofit() %&gt;%\n  font(fontname = \"Times New Roman\", part = \"all\")\n\n\nModel 2 Regression Analysis Model 2 (Y=log(laptop))(Intercept)5.785***(0.735)log(cost)0.110(0.103)log(mobile)0.258***(0.056)usage_month-0.008**(0.003)Num.Obs.142R20.229R2 Adj.0.213RMSE0.35+ p &lt; 0.1, * p &lt; 0.05, ** p &lt; 0.01, *** p &lt; 0.001\n\n\n\\[\n\\operatorname{\\widehat{log(laptop)}} = 5.785 + 0.11(\\operatorname{\\log(cost)}) + 0.258(\\operatorname{\\log(mobile)}) - 0.008(\\operatorname{usage\\_month})\n\\]\n\\[\n\\operatorname{\\widehat{log(laptop)}} = 5.785 + 0.11(\\operatorname{\\log(cost)}) + 0.258(\\operatorname{\\log(mobile)}) - 0.008(\\operatorname{usage\\_month})\n\\]"
+  },
+  {
+    "objectID": "mobile.html#model-3",
+    "href": "mobile.html#model-3",
+    "title": "mobile",
+    "section": "3.4 Model 3",
+    "text": "3.4 Model 3\n\n\ncode\nm3 &lt;- lm(laptop ~ cost + mobile + usage_month + gender, data = df)\n\nmodels_list &lt;- list(\"Model 3\" = m3)\n\nmodelsummary(\n  models_list, \n  fmt = 3, \n  stars = TRUE,  \n  gof_omit = 'AIC|BIC|Log.Lik|F|statistic', \n  output = \"flextable\"\n) %&gt;% \n  theme_apa() %&gt;% \n  autofit() %&gt;%\n  font(fontname = \"Times New Roman\", part = \"all\")\n\n\nRegression Analysis Model 3(Intercept)3905.511***(638.666)cost0.424(0.272)mobile0.317***(0.065)usage_month-40.910*(16.386)gendermale1745.878***(393.317)Num.Obs.142R20.327R2 Adj.0.307RMSE1931.29+ p &lt; 0.1, * p &lt; 0.05, ** p &lt; 0.01, *** p &lt; 0.001\n\n\n\\[\n\\operatorname{\\widehat{laptop}} = 3905.511 + 0.424(\\operatorname{cost}) + 0.317(\\operatorname{mobile}) - 40.91(\\operatorname{usage\\_month}) + 1745.878(\\operatorname{gender}_{\\operatorname{male}})\n\\]\n\n\\[\n\\operatorname{\\widehat{laptop}} = 3905.511 + 0.424(\\operatorname{cost}) + 0.317(\\operatorname{mobile}) - 40.91(\\operatorname{usage\\_month}) + 1745.878(\\operatorname{gender}_{\\operatorname{male}})\n\\]"
+  },
+  {
+    "objectID": "mobile.html#model-4",
+    "href": "mobile.html#model-4",
+    "title": "mobile",
+    "section": "3.5 Model 4",
+    "text": "3.5 Model 4\n\n\ncode\nm4 &lt;- lm(log(laptop) ~ log(cost) + log(mobile) + \n           usage_month + \n           gender + demand_type + brand_prefer , data = df)\n\nmodels_list &lt;- list(\"Model 4\" = m4)\n\nmodelsummary(\n  models_list, \n  fmt = 3, \n  stars = TRUE,  \n  gof_omit = 'AIC|BIC|Log.Lik|F|statistic', \n  output = \"flextable\"\n) %&gt;% \n  theme_apa() %&gt;% \n  autofit() %&gt;%\n  font(fontname = \"Times New Roman\", part = \"all\")\n\n\nRegression Analysis Model 4(Intercept)6.288***(0.730)log(cost)0.070(0.096)log(mobile)0.241***(0.052)usage_month-0.005*(0.003)gendermale0.231***(0.068)demand_typeperformance0.094(0.066)brand_prefermainstream-0.217*(0.087)brand_preferpremium-0.081(0.113)brand_prefervalue-0.322**(0.101)Num.Obs.142R20.406R2 Adj.0.370RMSE0.31+ p &lt; 0.1, * p &lt; 0.05, ** p &lt; 0.01, *** p &lt; 0.001\n\n\n\\[\n\\begin{aligned}\n\\operatorname{\\widehat{log(laptop)}} &= 6.2883 + 0.07(\\operatorname{\\log(cost)}) + 0.2408(\\operatorname{\\log(mobile)}) - 0.0055(\\operatorname{usage\\_month})\\ + \\\\\n&\\quad 0.2306(\\operatorname{gender}_{\\operatorname{male}}) + 0.094(\\operatorname{demand\\_type}_{\\operatorname{performance}}) - 0.2174(\\operatorname{brand\\_prefer}_{\\operatorname{mainstream}}) - 0.0812(\\operatorname{brand\\_prefer}_{\\operatorname{premium}})\\ - \\\\\n&\\quad 0.3221(\\operatorname{brand\\_prefer}_{\\operatorname{value}})\n\\end{aligned}\n\\]"
+  },
+  {
+    "objectID": "mobile.html#model-3.1",
+    "href": "mobile.html#model-3.1",
+    "title": "mobile",
+    "section": "3.3 Model 3.1",
+    "text": "3.3 Model 3.1\n\n\ncode\nm3 &lt;- lm(laptop ~ cost + mobile + usage_month + gender, data = df)\n\nmodels_list &lt;- list(\"Model 3\" = m3)\n\nmodelsummary(\n  models_list, \n  fmt = 3, \n  stars = TRUE,  \n  gof_omit = 'AIC|BIC|Log.Lik|F|statistic', \n  output = \"flextable\"\n) %&gt;% \n  theme_apa() %&gt;% \n  autofit() %&gt;%\n  font(fontname = \"Times New Roman\", part = \"all\")\n\n\nRegression Analysis Model 3(Intercept)3905.511***(638.666)cost0.424(0.272)mobile0.317***(0.065)usage_month-40.910*(16.386)gendermale1745.878***(393.317)Num.Obs.142R20.327R2 Adj.0.307RMSE1931.29+ p &lt; 0.1, * p &lt; 0.05, ** p &lt; 0.01, *** p &lt; 0.001\n\n\n\\[\n\\operatorname{\\widehat{laptop}} = 3905.511 + 0.424(\\operatorname{cost}) + 0.317(\\operatorname{mobile}) - 40.91(\\operatorname{usage\\_month}) + 1745.878(\\operatorname{gender}_{\\operatorname{male}})\n\\]\n\n\\[\n\\operatorname{\\widehat{laptop}} = 3905.511 + 0.424(\\operatorname{cost}) + 0.317(\\operatorname{mobile}) - 40.91(\\operatorname{usage\\_month}) + 1745.878(\\operatorname{gender}_{\\operatorname{male}})\n\\]"
+  },
+  {
+    "objectID": "mobile.html#model-2.1",
+    "href": "mobile.html#model-2.1",
+    "title": "mobile",
+    "section": "3.2 Model 2.1",
+    "text": "3.2 Model 2.1\n\n\ncode\nlibrary(broom)\nm2 &lt;- lm(log(laptop) ~ log(cost) + log(mobile) + usage_month, data = df)\n\nmodels_list &lt;- list(\"Model 2 (Y=log(laptop))\" = m2)\n\nmodelsummary(\n  models_list, \n  fmt = 3, \n  stars = TRUE,  \n  gof_omit = 'AIC|BIC|Log.Lik|F|statistic', \n  output = \"flextable\"\n) %&gt;% \n  theme_apa() %&gt;% \n  autofit() %&gt;%\n  font(fontname = \"Times New Roman\", part = \"all\")\n\n\nModel 2 Regression Analysis Model 2 (Y=log(laptop))(Intercept)5.785***(0.735)log(cost)0.110(0.103)log(mobile)0.258***(0.056)usage_month-0.008**(0.003)Num.Obs.142R20.229R2 Adj.0.213RMSE0.35+ p &lt; 0.1, * p &lt; 0.05, ** p &lt; 0.01, *** p &lt; 0.001\n\n\n\\[\n\\operatorname{\\widehat{log(laptop)}} = 5.785 + 0.11(\\operatorname{\\log(cost)}) + 0.258(\\operatorname{\\log(mobile)}) - 0.008(\\operatorname{usage\\_month})\n\\]\n\\[\n\\operatorname{\\widehat{log(laptop)}} = 5.785 + 0.11(\\operatorname{\\log(cost)}) + 0.258(\\operatorname{\\log(mobile)}) - 0.008(\\operatorname{usage\\_month})\n\\]"
+  },
+  {
+    "objectID": "mobile.html#model-2.2",
+    "href": "mobile.html#model-2.2",
+    "title": "mobile",
+    "section": "3.3 Model 2.2",
+    "text": "3.3 Model 2.2\n\n\ncode\nlibrary(broom)\nm2.2 &lt;- lm(log(laptop) ~ log(cost) + log(mobile) + usage_month + gender + \n     gender:log(mobile), data = df)\n\nmodels_list &lt;- list(\"Model 2 (Y=log(laptop))\" = m2.2)\n\nmodelsummary(\n  models_list, \n  fmt = 3, \n  stars = TRUE,  \n  gof_omit = 'AIC|BIC|Log.Lik|F|statistic', \n  output = \"flextable\"\n) %&gt;% \n  theme_apa() %&gt;% \n  autofit() %&gt;%\n  font(fontname = \"Times New Roman\", part = \"all\")\n\n\nModel 2 Regression Analysis Model 2 (Y=log(laptop))(Intercept)5.027***(0.740)log(cost)0.122(0.096)log(mobile)0.325***(0.059)usage_month-0.006*(0.003)gendermale1.827*(0.920)log(mobile) × gendermale-0.183+(0.110)Num.Obs.142R20.341R2 Adj.0.317RMSE0.32+ p &lt; 0.1, * p &lt; 0.05, ** p &lt; 0.01, *** p &lt; 0.001\n\n\n\\[\n\\begin{aligned}\n\\operatorname{\\widehat{log(laptop)}} &= 5.027 + 0.122(\\operatorname{\\log(cost)}) + 0.325(\\operatorname{\\log(mobile)}) - 0.006(\\operatorname{usage\\_month})\\ + \\\\\n&\\quad 1.827(\\operatorname{gender}_{\\operatorname{male}}) - 0.183(\\operatorname{\\log(mobile)} \\times \\operatorname{gender}_{\\operatorname{male}})\n\\end{aligned}\n\\]"
   }
 ]
