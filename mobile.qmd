@@ -186,25 +186,6 @@ extract_eq(m2,
 ```
 
 
-```{r}
-#| results: asis
-#| echo: false
-#| message: false
-#| warning: false
-
-library(equatiomatic)
-
-extract_eq(m2, 
-           use_coefs = TRUE, 
-           coef_digits = 3,          
-           fix_names = TRUE)
-
-
-```
-
-
-
-
 ## Model 2.2
 
 ```{r}
