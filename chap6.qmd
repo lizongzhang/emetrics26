@@ -6,6 +6,8 @@ title: "第6章"
 
 <img src="img/teacher.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[讲义](https://lizongzhang.github.io/emetrics26/chap6slide.html){target="_blank"}
 
+<img src="img/teacher.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[习题讲评](https://lizongzhang.github.io/emetrics26/chap6ex.html){target="_blank"}
+
 
 # Eviews操作
 
