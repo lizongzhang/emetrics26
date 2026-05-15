@@ -30,15 +30,22 @@ title: "第7章"
 
 # 习题讲评视频
 
-<img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px">[例题7.7.4讲评](https://www.bilibili.com/video/BV1h24y1C7aW/){target="_blank"}
+<img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px">[教材习题7.11+7.16——基于EViews](https://www.bilibili.com/video/BV1ey4y1W75g){target="_blank"}
 
-<img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px">[教材习题7.11 + 7.16讲评](https://www.bilibili.com/video/BV1rW4y1H76b/){target="_blank"}
+<img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px">[教材习题7.14——基于EViews](https://www.bilibili.com/video/BV1ey4y1W75g){target="_blank"}
 
-<img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px">[教材习题7.14讲评](https://www.bilibili.com/video/BV1r44y1D7fL/){target="_blank"}
 
-<img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px">[10个城市人口模型之循环语句讲评](https://www.bilibili.com/video/BV1EY411d7xD/){target="_blank"}
+<img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px">[教材习题7.21——基于EViews](https://www.bilibili.com/video/BV1ey4y1W75g){target="_blank"}
 
-<img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px">[10个城市人口模型之绘图讲评](https://www.bilibili.com/video/BV1v44y1D7j8/){target="_blank"}
+<img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px">[例题7.7.4讲评——基于R](https://www.bilibili.com/video/BV1h24y1C7aW/){target="_blank"}
+
+<img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px">[教材习题7.11 + 7.16讲评——基于R](https://www.bilibili.com/video/BV1rW4y1H76b/){target="_blank"}
+
+<img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px">[教材习题7.14讲评——基于R](https://www.bilibili.com/video/BV1r44y1D7fL/){target="_blank"}
+
+<img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px">[10个城市人口模型之循环语句讲评R](https://www.bilibili.com/video/BV1EY411d7xD/){target="_blank"}
+
+<img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px">[10个城市人口模型之绘图讲评R](https://www.bilibili.com/video/BV1v44y1D7j8/){target="_blank"}
 
 # 习题答案
 
@@ -54,11 +61,3 @@ title: "第7章"
 
 </details>
 
-# 习题讲评视频
-
-<img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px">[教材习题7.11+7.16](https://www.bilibili.com/video/BV1ey4y1W75g){target="_blank"}
-
-<img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px">[教材习题7.14](https://www.bilibili.com/video/BV1ey4y1W75g){target="_blank"}
-
-
-<img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px">[教材习题7.21](https://www.bilibili.com/video/BV1ey4y1W75g){target="_blank"}

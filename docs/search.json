@@ -823,7 +823,7 @@
     "href": "chap7.html",
     "title": "第7章",
     "section": "",
-    "text": "第7章 设定误差检验\n讲义\n\n\nEviews操作\nEviews遗漏或多余变量的检验\nEviews reset检验\n\n\nR教学视频\nR中如何实现回归方程设定误差检验(Ramsey RESET)?\nR中的for循环\n循环语句for loop在回归分析中的运用\nR中的数据结构转换：宽型转长形–pivot_longer函数的运用\nR中如何简洁地表达多元回归方程的设定？\n\n\n习题讲评视频\n例题7.7.4讲评\n教材习题7.11 + 7.16讲评\n教材习题7.14讲评\n10个城市人口模型之循环语句讲评\n10个城市人口模型之绘图讲评\n\n\n习题答案\n\n\n点击展开\n\n\n如果想在新窗口打开 PDF，请点这里： 在新标签页中查看 PDF\n\n\n&lt;!-- 备用内容（若浏览器不支持 iframe） --&gt;\n&lt;p&gt;\n你的浏览器无法嵌入 PDF，请 &lt;a href=\"img/EE4_Ch07_Solutions_Manual.pdf\" target=\"_blank\" rel=\"noopener\"&gt;点此下载/查看 PDF&lt;/a&gt;.\n&lt;/p&gt;\n\n\n\n\n习题讲评视频\n教材习题7.11+7.16\n教材习题7.14\n教材习题7.21"
+    "text": "第7章 设定误差检验\n讲义\n\n\nEviews操作\nEviews遗漏或多余变量的检验\nEviews reset检验\n\n\nR教学视频\nR中如何实现回归方程设定误差检验(Ramsey RESET)?\nR中的for循环\n循环语句for loop在回归分析中的运用\nR中的数据结构转换：宽型转长形–pivot_longer函数的运用\nR中如何简洁地表达多元回归方程的设定？\n\n\n习题讲评视频\n教材习题7.11+7.16——基于EViews\n教材习题7.14——基于EViews\n教材习题7.21——基于EViews\n例题7.7.4讲评——基于R\n教材习题7.11 + 7.16讲评——基于R\n教材习题7.14讲评——基于R\n10个城市人口模型之循环语句讲评R\n10个城市人口模型之绘图讲评R\n\n\n习题答案\n\n\n点击展开\n\n\n如果想在新窗口打开 PDF，请点这里： 在新标签页中查看 PDF\n\n\n&lt;!-- 备用内容（若浏览器不支持 iframe） --&gt;\n&lt;p&gt;\n你的浏览器无法嵌入 PDF，请 &lt;a href=\"img/EE4_Ch07_Solutions_Manual.pdf\" target=\"_blank\" rel=\"noopener\"&gt;点此下载/查看 PDF&lt;/a&gt;.\n&lt;/p&gt;"
   },
   {
     "objectID": "chap4.html",
