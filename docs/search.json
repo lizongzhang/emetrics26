@@ -494,7 +494,7 @@
     "href": "chap9.html",
     "title": "第9章",
     "section": "",
-    "text": "第9章 异方差\n讲义\n\n\nEviews操作\nEviews 残差的图形诊断\nEviews 异方差检验\nEviews 加权最小二乘\nEviews 怀特异方差校正值\n\n\nR教学视频\n异方差——残差的图形诊断在R中的实现\n怀特异方差检验在R中的实现\n加权最小二乘法在R中的实现\n怀特异方差校正后的标准误的计算在R中的实现\n\n\n习题讲评视频\n9.27 Breush-Pagan异方差检验\n9.27 如何应对异方差问题\n9.28 怀特异方差校正后的标准误与OLS标准误的对比\n\n\n习题答案\n\n\n点击展开\n\n\n如果想在新窗口打开 PDF，请点这里： 在新标签页中查看 PDF\n\n\n&lt;!-- 备用内容（若浏览器不支持 iframe） --&gt;\n&lt;p&gt;\n你的浏览器无法嵌入 PDF，请 &lt;a href=\"img/EE4_Ch09_Solutions_Manual.pdf\" target=\"_blank\" rel=\"noopener\"&gt;点此下载/查看 PDF&lt;/a&gt;.\n&lt;/p&gt;\n\n\n\n\n习题讲评视频\n教材习题9.6+9.7+9.8\n教材习题9.9\n教材习题9.14\n教材习题9.28"
+    "text": "第9章 异方差\n讲义\n\n\nEviews教学视频\nEviews 残差的图形诊断\nEviews 异方差检验\nEviews 加权最小二乘\nEviews 怀特异方差校正值\n\n\nR教学视频\n异方差——残差的图形诊断在R中的实现\n怀特异方差检验在R中的实现\n加权最小二乘法在R中的实现\n怀特异方差校正后的标准误的计算在R中的实现\n\n\n习题讲评视频\n教材习题9.6+9.7+9.8\n教材习题9.9–基于EViews\n教材习题9.14–基于EViews\n教材习题9.28–基于EViews\n9.27 Breush-Pagan异方差检验–基于R\n9.27 如何应对异方差问题–基于R\n9.28 怀特异方差校正后的标准误与OLS标准误的对比–基于R\n\n\n习题答案\n\n\n点击展开\n\n\n如果想在新窗口打开 PDF，请点这里： 在新标签页中查看 PDF\n\n\n&lt;!-- 备用内容（若浏览器不支持 iframe） --&gt;\n&lt;p&gt;\n你的浏览器无法嵌入 PDF，请 &lt;a href=\"img/EE4_Ch09_Solutions_Manual.pdf\" target=\"_blank\" rel=\"noopener\"&gt;点此下载/查看 PDF&lt;/a&gt;.\n&lt;/p&gt;"
   },
   {
     "objectID": "chap3slide.html",
@@ -1013,5 +1013,103 @@
     "title": "mobile",
     "section": "3.3 Model 2.2",
     "text": "3.3 Model 2.2\n\n\ncode\nlibrary(broom)\nm2.2 &lt;- lm(log(laptop) ~ log(cost) + log(mobile) + usage_month + gender + \n     gender:log(mobile), data = df)\n\nmodels_list &lt;- list(\"Model 2 (Y=log(laptop))\" = m2.2)\n\nmodelsummary(\n  models_list, \n  fmt = 3, \n  stars = TRUE,  \n  gof_omit = 'AIC|BIC|Log.Lik|F|statistic', \n  output = \"flextable\"\n) %&gt;% \n  theme_apa() %&gt;% \n  autofit() %&gt;%\n  font(fontname = \"Times New Roman\", part = \"all\")\n\n\nModel 2 Regression Analysis Model 2 (Y=log(laptop))(Intercept)5.027***(0.740)log(cost)0.122(0.096)log(mobile)0.325***(0.059)usage_month-0.006*(0.003)gendermale1.827*(0.920)log(mobile) × gendermale-0.183+(0.110)Num.Obs.142R20.341R2 Adj.0.317RMSE0.32+ p &lt; 0.1, * p &lt; 0.05, ** p &lt; 0.01, *** p &lt; 0.001\n\n\n\\[\n\\begin{aligned}\n\\operatorname{\\widehat{log(laptop)}} &= 5.027 + 0.122(\\operatorname{\\log(cost)}) + 0.325(\\operatorname{\\log(mobile)}) - 0.006(\\operatorname{usage\\_month})\\ + \\\\\n&\\quad 1.827(\\operatorname{gender}_{\\operatorname{male}}) - 0.183(\\operatorname{\\log(mobile)} \\times \\operatorname{gender}_{\\operatorname{male}})\n\\end{aligned}\n\\]"
+  },
+  {
+    "objectID": "pre.html#ai是r学习的超级加速器",
+    "href": "pre.html#ai是r学习的超级加速器",
+    "title": "小组任务课堂汇报",
+    "section": "1 AI是R学习的“超级加速器”",
+    "text": "1 AI是R学习的“超级加速器”\n学 R 最大的瓶颈不是“不会统计”，而是“我知道我想做什么，但不知道 R 该怎么实现”。\n好的 AI 能让你：\n\n从想法直接到可运行代码（节省 70% 时间）\n快速理解底层逻辑而非死记硬背\n养成专业级的编码习惯\n逐步建立自己的 R 知识体系"
+  },
+  {
+    "objectID": "pre.html#提示词框架",
+    "href": "pre.html#提示词框架",
+    "title": "小组任务课堂汇报",
+    "section": "2 提示词框架",
+    "text": "2 提示词框架\n\nRole（角色）\nContext（上下文）\nTask（具体任务）\nStandard（标准要求）\nExample（示例，可选）"
+  },
+  {
+    "objectID": "pre.html#解释报错",
+    "href": "pre.html#解释报错",
+    "title": "小组任务课堂汇报",
+    "section": "3 解释报错",
+    "text": "3 解释报错\n代码和报错都要贴给 AI，才能得到准确的解释和修复方案。\n\n\n\n\n\n\nTip\n\n\n我运行了以下代码，出现了报错。 [粘贴代码] [完整粘贴Console红色报错]\n我想实现的是……\n请： 1. 解释错误根本原因\n\n给出修复后的代码\n告诉我以后如何避免同类错误"
+  },
+  {
+    "objectID": "pre.html#ai最不可靠的地方",
+    "href": "pre.html#ai最不可靠的地方",
+    "title": "小组任务课堂汇报",
+    "section": "4 AI最不可靠的地方",
+    "text": "4 AI最不可靠的地方\n虽然 AI 非常强大，但它不是万能的，以下是它最容易出错的几个方面，初学者一定要提高警惕：\n① 幻觉（Hallucination）\nAI 有时会非常自信地编造不存在的信息，包括函数、参数、包的用法等。\n即使它说得头头是道，也可能完全错误。"
+  },
+  {
+    "objectID": "pre.html#在-rstudio-中高效使用-ai",
+    "href": "pre.html#在-rstudio-中高效使用-ai",
+    "title": "小组任务课堂汇报",
+    "section": "5 在 RStudio 中高效使用 AI",
+    "text": "5 在 RStudio 中高效使用 AI\nGitHub Copilot：适合边写边补全\nClaude / DeepSeek：适合复杂任务和深度思考（推荐网页版）\n最佳组合：Copilot 写代码 + Claude 做架构和审查"
+  },
+  {
+    "objectID": "pre.html#小结r小白进阶建议",
+    "href": "pre.html#小结r小白进阶建议",
+    "title": "小组任务课堂汇报",
+    "section": "6 小结：R小白进阶建议",
+    "text": "6 小结：R小白进阶建议\nAI辅助学习R的工作流：\n\n用清晰提示让AI生成代码\n复制到 RStudio 运行\n报错 → 贴给AI修复\n最重要：让AI逐行解释代码 → 自己把注释写进脚本\n重复此过程，建立个人代码库"
+  },
+  {
+    "objectID": "pre.html#汇报的安排",
+    "href": "pre.html#汇报的安排",
+    "title": "小组任务课堂汇报",
+    "section": "汇报的安排",
+    "text": "汇报的安排\n\n选拔机制：老师根据演示文稿质量，仅挑选 4 个优胜小组 进行课堂汇报。\n提交截止：第14周周日（2026年6月7日）20:00 前提交PDF，逾期直接失去资格。\n汇报时长：严格 5分钟。这是一场高效的学术成果推销，而非朗读报告。\n严禁内容：代码（第6部分）和个人心得（第7部分）不得放入PPT。\n奖励：优胜小组每位成员实验报告加 3-5分。"
+  },
+  {
+    "objectID": "pre.html#关键时间节点-deadline",
+    "href": "pre.html#关键时间节点-deadline",
+    "title": "小组任务课堂汇报",
+    "section": "关键时间节点 (Deadline)",
+    "text": "关键时间节点 (Deadline)\n\n截止时间： 第14周周日（2026年6月7日）20:00\n提交文件： 演示文稿（.pdf 格式, 请将Powerpoint文件或者WPS文件转成PDF文件）。\n文件命名： 文件命名“第#组+组长+班级+主题关键词+小组汇报.pdf”, 如“第1组池天俊 24人资1瑞幸小组汇报.pdf”\n提交方式： 上传至QQ群文件“小组汇报”文件夹中。\n提醒 逾期提交的小组将自动失去优胜小组选拔资格，且全组成员实验报告分会扣3-5分。\n公布发言小组名单： 第15周周一（2026年6月8日）20:00"
+  },
+  {
+    "objectID": "pre.html#优胜小组入选指标",
+    "href": "pre.html#优胜小组入选指标",
+    "title": "小组任务课堂汇报",
+    "section": "“优胜小组”入选指标",
+    "text": "“优胜小组”入选指标\n\n规范的回归表格： 必须按照学术规范，将软件输出结果整理成标准学术三线表（含系数、标准误或 \\(t\\) 值、显著性星号）。不要直接截图R或EViews输出结果。\n扎实的模型诊断： 报告必须包含完整的模型诊断（残差图形、多余或遗漏变量的检验、多重共线性 VIF、异方差检验等）。\n回归结果的解释： 解释系数的含义，而不是单纯机械地念数字。"
+  },
+  {
+    "objectID": "pre.html#现场汇报-5分钟",
+    "href": "pre.html#现场汇报-5分钟",
+    "title": "小组任务课堂汇报",
+    "section": "现场汇报 (5分钟)",
+    "text": "现场汇报 (5分钟)\n\n第15-16周上课期间\n每组严格限时 5 分钟。倒计时软件egg，超时会扣分。\n只汇报实验报告的第2-5部分：第6部分（代码）和第7部分（心得体会）无需放进演示文稿中。\n建议由1名表达能力最强的组员统一主讲，避免频繁换人浪费交接时间。"
+  },
+  {
+    "objectID": "pre.html#汇报文件结构",
+    "href": "pre.html#汇报文件结构",
+    "title": "小组任务课堂汇报",
+    "section": "汇报文件结构",
+    "text": "汇报文件结构\n1 封面页 [建议：20秒]\n\n视觉风格： 简洁、素雅（建议白底蓝字或黑字）。\n内容： 题目、小组全员姓名、学号、班级。"
+  },
+  {
+    "objectID": "pre.html#汇报文件排版",
+    "href": "pre.html#汇报文件排版",
+    "title": "小组任务课堂汇报",
+    "section": "汇报文件排版",
+    "text": "汇报文件排版\n\n一页一个核心信息，避免信息过载\n结构简洁：大标题 + 关键 bullet points + 1张核心图/表\n字体大小适当：标题 ≥ 32pt，正文 ≥ 24pt\n视觉风格：白底 + 深蓝/深灰文字，极简学术风，禁止花哨动画和无关图片"
+  },
+  {
+    "objectID": "pre.html#关键时间节点",
+    "href": "pre.html#关键时间节点",
+    "title": "小组任务课堂汇报",
+    "section": "关键时间节点",
+    "text": "关键时间节点\n\n提交截止：第14周周日（2026年6月7日）20:00\n提交要求：\n\n文件格式：PDF（PowerPoint / WPS 转PDF）\n文件命名：第#组+组长姓名+班级+主题关键词+小组汇报.pdf\n示例：第1组池天俊 24人资1瑞幸小组汇报.pdf\n提交位置：QQ群“小组汇报”文件夹\n\n结果公布：第15周周一（2026年6月8日）20:00\n汇报时间：第15-16周课堂（严格5分钟，倒计时，超时扣分）"
+  },
+  {
+    "objectID": "pre.html#优胜小组评选指标",
+    "href": "pre.html#优胜小组评选指标",
+    "title": "小组任务课堂汇报",
+    "section": "“优胜小组”评选指标",
+    "text": "“优胜小组”评选指标\n\n选题的现实意义和创新性\n合理的变量构建：选取的自变量、因变量和控制变量必须具有明确的经济学含义，并且数据来源可靠。。\n规范的回归表格：必须按照学术规范，将软件输出结果整理成学术论文三线表。不要直接截图R或EViews输出结果。\n完整的模型诊断：包括残差图形、多余或遗漏变量的检验、多重共线性 VIF、异方差检验。\n回归结果的解释：正确解释系数的含义。"
   }
 ]

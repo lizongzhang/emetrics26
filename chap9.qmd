@@ -8,7 +8,7 @@ title: "第9章"
 
 
 
-# Eviews操作
+# Eviews教学视频
 
 <img src="img/video.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[Eviews 残差的图形诊断](https://www.bilibili.com/video/BV1RV411y7hS/){target="_blank"} 
     
@@ -31,11 +31,20 @@ title: "第9章"
 
 # 习题讲评视频
 
-<img src="img/video.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[9.27 Breush-Pagan异方差检验](https://www.bilibili.com/video/BV1AG411T7CT/){target="_blank"}
+<img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px">[教材习题9.6+9.7+9.8](https://www.bilibili.com/video/BV1ey4y1W75g){target="_blank"}
 
-<img src="img/video.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[9.27 如何应对异方差问题](https://www.bilibili.com/video/BV1QG4y1G7R9/){target="_blank"}
+<img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px">[教材习题9.9--基于EViews](https://www.bilibili.com/video/BV1ey4y1W75g){target="_blank"}
 
-<img src="img/video.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[9.28 怀特异方差校正后的标准误与OLS标准误的对比](https://www.bilibili.com/video/BV1u841157eV/){target="_blank"}
+<img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px">[教材习题9.14--基于EViews](https://www.bilibili.com/video/BV1ey4y1W75g){target="_blank"}
+
+<img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px">[教材习题9.28--基于EViews](https://www.bilibili.com/video/BV1ey4y1W75g){target="_blank"}
+
+<img src="img/video.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[9.27 Breush-Pagan异方差检验--基于R](https://www.bilibili.com/video/BV1AG411T7CT/){target="_blank"}
+
+<img src="img/video.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[9.27 如何应对异方差问题--基于R](https://www.bilibili.com/video/BV1QG4y1G7R9/){target="_blank"}
+
+<img src="img/video.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[9.28 怀特异方差校正后的标准误与OLS标准误的对比--基于R](https://www.bilibili.com/video/BV1u841157eV/){target="_blank"}
+
 
 # 习题答案
 
@@ -51,12 +60,4 @@ title: "第9章"
 
 </details>    
 
-# 习题讲评视频
 
-<img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px">[教材习题9.6+9.7+9.8](https://www.bilibili.com/video/BV1ey4y1W75g){target="_blank"}
-
-<img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px">[教材习题9.9](https://www.bilibili.com/video/BV1ey4y1W75g){target="_blank"}
-
-<img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px">[教材习题9.14](https://www.bilibili.com/video/BV1ey4y1W75g){target="_blank"}
-
-<img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px">[教材习题9.28](https://www.bilibili.com/video/BV1ey4y1W75g){target="_blank"}

@@ -19,6 +19,7 @@ website:
       - chap9.qmd
       - chap10.qmd
       - case.qmd
+      - report.qmd
     tools:
       - icon: envelope
         href: "mailto: lizongzhang9@qq.com"
