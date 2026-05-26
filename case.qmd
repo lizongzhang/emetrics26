@@ -354,7 +354,7 @@ date-format: "YYYY-MM-DD"
 ---
 
 #  实验报告
-<img src="img/link.png" style="width: 24px; height: 24px;margin-right: 10px">[实验报告要求](https://lizongzhang.github.io/emetrics26/report.html)
+<img src="img/link.png" style="width: 24px; height: 24px;margin-right: 10px">[实验报告写作要求](https://lizongzhang.github.io/emetrics26/report.html)
 
 ---
 

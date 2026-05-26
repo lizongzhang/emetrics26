@@ -14,11 +14,67 @@
     "text": "第5章 函数形式变换\n讲义\n案例\n\n\nEviews操作\nEviews中双对数模型的估计\nEviews中对数-线性模型的估计\nEviews中如何计算Y的估计值？\nEviews时间序列趋势分析——对数线性模型和线性趋势模型\nEviews 多项式、双对数、倒数模型\n\n\nR教学视频\n回归分析中的对数变换——双对数模型、半对数模型的估计\n如何在回归模型中引入解释变量的平方项？\n如何利用回归模型进行预测？predict()函数的运用\nR中如何估计过原点的回归模型？\n\n\n习题答案\n\n\n点击展开\n\n\n如果想在新窗口打开 PDF，请点这里： 在新标签页中查看 PDF\n\n\n&lt;!-- 备用内容（若浏览器不支持 iframe） --&gt;\n&lt;p&gt;\n你的浏览器无法嵌入 PDF，请 &lt;a href=\"img/EE4_Ch05_Solutions_Manual.pdf\" target=\"_blank\" rel=\"noopener\"&gt;点此下载/查看 PDF&lt;/a&gt;.\n&lt;/p&gt;\n\n\n\n\n习题讲评视频\n教材习题5.17+5.25+5.26"
   },
   {
-    "objectID": "chap6.html",
-    "href": "chap6.html",
-    "title": "第6章",
+    "objectID": "chap4.html",
+    "href": "chap4.html",
+    "title": "第4章",
     "section": "",
-    "text": "第6章 虚拟变量\n讲义\n案例\n习题讲评\n\n\nEviews操作\nEviews中如何引入虚拟变量？\nEviews 如何引入虚拟变量和定量变量的交互项？\nEviews 季节分析中的虚拟变量\n\n\nR教学视频\nR中如何将字符串变量转换为虚拟变量？\n如何在回归模型中引入虚拟变量与定量变量的交互项？\nR中如何分析时间序列的季节效应？\n\n\n习题答案\n\n\n点击展开\n\n\n如果想在新窗口打开 PDF，请点这里： 在新标签页中查看 PDF\n\n\n&lt;!-- 备用内容（若浏览器不支持 iframe） --&gt;\n&lt;p&gt;\n你的浏览器无法嵌入 PDF，请 &lt;a href=\"img/EE4_Ch06_Solutions_Manual.pdf\" target=\"_blank\" rel=\"noopener\"&gt;点此下载/查看 PDF&lt;/a&gt;.\n&lt;/p&gt;\n\n\n\n\n习题讲评视频\n教材习题6.3-6.7\n教材习题6.8\n教材习题6.11-6.12\n教材习题6.27\n教材习题6.28"
+    "text": "第4章 多元回归\n讲义\n案例\n\n\nEviews操作\nEviews 多元回归\nEviews 受限最小二乘\nEviews 输出结果数值显示格式的设置\n\n\nR教学视频\n回归模型的比较——受限模型的F检验\n统计检验/回归模型的结果解释，还在手写吗？report()自动生成\nR如何快速创建学术论文表1 样本统计特征 tbl_summary()\n\n\n习题答案\n\n\n点击展开\n\n\n如果想在新窗口打开 PDF，请点这里： 在新标签页中查看 PDF\n\n\n&lt;!-- 备用内容（若浏览器不支持 iframe） --&gt;\n&lt;p&gt;\n你的浏览器无法嵌入 PDF，请 &lt;a href=\"img/EE4_Ch04_Solutions_Manual.pdf\" target=\"_blank\" rel=\"noopener\"&gt;点此下载/查看 PDF&lt;/a&gt;.\n&lt;/p&gt;\n\n\n\n\n习题讲评视频\n教材习题4.9+4.11+4.12\n教材习题4.14+4.18+4.22"
+  },
+  {
+    "objectID": "mobile.html",
+    "href": "mobile.html",
+    "title": "mobile",
+    "section": "",
+    "text": "数据来源：mobile.xlsx\n样本容量：142\nlaptop: 笔记本电脑价格(元)\ncost: 月生活费(元)\nmobile: 手机价格(元)\nmobile: 笔记本电脑使用时长(月)\ngender: 性别\ndemand_type: 需求类型(性能-performance/轻量-lite)\nbrand_prefer: 品牌偏好(高端设计-premium/主流商务-mainstream/专业游戏-gaming/高性价比-value)"
+  },
+  {
+    "objectID": "mobile.html#定量变量",
+    "href": "mobile.html#定量变量",
+    "title": "mobile",
+    "section": "2.1 定量变量",
+    "text": "2.1 定量变量\n\n\ncode\nlibrary(modelsummary)\ndatasummary(laptop + cost + mobile + usage_month ~ \n                     N + Mean + SD + Median + Min + Max, \n                   data = df, \n                   fmt = 3, \n                   output = 'flextable') %&gt;%\n  theme_apa() %&gt;%              \n  autofit() %&gt;%               \n  font(fontname = \"Times New Roman\", part = \"all\")\n\n\n NMeanSDMedianMinMaxlaptop1426260.6272362.1716000.0001800.00013000.000cost1422100.077672.0722000.000800.0005000.000mobile1425329.8242828.3705299.5001200.00013999.000usage_month14215.69710.25416.0001.00062.000"
+  },
+  {
+    "objectID": "mobile.html#定性变量",
+    "href": "mobile.html#定性变量",
+    "title": "mobile",
+    "section": "2.2 定性变量",
+    "text": "2.2 定性变量\n\n\ncode\ndatasummary(gender + demand_type + brand_prefer ~ \n            N + Percent() + laptop * (Mean + Median + SD + Min + Max), \n            data = df, \n            fmt = 2, \n            output = 'flextable') %&gt;%\n  theme_apa() %&gt;%\n  autofit() %&gt;%\n  font(fontname = \"Times New Roman\", part = \"all\")\n\n\n   NPercentMeanMedianSDMinMaxgenderfemale10876.065865.745550.002262.621800.0013000.00male3423.947514.977149.502260.612599.0012999.00demand_typelite9063.385733.385550.002120.691800.0012499.00performance5236.627173.176894.502497.742300.0013000.00brand_prefergaming2114.798042.247800.001947.865400.0013000.00mainstream8157.045800.215600.002078.701800.0012999.00premium1812.687578.336857.502639.923599.0012499.00value2215.495177.055000.002244.662000.0010000.00"
+  },
+  {
+    "objectID": "mobile.html#model-1",
+    "href": "mobile.html#model-1",
+    "title": "mobile",
+    "section": "3.1 Model 1",
+    "text": "3.1 Model 1\n\n\ncode\nlibrary(broom)\nm1 &lt;- lm(laptop ~ cost + mobile + usage_month, data = df)\n\nmodels_list &lt;- list(\"Model 1\" = m1)\n\nmodelsummary(\n  list(\"Model 1\" = m1), \n  fmt = 3, \n  stars = TRUE, \n  gof_omit = 'AIC|BIC|Log.Lik|F|statistic', \n  output = \"flextable\"\n) %&gt;% \n  theme_apa() %&gt;%\n  fontsize(size = 18, part = \"all\") %&gt;%      \n  padding(padding = 5, part = \"all\") %&gt;%\n  autofit() %&gt;%\n  font(fontname = \"Times New Roman\", part = \"all\")\n\n\nModel 1 Regression Analysis Model 1(Intercept)4689.049***(654.061)cost0.399(0.289)mobile0.291***(0.069)usage_month-52.193**(17.250)Num.Obs.142R20.230R2 Adj.0.213RMSE2065.51+ p &lt; 0.1, * p &lt; 0.05, ** p &lt; 0.01, *** p &lt; 0.001\n\n\n\\[\n\\operatorname{\\widehat{laptop}} = 4689.049 + 0.399(\\operatorname{cost}) + 0.291(\\operatorname{mobile}) - 52.193(\\operatorname{usage\\_month})\n\\]"
+  },
+  {
+    "objectID": "mobile.html#model-2.1",
+    "href": "mobile.html#model-2.1",
+    "title": "mobile",
+    "section": "3.2 Model 2.1",
+    "text": "3.2 Model 2.1\n\n\ncode\nlibrary(broom)\nm2 &lt;- lm(log(laptop) ~ log(cost) + log(mobile) + usage_month, data = df)\n\nmodels_list &lt;- list(\"Model 2 (Y=log(laptop))\" = m2)\n\nmodelsummary(\n  models_list, \n  fmt = 3, \n  stars = TRUE,  \n  gof_omit = 'AIC|BIC|Log.Lik|F|statistic', \n  output = \"flextable\"\n) %&gt;% \n  theme_apa() %&gt;% \n  autofit() %&gt;%\n  font(fontname = \"Times New Roman\", part = \"all\")\n\n\nModel 2 Regression Analysis Model 2 (Y=log(laptop))(Intercept)5.785***(0.735)log(cost)0.110(0.103)log(mobile)0.258***(0.056)usage_month-0.008**(0.003)Num.Obs.142R20.229R2 Adj.0.213RMSE0.35+ p &lt; 0.1, * p &lt; 0.05, ** p &lt; 0.01, *** p &lt; 0.001\n\n\n\\[\n\\operatorname{\\widehat{log(laptop)}} = 5.785 + 0.11(\\operatorname{\\log(cost)}) + 0.258(\\operatorname{\\log(mobile)}) - 0.008(\\operatorname{usage\\_month})\n\\]"
+  },
+  {
+    "objectID": "mobile.html#model-2.2",
+    "href": "mobile.html#model-2.2",
+    "title": "mobile",
+    "section": "3.3 Model 2.2",
+    "text": "3.3 Model 2.2\n\n\ncode\nlibrary(broom)\nm2.2 &lt;- lm(log(laptop) ~ log(cost) + log(mobile) + usage_month + gender + \n     gender:log(mobile), data = df)\n\nmodels_list &lt;- list(\"Model 2 (Y=log(laptop))\" = m2.2)\n\nmodelsummary(\n  models_list, \n  fmt = 3, \n  stars = TRUE,  \n  gof_omit = 'AIC|BIC|Log.Lik|F|statistic', \n  output = \"flextable\"\n) %&gt;% \n  theme_apa() %&gt;% \n  autofit() %&gt;%\n  font(fontname = \"Times New Roman\", part = \"all\")\n\n\nModel 2 Regression Analysis Model 2 (Y=log(laptop))(Intercept)5.027***(0.740)log(cost)0.122(0.096)log(mobile)0.325***(0.059)usage_month-0.006*(0.003)gendermale1.827*(0.920)log(mobile) × gendermale-0.183+(0.110)Num.Obs.142R20.341R2 Adj.0.317RMSE0.32+ p &lt; 0.1, * p &lt; 0.05, ** p &lt; 0.01, *** p &lt; 0.001\n\n\n\\[\n\\begin{aligned}\n\\operatorname{\\widehat{log(laptop)}} &= 5.027 + 0.122(\\operatorname{\\log(cost)}) + 0.325(\\operatorname{\\log(mobile)}) - 0.006(\\operatorname{usage\\_month})\\ + \\\\\n&\\quad 1.827(\\operatorname{gender}_{\\operatorname{male}}) - 0.183(\\operatorname{\\log(mobile)} \\times \\operatorname{gender}_{\\operatorname{male}})\n\\end{aligned}\n\\]"
+  },
+  {
+    "objectID": "mobile.html#model-3",
+    "href": "mobile.html#model-3",
+    "title": "mobile",
+    "section": "3.4 Model 3",
+    "text": "3.4 Model 3\n\n\ncode\nm3 &lt;- lm(laptop ~ cost + mobile + usage_month + gender, data = df)\n\nmodels_list &lt;- list(\"Model 3\" = m3)\n\nmodelsummary(\n  models_list, \n  fmt = 3, \n  stars = TRUE,  \n  gof_omit = 'AIC|BIC|Log.Lik|F|statistic', \n  output = \"flextable\"\n) %&gt;% \n  theme_apa() %&gt;% \n  autofit() %&gt;%\n  font(fontname = \"Times New Roman\", part = \"all\")\n\n\nRegression Analysis Model 3(Intercept)3905.511***(638.666)cost0.424(0.272)mobile0.317***(0.065)usage_month-40.910*(16.386)gendermale1745.878***(393.317)Num.Obs.142R20.327R2 Adj.0.307RMSE1931.29+ p &lt; 0.1, * p &lt; 0.05, ** p &lt; 0.01, *** p &lt; 0.001\n\n\n\\[\n\\operatorname{\\widehat{laptop}} = 3905.511 + 0.424(\\operatorname{cost}) + 0.317(\\operatorname{mobile}) - 40.91(\\operatorname{usage\\_month}) + 1745.878(\\operatorname{gender}_{\\operatorname{male}})\n\\]"
+  },
+  {
+    "objectID": "mobile.html#model-4",
+    "href": "mobile.html#model-4",
+    "title": "mobile",
+    "section": "3.5 Model 4",
+    "text": "3.5 Model 4\n\n\ncode\nm4 &lt;- lm(log(laptop) ~ log(cost) + log(mobile) + \n           usage_month + \n           gender + demand_type + brand_prefer , data = df)\n\nmodels_list &lt;- list(\"Model 4\" = m4)\n\nmodelsummary(\n  models_list, \n  fmt = 3, \n  stars = TRUE,  \n  gof_omit = 'AIC|BIC|Log.Lik|F|statistic', \n  output = \"flextable\"\n) %&gt;% \n  theme_apa() %&gt;% \n  autofit() %&gt;%\n  font(fontname = \"Times New Roman\", part = \"all\")\n\n\nRegression Analysis Model 4(Intercept)6.288***(0.730)log(cost)0.070(0.096)log(mobile)0.241***(0.052)usage_month-0.005*(0.003)gendermale0.231***(0.068)demand_typeperformance0.094(0.066)brand_prefermainstream-0.217*(0.087)brand_preferpremium-0.081(0.113)brand_prefervalue-0.322**(0.101)Num.Obs.142R20.406R2 Adj.0.370RMSE0.31+ p &lt; 0.1, * p &lt; 0.05, ** p &lt; 0.01, *** p &lt; 0.001\n\n\n\\[\n\\begin{aligned}\n\\operatorname{\\widehat{log(laptop)}} &= 6.2883 + 0.07(\\operatorname{\\log(cost)}) + 0.2408(\\operatorname{\\log(mobile)}) - 0.0055(\\operatorname{usage\\_month})\\ + \\\\\n&\\quad 0.2306(\\operatorname{gender}_{\\operatorname{male}}) + 0.094(\\operatorname{demand\\_type}_{\\operatorname{performance}}) - 0.2174(\\operatorname{brand\\_prefer}_{\\operatorname{mainstream}}) - 0.0812(\\operatorname{brand\\_prefer}_{\\operatorname{premium}})\\ - \\\\\n&\\quad 0.3221(\\operatorname{brand\\_prefer}_{\\operatorname{value}})\n\\end{aligned}\n\\]"
   },
   {
     "objectID": "chap3.html",
@@ -224,109 +280,60 @@
     "text": "计量经济学实验课(1学分)\n\n实验报告 + 小组作业"
   },
   {
-    "objectID": "case.html",
-    "href": "case.html",
-    "title": "小组任务",
-    "section": "",
-    "text": "提交分组信息：https://www.wjx.top/vm/rXASrvi.aspx#"
+    "objectID": "projects.html#project-2",
+    "href": "projects.html#project-2",
+    "title": "Projects",
+    "section": "Project 2",
+    "text": "Project 2"
   },
   {
-    "objectID": "case.html#组队标准",
-    "href": "case.html#组队标准",
-    "title": "小组任务",
-    "section": "组队标准",
-    "text": "组队标准\n\n标准规模：每组原则上由 4 位同学组成。\n人数调节：若班级总人数无法被 4 完全整除，允许出现个别 3人组 或 5人组。\n工作量对等原则：\n\n3 人组：需完成与标准组一致的要求，建议由综合能力较强的同学组成。\n5 人组：为抵消人力优势，该组需增加50%的有效样本量。"
+    "objectID": "projects.html#project-3",
+    "href": "projects.html#project-3",
+    "title": "Projects",
+    "section": "Project 3",
+    "text": "Project 3"
   },
   {
-    "objectID": "case.html#填报与随机分配",
-    "href": "case.html#填报与随机分配",
-    "title": "小组任务",
-    "section": "填报与随机分配",
-    "text": "填报与随机分配\n\n填报限期：请各组长于 第 2 周下课前 完成本问卷的组员名单填报。\n逾期后果：逾期（第 2 周下课后）仍未提交名单的同学，将视为放弃自主组队权利。\n强制指派：届时，老师将根据剩余名单进行随机分配或合并，确保每位同学都有组归属并能按时开展小组作业。"
-  },
-  {
-    "objectID": "case.html#合作伙伴守则",
-    "href": "case.html#合作伙伴守则",
-    "title": "小组任务",
-    "section": "合作伙伴守则",
-    "text": "合作伙伴守则\n\n共识建立：请同学们在组队时充分沟通，确保组员在学习态度和任务分配上达成共识。\n剔除机制：若组内出现成员经多次沟通仍严重不配合的行为，小组可提交沟通记录并向老师申请剔除该组员。\n申请限期：剔除申请截止于 第 10 周。\n独立惩罚：被剔除的成员需独立完成小组作业及实验报告。"
-  },
-  {
-    "objectID": "case.html#目的",
-    "href": "case.html#目的",
-    "title": "小组任务",
-    "section": "目的",
-    "text": "目的\n\n实践应用：运用经济计量方法分析现实问题。\n过程体验：完整体验从提出观点、建立模型、验证观点的经济计量分析全过程。\n最终产出：提交演示文件、汇报展示、实验报告。\n\n\n最好的学习方法： “The best way to learn is to do; the worst way to teach is to talk.” —— Paul Halmos (1916-2006)"
-  },
-  {
-    "objectID": "case.html#选题",
-    "href": "case.html#选题",
-    "title": "小组任务",
-    "section": "选题",
-    "text": "选题"
-  },
-  {
-    "objectID": "case.html#从想做到能做",
-    "href": "case.html#从想做到能做",
-    "title": "小组任务",
-    "section": "从“想做”到“能做”",
-    "text": "从“想做”到“能做”\n\n具体 (Specific)\n\n因果逻辑明确：选题必须明确为 变量 X 如何影响变量 Y 的实证分析框架。\n观测单元清晰：拒绝宏大叙事，必须明确数据中的每一行代表什么（例如：一个学生、一架航班、或是一个城市。\n\n\n\n有趣 (Interesting)\n\n好奇心驱动：选题应源于对现实生活的观察与好奇。\n价值探索：通过实证分析得出具有探索意义、能为他人提供参考价值的结论。\n\n\n\n新颖 (Novel)\n\n时效性：鼓励使用 2024-2025年的最新数据，分析如电竞酒店、新能源车等新兴细分市场。\n\n\n\n可行 (Feasible)\n\n核心前提：必须确保能够采集到不少于60 个有效样本的截面数据 。\n可量化：变量设计必须满足课程要求的硬性维度，确保模型能够有效运行。\n参考选题：\n\n新媒体分析：小红书帖文/B站视频互动量（Y）影响因素分析。\n二手车市场：二手新能源车价格（Y）与行驶里程、购车年限及品牌类型之间的关系。\n消费生活：校园周边奶茶定价（Y）与产品热量、配料数及品牌连锁性质的相关性。\n二手电子产品：iPad 二手价格（Y）受存储容量、已激活时长及配件完整度影响。\n游戏研究：数字游戏定价（Y）与好评率、安装包大小及是否支持中文的相关性。\n即时配送服务：外卖配送费（Y）如何随配送距离、订单金额及天气状况波动。\n品牌扩张策略：连锁店门店数（Y）与区域商务氛围、竞品密度及城市等级的关系。\n机票价格分析：特定航线（国际/国内）的价格影响因素。\n客房价格分析：连锁酒店、星级酒店、民宿的价格研究。\n不限于经济类话题：CET4成绩影响因素、跑步配速分析等。\n\n\n\n\n选题“负面清单”（禁止选择）\n\n陈旧同质化：大学生每月生活费影响因素分析、食堂就餐满意度影响因素分析\n选题宏大：全球各国通货膨胀率与经济增长的关系研究、“一带一路”对全球贸易格局的影响、互联网技术对人类文明进化的作用\n数据类型错误：中国房地产市场的波动逻辑分析、人民币汇率波动影响因素、城乡收入分配不平等分析\n数据无法获取：某知名快消品牌内部营销成本与利润分析、外卖骑手实际时薪影响因素"
-  },
-  {
-    "objectID": "case.html#数据要求与来源",
-    "href": "case.html#数据要求与来源",
-    "title": "小组任务",
-    "section": "数据要求与来源",
-    "text": "数据要求与来源\n\n数据类型：必须使用截面数据，严禁使用时间序列或面板数据。\n样本容量：有效个案数量不得低于 60 个（若是5人组，有效个案数量不得低于90）。\n\n\n📌 有效样本指经过清洗（缺失值、异常值处理等）后，实际用于回归模型估计的观测数量。\n\n\n💡 为了保证最终回归模型能使用足够的有效样本，建议在数据收集时不要刚好卡在最低门槛，而是预留一定的“缓冲量”。\n\n\n💡 推荐实际收集目标：70–80 个（个人） / 100–110 个（5人组）。在最低要求的基础上多收集 10–20%（约多10–20个观测），以应对数据清洗过程中可能出现的缺失值或异常值导致的样本量减少。\n\n\n❗重要提示：请勿选择以“省级行政区划”为观测单元的选题（如各省居民消费分析），我国省级行政区总数为 34 个（23 个省、5 个自治区、4 个直辖市和 2 个特别行政区）\n变量要求（数据收集阶段）：\n\n定量变量（Continuous/Quantitative Variables）： 至少4 个（确保 1 个作为被解释变量后，仍有充足的候选解释变量）。\n定性变量（Categorical/Qualitative Variables）： 至少 2 个。\n\n模型设定要求（实证分析阶段）：\n\n被解释变量\\(Y\\)：必须为定量变量\n解释变量构成：最终进入回归模型的变量应至少包含 2 个定量变量和 1个定性变量\n\n数据收集渠道：网页数据、数据库、问卷调查、APP等 。\n\n\n🚫 拒绝“常量”变量： 请务必检查你的数据。确保定量变量是有波动的，如果所有个案的数值都完全一样（例如：所有人的“受教育年限”都是 16），该变量将无法进入回归模型。\n\n\n🧩 定性变量精简化： 分类不宜过细。建议将定性变量的类别控制在 2-4 个 之间。如果分类太多（如：具体省份），请在分析前按逻辑进行归并。\n\n\n📦 建立“变量备用库”： 建议在数据收集阶段多准备几个备选变量。这样万一核心变量不显著，你可以立即调用备选变量进行调整，无需再次辛苦收集数据。\n\n\n\n🚩选题常见错误\n\n请各小组对照下表，核实你们的选题是否存在以下逻辑或格式问题。存在下述任何一种情况的申请，将被要求重选。\n\n\n\n\n\n\n\n\n错误类型\n典型错误示例\n为什么不行？\n\n\n\n\n观测单元错误\n以“年份”为单元（如：2000-2024年我国GDP分析）\n本次任务严格要求使用截面数据，禁止使用时间序列数据。\n\n\n样本量不足\n以“省级行政区”为单元（如：31个省的消费分析）\n样本量极小（N=31），统计效力严重不足，无法支持稳健的回归分析。\n\n\n变量类型错位\n被解释变量 \\(Y\\) 是“是否就业”（0=否, 1=是）\n被解释变量必须为定量变量，定性变量作为 \\(Y\\) 需使用特殊模型。\n\n\n解释变量单一\n仅收集了 1 个定量变量和 1 个定性变量\n无法满足模型设定要求（必须包含 \\(\\ge\\) 2个定量和 \\(\\ge\\) 1个定性解释变量）。\n\n\n数据逻辑自循环\n\\(Y\\) 是“考试总分”，\\(X\\) 是“数学分”、“语文分”\n变量间存在数学恒等关系而非因果统计关系，回归系数无意义。\n\n\n\n\n✅ 检查 1. 有效样本量是否达到要求（60个/五人组90个）？ 2. 你的数据是否确保每一行代表一个观测个体（如：人、公司）？ 3. 你的因变量 \\(Y\\) 是否可以进行求平均值等数值运算？"
-  },
-  {
-    "objectID": "case.html#评估核心准则",
-    "href": "case.html#评估核心准则",
-    "title": "小组任务",
-    "section": "评估核心准则",
-    "text": "评估核心准则\n本小组实证研究任务是贯穿整个学期的系统性工程，与课程教学进度同步推进。请各组注意，最终成绩评定不仅取决于期末汇报和实验报告，以下过程指标也是小组成绩和实验课成绩评定的重要依据 ：\n\n同步推进：是否在规定教学周期内完成对应的实证阶段。\n讨论过程：小组成员在课堂讨论课中的参与度与协作表现。\n工作态度：数据采集的真实性、变量选取的严谨性以及文档准备的完整度。\n反馈改进：是否认真听取老师在讨论课中给出的指导意见，并根据建议作出实质性的修正与改进 。"
-  },
-  {
-    "objectID": "case.html#讨论与汇报安排",
-    "href": "case.html#讨论与汇报安排",
-    "title": "小组任务",
-    "section": "讨论与汇报安排",
-    "text": "讨论与汇报安排\n\n第1轮讨论课 (第3-6周)：选题论证和数据收集\n\n任务1: 提交选题信息问卷：https://v.wjx.cn/vm/rXTAiul.aspx#\n\n\n点击展开\n\n\n核心任务：确立选题方向，通过初步数据探索验证模型逻辑的可行性。\n学生准备事项（需提交/展示）：\n\n填写选题信息问卷(请在讨论课前完成)：https://v.wjx.cn/vm/rXTAiul.aspx#\n数据文件： 展示已获取的数据概况，确保截面数据有效样本 \\(n \\ge 60\\)（5人组 \\(n \\ge 90\\)）。\n数据清洗：\n\n变量命名的规范化 (Variable Naming)\n\n全英文/拼音：变量名必须以英文字母开头。严禁使用中文、空格或特殊符号。\n禁用字符：不能包含中划线/短横线（-）、小圆点（.）。\n蛇形命名（snake_case）：所有字母小写，单词之间用下划线（_）连接（如 laptop_price）。\n见名知意： 严禁使用 \\(X1, Y\\) 等无意义符号，确保代码可读性。用 wage 而不是Y，用 edu 而不是 X1。\n\n异常值处理\n\n可视化检查：对定量变量绘制直方图或箱线图。\n优先采用 \\(3 \\times IQR\\) 规则 剔除极端值，以保留更多信息；若数据依然分布极度不均，再考虑 \\(1.5 \\times IQR\\)。 (注：剔除数值大于 \\(Q3 + 3 \\times IQR\\) 或小于 \\(Q1 - 3 \\times IQR\\) 的个案)。\n逻辑检查：务必剔除如“价格为0”、“年龄为负”等逻辑错误的个案。\n\n定性变量分类优化：\n\n合并原则：若某个分类下的个案数量少于 10 个，建议合并。合并后建议每组样本数 \\(&gt; 20\\)。\n逻辑合并：合并应基于逻辑相似性（如：将“硕士”和“博士”合并为“研究生”）。\n\n初步相关性分析：\n\n报告 \\(Y\\) 与各定量解释变量 \\(X\\) 之间的相关系数矩阵。\n核心解释变量与 \\(Y\\) 的相关系数绝对值 \\(|r| &gt; 0.2-0.3\\)。\n确保变量间存在基本关联，避免后期回归模型因相关性太弱导致“全盘不显著”。\n估计全变量的回归模型，若 \\(p\\) 值普遍较大且 \\(R^2\\) 极低。需要重新考虑定量变量的测度，重新选取样本。\n\n\n\n\n&lt;&gt;\n\n\n\n任务2: 数据预处理和初步回归\n\n\n点击展开\n\n\n\n\n\n\n\n任务目标\n\n\n\n在本阶段，各小组需完成原始数据的清洗、变量规范化命名及初步的描述性统计分析。这不仅是为了确保后续回归模型的稳健性，更是为了培养专业的数据处理习惯。\n\n\n1 样本量基本要求\n根据小组成员人数，有效样本量（剔除异常与错误后）需满足： - 常规小组（≤ 4人）： \\(n \\ge 60\\) - 5人小组： \\(n \\ge 90\\)\n2 数据清洗标准 (Data Cleaning)\n2.1 变量命名规范化 (Variable Naming)\n为了确保分析软件（Stata/R/Python/EViews）的兼容性，所有变量名必须遵循： - 命名格式： 采用 蛇形命名法（snake_case），所有字母小写，单词之间用下划线 _ 连接。 - 字符限制： 严禁使用中文、空格或特殊符号。必须以英文字母开头。 - 禁用符号： 严禁包含中划线/短横线 - 或小圆点 .。 - 语义化命名： 确保“见名知意”。严禁使用 \\(X1, X2, Y\\) 等代号。例如：用 wage 而不是 y，用 edu_years 而不是 x1。\n2.2 异常值处理与逻辑检查\n\n可视化检查： 对所有定量变量绘制直方图或箱线图。\nIQR 规则： - 优先采用 \\(3 \\times IQR\\) 规则剔除极端值：\n\n\\(Value &gt; Q3 + 3 \\times IQR\\) 或 \\(Value &lt; Q1 - 3 \\times IQR\\)。\n若数据依然极度不均，可考虑 \\(1.5 \\times IQR\\) 规则。\n\n逻辑校验： 强制剔除逻辑错误的个案（如价格 \\(\\le 0\\)、年龄为负等）。\n\n2.3 定性变量分类优化\n\n合并原则： 若某个分类下的个案数量 少于 10 个，必须进行合并。合并后建议每组样本数 \\(&gt; 20\\)。\n逻辑合并： 合并应基于逻辑相似性。例如：将“硕士”和“博士”合并为“研究生”。\n\n3 初步统计分析\n3.1 相关性自查 - 报告被解释变量 \\(Y\\) 与各定量解释变量 \\(X\\) 之间的 Pearson 相关系数矩阵。 - 核心解释变量与 \\(Y\\) 的相关系数绝对值 \\(|r|\\) 建议在 \\(0.2 - 0.3\\) 以上。\n3.2 回归质量预警 进行全变量 OLS 初步回归，若出现以下情况，需重新考虑变量测度或重新抽样： - \\(p\\) 值普遍较大且模型 \\(R^2\\) 极低（例如 \\(&lt; 0.01\\)）。\n4 提交物要求\n请提交一个名为 组号_组长姓名_研究主题.xlsx 的 Excel 文件。该文件必须严格包含以下四个命名的表单（Sheet）：\n\n\n\n\n\n\n\n\n表单名称\n内容要求\n包含指标\n\n\n\n\ndata\n清洗后的有效数据\n表头为规范化的英文变量名\n\n\ndesc\n描述性统计分析\n均值、中位数、标准差、最小值、最大值 、定量变量的直方图\n\n\ncol\n相关系数矩阵\n\\(Y\\) 与定量 \\(X\\) 的 Pearson 相关系数\n\n\nreg\n初步回归结果\n系数、标准误、\\(t\\) 值、\\(p\\) 值、\\(R^2\\)、调整后 \\(R^2\\)\n\n\n\n\n\n\n\n\n\nNote\n\n\n\n注意：严禁合并表单或随意更改 Sheet 名称。\n\n\n&lt;&gt;\n\n\n\n\n第2轮讨论课 (第7-9周)：基础建模\n\n\n点击展开\n\n\n应用方法：运用教材 第 4、5、6 章 的分析方法。\n需准备的文件：\n\n清洗后的数据文件(Excel文件格式)。\n汇报内容：\n\n数据来源：详细说明采集渠道。\n变量含义：每个 \\(X\\) 变量的含义、单位。\n估计结果：尝试不同回归方程的估计结果截图。\n模型择优：对比不同函数形式，阐述哪个模型最好及理由。\n主要结论：汇报初步发现的结论。\n\n\n\n&lt;&gt;\n\n\n\n第3轮讨论课 (第 10-13 周)：模型诊断与完善\n\n\n点击展开\n\n\n应用方法：运用教材 第 7、8、9 章 的方法。\n需准备的文件：\n\nEViews Workfile：包含所有诊断检验过程的最新版本。\nPPT 汇报演示：\n\n诊断与改进：汇报针对初始模型的优化路径。\n设定误差检验：是否存在遗漏变量或函数形式设定错误。\n多重共线性：VIF 检验及处理方案。\n异方差诊断：White 检验/BP 检验及加权最小二乘法等改进措施。\n最终结论：基于稳健模型得到的最终实证结论 [cite: 2026-01-31]。\n\n\n\n&lt;&gt;"
-  },
-  {
-    "objectID": "case.html#课堂汇报第15-16周",
-    "href": "case.html#课堂汇报第15-16周",
-    "title": "小组任务",
-    "section": "课堂汇报(第15-16周)",
-    "text": "课堂汇报(第15-16周)\n每组汇报时长控制在 5分钟之内\n课堂汇报要求"
-  },
-  {
-    "objectID": "case.html#撰写实验报告第10-15周",
-    "href": "case.html#撰写实验报告第10-15周",
-    "title": "小组任务",
-    "section": "撰写实验报告(第10-15周)",
-    "text": "撰写实验报告(第10-15周)\n实验报告写作要求\n实验报告提交时限：第17周理论课的最后一节课"
-  },
-  {
-    "objectID": "chap4slide.html",
-    "href": "chap4slide.html",
-    "title": "Chapter 4 Multiple Regression: Estimation and Hypothesis Testing",
+    "objectID": "chap5slide.html",
+    "href": "chap5slide.html",
+    "title": "Chapter 5 Functional Forms of Regression Model",
     "section": "",
     "text": "注意：本讲义供学习交流使用，请勿用于商业用途"
   },
   {
-    "objectID": "chap8slide.html",
-    "href": "chap8slide.html",
-    "title": "Chapter 8 Multicollinearity",
+    "objectID": "chap10.html",
+    "href": "chap10.html",
+    "title": "第10章",
+    "section": "",
+    "text": "第10章 自相关\n讲义\n\n\nEviews操作\nEviews 自相关的图形诊断\nEviews 自相关LM检验\nEviews 广义差分变换\nEviews 自相关下标准误的Neway-West校正\n\n\nR教学视频\n回归模型的比较——受限模型的F检验\n[自相关的图形诊断]\n[Durbin-Watson检验在R的实现]\n[一阶差分在R的实现]\n[广义差分在R的实现]\n[Newey-West校正后的标准误]\n\n\n习题讲评视频\n教材习题10.10\n教材习题10.12\n教材习题10.13\n教材习题10.17\n教材习题10.21"
+  },
+  {
+    "objectID": "chap9slide.html",
+    "href": "chap9slide.html",
+    "title": "Chapter 9 Heteroscedasticity",
     "section": "",
     "text": "注意：本讲义供学习交流使用，请勿用于商业用途"
   },
   {
-    "objectID": "chap2slide.html",
-    "href": "chap2slide.html",
-    "title": "Chapter 2 Basic Ideas of Linear Regression: The Two-Variable Regression Model",
+    "objectID": "chap3slide.html",
+    "href": "chap3slide.html",
+    "title": "Chapter 3 The Two-Variable Model: Hypothesis Testing",
     "section": "",
     "text": "注意：本讲义供学习交流使用，请勿用于商业用途"
+  },
+  {
+    "objectID": "chap9.html",
+    "href": "chap9.html",
+    "title": "第9章",
+    "section": "",
+    "text": "第9章 异方差\n讲义\n\n\nEviews教学视频\nEviews 残差的图形诊断\nEviews 异方差检验\nEviews 加权最小二乘\nEviews 怀特异方差校正值\n\n\nR教学视频\n异方差——残差的图形诊断在R中的实现\n怀特异方差检验在R中的实现\n加权最小二乘法在R中的实现\n怀特异方差校正后的标准误的计算在R中的实现\n\n\n习题讲评视频\n教材习题9.6+9.7+9.8\n教材习题9.9–基于EViews\n教材习题9.14–基于EViews\n教材习题9.28–基于EViews\n9.27 Breush-Pagan异方差检验–基于R\n9.27 如何应对异方差问题–基于R\n9.28 怀特异方差校正后的标准误与OLS标准误的对比–基于R\n\n\n习题答案\n\n\n点击展开\n\n\n如果想在新窗口打开 PDF，请点这里： 在新标签页中查看 PDF\n\n\n&lt;!-- 备用内容（若浏览器不支持 iframe） --&gt;\n&lt;p&gt;\n你的浏览器无法嵌入 PDF，请 &lt;a href=\"img/EE4_Ch09_Solutions_Manual.pdf\" target=\"_blank\" rel=\"noopener\"&gt;点此下载/查看 PDF&lt;/a&gt;.\n&lt;/p&gt;"
+  },
+  {
+    "objectID": "chap8.html",
+    "href": "chap8.html",
+    "title": "第8章",
+    "section": "",
+    "text": "第8章 多重共线性\n讲义\n\n\nEviews操作\nEviews 多重共线性\n\n\nR教学视频\n多重共线性的诊断在R中的实现——相关系数矩阵cor 和 方差膨胀因子\n习题8.14-8.18——多重共线性的诊断和补救\n\n\n习题答案\n\n\n点击展开\n\n\n如果想在新窗口打开 PDF，请点这里： 在新标签页中查看 PDF\n\n\n&lt;!-- 备用内容（若浏览器不支持 iframe） --&gt;\n&lt;p&gt;\n你的浏览器无法嵌入 PDF，请 &lt;a href=\"img/EE4_Ch08_Solutions_Manual.pdf\" target=\"_blank\" rel=\"noopener\"&gt;点此下载/查看 PDF&lt;/a&gt;.\n&lt;/p&gt;\n\n\n\n\n习题讲评视频\n教材习题8.14-8.18\n教材习题8.26+8.31"
   },
   {
     "objectID": "case2pre.html#数据和变量",
@@ -483,60 +490,158 @@
     "text": "Thanks for your attention！"
   },
   {
-    "objectID": "chap8.html",
-    "href": "chap8.html",
-    "title": "第8章",
-    "section": "",
-    "text": "第8章 多重共线性\n讲义\n\n\nEviews操作\nEviews 多重共线性\n\n\nR教学视频\n多重共线性的诊断在R中的实现——相关系数矩阵cor 和 方差膨胀因子\n习题8.14-8.18——多重共线性的诊断和补救\n\n\n习题答案\n\n\n点击展开\n\n\n如果想在新窗口打开 PDF，请点这里： 在新标签页中查看 PDF\n\n\n&lt;!-- 备用内容（若浏览器不支持 iframe） --&gt;\n&lt;p&gt;\n你的浏览器无法嵌入 PDF，请 &lt;a href=\"img/EE4_Ch08_Solutions_Manual.pdf\" target=\"_blank\" rel=\"noopener\"&gt;点此下载/查看 PDF&lt;/a&gt;.\n&lt;/p&gt;\n\n\n\n\n习题讲评视频\n教材习题8.14-8.18\n教材习题8.26+8.31"
-  },
-  {
-    "objectID": "chap9.html",
-    "href": "chap9.html",
-    "title": "第9章",
-    "section": "",
-    "text": "第9章 异方差\n讲义\n\n\nEviews教学视频\nEviews 残差的图形诊断\nEviews 异方差检验\nEviews 加权最小二乘\nEviews 怀特异方差校正值\n\n\nR教学视频\n异方差——残差的图形诊断在R中的实现\n怀特异方差检验在R中的实现\n加权最小二乘法在R中的实现\n怀特异方差校正后的标准误的计算在R中的实现\n\n\n习题讲评视频\n教材习题9.6+9.7+9.8\n教材习题9.9–基于EViews\n教材习题9.14–基于EViews\n教材习题9.28–基于EViews\n9.27 Breush-Pagan异方差检验–基于R\n9.27 如何应对异方差问题–基于R\n9.28 怀特异方差校正后的标准误与OLS标准误的对比–基于R\n\n\n习题答案\n\n\n点击展开\n\n\n如果想在新窗口打开 PDF，请点这里： 在新标签页中查看 PDF\n\n\n&lt;!-- 备用内容（若浏览器不支持 iframe） --&gt;\n&lt;p&gt;\n你的浏览器无法嵌入 PDF，请 &lt;a href=\"img/EE4_Ch09_Solutions_Manual.pdf\" target=\"_blank\" rel=\"noopener\"&gt;点此下载/查看 PDF&lt;/a&gt;.\n&lt;/p&gt;"
-  },
-  {
-    "objectID": "chap3slide.html",
-    "href": "chap3slide.html",
-    "title": "Chapter 3 The Two-Variable Model: Hypothesis Testing",
+    "objectID": "chap2slide.html",
+    "href": "chap2slide.html",
+    "title": "Chapter 2 Basic Ideas of Linear Regression: The Two-Variable Regression Model",
     "section": "",
     "text": "注意：本讲义供学习交流使用，请勿用于商业用途"
   },
   {
-    "objectID": "chap9slide.html",
-    "href": "chap9slide.html",
-    "title": "Chapter 9 Heteroscedasticity",
+    "objectID": "chap8slide.html",
+    "href": "chap8slide.html",
+    "title": "Chapter 8 Multicollinearity",
     "section": "",
     "text": "注意：本讲义供学习交流使用，请勿用于商业用途"
   },
   {
-    "objectID": "chap10.html",
-    "href": "chap10.html",
-    "title": "第10章",
-    "section": "",
-    "text": "第10章 自相关\n讲义\n\n\nEviews操作\nEviews 自相关的图形诊断\nEviews 自相关LM检验\nEviews 广义差分变换\nEviews 自相关下标准误的Neway-West校正\n\n\nR教学视频\n回归模型的比较——受限模型的F检验\n[自相关的图形诊断]\n[Durbin-Watson检验在R的实现]\n[一阶差分在R的实现]\n[广义差分在R的实现]\n[Newey-West校正后的标准误]\n\n\n习题讲评视频\n教材习题10.10\n教材习题10.12\n教材习题10.13\n教材习题10.17\n教材习题10.21"
-  },
-  {
-    "objectID": "chap5slide.html",
-    "href": "chap5slide.html",
-    "title": "Chapter 5 Functional Forms of Regression Model",
+    "objectID": "chap4slide.html",
+    "href": "chap4slide.html",
+    "title": "Chapter 4 Multiple Regression: Estimation and Hypothesis Testing",
     "section": "",
     "text": "注意：本讲义供学习交流使用，请勿用于商业用途"
   },
   {
-    "objectID": "projects.html#project-2",
-    "href": "projects.html#project-2",
-    "title": "Projects",
-    "section": "Project 2",
-    "text": "Project 2"
+    "objectID": "case.html",
+    "href": "case.html",
+    "title": "小组任务",
+    "section": "",
+    "text": "提交分组信息：https://www.wjx.top/vm/rXASrvi.aspx#"
   },
   {
-    "objectID": "projects.html#project-3",
-    "href": "projects.html#project-3",
-    "title": "Projects",
-    "section": "Project 3",
-    "text": "Project 3"
+    "objectID": "case.html#组队标准",
+    "href": "case.html#组队标准",
+    "title": "小组任务",
+    "section": "组队标准",
+    "text": "组队标准\n\n标准规模：每组原则上由 4 位同学组成。\n人数调节：若班级总人数无法被 4 完全整除，允许出现个别 3人组 或 5人组。\n工作量对等原则：\n\n3 人组：需完成与标准组一致的要求，建议由综合能力较强的同学组成。\n5 人组：为抵消人力优势，该组需增加50%的有效样本量。"
+  },
+  {
+    "objectID": "case.html#填报与随机分配",
+    "href": "case.html#填报与随机分配",
+    "title": "小组任务",
+    "section": "填报与随机分配",
+    "text": "填报与随机分配\n\n填报限期：请各组长于 第 2 周下课前 完成本问卷的组员名单填报。\n逾期后果：逾期（第 2 周下课后）仍未提交名单的同学，将视为放弃自主组队权利。\n强制指派：届时，老师将根据剩余名单进行随机分配或合并，确保每位同学都有组归属并能按时开展小组作业。"
+  },
+  {
+    "objectID": "case.html#合作伙伴守则",
+    "href": "case.html#合作伙伴守则",
+    "title": "小组任务",
+    "section": "合作伙伴守则",
+    "text": "合作伙伴守则\n\n共识建立：请同学们在组队时充分沟通，确保组员在学习态度和任务分配上达成共识。\n剔除机制：若组内出现成员经多次沟通仍严重不配合的行为，小组可提交沟通记录并向老师申请剔除该组员。\n申请限期：剔除申请截止于 第 10 周。\n独立惩罚：被剔除的成员需独立完成小组作业及实验报告。"
+  },
+  {
+    "objectID": "case.html#目的",
+    "href": "case.html#目的",
+    "title": "小组任务",
+    "section": "目的",
+    "text": "目的\n\n实践应用：运用经济计量方法分析现实问题。\n过程体验：完整体验从提出观点、建立模型、验证观点的经济计量分析全过程。\n最终产出：提交演示文件、汇报展示、实验报告。\n\n\n最好的学习方法： “The best way to learn is to do; the worst way to teach is to talk.” —— Paul Halmos (1916-2006)"
+  },
+  {
+    "objectID": "case.html#选题",
+    "href": "case.html#选题",
+    "title": "小组任务",
+    "section": "选题",
+    "text": "选题"
+  },
+  {
+    "objectID": "case.html#从想做到能做",
+    "href": "case.html#从想做到能做",
+    "title": "小组任务",
+    "section": "从“想做”到“能做”",
+    "text": "从“想做”到“能做”\n\n具体 (Specific)\n\n因果逻辑明确：选题必须明确为 变量 X 如何影响变量 Y 的实证分析框架。\n观测单元清晰：拒绝宏大叙事，必须明确数据中的每一行代表什么（例如：一个学生、一架航班、或是一个城市。\n\n\n\n有趣 (Interesting)\n\n好奇心驱动：选题应源于对现实生活的观察与好奇。\n价值探索：通过实证分析得出具有探索意义、能为他人提供参考价值的结论。\n\n\n\n新颖 (Novel)\n\n时效性：鼓励使用 2024-2025年的最新数据，分析如电竞酒店、新能源车等新兴细分市场。\n\n\n\n可行 (Feasible)\n\n核心前提：必须确保能够采集到不少于60 个有效样本的截面数据 。\n可量化：变量设计必须满足课程要求的硬性维度，确保模型能够有效运行。\n参考选题：\n\n新媒体分析：小红书帖文/B站视频互动量（Y）影响因素分析。\n二手车市场：二手新能源车价格（Y）与行驶里程、购车年限及品牌类型之间的关系。\n消费生活：校园周边奶茶定价（Y）与产品热量、配料数及品牌连锁性质的相关性。\n二手电子产品：iPad 二手价格（Y）受存储容量、已激活时长及配件完整度影响。\n游戏研究：数字游戏定价（Y）与好评率、安装包大小及是否支持中文的相关性。\n即时配送服务：外卖配送费（Y）如何随配送距离、订单金额及天气状况波动。\n品牌扩张策略：连锁店门店数（Y）与区域商务氛围、竞品密度及城市等级的关系。\n机票价格分析：特定航线（国际/国内）的价格影响因素。\n客房价格分析：连锁酒店、星级酒店、民宿的价格研究。\n不限于经济类话题：CET4成绩影响因素、跑步配速分析等。\n\n\n\n\n选题“负面清单”（禁止选择）\n\n陈旧同质化：大学生每月生活费影响因素分析、食堂就餐满意度影响因素分析\n选题宏大：全球各国通货膨胀率与经济增长的关系研究、“一带一路”对全球贸易格局的影响、互联网技术对人类文明进化的作用\n数据类型错误：中国房地产市场的波动逻辑分析、人民币汇率波动影响因素、城乡收入分配不平等分析\n数据无法获取：某知名快消品牌内部营销成本与利润分析、外卖骑手实际时薪影响因素"
+  },
+  {
+    "objectID": "case.html#数据要求与来源",
+    "href": "case.html#数据要求与来源",
+    "title": "小组任务",
+    "section": "数据要求与来源",
+    "text": "数据要求与来源\n\n数据类型：必须使用截面数据，严禁使用时间序列或面板数据。\n样本容量：有效个案数量不得低于 60 个（若是5人组，有效个案数量不得低于90）。\n\n\n📌 有效样本指经过清洗（缺失值、异常值处理等）后，实际用于回归模型估计的观测数量。\n\n\n💡 为了保证最终回归模型能使用足够的有效样本，建议在数据收集时不要刚好卡在最低门槛，而是预留一定的“缓冲量”。\n\n\n💡 推荐实际收集目标：70–80 个（个人） / 100–110 个（5人组）。在最低要求的基础上多收集 10–20%（约多10–20个观测），以应对数据清洗过程中可能出现的缺失值或异常值导致的样本量减少。\n\n\n❗重要提示：请勿选择以“省级行政区划”为观测单元的选题（如各省居民消费分析），我国省级行政区总数为 34 个（23 个省、5 个自治区、4 个直辖市和 2 个特别行政区）\n变量要求（数据收集阶段）：\n\n定量变量（Continuous/Quantitative Variables）： 至少4 个（确保 1 个作为被解释变量后，仍有充足的候选解释变量）。\n定性变量（Categorical/Qualitative Variables）： 至少 2 个。\n\n模型设定要求（实证分析阶段）：\n\n被解释变量\\(Y\\)：必须为定量变量\n解释变量构成：最终进入回归模型的变量应至少包含 2 个定量变量和 1个定性变量\n\n数据收集渠道：网页数据、数据库、问卷调查、APP等 。\n\n\n🚫 拒绝“常量”变量： 请务必检查你的数据。确保定量变量是有波动的，如果所有个案的数值都完全一样（例如：所有人的“受教育年限”都是 16），该变量将无法进入回归模型。\n\n\n🧩 定性变量精简化： 分类不宜过细。建议将定性变量的类别控制在 2-4 个 之间。如果分类太多（如：具体省份），请在分析前按逻辑进行归并。\n\n\n📦 建立“变量备用库”： 建议在数据收集阶段多准备几个备选变量。这样万一核心变量不显著，你可以立即调用备选变量进行调整，无需再次辛苦收集数据。\n\n\n\n🚩选题常见错误\n\n请各小组对照下表，核实你们的选题是否存在以下逻辑或格式问题。存在下述任何一种情况的申请，将被要求重选。\n\n\n\n\n\n\n\n\n错误类型\n典型错误示例\n为什么不行？\n\n\n\n\n观测单元错误\n以“年份”为单元（如：2000-2024年我国GDP分析）\n本次任务严格要求使用截面数据，禁止使用时间序列数据。\n\n\n样本量不足\n以“省级行政区”为单元（如：31个省的消费分析）\n样本量极小（N=31），统计效力严重不足，无法支持稳健的回归分析。\n\n\n变量类型错位\n被解释变量 \\(Y\\) 是“是否就业”（0=否, 1=是）\n被解释变量必须为定量变量，定性变量作为 \\(Y\\) 需使用特殊模型。\n\n\n解释变量单一\n仅收集了 1 个定量变量和 1 个定性变量\n无法满足模型设定要求（必须包含 \\(\\ge\\) 2个定量和 \\(\\ge\\) 1个定性解释变量）。\n\n\n数据逻辑自循环\n\\(Y\\) 是“考试总分”，\\(X\\) 是“数学分”、“语文分”\n变量间存在数学恒等关系而非因果统计关系，回归系数无意义。\n\n\n\n\n✅ 检查 1. 有效样本量是否达到要求（60个/五人组90个）？ 2. 你的数据是否确保每一行代表一个观测个体（如：人、公司）？ 3. 你的因变量 \\(Y\\) 是否可以进行求平均值等数值运算？"
+  },
+  {
+    "objectID": "case.html#第1轮讨论课-第3-6周选题论证和数据收集",
+    "href": "case.html#第1轮讨论课-第3-6周选题论证和数据收集",
+    "title": "小组任务",
+    "section": "第1轮讨论课 (第3-6周)：选题论证和数据收集",
+    "text": "第1轮讨论课 (第3-6周)：选题论证和数据收集\n\n任务1: 提交选题信息问卷\nhttps://v.wjx.cn/vm/rXTAiul.aspx#\n\n\n点击展开\n\n\n核心任务：确立选题方向，通过初步数据探索验证模型逻辑的可行性。\n学生准备事项（需提交/展示）：\n\n填写选题信息问卷(请在讨论课前完成)：https://v.wjx.cn/vm/rXTAiul.aspx#\n数据文件： 展示已获取的数据概况，确保截面数据有效样本 \\(n \\ge 60\\)（5人组 \\(n \\ge 90\\)）。\n数据清洗：\n\n变量命名的规范化 (Variable Naming)\n\n全英文/拼音：变量名必须以英文字母开头。严禁使用中文、空格或特殊符号。\n禁用字符：不能包含中划线/短横线（-）、小圆点（.）。\n蛇形命名（snake_case）：所有字母小写，单词之间用下划线（_）连接（如 laptop_price）。\n见名知意： 严禁使用 \\(X1, Y\\) 等无意义符号，确保代码可读性。用 wage 而不是Y，用 edu 而不是 X1。\n\n异常值处理\n\n可视化检查：对定量变量绘制直方图或箱线图。\n优先采用 \\(3 \\times IQR\\) 规则 剔除极端值，以保留更多信息；若数据依然分布极度不均，再考虑 \\(1.5 \\times IQR\\)。 (注：剔除数值大于 \\(Q3 + 3 \\times IQR\\) 或小于 \\(Q1 - 3 \\times IQR\\) 的个案)。\n逻辑检查：务必剔除如“价格为0”、“年龄为负”等逻辑错误的个案。\n\n定性变量分类优化：\n\n合并原则：若某个分类下的个案数量少于 10 个，建议合并。合并后建议每组样本数 \\(&gt; 20\\)。\n逻辑合并：合并应基于逻辑相似性（如：将“硕士”和“博士”合并为“研究生”）。\n\n初步相关性分析：\n\n报告 \\(Y\\) 与各定量解释变量 \\(X\\) 之间的相关系数矩阵。\n核心解释变量与 \\(Y\\) 的相关系数绝对值 \\(|r| &gt; 0.2-0.3\\)。\n确保变量间存在基本关联，避免后期回归模型因相关性太弱导致“全盘不显著”。\n估计全变量的回归模型，若 \\(p\\) 值普遍较大且 \\(R^2\\) 极低。需要重新考虑定量变量的测度，重新选取样本。\n\n\n\n\n&lt;&gt;"
+  },
+  {
+    "objectID": "case.html#第2轮讨论课-第6-7周数据预处理和初步回归",
+    "href": "case.html#第2轮讨论课-第6-7周数据预处理和初步回归",
+    "title": "小组任务",
+    "section": "第2轮讨论课 (第6-7周)：数据预处理和初步回归",
+    "text": "第2轮讨论课 (第6-7周)：数据预处理和初步回归\n\n\n点击展开\n\n\n\n\n\n\n\nImportant\n\n\n\n在本阶段，各小组需完成原始数据的清洗、变量规范化命名及初步的描述性统计分析。这不仅是为了确保后续回归模型的稳健性，更是为了培养专业的数据处理习惯。\n\n\n1 样本量基本要求\n根据小组成员人数，有效样本量（剔除异常与错误后）需满足： - 常规小组（≤ 4人）： \\(n \\ge 60\\) - 5人小组： \\(n \\ge 90\\)\n2 数据清洗标准 (Data Cleaning)\n2.1 变量命名规范化 (Variable Naming)\n为了确保分析软件（Stata/R/Python/EViews）的兼容性，所有变量名必须遵循： - 命名格式： 采用 蛇形命名法（snake_case），所有字母小写，单词之间用下划线 _ 连接。 - 字符限制： 严禁使用中文、空格或特殊符号。必须以英文字母开头。 - 禁用符号： 严禁包含中划线/短横线 - 或小圆点 .。 - 语义化命名： 确保“见名知意”。严禁使用 \\(X1, X2, Y\\) 等代号。例如：用 wage 而不是 y，用 edu_years 而不是 x1。\n2.2 异常值处理与逻辑检查\n\n可视化检查： 对所有定量变量绘制直方图或箱线图。\nIQR 规则： - 优先采用 \\(3 \\times IQR\\) 规则剔除极端值：\n\n\\(Value &gt; Q3 + 3 \\times IQR\\) 或 \\(Value &lt; Q1 - 3 \\times IQR\\)。\n若数据依然极度不均，可考虑 \\(1.5 \\times IQR\\) 规则。\n\n逻辑校验： 强制剔除逻辑错误的个案（如价格 \\(\\le 0\\)、年龄为负等）。\n\n2.3 定性变量分类优化\n\n合并原则： 若某个分类下的个案数量 少于 10 个，必须进行合并。合并后建议每组样本数 \\(&gt; 20\\)。\n逻辑合并： 合并应基于逻辑相似性。例如：将“硕士”和“博士”合并为“研究生”。\n\n3 初步统计分析\n3.1 相关性自查 - 报告被解释变量 \\(Y\\) 与各定量解释变量 \\(X\\) 之间的 Pearson 相关系数矩阵。 - 核心解释变量与 \\(Y\\) 的相关系数绝对值 \\(|r|\\) 建议在 \\(0.2 - 0.3\\) 以上。\n3.2 回归质量预警 进行全变量 OLS 初步回归，若出现以下情况，需重新考虑变量测度或重新抽样： - \\(p\\) 值普遍较大且模型 \\(R^2\\) 极低（例如 \\(&lt; 0.01\\)）。\n4 提交物要求\n请提交一个名为 组号_组长姓名_研究主题.xlsx 的 Excel 文件。该文件必须严格包含以下四个命名的表单（Sheet）：\n\n\n\n\n\n\n\n\n表单名称\n内容要求\n包含指标\n\n\n\n\ndata\n清洗后的有效数据\n表头为规范化的英文变量名\n\n\ndesc\n描述性统计分析\n均值、中位数、标准差、最小值、最大值 、定量变量的直方图\n\n\ncor\n相关系数矩阵\n\\(Y\\) 与定量 \\(X\\) 的 Pearson 相关系数\n\n\nreg\n初步回归结果\n系数、标准误、\\(t\\) 值、\\(p\\) 值、\\(R^2\\)、调整后 \\(R^2\\)\n\n\n\n\n\n\n\n\n\nNote\n\n\n\n注意：严禁合并表单或随意更改 Sheet 名称。\n\n\n&lt;&gt;"
+  },
+  {
+    "objectID": "case.html#第3轮讨论课-第10周模型函数形式变换虚拟变量的引入",
+    "href": "case.html#第3轮讨论课-第10周模型函数形式变换虚拟变量的引入",
+    "title": "小组任务",
+    "section": "第3轮讨论课 (第10周)：模型函数形式变换、虚拟变量的引入",
+    "text": "第3轮讨论课 (第10周)：模型函数形式变换、虚拟变量的引入\n\n\n点击展开\n\n分析方法：教材第5-6章关于函数形式变换、虚拟变量的引入\n核心任务：针对同一被解释变量，依次尝试并对比以下四类扩展模型：\n\n虚拟变量模型：引入定性变量。\n双对数模型：探究因变量与自变量之间的弹性关系。\n平方项模型：检验是否存在非线性趋势（如边际效应递减）。\n交互项模型：检验某个解释变量是否对另一个变量具有调节效应。\n\n思考问题：在对比上述模型后，基于统计显著性（Stars）、系数的符号是否符合预期，拟合优度（\\(R^2\\)），你认为哪个模型最合适？请简述理由。\n提交物要求\n请提交一个名为 组号_组长姓名_研究主题_chap5-6.xlsx 的 Excel 文件。该文件必须严格包含以下四个命名的表单（Sheet）：\n\n\n\n\n\n\n\n\n表单名称\n内容要求\n包含指标\n\n\n\n\ndata\n清洗后的数据\n表头为规范化的英文变量名\n\n\nvar\n变量的含义及单位\n列出变量名称，变量含义及单位，定性变量的频数分布表\n\n\nreg\n回归模型\n所有尝试过的回归模型的估计结果\n\n\nbest\n最优模型\n选择该模型的理由\n\n\n\n\n\n\n\n\n\nNote\n\n\n\n注意：严禁合并表单或随意更改 Sheet 名称。\n\n\n&lt;&gt;"
+  },
+  {
+    "objectID": "case.html#第4轮讨论课-第-12-周模型诊断与完善",
+    "href": "case.html#第4轮讨论课-第-12-周模型诊断与完善",
+    "title": "小组任务",
+    "section": "第4轮讨论课 (第 12 周)：模型诊断与完善",
+    "text": "第4轮讨论课 (第 12 周)：模型诊断与完善\n\n\n点击展开\n\n\n应用方法：运用教材 第 7、8、9 章 的方法。\n需准备的文件：\n\nEViews Workfile：包含所有诊断检验过程的最新版本。\nPPT 汇报演示：\n\n诊断与改进：汇报针对初始模型的优化路径。\n设定误差检验：是否存在遗漏变量或函数形式设定错误。\n多重共线性：VIF 检验及处理方案。\n异方差诊断：White 检验/BP 检验及加权最小二乘法等改进措施。\n最终结论：基于稳健模型得到的最终实证结论 [cite: 2026-01-31]。\n\n\n\n&lt;&gt;"
+  },
+  {
+    "objectID": "pre.html#汇报安排",
+    "href": "pre.html#汇报安排",
+    "title": "小组任务课堂汇报",
+    "section": "汇报安排",
+    "text": "汇报安排\n\n选拔机制：老师根据演示文稿质量，仅挑选 4 个优胜小组 进行课堂汇报。\n提交截止：第14周周日（2026年6月7日）20:00 前提交PDF，逾期直接失去资格。\n汇报时长：严格 5分钟。这是一场高效的小组成果展示，而非朗读报告。\n严禁内容：代码（第6部分）和个人心得（第7部分）不得放入PPT。\n奖励：优胜小组每位成员实验报告加 3-5分。"
+  },
+  {
+    "objectID": "pre.html#关键时间节点",
+    "href": "pre.html#关键时间节点",
+    "title": "小组任务课堂汇报",
+    "section": "关键时间节点",
+    "text": "关键时间节点\n\n提交截止：第14周周日（2026年6月7日）20:00\n提交要求：\n\n文件格式：PDF（PowerPoint / WPS 转PDF）\n文件命名：第#组+组长姓名+班级+主题关键词+小组汇报.pdf\n\n示例：第1组池天俊 24人资1瑞幸小组汇报.pdf\n\n提交位置：QQ群“小组汇报”文件夹\n\n结果公布：第15周周一（2026年6月8日）20:00\n汇报时间：第15-16周课堂（严格5分钟，倒计时，超时扣分）"
+  },
+  {
+    "objectID": "pre.html#优胜小组评选指标",
+    "href": "pre.html#优胜小组评选指标",
+    "title": "小组任务课堂汇报",
+    "section": "“优胜小组”评选指标",
+    "text": "“优胜小组”评选指标\n\n选题的现实意义和创新性\n变量选取的经济合理性与数据质量\n规范的三线表（严禁直接截图软件输出）\n完整的模型诊断(残差图形、多余或遗漏变量的检验、多重共线性 VIF、异方差检验)\n系数经济含义的准确解释"
+  },
+  {
+    "objectID": "pre.html#现场汇报-5分钟",
+    "href": "pre.html#现场汇报-5分钟",
+    "title": "小组任务课堂汇报",
+    "section": "现场汇报 (5分钟)",
+    "text": "现场汇报 (5分钟)\n\n第15-16周上课期间\n每组严格限时 5 分钟。倒计时软件egg，超时会扣分。\n只汇报实验报告的第2-5部分：第6部分（代码）和第7部分（心得体会）无需放进演示文稿中。\n建议由1名表达能力最强的组员统一主讲，避免频繁换人浪费交接时间。"
+  },
+  {
+    "objectID": "pre.html#汇报文件排版",
+    "href": "pre.html#汇报文件排版",
+    "title": "小组任务课堂汇报",
+    "section": "汇报文件排版",
+    "text": "汇报文件排版\n\n一页一个核心信息，避免信息过载\n结构简洁：大标题 + 关键要点 + 1张核心图/表\n字体大小适当：标题 ≥ 32pt，正文 ≥ 24pt\n视觉风格：白底 + 深蓝/深灰文字，极简学术风，禁止花哨动画和无关图片\n15-20页左右，确保内容完整且不冗余"
+  },
+  {
+    "objectID": "pre.html#汇报文件结构",
+    "href": "pre.html#汇报文件结构",
+    "title": "小组任务课堂汇报",
+    "section": "汇报文件结构",
+    "text": "汇报文件结构\n1 封面页 [建议：20秒]\n\n视觉风格： 简洁、素雅（建议白底蓝字或黑字）。\n内容： 题目、小组全员姓名、学号、班级。"
+  },
+  {
+    "objectID": "pre.html#汇报演示文稿示例",
+    "href": "pre.html#汇报演示文稿示例",
+    "title": "小组任务课堂汇报",
+    "section": "汇报演示文稿示例",
+    "text": "汇报演示文稿示例"
   },
   {
     "objectID": "case1code.html",
@@ -578,7 +683,7 @@
     "href": "case1code.html#分组描述统计",
     "title": "Case 1 based on Chap 3 and Chap 4",
     "section": "分组描述统计",
-    "text": "分组描述统计\n\n#按area分组,报告retail.price的描述性统计量\ndata %&gt;%\n  group_by(area) %&gt;%\n  summarize(n(),\n            min = min(retail.price),\n            q1 = quantile(retail.price, 0.25),\n            median = median(retail.price),\n            mean = mean(retail.price),\n            q3 = quantile(retail.price, 0.75),\n            max = max(retail.price),\n            sd = sd(retail.price))\n\n# A tibble: 3 × 9\n  area  `n()`   min    q1 median  mean    q3   max    sd\n  &lt;chr&gt; &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n1 市区    168     8    13     15  16.5  16.2    35  5.90\n2 近郊    138     7    13     14  14.7  16      30  4.20\n3 远郊     30     8    11     14  14.5  16      28  5.06\n\n#按area分组,报告retail.price的描述性统计量，表格按mean降序排列\ndistrict_table &lt;- data %&gt;%\n  group_by(district) %&gt;%\n  summarize(n(),\n            min = min(retail.price),\n            q1 = quantile(retail.price, 0.25),\n            median = median(retail.price),\n            mean = mean(retail.price),\n            q3 = quantile(retail.price, 0.75),\n            max = max(retail.price),\n            sd = sd(retail.price)) %&gt;% arrange(desc(mean))\ndistrict_table\n\n# A tibble: 11 × 9\n   district `n()`   min    q1 median  mean    q3   max    sd\n   &lt;chr&gt;    &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n 1 越秀        36    10  14     15    17.1  16      31 5.68 \n 2 海珠        44     8  13     15    16.6  17.2    31 6.09 \n 3 花都         6     9  13.5   15.5  16.5  17.5    28 6.41 \n 4 荔湾        17    11  13     15    16.3  16      29 5.60 \n 5 天河        71     9  13     14    16.3  16      35 6.05 \n 6 南沙         7     8  10.5   14    15.6  19      28 7.04 \n 7 白云        68     9  13     15    15.3  16      30 4.53 \n 8 番禺        48     7  13     14.5  14.8  16      30 4.13 \n 9 增城        15     9  11     14    13.5  14.5    23 3.52 \n10 黄埔        22     8  10.5   12.5  12.6  14.8    16 2.44 \n11 从化         2    11  11.2   11.5  11.5  11.8    12 0.707\n\n#按area分组,报告retail.price的描述性统计量，表格按`n()`降序排列\ndistrict_table &lt;- data %&gt;%\n  group_by(district) %&gt;%\n  summarize(n(),\n            min = min(retail.price),\n            q1 = quantile(retail.price, 0.25),\n            median = median(retail.price),\n            mean = mean(retail.price),\n            q3 = quantile(retail.price, 0.75),\n            max = max(retail.price),\n            sd = sd(retail.price)) %&gt;% arrange(desc(`n()`))\ndistrict_table\n\n# A tibble: 11 × 9\n   district `n()`   min    q1 median  mean    q3   max    sd\n   &lt;chr&gt;    &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n 1 天河        71     9  13     14    16.3  16      35 6.05 \n 2 白云        68     9  13     15    15.3  16      30 4.53 \n 3 番禺        48     7  13     14.5  14.8  16      30 4.13 \n 4 海珠        44     8  13     15    16.6  17.2    31 6.09 \n 5 越秀        36    10  14     15    17.1  16      31 5.68 \n 6 黄埔        22     8  10.5   12.5  12.6  14.8    16 2.44 \n 7 荔湾        17    11  13     15    16.3  16      29 5.60 \n 8 增城        15     9  11     14    13.5  14.5    23 3.52 \n 9 南沙         7     8  10.5   14    15.6  19      28 7.04 \n10 花都         6     9  13.5   15.5  16.5  17.5    28 6.41 \n11 从化         2    11  11.2   11.5  11.5  11.8    12 0.707\n\n#按area分组,报告groupbuy.price的描述性统计量，表格按`n()`降序排列\n#filter(!is.na(groupbuy.price)) 剔除有缺失值的个案\ndistrict_table &lt;- data %&gt;%\n  group_by(area) %&gt;% \n  filter(!is.na(groupbuy.price)) %&gt;% \n  summarize(n(),\n           retail.mean = mean(retail.price),\n           groupbuy.mean = mean(groupbuy.price)) %&gt;% \n           arrange(desc(`n()`))\ndistrict_table\n\n# A tibble: 3 × 4\n  area  `n()` retail.mean groupbuy.mean\n  &lt;chr&gt; &lt;int&gt;       &lt;dbl&gt;         &lt;dbl&gt;\n1 市区    150        16.1         11.7 \n2 近郊    126        14.5         10.2 \n3 远郊     25        15.3          9.36\n\n#按品牌分组,报告retail.price的描述性统计量，表格按`n()`降序排列\n#filter(`n()`&gt;20) 选择分店数量多于20家的品牌\n#MAC：`` option+tilda\nbrand_table &lt;- data %&gt;%\n  group_by(brand) %&gt;%\n  summarize(n(),\n            min = min(retail.price),\n            q1 = quantile(retail.price, 0.25),\n            median = median(retail.price),\n            mean = mean(retail.price),\n            q3 = quantile(retail.price, 0.75),\n            max = max(retail.price),\n            sd = sd(retail.price)) %&gt;% filter(\n              `n()`&gt;20) %&gt;% arrange(desc(mean))\nbrand_table\n\n# A tibble: 6 × 9\n  brand            `n()`   min    q1 median  mean    q3   max    sd\n  &lt;chr&gt;            &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n1 喜茶                43    24  27       28  27.9  29      35  1.82\n2 茶百道              58    13  15       16  15.6  16      19  1.15\n3 TANING手挞柠檬茶    44    13  14.8     15  15.0  16      18  1.07\n4 CoCo都可            64    11  13       14  14.4  15      23  2.01\n5 书亦烧仙草          82    10  12       13  13.4  14.8    21  1.77\n6 益禾堂              45     7   9       10  10.1  11      13  1.29\n\n#按brand, area两个变量分组\n\nbrand_table &lt;- data %&gt;%\n  group_by(brand, area) %&gt;%\n  summarize(n(),\n            min = min(retail.price),\n            q1 = quantile(retail.price, 0.25),\n            median = median(retail.price),\n            mean = mean(retail.price),\n            q3 = quantile(retail.price, 0.75),\n            max = max(retail.price),\n            sd = sd(retail.price)) %&gt;% filter(\n              `n()`&gt;10) %&gt;% arrange(desc(mean))\n\n`summarise()` has grouped output by 'brand'. You can override using the\n`.groups` argument.\n\nbrand_table\n\n# A tibble: 11 × 10\n# Groups:   brand [6]\n   brand            area  `n()`   min    q1 median  mean    q3   max    sd\n   &lt;chr&gt;            &lt;chr&gt; &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n 1 喜茶             市区     32    24  27     27.5  27.9  28.2    35 1.95 \n 2 茶百道           市区     23    13  15     16    15.7  16.5    18 1.27 \n 3 茶百道           近郊     32    14  15     15    15.4  16      19 1.01 \n 4 TANING手挞柠檬茶 市区     26    13  15     15    15.0  15      18 1.08 \n 5 TANING手挞柠檬茶 近郊     16    13  14.8   15    14.9  16      16 0.998\n 6 CoCo都可         近郊     21    12  13     14    14.4  16      20 2.04 \n 7 CoCo都可         市区     37    11  13     14    14.2  15      18 1.59 \n 8 书亦烧仙草       近郊     39    10  12.5   14    13.6  15      16 1.43 \n 9 书亦烧仙草       市区     33    10  12     13    13.2  14      16 1.72 \n10 益禾堂           市区     17     8  10     10    10.4  11      13 1.18 \n11 益禾堂           近郊     21     7   9     10    10    11      13 1.45"
+    "text": "分组描述统计\n\n#按area分组,报告retail.price的描述性统计量\ndata %&gt;%\n  group_by(area) %&gt;%\n  summarize(n(),\n            min = min(retail.price),\n            q1 = quantile(retail.price, 0.25),\n            median = median(retail.price),\n            mean = mean(retail.price),\n            q3 = quantile(retail.price, 0.75),\n            max = max(retail.price),\n            sd = sd(retail.price))\n\n# A tibble: 3 × 9\n  area  `n()`   min    q1 median  mean    q3   max    sd\n  &lt;chr&gt; &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n1 市区    168     8    13     15  16.5  16.2    35  5.90\n2 近郊    138     7    13     14  14.7  16      30  4.20\n3 远郊     30     8    11     14  14.5  16      28  5.06\n\n#按area分组,报告retail.price的描述性统计量，表格按mean降序排列\ndistrict_table &lt;- data %&gt;%\n  group_by(district) %&gt;%\n  summarize(n(),\n            min = min(retail.price),\n            q1 = quantile(retail.price, 0.25),\n            median = median(retail.price),\n            mean = mean(retail.price),\n            q3 = quantile(retail.price, 0.75),\n            max = max(retail.price),\n            sd = sd(retail.price)) %&gt;% arrange(desc(mean))\ndistrict_table\n\n# A tibble: 11 × 9\n   district `n()`   min    q1 median  mean    q3   max    sd\n   &lt;chr&gt;    &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n 1 越秀        36    10  14     15    17.1  16      31 5.68 \n 2 海珠        44     8  13     15    16.6  17.2    31 6.09 \n 3 花都         6     9  13.5   15.5  16.5  17.5    28 6.41 \n 4 荔湾        17    11  13     15    16.3  16      29 5.60 \n 5 天河        71     9  13     14    16.3  16      35 6.05 \n 6 南沙         7     8  10.5   14    15.6  19      28 7.04 \n 7 白云        68     9  13     15    15.3  16      30 4.53 \n 8 番禺        48     7  13     14.5  14.8  16      30 4.13 \n 9 增城        15     9  11     14    13.5  14.5    23 3.52 \n10 黄埔        22     8  10.5   12.5  12.6  14.8    16 2.44 \n11 从化         2    11  11.2   11.5  11.5  11.8    12 0.707\n\n#按area分组,报告retail.price的描述性统计量，表格按`n()`降序排列\ndistrict_table &lt;- data %&gt;%\n  group_by(district) %&gt;%\n  summarize(n(),\n            min = min(retail.price),\n            q1 = quantile(retail.price, 0.25),\n            median = median(retail.price),\n            mean = mean(retail.price),\n            q3 = quantile(retail.price, 0.75),\n            max = max(retail.price),\n            sd = sd(retail.price)) %&gt;% arrange(desc(`n()`))\ndistrict_table\n\n# A tibble: 11 × 9\n   district `n()`   min    q1 median  mean    q3   max    sd\n   &lt;chr&gt;    &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n 1 天河        71     9  13     14    16.3  16      35 6.05 \n 2 白云        68     9  13     15    15.3  16      30 4.53 \n 3 番禺        48     7  13     14.5  14.8  16      30 4.13 \n 4 海珠        44     8  13     15    16.6  17.2    31 6.09 \n 5 越秀        36    10  14     15    17.1  16      31 5.68 \n 6 黄埔        22     8  10.5   12.5  12.6  14.8    16 2.44 \n 7 荔湾        17    11  13     15    16.3  16      29 5.60 \n 8 增城        15     9  11     14    13.5  14.5    23 3.52 \n 9 南沙         7     8  10.5   14    15.6  19      28 7.04 \n10 花都         6     9  13.5   15.5  16.5  17.5    28 6.41 \n11 从化         2    11  11.2   11.5  11.5  11.8    12 0.707\n\n#按area分组,报告groupbuy.price的描述性统计量，表格按`n()`降序排列\n#filter(!is.na(groupbuy.price)) 剔除有缺失值的个案\ndistrict_table &lt;- data %&gt;%\n  group_by(area) %&gt;% \n  filter(!is.na(groupbuy.price)) %&gt;% \n  summarize(n(),\n           retail.mean = mean(retail.price),\n           groupbuy.mean = mean(groupbuy.price)) %&gt;% \n           arrange(desc(`n()`))\ndistrict_table\n\n# A tibble: 3 × 4\n  area  `n()` retail.mean groupbuy.mean\n  &lt;chr&gt; &lt;int&gt;       &lt;dbl&gt;         &lt;dbl&gt;\n1 市区    150        16.1         11.7 \n2 近郊    126        14.5         10.2 \n3 远郊     25        15.3          9.36\n\n#按品牌分组,报告retail.price的描述性统计量，表格按`n()`降序排列\n#filter(`n()`&gt;20) 选择分店数量多于20家的品牌\n#MAC：`` option+tilda\nbrand_table &lt;- data %&gt;%\n  group_by(brand) %&gt;%\n  summarize(n(),\n            min = min(retail.price),\n            q1 = quantile(retail.price, 0.25),\n            median = median(retail.price),\n            mean = mean(retail.price),\n            q3 = quantile(retail.price, 0.75),\n            max = max(retail.price),\n            sd = sd(retail.price)) %&gt;% filter(\n              `n()`&gt;20) %&gt;% arrange(desc(mean))\nbrand_table\n\n# A tibble: 6 × 9\n  brand            `n()`   min    q1 median  mean    q3   max    sd\n  &lt;chr&gt;            &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n1 喜茶                43    24  27       28  27.9  29      35  1.82\n2 茶百道              58    13  15       16  15.6  16      19  1.15\n3 TANING手挞柠檬茶    44    13  14.8     15  15.0  16      18  1.07\n4 CoCo都可            64    11  13       14  14.4  15      23  2.01\n5 书亦烧仙草          82    10  12       13  13.4  14.8    21  1.77\n6 益禾堂              45     7   9       10  10.1  11      13  1.29\n\n#按brand, area两个变量分组\n\nbrand_table &lt;- data %&gt;%\n  group_by(brand, area) %&gt;%\n  summarize(n(),\n            min = min(retail.price),\n            q1 = quantile(retail.price, 0.25),\n            median = median(retail.price),\n            mean = mean(retail.price),\n            q3 = quantile(retail.price, 0.75),\n            max = max(retail.price),\n            sd = sd(retail.price)) %&gt;% filter(\n              `n()`&gt;10) %&gt;% arrange(desc(mean))\n\n`summarise()` has regrouped the output.\nℹ Summaries were computed grouped by brand and area.\nℹ Output is grouped by brand.\nℹ Use `summarise(.groups = \"drop_last\")` to silence this message.\nℹ Use `summarise(.by = c(brand, area))` for per-operation grouping\n  (`?dplyr::dplyr_by`) instead.\n\nbrand_table\n\n# A tibble: 11 × 10\n# Groups:   brand [6]\n   brand            area  `n()`   min    q1 median  mean    q3   max    sd\n   &lt;chr&gt;            &lt;chr&gt; &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n 1 喜茶             市区     32    24  27     27.5  27.9  28.2    35 1.95 \n 2 茶百道           市区     23    13  15     16    15.7  16.5    18 1.27 \n 3 茶百道           近郊     32    14  15     15    15.4  16      19 1.01 \n 4 TANING手挞柠檬茶 市区     26    13  15     15    15.0  15      18 1.08 \n 5 TANING手挞柠檬茶 近郊     16    13  14.8   15    14.9  16      16 0.998\n 6 CoCo都可         近郊     21    12  13     14    14.4  16      20 2.04 \n 7 CoCo都可         市区     37    11  13     14    14.2  15      18 1.59 \n 8 书亦烧仙草       近郊     39    10  12.5   14    13.6  15      16 1.43 \n 9 书亦烧仙草       市区     33    10  12     13    13.2  14      16 1.72 \n10 益禾堂           市区     17     8  10     10    10.4  11      13 1.18 \n11 益禾堂           近郊     21     7   9     10    10    11      13 1.45"
   },
   {
     "objectID": "case1code.html#总体均值的区间估计",
@@ -826,130 +931,11 @@
     "text": "第7章 设定误差检验\n讲义\n\n\nEviews操作\nEviews遗漏或多余变量的检验\nEviews reset检验\n\n\nR教学视频\nR中如何实现回归方程设定误差检验(Ramsey RESET)?\nR中的for循环\n循环语句for loop在回归分析中的运用\nR中的数据结构转换：宽型转长形–pivot_longer函数的运用\nR中如何简洁地表达多元回归方程的设定？\n\n\n习题讲评视频\n教材习题7.11+7.16——基于EViews\n教材习题7.14——基于EViews\n教材习题7.21——基于EViews\n例题7.7.4讲评——基于R\n教材习题7.11 + 7.16讲评——基于R\n教材习题7.14讲评——基于R\n10个城市人口模型之循环语句讲评R\n10个城市人口模型之绘图讲评R\n\n\n习题答案\n\n\n点击展开\n\n\n如果想在新窗口打开 PDF，请点这里： 在新标签页中查看 PDF\n\n\n&lt;!-- 备用内容（若浏览器不支持 iframe） --&gt;\n&lt;p&gt;\n你的浏览器无法嵌入 PDF，请 &lt;a href=\"img/EE4_Ch07_Solutions_Manual.pdf\" target=\"_blank\" rel=\"noopener\"&gt;点此下载/查看 PDF&lt;/a&gt;.\n&lt;/p&gt;"
   },
   {
-    "objectID": "chap4.html",
-    "href": "chap4.html",
-    "title": "第4章",
+    "objectID": "chap6.html",
+    "href": "chap6.html",
+    "title": "第6章",
     "section": "",
-    "text": "第4章 多元回归\n讲义\n案例\n\n\nEviews操作\nEviews 多元回归\nEviews 受限最小二乘\nEviews 输出结果数值显示格式的设置\n\n\nR教学视频\n回归模型的比较——受限模型的F检验\n统计检验/回归模型的结果解释，还在手写吗？report()自动生成\nR如何快速创建学术论文表1 样本统计特征 tbl_summary()\n\n\n习题答案\n\n\n点击展开\n\n\n如果想在新窗口打开 PDF，请点这里： 在新标签页中查看 PDF\n\n\n&lt;!-- 备用内容（若浏览器不支持 iframe） --&gt;\n&lt;p&gt;\n你的浏览器无法嵌入 PDF，请 &lt;a href=\"img/EE4_Ch04_Solutions_Manual.pdf\" target=\"_blank\" rel=\"noopener\"&gt;点此下载/查看 PDF&lt;/a&gt;.\n&lt;/p&gt;\n\n\n\n\n习题讲评视频\n教材习题4.9+4.11+4.12\n教材习题4.14+4.18+4.22"
-  },
-  {
-    "objectID": "chap7slide.html",
-    "href": "chap7slide.html",
-    "title": "Chapter 7 Model Selection: Criteria and Tests",
-    "section": "",
-    "text": "注意：本讲义供学习交流使用，请勿用于商业用途"
-  },
-  {
-    "objectID": "case.html#样本量基本要求",
-    "href": "case.html#样本量基本要求",
-    "title": "小组任务",
-    "section": "样本量基本要求",
-    "text": "样本量基本要求\n根据小组成员人数，有效样本量（剔除异常与错误后）需满足： - 常规小组（≤ 4人）： \\(n \\ge 60\\) - 5人小组： \\(n \\ge 90\\)"
-  },
-  {
-    "objectID": "case.html#数据清洗标准-data-cleaning",
-    "href": "case.html#数据清洗标准-data-cleaning",
-    "title": "小组任务",
-    "section": "数据清洗标准 (Data Cleaning)",
-    "text": "数据清洗标准 (Data Cleaning)\n\n变量命名规范化 (Variable Naming)\n为了确保分析软件（Stata/R/Python/EViews）的兼容性，所有变量名必须遵循： - 命名格式： 采用 蛇形命名法（snake_case），所有字母小写，单词之间用下划线 _ 连接。 - 字符限制： 严禁使用中文、空格或特殊符号。必须以英文字母开头。 - 禁用符号： 严禁包含中划线/短横线 - 或小圆点 .。 - 语义化命名： 确保“见名知意”。严禁使用 \\(X1, X2, Y\\) 等代号。例如：用 wage 而不是 y，用 edu_years 而不是 x1。\n\n\n异常值处理与逻辑检查\n\n可视化检查： 对所有定量变量绘制直方图或箱线图。\nIQR 规则： - 优先采用 \\(3 \\times IQR\\) 规则剔除极端值：\n\n\\(Value &gt; Q3 + 3 \\times IQR\\) 或 \\(Value &lt; Q1 - 3 \\times IQR\\)。\n若数据依然极度不均，可考虑 \\(1.5 \\times IQR\\) 规则。\n\n逻辑校验： 强制剔除逻辑错误的个案（如价格 \\(\\le 0\\)、年龄为负等）。\n\n\n\n定性变量分类优化\n\n合并原则： 若某个分类下的个案数量 少于 10 个，必须进行合并。合并后建议每组样本数 \\(&gt; 20\\)。\n逻辑合并： 合并应基于逻辑相似性。例如：将“硕士”和“博士”合并为“研究生”。"
-  },
-  {
-    "objectID": "case.html#初步统计分析",
-    "href": "case.html#初步统计分析",
-    "title": "小组任务",
-    "section": "初步统计分析",
-    "text": "初步统计分析\n\n相关性自查\n\n报告被解释变量 \\(Y\\) 与各定量解释变量 \\(X\\) 之间的 Pearson 相关系数矩阵。\n核心解释变量与 \\(Y\\) 的相关系数绝对值 \\(|r|\\) 建议在 \\(0.2 - 0.3\\) 以上。\n\n\n\n回归质量预警\n进行全变量 OLS 初步回归，若出现以下情况，需重新考虑变量测度或重新抽样： - \\(p\\) 值普遍较大且模型 \\(R^2\\) 极低（例如 \\(&lt; 0.01\\)）。"
-  },
-  {
-    "objectID": "case.html#提交物要求",
-    "href": "case.html#提交物要求",
-    "title": "小组任务",
-    "section": "提交物要求",
-    "text": "提交物要求\n请提交一个名为 组号_组长姓名_研究题目.xlsx 的 Excel 文件。该文件必须严格包含以下四个命名的表单（Sheet）：\n\n\n\n\n\n\n\n\n表单名称\n内容要求\n包含指标\n\n\n\n\ndata\n清洗后的有效数据\n表头为规范化的英文变量名\n\n\ndesc\n描述性统计分析\n均值、中位数、标准差、最小值、最大值\n\n\ncol\n相关系数矩阵\n\\(Y\\) 与定量 \\(X\\) 的 Pearson 相关系数\n\n\nreg\n初步回归结果\n系数、标准误、\\(t\\) 值、\\(p\\) 值、\\(R^2\\)、调整后 \\(R^2\\)\n\n\n\n\n\n\n\n\n\nNote\n\n\n\n注意：严禁合并表单或随意更改 Sheet 名称。\n\n\n&lt;&gt;\n\n\n第2轮讨论课 (第7-9周)：基础建模\n\n\n点击展开\n\n\n应用方法：运用教材 第 4、5、6 章 的分析方法。\n需准备的文件：\n\n清洗后的数据文件(Excel文件格式)。\n汇报内容：\n\n数据来源：详细说明采集渠道。\n变量含义：每个 \\(X\\) 变量的含义、单位。\n估计结果：尝试不同回归方程的估计结果截图。\n模型择优：对比不同函数形式，阐述哪个模型最好及理由。\n主要结论：汇报初步发现的结论。\n\n\n\n\n\n\n\n第3轮讨论课 (第 10-13 周)：模型诊断与完善\n\n\n点击展开\n\n\n应用方法：运用教材 第 7、8、9 章 的方法。\n需准备的文件：\n\nEViews Workfile：包含所有诊断检验过程的最新版本。\nPPT 汇报演示：\n\n诊断与改进：汇报针对初始模型的优化路径。\n设定误差检验：是否存在遗漏变量或函数形式设定错误。\n多重共线性：VIF 检验及处理方案。\n异方差诊断：White 检验/BP 检验及加权最小二乘法等改进措施。\n最终结论：基于稳健模型得到的最终实证结论 [cite: 2026-01-31]。\n\n\n\n&lt;&gt;"
-  },
-  {
-    "objectID": "case.html#第1轮讨论课-第3-6周选题论证和数据收集",
-    "href": "case.html#第1轮讨论课-第3-6周选题论证和数据收集",
-    "title": "小组任务",
-    "section": "第1轮讨论课 (第3-6周)：选题论证和数据收集",
-    "text": "第1轮讨论课 (第3-6周)：选题论证和数据收集\n\n任务1: 提交选题信息问卷\nhttps://v.wjx.cn/vm/rXTAiul.aspx#\n\n\n点击展开\n\n\n核心任务：确立选题方向，通过初步数据探索验证模型逻辑的可行性。\n学生准备事项（需提交/展示）：\n\n填写选题信息问卷(请在讨论课前完成)：https://v.wjx.cn/vm/rXTAiul.aspx#\n数据文件： 展示已获取的数据概况，确保截面数据有效样本 \\(n \\ge 60\\)（5人组 \\(n \\ge 90\\)）。\n数据清洗：\n\n变量命名的规范化 (Variable Naming)\n\n全英文/拼音：变量名必须以英文字母开头。严禁使用中文、空格或特殊符号。\n禁用字符：不能包含中划线/短横线（-）、小圆点（.）。\n蛇形命名（snake_case）：所有字母小写，单词之间用下划线（_）连接（如 laptop_price）。\n见名知意： 严禁使用 \\(X1, Y\\) 等无意义符号，确保代码可读性。用 wage 而不是Y，用 edu 而不是 X1。\n\n异常值处理\n\n可视化检查：对定量变量绘制直方图或箱线图。\n优先采用 \\(3 \\times IQR\\) 规则 剔除极端值，以保留更多信息；若数据依然分布极度不均，再考虑 \\(1.5 \\times IQR\\)。 (注：剔除数值大于 \\(Q3 + 3 \\times IQR\\) 或小于 \\(Q1 - 3 \\times IQR\\) 的个案)。\n逻辑检查：务必剔除如“价格为0”、“年龄为负”等逻辑错误的个案。\n\n定性变量分类优化：\n\n合并原则：若某个分类下的个案数量少于 10 个，建议合并。合并后建议每组样本数 \\(&gt; 20\\)。\n逻辑合并：合并应基于逻辑相似性（如：将“硕士”和“博士”合并为“研究生”）。\n\n初步相关性分析：\n\n报告 \\(Y\\) 与各定量解释变量 \\(X\\) 之间的相关系数矩阵。\n核心解释变量与 \\(Y\\) 的相关系数绝对值 \\(|r| &gt; 0.2-0.3\\)。\n确保变量间存在基本关联，避免后期回归模型因相关性太弱导致“全盘不显著”。\n估计全变量的回归模型，若 \\(p\\) 值普遍较大且 \\(R^2\\) 极低。需要重新考虑定量变量的测度，重新选取样本。\n\n\n\n\n&lt;&gt;"
-  },
-  {
-    "objectID": "case.html#第2轮讨论课-第7-9周基础建模",
-    "href": "case.html#第2轮讨论课-第7-9周基础建模",
-    "title": "小组任务",
-    "section": "第2轮讨论课 (第7-9周)：基础建模",
-    "text": "第2轮讨论课 (第7-9周)：基础建模\n\n\n点击展开\n\n\n应用方法：运用教材 第 4、5、6 章 的分析方法。\n需准备的文件：\n\n清洗后的数据文件(Excel文件格式)。\n汇报内容：\n\n数据来源：详细说明采集渠道。\n变量含义：每个 \\(X\\) 变量的含义、单位。\n估计结果：尝试不同回归方程的估计结果截图。\n模型择优：对比不同函数形式，阐述哪个模型最好及理由。\n主要结论：汇报初步发现的结论。\n\n\n\n&lt;&gt;"
-  },
-  {
-    "objectID": "case.html#第3轮讨论课-第-10-13-周模型诊断与完善",
-    "href": "case.html#第3轮讨论课-第-10-13-周模型诊断与完善",
-    "title": "小组任务",
-    "section": "第3轮讨论课 (第 10-13 周)：模型诊断与完善",
-    "text": "第3轮讨论课 (第 10-13 周)：模型诊断与完善\n\n\n点击展开\n\n\n应用方法：运用教材 第 7、8、9 章 的方法。\n需准备的文件：\n\nEViews Workfile：包含所有诊断检验过程的最新版本。\nPPT 汇报演示：\n\n诊断与改进：汇报针对初始模型的优化路径。\n设定误差检验：是否存在遗漏变量或函数形式设定错误。\n多重共线性：VIF 检验及处理方案。\n异方差诊断：White 检验/BP 检验及加权最小二乘法等改进措施。\n最终结论：基于稳健模型得到的最终实证结论 [cite: 2026-01-31]。\n\n\n\n&lt;&gt;"
-  },
-  {
-    "objectID": "mobile.html#定量变量",
-    "href": "mobile.html#定量变量",
-    "title": "mobile",
-    "section": "2.1 定量变量",
-    "text": "2.1 定量变量\n\n\ncode\nlibrary(modelsummary)\ndatasummary(laptop + cost + mobile + usage_month ~ \n                     N + Mean + SD + Median + Min + Max, \n                   data = df, \n                   fmt = 3, \n                   output = 'flextable') %&gt;%\n  theme_apa() %&gt;%              \n  autofit() %&gt;%               \n  font(fontname = \"Times New Roman\", part = \"all\")\n\n\n NMeanSDMedianMinMaxlaptop1426260.6272362.1716000.0001800.00013000.000cost1422100.077672.0722000.000800.0005000.000mobile1425329.8242828.3705299.5001200.00013999.000usage_month14215.69710.25416.0001.00062.000"
-  },
-  {
-    "objectID": "mobile.html#定性变量",
-    "href": "mobile.html#定性变量",
-    "title": "mobile",
-    "section": "2.2 定性变量",
-    "text": "2.2 定性变量\n\n\ncode\ndatasummary(gender + demand_type + brand_prefer ~ \n            N + Percent() + laptop * (Mean + Median + SD + Min + Max), \n            data = df, \n            fmt = 2, \n            output = 'flextable') %&gt;%\n  theme_apa() %&gt;%\n  autofit() %&gt;%\n  font(fontname = \"Times New Roman\", part = \"all\")\n\n\n   NPercentMeanMedianSDMinMaxgenderfemale10876.065865.745550.002262.621800.0013000.00male3423.947514.977149.502260.612599.0012999.00demand_typelite9063.385733.385550.002120.691800.0012499.00performance5236.627173.176894.502497.742300.0013000.00brand_prefergaming2114.798042.247800.001947.865400.0013000.00mainstream8157.045800.215600.002078.701800.0012999.00premium1812.687578.336857.502639.923599.0012499.00value2215.495177.055000.002244.662000.0010000.00"
-  },
-  {
-    "objectID": "mobile.html#section",
-    "href": "mobile.html#section",
-    "title": "mobile",
-    "section": "",
-    "text": "Thanks for your attention！"
-  },
-  {
-    "objectID": "mobile.html#数据和变量",
-    "href": "mobile.html#数据和变量",
-    "title": "mobile",
-    "section": "",
-    "text": "数据来源：mobile.xlsx\n样本容量：142\nlaptop: 笔记本电脑价格(元)\nexpense: 月生活费(元)\nmobile: 手机价格(元)\nmobile: 笔记本电脑使用时长(月)\ngender: 性别\ndemand_level: performance/lite\nbrand_preference: gaming/mainstream/premium/value"
-  },
-  {
-    "objectID": "mobile.html#描述性统计分析",
-    "href": "mobile.html#描述性统计分析",
-    "title": "mobile",
-    "section": "2 描述性统计分析",
-    "text": "2 描述性统计分析\n\n2.1 定量变量\n\n\ncode\nlibrary(modelsummary)\ndatasummary(laptop + expense + mobile + usage_month ~ \n                     N + Mean + SD + Median + Min + Max, \n                   data = df, \n                   fmt = 3, \n                   output = 'flextable') %&gt;%\n  theme_apa() %&gt;%              \n  autofit() %&gt;%               \n  font(fontname = \"Times New Roman\", part = \"all\")\n\n\n NMeanSDMedianMinMaxlaptop1426260.6272362.1716000.0001800.00013000.000expense1422100.077672.0722000.000800.0005000.000mobile1425329.8242828.3705299.5001200.00013999.000usage_month14215.69710.25416.0001.00062.000\n\n\n\n\n\n2.2 定性变量\n\n\ncode\ndatasummary(gender + demand_level + brand_preference ~ \n            N + Percent() + laptop * (Mean + Median + SD + Min + Max), \n            data = df, \n            fmt = 2, \n            output = 'flextable') %&gt;%\n  theme_apa() %&gt;%\n  autofit() %&gt;%\n  font(fontname = \"Times New Roman\", part = \"all\")\n\n\n   NPercentMeanMedianSDMinMaxgenderfemale10876.065865.745550.002262.621800.0013000.00male3423.947514.977149.502260.612599.0012999.00demand_levellite9063.385733.385550.002120.691800.0012499.00performance5236.627173.176894.502497.742300.0013000.00brand_preferencegaming2114.798042.247800.001947.865400.0013000.00mainstream8157.045800.215600.002078.701800.0012999.00premium1812.687578.336857.502639.923599.0012499.00value2215.495177.055000.002244.662000.0010000.00"
-  },
-  {
-    "objectID": "mobile.html#回归分析",
-    "href": "mobile.html#回归分析",
-    "title": "mobile",
-    "section": "3 回归分析",
-    "text": "3 回归分析\n\n3.1 Model 1\n\n\ncode\nlibrary(broom)\nm1 &lt;- lm(laptop ~ expense + mobile + usage_month, data = df)\n\nmodels_list &lt;- list(\"Model 1\" = m1)\n\nmodelsummary(\n  list(\"Model 1\" = m1), \n  fmt = 3, \n  stars = TRUE, \n  gof_omit = 'AIC|BIC|Log.Lik|F|statistic', \n  output = \"flextable\"\n) %&gt;% \n  theme_apa() %&gt;%\n  fontsize(size = 18, part = \"all\") %&gt;%      \n  padding(padding = 5, part = \"all\") %&gt;%\n  autofit() %&gt;%\n  font(fontname = \"Times New Roman\", part = \"all\")\n\n\nModel 1 Regression Analysis Model 1(Intercept)4689.049***(654.061)expense0.399(0.289)mobile0.291***(0.069)usage_month-52.193**(17.250)Num.Obs.142R20.230R2 Adj.0.213RMSE2065.51+ p &lt; 0.1, * p &lt; 0.05, ** p &lt; 0.01, *** p &lt; 0.001\n\n\n\\[\n\\operatorname{\\widehat{laptop}} = 4689.049 + 0.399(\\operatorname{\\expense}) + 0.291(\\operatorname{mobile}) - 52.193(\\operatorname{usage\\_month})\n\\]\n\n\n\n3.2 Model 2\n\n\ncode\nlibrary(broom)\nm2 &lt;- lm(log(laptop) ~ log(expense) + log(mobile) + usage_month, data = df)\n\nmodels_list &lt;- list(\"Model 2 (Y=log(laptop))\" = m2)\n\nmodelsummary(\n  models_list, \n  fmt = 3, \n  stars = TRUE,  \n  gof_omit = 'AIC|BIC|Log.Lik|F|statistic', \n  output = \"flextable\"\n) %&gt;% \n  theme_apa() %&gt;% \n  autofit() %&gt;%\n  font(fontname = \"Times New Roman\", part = \"all\")\n\n\nModel 2 Regression Analysis Model 2 (Y=log(laptop))(Intercept)5.785***(0.735)log(expense)0.110(0.103)log(mobile)0.258***(0.056)usage_month-0.008**(0.003)Num.Obs.142R20.229R2 Adj.0.213RMSE0.35+ p &lt; 0.1, * p &lt; 0.05, ** p &lt; 0.01, *** p &lt; 0.001\n\n\n\\[\n\\operatorname{\\widehat{log(laptop)}} = 5.785 + 0.11(\\operatorname{\\log(\\expense)}) + 0.258(\\operatorname{\\log(mobile)}) - 0.008(\\operatorname{usage\\_month})\n\\]\n\n\n\n3.3 Model 3\n\n\ncode\nm3 &lt;- lm(laptop ~ expense + mobile + usage_month + gender, data = df)\n\nmodels_list &lt;- list(\"Model 3\" = m3)\n\nmodelsummary(\n  models_list, \n  fmt = 3, \n  stars = TRUE,  \n  gof_omit = 'AIC|BIC|Log.Lik|F|statistic', \n  output = \"flextable\"\n) %&gt;% \n  theme_apa() %&gt;% \n  autofit() %&gt;%\n  font(fontname = \"Times New Roman\", part = \"all\")\n\n\nRegression Analysis Model 3(Intercept)3905.511***(638.666)expense0.424(0.272)mobile0.317***(0.065)usage_month-40.910*(16.386)gendermale1745.878***(393.317)Num.Obs.142R20.327R2 Adj.0.307RMSE1931.29+ p &lt; 0.1, * p &lt; 0.05, ** p &lt; 0.01, *** p &lt; 0.001\n\n\n\\[\n\\operatorname{\\widehat{laptop}} = 3905.511 + 0.424(\\operatorname{\\expense}) + 0.317(\\operatorname{mobile}) - 40.91(\\operatorname{usage\\_month}) + 1745.878(\\operatorname{gender}_{\\operatorname{male}})\n\\]"
-  },
-  {
-    "objectID": "case.html#第3轮讨论课-第10周模型函数形式变换虚拟变量的引入",
-    "href": "case.html#第3轮讨论课-第10周模型函数形式变换虚拟变量的引入",
-    "title": "小组任务",
-    "section": "第3轮讨论课 (第10周)：模型函数形式变换、虚拟变量的引入",
-    "text": "第3轮讨论课 (第10周)：模型函数形式变换、虚拟变量的引入\n\n\n点击展开\n\n分析方法：教材第5-6章关于函数形式变换、虚拟变量的引入\n核心任务：针对同一被解释变量，依次尝试并对比以下四类扩展模型：\n\n虚拟变量模型：引入定性变量。\n双对数模型：探究因变量与自变量之间的弹性关系。\n平方项模型：检验是否存在非线性趋势（如边际效应递减）。\n交互项模型：检验某个解释变量是否对另一个变量具有调节效应。\n\n思考问题：在对比上述模型后，基于统计显著性（Stars）、系数的符号是否符合预期，拟合优度（\\(R^2\\)），你认为哪个模型最合适？请简述理由。\n提交物要求\n请提交一个名为 组号_组长姓名_研究主题_chap5-6.xlsx 的 Excel 文件。该文件必须严格包含以下四个命名的表单（Sheet）：\n\n\n\n\n\n\n\n\n表单名称\n内容要求\n包含指标\n\n\n\n\ndata\n清洗后的数据\n表头为规范化的英文变量名\n\n\nvar\n变量的含义及单位\n列出变量名称，变量含义及单位，定性变量的频数分布表\n\n\nreg\n回归模型\n所有尝试过的回归模型的估计结果\n\n\nbest\n最优模型\n选择该模型的理由\n\n\n\n\n\n\n\n\n\nNote\n\n\n\n注意：严禁合并表单或随意更改 Sheet 名称。\n\n\n&lt;&gt;"
-  },
-  {
-    "objectID": "case.html#第4轮讨论课-第-12-周模型诊断与完善",
-    "href": "case.html#第4轮讨论课-第-12-周模型诊断与完善",
-    "title": "小组任务",
-    "section": "第4轮讨论课 (第 12 周)：模型诊断与完善",
-    "text": "第4轮讨论课 (第 12 周)：模型诊断与完善\n\n\n点击展开\n\n\n应用方法：运用教材 第 7、8、9 章 的方法。\n需准备的文件：\n\nEViews Workfile：包含所有诊断检验过程的最新版本。\nPPT 汇报演示：\n\n诊断与改进：汇报针对初始模型的优化路径。\n设定误差检验：是否存在遗漏变量或函数形式设定错误。\n多重共线性：VIF 检验及处理方案。\n异方差诊断：White 检验/BP 检验及加权最小二乘法等改进措施。\n最终结论：基于稳健模型得到的最终实证结论 [cite: 2026-01-31]。\n\n\n\n&lt;&gt;"
-  },
-  {
-    "objectID": "case.html#第2轮讨论课-第6-7周数据预处理和初步回归",
-    "href": "case.html#第2轮讨论课-第6-7周数据预处理和初步回归",
-    "title": "小组任务",
-    "section": "第2轮讨论课 (第6-7周)：数据预处理和初步回归",
-    "text": "第2轮讨论课 (第6-7周)：数据预处理和初步回归\n\n\n点击展开\n\n\n\n\n\n\n\nImportant\n\n\n\n在本阶段，各小组需完成原始数据的清洗、变量规范化命名及初步的描述性统计分析。这不仅是为了确保后续回归模型的稳健性，更是为了培养专业的数据处理习惯。\n\n\n1 样本量基本要求\n根据小组成员人数，有效样本量（剔除异常与错误后）需满足： - 常规小组（≤ 4人）： \\(n \\ge 60\\) - 5人小组： \\(n \\ge 90\\)\n2 数据清洗标准 (Data Cleaning)\n2.1 变量命名规范化 (Variable Naming)\n为了确保分析软件（Stata/R/Python/EViews）的兼容性，所有变量名必须遵循： - 命名格式： 采用 蛇形命名法（snake_case），所有字母小写，单词之间用下划线 _ 连接。 - 字符限制： 严禁使用中文、空格或特殊符号。必须以英文字母开头。 - 禁用符号： 严禁包含中划线/短横线 - 或小圆点 .。 - 语义化命名： 确保“见名知意”。严禁使用 \\(X1, X2, Y\\) 等代号。例如：用 wage 而不是 y，用 edu_years 而不是 x1。\n2.2 异常值处理与逻辑检查\n\n可视化检查： 对所有定量变量绘制直方图或箱线图。\nIQR 规则： - 优先采用 \\(3 \\times IQR\\) 规则剔除极端值：\n\n\\(Value &gt; Q3 + 3 \\times IQR\\) 或 \\(Value &lt; Q1 - 3 \\times IQR\\)。\n若数据依然极度不均，可考虑 \\(1.5 \\times IQR\\) 规则。\n\n逻辑校验： 强制剔除逻辑错误的个案（如价格 \\(\\le 0\\)、年龄为负等）。\n\n2.3 定性变量分类优化\n\n合并原则： 若某个分类下的个案数量 少于 10 个，必须进行合并。合并后建议每组样本数 \\(&gt; 20\\)。\n逻辑合并： 合并应基于逻辑相似性。例如：将“硕士”和“博士”合并为“研究生”。\n\n3 初步统计分析\n3.1 相关性自查 - 报告被解释变量 \\(Y\\) 与各定量解释变量 \\(X\\) 之间的 Pearson 相关系数矩阵。 - 核心解释变量与 \\(Y\\) 的相关系数绝对值 \\(|r|\\) 建议在 \\(0.2 - 0.3\\) 以上。\n3.2 回归质量预警 进行全变量 OLS 初步回归，若出现以下情况，需重新考虑变量测度或重新抽样： - \\(p\\) 值普遍较大且模型 \\(R^2\\) 极低（例如 \\(&lt; 0.01\\)）。\n4 提交物要求\n请提交一个名为 组号_组长姓名_研究主题.xlsx 的 Excel 文件。该文件必须严格包含以下四个命名的表单（Sheet）：\n\n\n\n\n\n\n\n\n表单名称\n内容要求\n包含指标\n\n\n\n\ndata\n清洗后的有效数据\n表头为规范化的英文变量名\n\n\ndesc\n描述性统计分析\n均值、中位数、标准差、最小值、最大值 、定量变量的直方图\n\n\ncor\n相关系数矩阵\n\\(Y\\) 与定量 \\(X\\) 的 Pearson 相关系数\n\n\nreg\n初步回归结果\n系数、标准误、\\(t\\) 值、\\(p\\) 值、\\(R^2\\)、调整后 \\(R^2\\)\n\n\n\n\n\n\n\n\n\nNote\n\n\n\n注意：严禁合并表单或随意更改 Sheet 名称。\n\n\n&lt;&gt;"
+    "text": "第6章 虚拟变量\n讲义\n案例\n习题讲评\n\n\nEviews操作\nEviews中如何引入虚拟变量？\nEviews 如何引入虚拟变量和定量变量的交互项？\nEviews 季节分析中的虚拟变量\n\n\nR教学视频\nR中如何将字符串变量转换为虚拟变量？\n如何在回归模型中引入虚拟变量与定量变量的交互项？\nR中如何分析时间序列的季节效应？\n\n\n习题答案\n\n\n点击展开\n\n\n如果想在新窗口打开 PDF，请点这里： 在新标签页中查看 PDF\n\n\n&lt;!-- 备用内容（若浏览器不支持 iframe） --&gt;\n&lt;p&gt;\n你的浏览器无法嵌入 PDF，请 &lt;a href=\"img/EE4_Ch06_Solutions_Manual.pdf\" target=\"_blank\" rel=\"noopener\"&gt;点此下载/查看 PDF&lt;/a&gt;.\n&lt;/p&gt;\n\n\n\n\n习题讲评视频\n教材习题6.3-6.7\n教材习题6.8\n教材习题6.11-6.12\n教材习题6.27\n教材习题6.28"
   },
   {
     "objectID": "chap6ex.html",
@@ -959,234 +945,10 @@
     "text": "注意：本讲义供学习交流使用，请勿用于商业用途"
   },
   {
-    "objectID": "mobile.html",
-    "href": "mobile.html",
-    "title": "mobile",
+    "objectID": "chap7slide.html",
+    "href": "chap7slide.html",
+    "title": "Chapter 7 Model Selection: Criteria and Tests",
     "section": "",
-    "text": "数据来源：mobile.xlsx\n样本容量：142\nlaptop: 笔记本电脑价格(元)\ncost: 月生活费(元)\nmobile: 手机价格(元)\nmobile: 笔记本电脑使用时长(月)\ngender: 性别\ndemand_type: 需求类型(性能-performance/轻量-lite)\nbrand_prefer: 品牌偏好(高端设计-premium/主流商务-mainstream/专业游戏-gaming/高性价比-value)"
-  },
-  {
-    "objectID": "mobile.html#model-1",
-    "href": "mobile.html#model-1",
-    "title": "mobile",
-    "section": "3.1 Model 1",
-    "text": "3.1 Model 1\n\n\ncode\nlibrary(broom)\nm1 &lt;- lm(laptop ~ cost + mobile + usage_month, data = df)\n\nmodels_list &lt;- list(\"Model 1\" = m1)\n\nmodelsummary(\n  list(\"Model 1\" = m1), \n  fmt = 3, \n  stars = TRUE, \n  gof_omit = 'AIC|BIC|Log.Lik|F|statistic', \n  output = \"flextable\"\n) %&gt;% \n  theme_apa() %&gt;%\n  fontsize(size = 18, part = \"all\") %&gt;%      \n  padding(padding = 5, part = \"all\") %&gt;%\n  autofit() %&gt;%\n  font(fontname = \"Times New Roman\", part = \"all\")\n\n\nModel 1 Regression Analysis Model 1(Intercept)4689.049***(654.061)cost0.399(0.289)mobile0.291***(0.069)usage_month-52.193**(17.250)Num.Obs.142R20.230R2 Adj.0.213RMSE2065.51+ p &lt; 0.1, * p &lt; 0.05, ** p &lt; 0.01, *** p &lt; 0.001\n\n\n\\[\n\\operatorname{\\widehat{laptop}} = 4689.049 + 0.399(\\operatorname{cost}) + 0.291(\\operatorname{mobile}) - 52.193(\\operatorname{usage\\_month})\n\\]"
-  },
-  {
-    "objectID": "mobile.html#model-2",
-    "href": "mobile.html#model-2",
-    "title": "mobile",
-    "section": "3.2 Model 2",
-    "text": "3.2 Model 2\n\n\ncode\nlibrary(broom)\nm2 &lt;- lm(log(laptop) ~ log(cost) + log(mobile) + usage_month, data = df)\n\nmodels_list &lt;- list(\"Model 2 (Y=log(laptop))\" = m2)\n\nmodelsummary(\n  models_list, \n  fmt = 3, \n  stars = TRUE,  \n  gof_omit = 'AIC|BIC|Log.Lik|F|statistic', \n  output = \"flextable\"\n) %&gt;% \n  theme_apa() %&gt;% \n  autofit() %&gt;%\n  font(fontname = \"Times New Roman\", part = \"all\")\n\n\nModel 2 Regression Analysis Model 2 (Y=log(laptop))(Intercept)5.785***(0.735)log(cost)0.110(0.103)log(mobile)0.258***(0.056)usage_month-0.008**(0.003)Num.Obs.142R20.229R2 Adj.0.213RMSE0.35+ p &lt; 0.1, * p &lt; 0.05, ** p &lt; 0.01, *** p &lt; 0.001\n\n\n\\[\n\\operatorname{\\widehat{log(laptop)}} = 5.785 + 0.11(\\operatorname{\\log(cost)}) + 0.258(\\operatorname{\\log(mobile)}) - 0.008(\\operatorname{usage\\_month})\n\\]\n\\[\n\\operatorname{\\widehat{log(laptop)}} = 5.785 + 0.11(\\operatorname{\\log(cost)}) + 0.258(\\operatorname{\\log(mobile)}) - 0.008(\\operatorname{usage\\_month})\n\\]"
-  },
-  {
-    "objectID": "mobile.html#model-3",
-    "href": "mobile.html#model-3",
-    "title": "mobile",
-    "section": "3.4 Model 3",
-    "text": "3.4 Model 3\n\n\ncode\nm3 &lt;- lm(laptop ~ cost + mobile + usage_month + gender, data = df)\n\nmodels_list &lt;- list(\"Model 3\" = m3)\n\nmodelsummary(\n  models_list, \n  fmt = 3, \n  stars = TRUE,  \n  gof_omit = 'AIC|BIC|Log.Lik|F|statistic', \n  output = \"flextable\"\n) %&gt;% \n  theme_apa() %&gt;% \n  autofit() %&gt;%\n  font(fontname = \"Times New Roman\", part = \"all\")\n\n\nRegression Analysis Model 3(Intercept)3905.511***(638.666)cost0.424(0.272)mobile0.317***(0.065)usage_month-40.910*(16.386)gendermale1745.878***(393.317)Num.Obs.142R20.327R2 Adj.0.307RMSE1931.29+ p &lt; 0.1, * p &lt; 0.05, ** p &lt; 0.01, *** p &lt; 0.001\n\n\n\\[\n\\operatorname{\\widehat{laptop}} = 3905.511 + 0.424(\\operatorname{cost}) + 0.317(\\operatorname{mobile}) - 40.91(\\operatorname{usage\\_month}) + 1745.878(\\operatorname{gender}_{\\operatorname{male}})\n\\]"
-  },
-  {
-    "objectID": "mobile.html#model-4",
-    "href": "mobile.html#model-4",
-    "title": "mobile",
-    "section": "3.5 Model 4",
-    "text": "3.5 Model 4\n\n\ncode\nm4 &lt;- lm(log(laptop) ~ log(cost) + log(mobile) + \n           usage_month + \n           gender + demand_type + brand_prefer , data = df)\n\nmodels_list &lt;- list(\"Model 4\" = m4)\n\nmodelsummary(\n  models_list, \n  fmt = 3, \n  stars = TRUE,  \n  gof_omit = 'AIC|BIC|Log.Lik|F|statistic', \n  output = \"flextable\"\n) %&gt;% \n  theme_apa() %&gt;% \n  autofit() %&gt;%\n  font(fontname = \"Times New Roman\", part = \"all\")\n\n\nRegression Analysis Model 4(Intercept)6.288***(0.730)log(cost)0.070(0.096)log(mobile)0.241***(0.052)usage_month-0.005*(0.003)gendermale0.231***(0.068)demand_typeperformance0.094(0.066)brand_prefermainstream-0.217*(0.087)brand_preferpremium-0.081(0.113)brand_prefervalue-0.322**(0.101)Num.Obs.142R20.406R2 Adj.0.370RMSE0.31+ p &lt; 0.1, * p &lt; 0.05, ** p &lt; 0.01, *** p &lt; 0.001\n\n\n\\[\n\\begin{aligned}\n\\operatorname{\\widehat{log(laptop)}} &= 6.2883 + 0.07(\\operatorname{\\log(cost)}) + 0.2408(\\operatorname{\\log(mobile)}) - 0.0055(\\operatorname{usage\\_month})\\ + \\\\\n&\\quad 0.2306(\\operatorname{gender}_{\\operatorname{male}}) + 0.094(\\operatorname{demand\\_type}_{\\operatorname{performance}}) - 0.2174(\\operatorname{brand\\_prefer}_{\\operatorname{mainstream}}) - 0.0812(\\operatorname{brand\\_prefer}_{\\operatorname{premium}})\\ - \\\\\n&\\quad 0.3221(\\operatorname{brand\\_prefer}_{\\operatorname{value}})\n\\end{aligned}\n\\]"
-  },
-  {
-    "objectID": "mobile.html#model-3.1",
-    "href": "mobile.html#model-3.1",
-    "title": "mobile",
-    "section": "3.3 Model 3.1",
-    "text": "3.3 Model 3.1\n\n\ncode\nm3 &lt;- lm(laptop ~ cost + mobile + usage_month + gender, data = df)\n\nmodels_list &lt;- list(\"Model 3\" = m3)\n\nmodelsummary(\n  models_list, \n  fmt = 3, \n  stars = TRUE,  \n  gof_omit = 'AIC|BIC|Log.Lik|F|statistic', \n  output = \"flextable\"\n) %&gt;% \n  theme_apa() %&gt;% \n  autofit() %&gt;%\n  font(fontname = \"Times New Roman\", part = \"all\")\n\n\nRegression Analysis Model 3(Intercept)3905.511***(638.666)cost0.424(0.272)mobile0.317***(0.065)usage_month-40.910*(16.386)gendermale1745.878***(393.317)Num.Obs.142R20.327R2 Adj.0.307RMSE1931.29+ p &lt; 0.1, * p &lt; 0.05, ** p &lt; 0.01, *** p &lt; 0.001\n\n\n\\[\n\\operatorname{\\widehat{laptop}} = 3905.511 + 0.424(\\operatorname{cost}) + 0.317(\\operatorname{mobile}) - 40.91(\\operatorname{usage\\_month}) + 1745.878(\\operatorname{gender}_{\\operatorname{male}})\n\\]\n\n\\[\n\\operatorname{\\widehat{laptop}} = 3905.511 + 0.424(\\operatorname{cost}) + 0.317(\\operatorname{mobile}) - 40.91(\\operatorname{usage\\_month}) + 1745.878(\\operatorname{gender}_{\\operatorname{male}})\n\\]"
-  },
-  {
-    "objectID": "mobile.html#model-2.1",
-    "href": "mobile.html#model-2.1",
-    "title": "mobile",
-    "section": "3.2 Model 2.1",
-    "text": "3.2 Model 2.1\n\n\ncode\nlibrary(broom)\nm2 &lt;- lm(log(laptop) ~ log(cost) + log(mobile) + usage_month, data = df)\n\nmodels_list &lt;- list(\"Model 2 (Y=log(laptop))\" = m2)\n\nmodelsummary(\n  models_list, \n  fmt = 3, \n  stars = TRUE,  \n  gof_omit = 'AIC|BIC|Log.Lik|F|statistic', \n  output = \"flextable\"\n) %&gt;% \n  theme_apa() %&gt;% \n  autofit() %&gt;%\n  font(fontname = \"Times New Roman\", part = \"all\")\n\n\nModel 2 Regression Analysis Model 2 (Y=log(laptop))(Intercept)5.785***(0.735)log(cost)0.110(0.103)log(mobile)0.258***(0.056)usage_month-0.008**(0.003)Num.Obs.142R20.229R2 Adj.0.213RMSE0.35+ p &lt; 0.1, * p &lt; 0.05, ** p &lt; 0.01, *** p &lt; 0.001\n\n\n\\[\n\\operatorname{\\widehat{log(laptop)}} = 5.785 + 0.11(\\operatorname{\\log(cost)}) + 0.258(\\operatorname{\\log(mobile)}) - 0.008(\\operatorname{usage\\_month})\n\\]"
-  },
-  {
-    "objectID": "mobile.html#model-2.2",
-    "href": "mobile.html#model-2.2",
-    "title": "mobile",
-    "section": "3.3 Model 2.2",
-    "text": "3.3 Model 2.2\n\n\ncode\nlibrary(broom)\nm2.2 &lt;- lm(log(laptop) ~ log(cost) + log(mobile) + usage_month + gender + \n     gender:log(mobile), data = df)\n\nmodels_list &lt;- list(\"Model 2 (Y=log(laptop))\" = m2.2)\n\nmodelsummary(\n  models_list, \n  fmt = 3, \n  stars = TRUE,  \n  gof_omit = 'AIC|BIC|Log.Lik|F|statistic', \n  output = \"flextable\"\n) %&gt;% \n  theme_apa() %&gt;% \n  autofit() %&gt;%\n  font(fontname = \"Times New Roman\", part = \"all\")\n\n\nModel 2 Regression Analysis Model 2 (Y=log(laptop))(Intercept)5.027***(0.740)log(cost)0.122(0.096)log(mobile)0.325***(0.059)usage_month-0.006*(0.003)gendermale1.827*(0.920)log(mobile) × gendermale-0.183+(0.110)Num.Obs.142R20.341R2 Adj.0.317RMSE0.32+ p &lt; 0.1, * p &lt; 0.05, ** p &lt; 0.01, *** p &lt; 0.001\n\n\n\\[\n\\begin{aligned}\n\\operatorname{\\widehat{log(laptop)}} &= 5.027 + 0.122(\\operatorname{\\log(cost)}) + 0.325(\\operatorname{\\log(mobile)}) - 0.006(\\operatorname{usage\\_month})\\ + \\\\\n&\\quad 1.827(\\operatorname{gender}_{\\operatorname{male}}) - 0.183(\\operatorname{\\log(mobile)} \\times \\operatorname{gender}_{\\operatorname{male}})\n\\end{aligned}\n\\]"
-  },
-  {
-    "objectID": "pre.html#ai是r学习的超级加速器",
-    "href": "pre.html#ai是r学习的超级加速器",
-    "title": "小组任务课堂汇报",
-    "section": "1 AI是R学习的“超级加速器”",
-    "text": "1 AI是R学习的“超级加速器”\n学 R 最大的瓶颈不是“不会统计”，而是“我知道我想做什么，但不知道 R 该怎么实现”。\n好的 AI 能让你：\n\n从想法直接到可运行代码（节省 70% 时间）\n快速理解底层逻辑而非死记硬背\n养成专业级的编码习惯\n逐步建立自己的 R 知识体系"
-  },
-  {
-    "objectID": "pre.html#提示词框架",
-    "href": "pre.html#提示词框架",
-    "title": "小组任务课堂汇报",
-    "section": "2 提示词框架",
-    "text": "2 提示词框架\n\nRole（角色）\nContext（上下文）\nTask（具体任务）\nStandard（标准要求）\nExample（示例，可选）"
-  },
-  {
-    "objectID": "pre.html#解释报错",
-    "href": "pre.html#解释报错",
-    "title": "小组任务课堂汇报",
-    "section": "3 解释报错",
-    "text": "3 解释报错\n代码和报错都要贴给 AI，才能得到准确的解释和修复方案。\n\n\n\n\n\n\nTip\n\n\n我运行了以下代码，出现了报错。 [粘贴代码] [完整粘贴Console红色报错]\n我想实现的是……\n请： 1. 解释错误根本原因\n\n给出修复后的代码\n告诉我以后如何避免同类错误"
-  },
-  {
-    "objectID": "pre.html#ai最不可靠的地方",
-    "href": "pre.html#ai最不可靠的地方",
-    "title": "小组任务课堂汇报",
-    "section": "4 AI最不可靠的地方",
-    "text": "4 AI最不可靠的地方\n虽然 AI 非常强大，但它不是万能的，以下是它最容易出错的几个方面，初学者一定要提高警惕：\n① 幻觉（Hallucination）\nAI 有时会非常自信地编造不存在的信息，包括函数、参数、包的用法等。\n即使它说得头头是道，也可能完全错误。"
-  },
-  {
-    "objectID": "pre.html#在-rstudio-中高效使用-ai",
-    "href": "pre.html#在-rstudio-中高效使用-ai",
-    "title": "小组任务课堂汇报",
-    "section": "5 在 RStudio 中高效使用 AI",
-    "text": "5 在 RStudio 中高效使用 AI\nGitHub Copilot：适合边写边补全\nClaude / DeepSeek：适合复杂任务和深度思考（推荐网页版）\n最佳组合：Copilot 写代码 + Claude 做架构和审查"
-  },
-  {
-    "objectID": "pre.html#小结r小白进阶建议",
-    "href": "pre.html#小结r小白进阶建议",
-    "title": "小组任务课堂汇报",
-    "section": "6 小结：R小白进阶建议",
-    "text": "6 小结：R小白进阶建议\nAI辅助学习R的工作流：\n\n用清晰提示让AI生成代码\n复制到 RStudio 运行\n报错 → 贴给AI修复\n最重要：让AI逐行解释代码 → 自己把注释写进脚本\n重复此过程，建立个人代码库"
-  },
-  {
-    "objectID": "pre.html#汇报的安排",
-    "href": "pre.html#汇报的安排",
-    "title": "小组汇报",
-    "section": "汇报的安排",
-    "text": "汇报的安排\n\n选拔机制：老师根据演示文稿质量，仅挑选 4 个优胜小组 进行课堂汇报。\n提交截止：第14周周日（2026年6月7日）20:00 前提交PDF，逾期直接失去资格。\n汇报时长：严格 5分钟。这是一场高效的学术成果推销，而非朗读报告。\n严禁内容：代码（第6部分）和个人心得（第7部分）不得放入PPT。\n奖励：优胜小组每位成员实验报告加 3-5分。"
-  },
-  {
-    "objectID": "pre.html#关键时间节点-deadline",
-    "href": "pre.html#关键时间节点-deadline",
-    "title": "小组任务课堂汇报",
-    "section": "关键时间节点 (Deadline)",
-    "text": "关键时间节点 (Deadline)\n\n截止时间： 第14周周日（2026年6月7日）20:00\n提交文件： 演示文稿（.pdf 格式, 请将Powerpoint文件或者WPS文件转成PDF文件）。\n文件命名： 文件命名“第#组+组长+班级+主题关键词+小组汇报.pdf”, 如“第1组池天俊 24人资1瑞幸小组汇报.pdf”\n提交方式： 上传至QQ群文件“小组汇报”文件夹中。\n提醒 逾期提交的小组将自动失去优胜小组选拔资格，且全组成员实验报告分会扣3-5分。\n公布发言小组名单： 第15周周一（2026年6月8日）20:00"
-  },
-  {
-    "objectID": "pre.html#优胜小组入选指标",
-    "href": "pre.html#优胜小组入选指标",
-    "title": "小组任务课堂汇报",
-    "section": "“优胜小组”入选指标",
-    "text": "“优胜小组”入选指标\n\n规范的回归表格： 必须按照学术规范，将软件输出结果整理成标准学术三线表（含系数、标准误或 \\(t\\) 值、显著性星号）。不要直接截图R或EViews输出结果。\n扎实的模型诊断： 报告必须包含完整的模型诊断（残差图形、多余或遗漏变量的检验、多重共线性 VIF、异方差检验等）。\n回归结果的解释： 解释系数的含义，而不是单纯机械地念数字。"
-  },
-  {
-    "objectID": "pre.html#现场汇报-5分钟",
-    "href": "pre.html#现场汇报-5分钟",
-    "title": "小组任务课堂汇报",
-    "section": "现场汇报 (5分钟)",
-    "text": "现场汇报 (5分钟)\n\n第15-16周上课期间\n每组严格限时 5 分钟。倒计时软件egg，超时会扣分。\n只汇报实验报告的第2-5部分：第6部分（代码）和第7部分（心得体会）无需放进演示文稿中。\n建议由1名表达能力最强的组员统一主讲，避免频繁换人浪费交接时间。"
-  },
-  {
-    "objectID": "pre.html#汇报文件结构",
-    "href": "pre.html#汇报文件结构",
-    "title": "小组任务课堂汇报",
-    "section": "汇报文件结构",
-    "text": "汇报文件结构\n1 封面页 [建议：20秒]\n\n视觉风格： 简洁、素雅（建议白底蓝字或黑字）。\n内容： 题目、小组全员姓名、学号、班级。"
-  },
-  {
-    "objectID": "pre.html#汇报文件排版",
-    "href": "pre.html#汇报文件排版",
-    "title": "小组任务课堂汇报",
-    "section": "汇报文件排版",
-    "text": "汇报文件排版\n\n一页一个核心信息，避免信息过载\n结构简洁：大标题 + 关键要点 + 1张核心图/表\n字体大小适当：标题 ≥ 32pt，正文 ≥ 24pt\n视觉风格：白底 + 深蓝/深灰文字，极简学术风，禁止花哨动画和无关图片\n15-20页左右，确保内容完整且不冗余"
-  },
-  {
-    "objectID": "pre.html#关键时间节点",
-    "href": "pre.html#关键时间节点",
-    "title": "小组任务课堂汇报",
-    "section": "关键时间节点",
-    "text": "关键时间节点\n\n提交截止：第14周周日（2026年6月7日）20:00\n提交要求：\n\n文件格式：PDF（PowerPoint / WPS 转PDF）\n文件命名：第#组+组长姓名+班级+主题关键词+小组汇报.pdf\n\n示例：第1组池天俊 24人资1瑞幸小组汇报.pdf\n\n提交位置：QQ群“小组汇报”文件夹\n\n结果公布：第15周周一（2026年6月8日）20:00\n汇报时间：第15-16周课堂（严格5分钟，倒计时，超时扣分）"
-  },
-  {
-    "objectID": "pre.html#优胜小组评选指标",
-    "href": "pre.html#优胜小组评选指标",
-    "title": "小组任务课堂汇报",
-    "section": "“优胜小组”评选指标",
-    "text": "“优胜小组”评选指标\n\n选题的现实意义和创新性\n变量选取的经济合理性与数据质量\n规范的三线表（严禁直接截图软件输出）\n完整的模型诊断(残差图形、多余或遗漏变量的检验、多重共线性 VIF、异方差检验)\n系数经济含义的准确解释"
-  },
-  {
-    "objectID": "case.html#撰写实验报告第10-16周",
-    "href": "case.html#撰写实验报告第10-16周",
-    "title": "小组任务",
-    "section": "撰写实验报告(第10-16周)",
-    "text": "撰写实验报告(第10-16周)\n实验报告写作要求\n实验报告提交时限：第17周理论课的最后一节课"
-  },
-  {
-    "objectID": "pre.html#汇报演示文稿示例",
-    "href": "pre.html#汇报演示文稿示例",
-    "title": "小组任务课堂汇报",
-    "section": "汇报演示文稿示例",
-    "text": "汇报演示文稿示例"
-  },
-  {
-    "objectID": "pre.html#封面",
-    "href": "pre.html#封面",
-    "title": "小组汇报",
-    "section": "封面",
-    "text": "封面\n\n大学生手机与电脑消费支出及性别差异研究\n\n小组成员： XXX（学号）、XXX（学号）、XXX（学号）\n班级： 24XXX班\n日期： 2026年6月"
-  },
-  {
-    "objectID": "pre.html#研究假说",
-    "href": "pre.html#研究假说",
-    "title": "小组汇报",
-    "section": "研究假说",
-    "text": "研究假说\n\n研究问题： 哪些因素显著影响大学生的手机消费支出？\n假说1： 月生活费越高，购买的手机价格越高（正向促进）。\n假说2： 购买的笔记本电脑消费支出越高，手机消费支出越高（正向促进）。\n假说3： 性别对笔记本电脑价格与手机价格之间的关系存在调节效应，即不同性别群体中，笔记本电脑价格对手机价格的弹性不同。"
-  },
-  {
-    "objectID": "pre.html#数据概况",
-    "href": "pre.html#数据概况",
-    "title": "小组汇报",
-    "section": "数据概况",
-    "text": "数据概况\n\n数据来源： 26春教学班，157人，问卷星平台发放问卷\n样本容量： 142\n\n\n\n\n变量符号\n变量名称\n类型\n单位\n\n\n\n\nmobile\n手机消费支出\n定量\n元\n\n\nlaptop\n笔记本电脑消费支出\n定量\n元\n\n\ncost\n月生活费\n定量\n元\n\n\nusage_month\n笔记本使用时长\n定量\n月\n\n\ngender\n性别\n定性\n—"
-  },
-  {
-    "objectID": "pre.html#模型表达式-1",
-    "href": "pre.html#模型表达式-1",
-    "title": "小组汇报",
-    "section": "模型表达式",
-    "text": "模型表达式\n最优模型：双对数模型 + 性别交互项\n\\[\n\\begin{aligned}\nLn(mobile_{i}) = &B_0 + B_1 Ln(laptop_{i}) + B_2 Ln(cost_{i}) \\\\\n&+ B_3 \\, usage\\_month_{i} + B_4 \\, gender_{i} \\\\\n&+ B_5 \\, gender_{i} \\times Ln(laptop_{i}) + u_{i}\n\\end{aligned}\n\\]\n\n因变量：\\(Ln(mobile)\\)，手机消费支出的对数\n\\(B_1\\)、\\(B_2\\)：弹性系数，表示自变量变动1%时，手机消费支出变动的百分比"
-  },
-  {
-    "objectID": "pre.html#回归结果",
-    "href": "pre.html#回归结果",
-    "title": "小组汇报",
-    "section": "回归结果",
-    "text": "回归结果\n\n\n log(mobile)(Intercept)-1.249(1.323)log(cost)0.549***(0.136)log(laptop)0.640***(0.124)usage_month0.002(0.004)gendermale1.285(2.628)log(laptop) × gendermale-0.177(0.297)Num.Obs.142R20.316+ p &lt; 0.1, * p &lt; 0.05, ** p &lt; 0.01, *** p &lt; 0.001"
-  },
-  {
-    "objectID": "pre.html#模型诊断",
-    "href": "pre.html#模型诊断",
-    "title": "小组汇报",
-    "section": "模型诊断",
-    "text": "模型诊断"
-  },
-  {
-    "objectID": "pre.html#估计结果解释",
-    "href": "pre.html#估计结果解释",
-    "title": "小组汇报",
-    "section": "估计结果解释",
-    "text": "估计结果解释\n\n月生活费弹性（\\(B_1\\)）： 月生活费每增加1%，手机价格显著上升约_____%，符合假说1。\n笔记本电脑价格弹性（\\(B_2\\)）： 笔记本价格每增加1%，手机价格显著上升约_____%，符合假说2。\n使用时长（\\(B_3\\)）： 笔记本使用时长对手机价格的影响[显著/不显著]，可能原因是……\n性别交互项（\\(B_5\\)）： 男/女生群体中，笔记本价格对手机价格的弹性存在显著差异，符合假说3。"
-  },
-  {
-    "objectID": "pre.html#结论与启示",
-    "href": "pre.html#结论与启示",
-    "title": "小组汇报",
-    "section": "结论与启示",
-    "text": "结论与启示\n核心结论：\n\n月生活费和笔记本电脑价格是手机价格的显著正向预测因素。\n性别对笔记本价格与手机价格的关系具有显著调节效应。\nModel 2.2 的 \\(R^2\\) = ____，模型整体拟合效果良好。\n\n现实启示：\n\n手机厂商可针对高消费能力学生群体（高生活费 + 高端笔记本用户）推出差异化高端产品线。\n针对不同性别消费者，制定差异化的笔记本与手机捆绑营销策略。"
-  },
-  {
-    "objectID": "pre.html#汇报安排",
-    "href": "pre.html#汇报安排",
-    "title": "小组任务课堂汇报",
-    "section": "汇报安排",
-    "text": "汇报安排\n\n选拔机制：老师根据演示文稿质量，仅挑选 4 个优胜小组 进行课堂汇报。\n提交截止：第14周周日（2026年6月7日）20:00 前提交PDF，逾期直接失去资格。\n汇报时长：严格 5分钟。这是一场高效的小组成果展示，而非朗读报告。\n严禁内容：代码（第6部分）和个人心得（第7部分）不得放入PPT。\n奖励：优胜小组每位成员实验报告加 3-5分。"
+    "text": "注意：本讲义供学习交流使用，请勿用于商业用途"
   }
 ]
