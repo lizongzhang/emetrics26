@@ -47,13 +47,13 @@ showtext_auto()
 
 ---
 
-## 汇报的安排
+## 汇报安排
 
 - 选拔机制：老师根据演示文稿质量，仅挑选 4 个优胜小组 进行课堂汇报。
 
 - 提交截止：第14周周日（2026年6月7日）20:00 前提交PDF，逾期直接失去资格。
 
-- 汇报时长：严格 5分钟。这是一场高效的学术成果推销，而非朗读报告。
+- 汇报时长：严格 5分钟。这是一场高效的小组成果展示，而非朗读报告。
 
 - 严禁内容：代码（第6部分）和个人心得（第7部分）不得放入PPT。
 
@@ -67,13 +67,13 @@ showtext_auto()
 
 - 提交要求：
 
-  - 文件格式：PDF（PowerPoint / WPS 转PDF）
+    - 文件格式：PDF（PowerPoint / WPS 转PDF）
   
-  - 文件命名：第#组+组长姓名+班级+主题关键词+小组汇报.pdf
+    - 文件命名：第#组+组长姓名+班级+主题关键词+小组汇报.pdf
   
-  - 示例：第1组池天俊 24人资1瑞幸小组汇报.pdf
+        - 示例：第1组池天俊 24人资1瑞幸小组汇报.pdf
   
-  - 提交位置：QQ群“小组汇报”文件夹
+    - 提交位置：QQ群“小组汇报”文件夹
 
 - 结果公布：第15周周一（2026年6月8日）20:00
 
@@ -85,13 +85,13 @@ showtext_auto()
 
 - 选题的现实意义和创新性
 
-- 合理的变量构建：选取的自变量、因变量和控制变量必须具有明确的经济学含义，并且数据来源可靠。。
+- 变量选取的经济合理性与数据质量
 
-- 规范的回归表格：必须按照学术规范，将软件输出结果整理成**学术论文三线表**。不要直接截图R或EViews输出结果。
+- 规范的三线表（严禁直接截图软件输出）
 
-- 完整的模型诊断：包括残差图形、多余或遗漏变量的检验、多重共线性 VIF、异方差检验。
+- 完整的模型诊断(残差图形、多余或遗漏变量的检验、多重共线性 VIF、异方差检验)
 
-- 回归结果的解释：正确解释系数的含义。
+- 系数经济含义的准确解释
 
 ---
 
@@ -112,12 +112,13 @@ showtext_auto()
 
 - 一页一个核心信息，避免信息过载
 
-- 结构简洁：大标题 + 关键 bullet points + 1张核心图/表
+- 结构简洁：大标题 + 关键要点 + 1张核心图/表
 
 - 字体大小适当：标题 ≥ 32pt，正文 ≥ 24pt
 
 - 视觉风格：白底 + 深蓝/深灰文字，极简学术风，禁止花哨动画和无关图片
 
+- 15-20页左右，确保内容完整且不冗余
 
 ---
 
@@ -183,6 +184,8 @@ $$
 
 ---
 
+#### 回归模型估计结果
+
  **学术论文三线表**。包含：变量名、估计系数、标准误、显著性星号（$*$, $**$, $***$）、样本容量 $n$、$R^2$。
 
 ![](img/pre_pic1.png)
@@ -233,5 +236,268 @@ $$
 
 ## 汇报演示文稿示例
 
+```{r}
+#| message: false
+#| warning: false
+#| include: false
 
+library(tidyverse)
+library(readxl)
+library(modelsummary)
+library(flextable)
+library(knitr)
+library(showtext)
+showtext_auto()
+
+df <- read_excel("data/mobile.xlsx")
+df$male <- df$gender
+
+```
+
+---
+
+### 封面 {.unnumbered}
+
+:::{style="text-align:center; margin-top: 80px;"}
+
+**预算约束、笔记本电脑支出与大学生手机消费<br>——基于性别差异的实证研究**
+
+---
+
+**小组成员**
+
+**班级** 
+
+**2026.6.** 
+
+
+:::
+
+---
+
+### 研究假说
+
+- **研究问题：** 哪些因素显著影响大学生的手机消费支出？
+
+- **假说1：** 月生活费越高，手机消费支出越高。
+
+- **假说2：** 购买的笔记本电脑消费支出越高，手机消费支出越高。
+
+- **假说3：** 不同性别群体中，生活费对手机消费支出的弹性不同。
+
+- **假说4：** 即不同性别群体中，笔记本电脑支出对手机消费支出的弹性不同。
+
+---
+
+### 数据概况
+
+- **数据来源：** 26春教学班，157人，问卷星
+
+- **样本容量：** 142
+
+| 变量符号 | 变量名称 | 类型 | 单位 |
+|----------|----------|------|------|
+| `mobile` | 手机消费支出 | 定量 | 元 |
+| `laptop` | 笔记本电脑消费支出 | 定量 | 元 |
+| `cost` | 月生活费 | 定量 | 元 |
+| `male` | 性别 | 定性 | 1-男性, 0-女性 |
+
+---
+
+#### 定量变量描述统计
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+
+datasummary(mobile + laptop + cost ~
+              N + Mean + SD + Median + Min + Max,
+            data = df,
+            fmt = 3,
+            output = 'flextable') %>%
+  theme_apa() %>%
+  fontsize(size = 20, part = "all") %>%
+  padding(padding = 10, part = "all") %>%
+  line_spacing(space = 1.2, part = "all") %>%
+  color(color = "#044875", part = "all") %>%
+  autofit() %>%
+  font(fontname = "Times New Roman", part = "all")
+```
+
+---
+
+#### 定性变量描述统计
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+
+datasummary(gender ~
+              N + Percent(),
+            data = df,
+            fmt = 2,
+            output = 'flextable') %>%
+  theme_apa() %>%
+  fontsize(size = 20, part = "all") %>%
+  padding(padding = 5, part = "all") %>%
+  line_spacing(space = 1.2, part = "all") %>%     color(color = "#044875", part = "all") %>%
+  autofit() %>%
+  font(fontname = "Times New Roman", part = "all")
+```
+
+---
+
+### 模型表达式
+
+最优模型：**双对数模型 + 性别交互项**
+
+$$
+\begin{aligned}
+Ln(mobile_{i}) = &B_0  + B_1 Ln(cost_{i}) + B_2 Ln(laptop_{i}) + B_3 male_{i}\\
+&B_4 male \times Ln(cost_{i})+ B_5 male_{i} \times Ln(laptop_{i}) + u_{i}
+\end{aligned}
+$$
+
+
+---
+
+### 回归模型估计结果
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+
+m2.2 <- lm(log(mobile) ~ log(cost) + log(laptop) +
+             gender + gender:log(cost) + gender:log(laptop), data = df)
+
+modelsummary(
+  list("log(mobile)" = m2.2),
+  fmt = 3,
+  stars = TRUE,
+  gof_omit = 'AIC|BIC|Log.Lik|F|statistic|RMSE|Adj',
+  gof_map = c("nobs", "r.squared"),
+  output = "flextable"
+) %>%
+  theme_apa() %>%
+  fontsize(size = 18, part = "all") %>%
+  padding(padding = 5, part = "all") %>%
+  line_spacing(space = 0.7, part = "all") %>%
+  color(color = "#044875", part = "all") %>%
+  autofit() %>%
+  width(j = 1, width = 3.5) %>%
+  width(j = 2, width = 2.5) %>%
+  font(fontname = "Times New Roman", part = "all")
+```
+
+---
+
+### 残差的图形诊断
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| fig-width: 10
+#| fig-height: 5
+
+plot(m2.2, which = 1)
+```
+
+---
+
+### 多余或遗漏变量的检验
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+
+# 受限模型（不含 gender 和交互项）
+m2.1 <- lm(log(mobile) ~ log(cost) + log(laptop), data = df)
+
+# F检验：联合检验 gender 和 gender:log(laptop) 是否为多余变量
+anova(m2.1, m2.2)
+
+```
+
+性别，以及性别与生活费支出的交互项是显著的，不能被视为多余变量。
+
+
+---
+
+### 多重共线性诊断（VIF）
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+
+library(car)
+vif_result <- vif(m2.2)
+vif_df <- data.frame(
+  变量 = names(vif_result),
+  VIF = round(vif_result, 3)
+)
+kable(vif_df, align = "c")
+```
+
+多重共线性不严重。
+
+---
+
+### 异方差检验（Breusch-Pagan）
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+
+library(lmtest)
+bp_test <- bptest(m2.2)
+print(bp_test)
+```
+
+不存在异方差问题，模型的OLS估计是有效的。
+
+---
+
+### 估计结果解释
+
+
+- 月生活费对女生手机支出的弹性为 0.427，对男生为 1.165 ($0.427+0.738$)。
+ 
+- 笔记本电脑支出对手机支出的弹性约为 0.654，无显著性别差异。
+
+- 手机使用时长对手机消费无显著影响。
+
+---
+
+### 结论与启示
+
+**结论**
+
+- 收入效应明显，且存在显著的性别异质性。女生的生活费弹性为 0.427，而男生的生活费弹性高达 1.165。男生在拿到更多生活费时，更倾向于将其迅速转化为手机支出的升级。
+
+- 笔记本电脑消费与手机消费呈现强协同效应。两群体的电脑支出对手机支出的带动弹性都在 0.654 左右，且男女之间没有显著路径差异（交互项不显著）。
+
+
+---
+
+
+**启示**
+
+- 数码厂商的“性别差异化”精准营销策略：男生的手机消费极易受到“可支配资金流”的波动影响。
+
+- 校园零售可将电脑与手机进行捆绑销售。
+
+---
+
+:::{style="text-align: center; margin-top: 200px; font-size: 1.5em;"}
+
+**敬请批评指正！**
+
+:::
 

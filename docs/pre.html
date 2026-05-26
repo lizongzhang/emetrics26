@@ -125,6 +125,8 @@
       margin-right: 0; 
     }
   </style>
+  <link href="site_libs/tabwid-1.1.3/tabwid.css" rel="stylesheet">
+  <script src="site_libs/tabwid-1.1.3/tabwid.js"></script>
 </head>
 <body class="quarto-light">
   <div class="reveal">
@@ -146,7 +148,7 @@ Li Zongzhang
 <nav role="doc-toc"> 
 <h2 id="toc-title">大纲</h2>
 <ul>
-<li><a href="#/汇报的安排" id="/toc-汇报的安排">汇报的安排</a></li>
+<li><a href="#/汇报安排" id="/toc-汇报安排">汇报安排</a></li>
 <li><a href="#/关键时间节点" id="/toc-关键时间节点">关键时间节点</a></li>
 <li><a href="#/优胜小组评选指标" id="/toc-优胜小组评选指标">“优胜小组”评选指标</a></li>
 <li><a href="#/现场汇报-5分钟" id="/toc-现场汇报-5分钟">现场汇报 (5分钟)</a></li>
@@ -161,16 +163,31 @@ Li Zongzhang
 
 
 
+<li><a href="#/汇报演示文稿示例" id="/toc-汇报演示文稿示例">汇报演示文稿示例</a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 </ul>
 </nav>
 </section>
-<section id="汇报的安排" class="slide level2">
-<h2>汇报的安排</h2>
+<section id="汇报安排" class="slide level2">
+<h2>汇报安排</h2>
 <ul>
 <li><p>选拔机制：老师根据演示文稿质量，仅挑选 4 个优胜小组 进行课堂汇报。</p></li>
 <li><p>提交截止：第14周周日（2026年6月7日）20:00 前提交PDF，逾期直接失去资格。</p></li>
-<li><p>汇报时长：严格 5分钟。这是一场高效的学术成果推销，而非朗读报告。</p></li>
+<li><p>汇报时长：严格 5分钟。这是一场高效的小组成果展示，而非朗读报告。</p></li>
 <li><p>严禁内容：代码（第6部分）和个人心得（第7部分）不得放入PPT。</p></li>
 <li><p>奖励：优胜小组每位成员实验报告加 3-5分。</p></li>
 </ul>
@@ -182,8 +199,10 @@ Li Zongzhang
 <li><p>提交要求：</p>
 <ul>
 <li><p>文件格式：PDF（PowerPoint / WPS 转PDF）</p></li>
-<li><p>文件命名：第#组+组长姓名+班级+主题关键词+小组汇报.pdf</p></li>
-<li><p>示例：第1组池天俊 24人资1瑞幸小组汇报.pdf</p></li>
+<li><p>文件命名：第#组+组长姓名+班级+主题关键词+小组汇报.pdf</p>
+<ul>
+<li>示例：第1组池天俊 24人资1瑞幸小组汇报.pdf</li>
+</ul></li>
 <li><p>提交位置：QQ群“小组汇报”文件夹</p></li>
 </ul></li>
 <li><p>结果公布：第15周周一（2026年6月8日）20:00</p></li>
@@ -194,10 +213,10 @@ Li Zongzhang
 <h2>“优胜小组”评选指标</h2>
 <ul>
 <li><p>选题的现实意义和创新性</p></li>
-<li><p>合理的变量构建：选取的自变量、因变量和控制变量必须具有明确的经济学含义，并且数据来源可靠。。</p></li>
-<li><p>规范的回归表格：必须按照学术规范，将软件输出结果整理成<strong>学术论文三线表</strong>。不要直接截图R或EViews输出结果。</p></li>
-<li><p>完整的模型诊断：包括残差图形、多余或遗漏变量的检验、多重共线性 VIF、异方差检验。</p></li>
-<li><p>回归结果的解释：正确解释系数的含义。</p></li>
+<li><p>变量选取的经济合理性与数据质量</p></li>
+<li><p>规范的三线表（严禁直接截图软件输出）</p></li>
+<li><p>完整的模型诊断(残差图形、多余或遗漏变量的检验、多重共线性 VIF、异方差检验)</p></li>
+<li><p>系数经济含义的准确解释</p></li>
 </ul>
 </section>
 <section id="现场汇报-5分钟" class="slide level2">
@@ -213,9 +232,10 @@ Li Zongzhang
 <h2>汇报文件排版</h2>
 <ul>
 <li><p>一页一个核心信息，避免信息过载</p></li>
-<li><p>结构简洁：大标题 + 关键 bullet points + 1张核心图/表</p></li>
+<li><p>结构简洁：大标题 + 关键要点 + 1张核心图/表</p></li>
 <li><p>字体大小适当：标题 ≥ 32pt，正文 ≥ 24pt</p></li>
 <li><p>视觉风格：白底 + 深蓝/深灰文字，极简学术风，禁止花哨动画和无关图片</p></li>
+<li><p>15-20页左右，确保内容完整且不冗余</p></li>
 </ul>
 </section>
 <section id="汇报文件结构" class="slide level2">
@@ -272,6 +292,7 @@ Ln(Sales_{i}) = &amp;B_0 + B_1 Ln(Advertising_{i}) + B_2Ln(Price_{i}) + \\
 </section>
 <section class="slide level2">
 
+<h4 id="回归模型估计结果">回归模型估计结果</h4>
 <p><strong>学术论文三线表</strong>。包含：变量名、估计系数、标准误、显著性星号（<span class="math inline">\(*\)</span>, <span class="math inline">\(**\)</span>, <span class="math inline">\(***\)</span>）、样本容量 <span class="math inline">\(n\)</span>、<span class="math inline">\(R^2\)</span>。</p>
 
 <img data-src="img/pre_pic1.png" class="r-stretch"></section>
@@ -304,14 +325,14 @@ Ln(Sales_{i}) = &amp;B_0 + B_1 Ln(Advertising_{i}) + B_2Ln(Price_{i}) + \\
 </section>
 <section class="slide level2">
 
-<div title="小组汇报的核心要求">
+<div title="注意事项">
 <div class="callout callout-tip callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<p><strong>小组汇报的核心要求</strong></p>
+<p><strong>注意事项</strong></p>
 </div>
 <div class="callout-content">
 <ul>
@@ -326,8 +347,227 @@ Ln(Sales_{i}) = &amp;B_0 + B_1 Ln(Advertising_{i}) + B_2Ln(Price_{i}) + \\
 </div>
 </div>
 </section>
+<section id="汇报演示文稿示例" class="slide level2">
+<h2>汇报演示文稿示例</h2>
+</section>
 <section class="slide level2">
 
+<h3 class="unnumbered" id="封面">封面</h3>
+<div style="text-align:center; margin-top: 80px;">
+<p><strong>预算约束、笔记本电脑支出与大学生手机消费<br>——基于性别差异的实证研究</strong></p>
+<hr>
+<p><strong>小组成员</strong></p>
+<p><strong>班级</strong></p>
+<p><strong>2026.6.</strong></p>
+</div>
+</section>
+<section class="slide level2">
+
+<h3 id="研究假说">研究假说</h3>
+<ul>
+<li><p><strong>研究问题：</strong> 哪些因素显著影响大学生的手机消费支出？</p></li>
+<li><p><strong>假说1：</strong> 月生活费越高，手机消费支出越高。</p></li>
+<li><p><strong>假说2：</strong> 购买的笔记本电脑消费支出越高，手机消费支出越高。</p></li>
+<li><p><strong>假说3：</strong> 不同性别群体中，生活费对手机消费支出的弹性不同。</p></li>
+<li><p><strong>假说4：</strong> 即不同性别群体中，笔记本电脑支出对手机消费支出的弹性不同。</p></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="数据概况">数据概况</h3>
+<ul>
+<li><p><strong>数据来源：</strong> 26春教学班，157人，问卷星</p></li>
+<li><p><strong>样本容量：</strong> 142</p></li>
+</ul>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>变量符号</th>
+<th>变量名称</th>
+<th>类型</th>
+<th>单位</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>mobile</code></td>
+<td>手机消费支出</td>
+<td>定量</td>
+<td>元</td>
+</tr>
+<tr class="even">
+<td><code>laptop</code></td>
+<td>笔记本电脑消费支出</td>
+<td>定量</td>
+<td>元</td>
+</tr>
+<tr class="odd">
+<td><code>cost</code></td>
+<td>月生活费</td>
+<td>定量</td>
+<td>元</td>
+</tr>
+<tr class="even">
+<td><code>male</code></td>
+<td>性别</td>
+<td>定性</td>
+<td>1-男性, 0-女性</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section class="slide level2">
+
+<h4 id="定量变量描述统计">定量变量描述统计</h4>
+<div class="cell">
+<div class="cell-output-display">
+<div class="tabwid"><style>.cl-40b9881e{}.cl-40b62aac{font-family:'Times New Roman';font-size:20pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(4, 72, 117, 1.00);background-color:transparent;}.cl-40b78afa{margin:0;text-align:center;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:10pt;padding-top:10pt;padding-left:10pt;padding-right:10pt;line-height: 1.2;background-color:transparent;}.cl-40b79874{width:1.242in;background-color:transparent;vertical-align: middle;border-bottom: 0.75pt solid rgba(0, 0, 0, 1.00);border-top: 0.75pt solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-40b79875{width:0.887in;background-color:transparent;vertical-align: middle;border-bottom: 0.75pt solid rgba(0, 0, 0, 1.00);border-top: 0.75pt solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-40b7987e{width:1.512in;background-color:transparent;vertical-align: middle;border-bottom: 0.75pt solid rgba(0, 0, 0, 1.00);border-top: 0.75pt solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-40b7987f{width:1.651in;background-color:transparent;vertical-align: middle;border-bottom: 0.75pt solid rgba(0, 0, 0, 1.00);border-top: 0.75pt solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-40b79880{width:1.242in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-40b79881{width:0.887in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-40b79888{width:1.512in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-40b79889{width:1.651in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-40b7988a{width:1.242in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-40b79892{width:0.887in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-40b79893{width:1.512in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-40b79894{width:1.651in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-40b7989c{width:1.242in;background-color:transparent;vertical-align: middle;border-bottom: 0.75pt solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-40b7989d{width:0.887in;background-color:transparent;vertical-align: middle;border-bottom: 0.75pt solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-40b7989e{width:1.512in;background-color:transparent;vertical-align: middle;border-bottom: 0.75pt solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-40b798a6{width:1.651in;background-color:transparent;vertical-align: middle;border-bottom: 0.75pt solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}</style><table data-quarto-disable-processing="true" class="cl-40b9881e"><thead><tr style="overflow-wrap:break-word;"><th class="cl-40b79874"><p class="cl-40b78afa"><span class="cl-40b62aac"> </span></p></th><th class="cl-40b79875"><p class="cl-40b78afa"><span class="cl-40b62aac">N</span></p></th><th class="cl-40b7987e"><p class="cl-40b78afa"><span class="cl-40b62aac">Mean</span></p></th><th class="cl-40b7987e"><p class="cl-40b78afa"><span class="cl-40b62aac">SD</span></p></th><th class="cl-40b7987e"><p class="cl-40b78afa"><span class="cl-40b62aac">Median</span></p></th><th class="cl-40b7987e"><p class="cl-40b78afa"><span class="cl-40b62aac">Min</span></p></th><th class="cl-40b7987f"><p class="cl-40b78afa"><span class="cl-40b62aac">Max</span></p></th></tr></thead><tbody><tr style="overflow-wrap:break-word;"><td class="cl-40b79880"><p class="cl-40b78afa"><span class="cl-40b62aac">mobile</span></p></td><td class="cl-40b79881"><p class="cl-40b78afa"><span class="cl-40b62aac">142</span></p></td><td class="cl-40b79888"><p class="cl-40b78afa"><span class="cl-40b62aac">5329.824</span></p></td><td class="cl-40b79888"><p class="cl-40b78afa"><span class="cl-40b62aac">2828.370</span></p></td><td class="cl-40b79888"><p class="cl-40b78afa"><span class="cl-40b62aac">5299.500</span></p></td><td class="cl-40b79888"><p class="cl-40b78afa"><span class="cl-40b62aac">1200.000</span></p></td><td class="cl-40b79889"><p class="cl-40b78afa"><span class="cl-40b62aac">13999.000</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-40b7988a"><p class="cl-40b78afa"><span class="cl-40b62aac">laptop</span></p></td><td class="cl-40b79892"><p class="cl-40b78afa"><span class="cl-40b62aac">142</span></p></td><td class="cl-40b79893"><p class="cl-40b78afa"><span class="cl-40b62aac">6260.627</span></p></td><td class="cl-40b79893"><p class="cl-40b78afa"><span class="cl-40b62aac">2362.171</span></p></td><td class="cl-40b79893"><p class="cl-40b78afa"><span class="cl-40b62aac">6000.000</span></p></td><td class="cl-40b79893"><p class="cl-40b78afa"><span class="cl-40b62aac">1800.000</span></p></td><td class="cl-40b79894"><p class="cl-40b78afa"><span class="cl-40b62aac">13000.000</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-40b7989c"><p class="cl-40b78afa"><span class="cl-40b62aac">cost</span></p></td><td class="cl-40b7989d"><p class="cl-40b78afa"><span class="cl-40b62aac">142</span></p></td><td class="cl-40b7989e"><p class="cl-40b78afa"><span class="cl-40b62aac">2100.077</span></p></td><td class="cl-40b7989e"><p class="cl-40b78afa"><span class="cl-40b62aac">672.072</span></p></td><td class="cl-40b7989e"><p class="cl-40b78afa"><span class="cl-40b62aac">2000.000</span></p></td><td class="cl-40b7989e"><p class="cl-40b78afa"><span class="cl-40b62aac">800.000</span></p></td><td class="cl-40b798a6"><p class="cl-40b78afa"><span class="cl-40b62aac">5000.000</span></p></td></tr></tbody></table></div>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<h4 id="定性变量描述统计">定性变量描述统计</h4>
+<div class="cell">
+<div class="cell-output-display">
+<div class="tabwid"><style>.cl-40c506bc{}.cl-40c224ec{font-family:'Times New Roman';font-size:20pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(4, 72, 117, 1.00);background-color:transparent;}.cl-40c35f7e{margin:0;text-align:center;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1.2;background-color:transparent;}.cl-40c36b4a{width:1.041in;background-color:transparent;vertical-align: middle;border-bottom: 0.75pt solid rgba(0, 0, 0, 1.00);border-top: 0.75pt solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-40c36b54{width:0.702in;background-color:transparent;vertical-align: middle;border-bottom: 0.75pt solid rgba(0, 0, 0, 1.00);border-top: 0.75pt solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-40c36b55{width:1.118in;background-color:transparent;vertical-align: middle;border-bottom: 0.75pt solid rgba(0, 0, 0, 1.00);border-top: 0.75pt solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-40c36b56{width:1.041in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-40c36b5e{width:0.702in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-40c36b5f{width:1.118in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-40c36b60{width:1.041in;background-color:transparent;vertical-align: middle;border-bottom: 0.75pt solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-40c36b68{width:0.702in;background-color:transparent;vertical-align: middle;border-bottom: 0.75pt solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-40c36b69{width:1.118in;background-color:transparent;vertical-align: middle;border-bottom: 0.75pt solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}</style><table data-quarto-disable-processing="true" class="cl-40c506bc"><thead><tr style="overflow-wrap:break-word;"><th class="cl-40c36b4a"><p class="cl-40c35f7e"><span class="cl-40c224ec">gender</span></p></th><th class="cl-40c36b54"><p class="cl-40c35f7e"><span class="cl-40c224ec">N</span></p></th><th class="cl-40c36b55"><p class="cl-40c35f7e"><span class="cl-40c224ec">Percent</span></p></th></tr></thead><tbody><tr style="overflow-wrap:break-word;"><td class="cl-40c36b56"><p class="cl-40c35f7e"><span class="cl-40c224ec">female</span></p></td><td class="cl-40c36b5e"><p class="cl-40c35f7e"><span class="cl-40c224ec">108</span></p></td><td class="cl-40c36b5f"><p class="cl-40c35f7e"><span class="cl-40c224ec">76.06</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-40c36b60"><p class="cl-40c35f7e"><span class="cl-40c224ec">male</span></p></td><td class="cl-40c36b68"><p class="cl-40c35f7e"><span class="cl-40c224ec">34</span></p></td><td class="cl-40c36b69"><p class="cl-40c35f7e"><span class="cl-40c224ec">23.94</span></p></td></tr></tbody></table></div>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<h3 id="模型表达式-1">模型表达式</h3>
+<p>最优模型：<strong>双对数模型 + 性别交互项</strong></p>
+<p><span class="math display">\[
+\begin{aligned}
+Ln(mobile_{i}) = &amp;B_0  + B_1 Ln(cost_{i}) + B_2 Ln(laptop_{i}) + B_3 male_{i}\\
+&amp;B_4 male \times Ln(cost_{i})+ B_5 male_{i} \times Ln(laptop_{i}) + u_{i}
+\end{aligned}
+\]</span></p>
+</section>
+<section class="slide level2">
+
+<h3 id="回归模型估计结果-1">回归模型估计结果</h3>
+<div class="cell">
+<div class="cell-output-display">
+<div class="tabwid"><style>.cl-40fe1d8a{}.cl-40fb03f2{font-family:'Times New Roman';font-size:18pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(4, 72, 117, 1.00);background-color:transparent;}.cl-40fc4e38{margin:0;text-align:center;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 0.7;background-color:transparent;}.cl-40fc5aa4{width:3.5in;background-color:transparent;vertical-align: middle;border-bottom: 0.75pt solid rgba(0, 0, 0, 1.00);border-top: 0.75pt solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-40fc5aae{width:2.5in;background-color:transparent;vertical-align: middle;border-bottom: 0.75pt solid rgba(0, 0, 0, 1.00);border-top: 0.75pt solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-40fc5aaf{width:3.5in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-40fc5ab0{width:2.5in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-40fc5ab8{width:3.5in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-40fc5ac2{width:2.5in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-40fc5ac3{width:3.5in;background-color:transparent;vertical-align: middle;border-bottom: 0.75pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-40fc5ac4{width:2.5in;background-color:transparent;vertical-align: middle;border-bottom: 0.75pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-40fc5acc{width:3.5in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0.75pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-40fc5acd{width:2.5in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0.75pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-40fc5ace{width:3.5in;background-color:transparent;vertical-align: middle;border-bottom: 0.75pt solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-40fc5ad6{width:2.5in;background-color:transparent;vertical-align: middle;border-bottom: 0.75pt solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-40fc5ad7{width:3.5in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(255, 255, 255, 0.00);border-top: 0 solid rgba(255, 255, 255, 0.00);border-left: 0 solid rgba(255, 255, 255, 0.00);border-right: 0 solid rgba(255, 255, 255, 0.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-40fc5ad8{width:2.5in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(255, 255, 255, 0.00);border-top: 0 solid rgba(255, 255, 255, 0.00);border-left: 0 solid rgba(255, 255, 255, 0.00);border-right: 0 solid rgba(255, 255, 255, 0.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}</style><table data-quarto-disable-processing="true" class="cl-40fe1d8a"><thead><tr style="overflow-wrap:break-word;"><th class="cl-40fc5aa4"><p class="cl-40fc4e38"><span class="cl-40fb03f2"> </span></p></th><th class="cl-40fc5aae"><p class="cl-40fc4e38"><span class="cl-40fb03f2">log(mobile)</span></p></th></tr></thead><tbody><tr style="overflow-wrap:break-word;"><td class="cl-40fc5aaf"><p class="cl-40fc4e38"><span class="cl-40fb03f2">(Intercept)</span></p></td><td class="cl-40fc5ab0"><p class="cl-40fc4e38"><span class="cl-40fb03f2">-0.421</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-40fc5aaf"><p class="cl-40fc4e38"><span class="cl-40fb03f2"></span></p></td><td class="cl-40fc5ab0"><p class="cl-40fc4e38"><span class="cl-40fb03f2">(1.332)</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-40fc5ab8"><p class="cl-40fc4e38"><span class="cl-40fb03f2">log(cost)</span></p></td><td class="cl-40fc5ac2"><p class="cl-40fc4e38"><span class="cl-40fb03f2">0.427**</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-40fc5aaf"><p class="cl-40fc4e38"><span class="cl-40fb03f2"></span></p></td><td class="cl-40fc5ab0"><p class="cl-40fc4e38"><span class="cl-40fb03f2">(0.147)</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-40fc5ab8"><p class="cl-40fc4e38"><span class="cl-40fb03f2">log(laptop)</span></p></td><td class="cl-40fc5ac2"><p class="cl-40fc4e38"><span class="cl-40fb03f2">0.654***</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-40fc5aaf"><p class="cl-40fc4e38"><span class="cl-40fb03f2"></span></p></td><td class="cl-40fc5ab0"><p class="cl-40fc4e38"><span class="cl-40fb03f2">(0.121)</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-40fc5ab8"><p class="cl-40fc4e38"><span class="cl-40fb03f2">gendermale</span></p></td><td class="cl-40fc5ac2"><p class="cl-40fc4e38"><span class="cl-40fb03f2">-2.025</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-40fc5aaf"><p class="cl-40fc4e38"><span class="cl-40fb03f2"></span></p></td><td class="cl-40fc5ab0"><p class="cl-40fc4e38"><span class="cl-40fb03f2">(3.061)</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-40fc5ab8"><p class="cl-40fc4e38"><span class="cl-40fb03f2">log(cost) × gendermale</span></p></td><td class="cl-40fc5ac2"><p class="cl-40fc4e38"><span class="cl-40fb03f2">0.738*</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-40fc5aaf"><p class="cl-40fc4e38"><span class="cl-40fb03f2"></span></p></td><td class="cl-40fc5ab0"><p class="cl-40fc4e38"><span class="cl-40fb03f2">(0.361)</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-40fc5ab8"><p class="cl-40fc4e38"><span class="cl-40fb03f2">log(laptop) × gendermale</span></p></td><td class="cl-40fc5ac2"><p class="cl-40fc4e38"><span class="cl-40fb03f2">-0.436</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-40fc5ac3"><p class="cl-40fc4e38"><span class="cl-40fb03f2"></span></p></td><td class="cl-40fc5ac4"><p class="cl-40fc4e38"><span class="cl-40fb03f2">(0.318)</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-40fc5acc"><p class="cl-40fc4e38"><span class="cl-40fb03f2">Num.Obs.</span></p></td><td class="cl-40fc5acd"><p class="cl-40fc4e38"><span class="cl-40fb03f2">142</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-40fc5ace"><p class="cl-40fc4e38"><span class="cl-40fb03f2">R2</span></p></td><td class="cl-40fc5ad6"><p class="cl-40fc4e38"><span class="cl-40fb03f2">0.336</span></p></td></tr></tbody><tfoot><tr style="overflow-wrap:break-word;"><td colspan="2" class="cl-40fc5ad7"><p class="cl-40fc4e38"><span class="cl-40fb03f2">+ p &lt; 0.1, * p &lt; 0.05, ** p &lt; 0.01, *** p &lt; 0.001</span></p></td></tr></tfoot></table></div>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<h3 id="残差的图形诊断">残差的图形诊断</h3>
+
+<img data-src="pre_files/figure-revealjs/unnamed-chunk-6-1.png" width="960" class="r-stretch"></section>
+<section class="slide level2">
+
+<h3 id="多余或遗漏变量的检验">多余或遗漏变量的检验</h3>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>Analysis of Variance Table
+
+Model 1: log(mobile) ~ log(cost) + log(laptop)
+Model 2: log(mobile) ~ log(cost) + log(laptop) + gender + gender:log(cost) + 
+    gender:log(laptop)
+  Res.Df    RSS Df Sum of Sq      F   Pr(&gt;F)   
+1    139 34.808                                
+2    136 31.859  3    2.9484 4.1953 0.007111 **
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
+</div>
+</div>
+<p>性别，以及性别与生活费支出的交互项是显著的，不能被视为多余变量。</p>
+</section>
+<section class="slide level2">
+
+<h3 id="多重共线性诊断vif">多重共线性诊断（VIF）</h3>
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: left;"></th>
+<th style="text-align: center;">变量</th>
+<th style="text-align: center;">VIF</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">log(cost)</td>
+<td style="text-align: center;">log(cost)</td>
+<td style="text-align: center;">1.306</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">log(laptop)</td>
+<td style="text-align: center;">log(laptop)</td>
+<td style="text-align: center;">1.389</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">gender</td>
+<td style="text-align: center;">gender</td>
+<td style="text-align: center;">1034.346</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">log(cost):gender</td>
+<td style="text-align: center;">log(cost):gender</td>
+<td style="text-align: center;">827.482</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">log(laptop):gender</td>
+<td style="text-align: center;">log(laptop):gender</td>
+<td style="text-align: center;">883.250</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>多重共线性不严重。</p>
+</section>
+<section class="slide level2">
+
+<h3 id="异方差检验breusch-pagan">异方差检验（Breusch-Pagan）</h3>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    studentized Breusch-Pagan test
+
+data:  m2.2
+BP = 4.3151, df = 5, p-value = 0.505</code></pre>
+</div>
+</div>
+<p>不存在异方差问题，模型的OLS估计是有效的。</p>
+</section>
+<section class="slide level2">
+
+<h3 id="估计结果解释">估计结果解释</h3>
+<ul>
+<li><p>月生活费对女生手机支出的弹性为 0.427，对男生为 1.165 (<span class="math inline">\(0.427+0.738\)</span>)。</p></li>
+<li><p>笔记本电脑支出对手机支出的弹性约为 0.654，无显著性别差异。</p></li>
+<li><p>手机使用时长对手机消费无显著影响。</p></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="结论与启示">结论与启示</h3>
+<p><strong>结论</strong></p>
+<ul>
+<li><p>收入效应明显，且存在显著的性别异质性。女生的生活费弹性为 0.427，而男生的生活费弹性高达 1.165。男生在拿到更多生活费时，更倾向于将其迅速转化为手机支出的升级。</p></li>
+<li><p>笔记本电脑消费与手机消费呈现强协同效应。两群体的电脑支出对手机支出的带动弹性都在 0.654 左右，且男女之间没有显著路径差异（交互项不显著）。</p></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<p><strong>启示</strong></p>
+<ul>
+<li><p>数码厂商的“性别差异化”精准营销策略：男生的手机消费极易受到“可支配资金流”的波动影响。</p></li>
+<li><p>校园零售可将电脑与手机进行捆绑销售。</p></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<div style="text-align: center; margin-top: 200px; font-size: 1.5em;">
+<p><strong>敬请批评指正！</strong></p>
+</div>
 
 
 </section>

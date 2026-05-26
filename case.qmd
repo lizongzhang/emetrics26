@@ -132,7 +132,7 @@ date-format: "YYYY-MM-DD"
 ---
 
 
-# 阶段评估说明
+# 阶段性评估
 
 本小组实证研究任务是**贯穿整个学期**的系统性工程，与课程教学进度同步推进。请各组注意，最终成绩评定不仅取决于期末汇报和实验报告，以下过程指标也是**小组作业和实验课成绩评定的重要依据** ：
 
@@ -143,7 +143,7 @@ date-format: "YYYY-MM-DD"
 
 ---
 
-# 讨论与汇报
+# 阶段性讨论
 
 ## 第1轮讨论课 (第3-6周)：选题论证和数据收集
 
@@ -312,30 +312,28 @@ date-format: "YYYY-MM-DD"
 
 ---
 
-## 课堂汇报(第15-16周)
+# 小组汇报(第15-16周)
 
-每组汇报时长控制在 **5分钟之内**
+<img src="img/link.png" style="width: 24px; height: 24px;margin-right: 10px">[小组汇报要求](https://lizongzhang.github.io/emetrics26/pre.html){target="_blank"}
 
-<img src="img/link.png" style="width: 24px; height: 24px;margin-right: 10px">[课堂汇报要求](https://lizongzhang.github.io/emetrics26/pre.html){target="_blank"}
-
-## 撰写实验报告(第10-16周)
+# 撰写实验报告(第10-16周)
 
 <img src="img/link.png" style="width: 24px; height: 24px;margin-right: 10px">[实验报告写作要求](https://lizongzhang.github.io/emetrics26/report.html){target="_blank"}
 
 实验报告提交时限：第17周理论课的最后一节课
     
-# 学生习作Slides
+# 学生习作演示文稿
 
- <img src="img/link.png" style="width: 24px; height: 24px;margin-right: 10px">[星巴克门店数量分析--第5章](https://lizongzhang.github.io/ee4/stu1.html)
+ <img src="img/link.png" style="width: 24px; height: 24px;margin-right: 10px">[星巴克门店数量分析——第5章](https://lizongzhang.github.io/ee4/stu1.html)
 
-<img src="img/link.png" style="width: 24px; height: 24px;margin-right: 10px">[小米之家门店数量分析--第6章](https://lizongzhang.github.io/ee4/stu2.html)
+<img src="img/link.png" style="width: 24px; height: 24px;margin-right: 10px">[小米之家门店数量分析——第6章](https://lizongzhang.github.io/ee4/stu2.html)
 
-<img src="img/link.png" style="width: 24px; height: 24px;margin-right: 10px">[永辉超市门店数量分析--第6章](https://lizongzhang.github.io/ee4/stu4.html)
+<img src="img/link.png" style="width: 24px; height: 24px;margin-right: 10px">[永辉超市门店数量分析——第6章](https://lizongzhang.github.io/ee4/stu4.html)
 
-<img src="img/link.png" style="width: 24px; height: 24px;margin-right: 10px">[小米手机价格分析--第7-9章](https://lizongzhang.github.io/ee4/stu3.html)
+<img src="img/link.png" style="width: 24px; height: 24px;margin-right: 10px">[小米手机价格分析——第7-9章](https://lizongzhang.github.io/ee4/stu3.html)
 
 <details>
-<summary style="cursor: pointer; font-weight: bold;">视频点赞分析--20金融3陈瑞祺(点击展开)</summary>
+<summary style="cursor: pointer; font-weight: bold;">视频点赞分析——20金融3陈瑞祺(点击展开)</summary>
 
 <p>如果想在新窗口打开 PDF，请点这里： <a href="img/crq.pdf" target="_blank" rel="noopener">在新标签页中查看 PDF</a></p>
 
@@ -349,9 +347,9 @@ date-format: "YYYY-MM-DD"
 
 # 学生习作点评
 
-<img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px">[第6章虚拟变量小组作业讲评--20国贸](https://www.bilibili.com/video/BV1A44y1D73Q/)
+<img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px">[第6章虚拟变量小组作业讲评——20国贸](https://www.bilibili.com/video/BV1A44y1D73Q/)
 
-<img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px">[第7-9章小组作业讲评 20经济](https://www.bilibili.com/video/BV1pM411U7DH/)
+<img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px">[第7-9章小组作业讲评——20经济](https://www.bilibili.com/video/BV1pM411U7DH/)
 
 ---
 
