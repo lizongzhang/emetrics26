@@ -89,6 +89,11 @@ title: "第9章"
 
 <img src="img/link.png" style="width: 24px; height: 24px;margin-right: 10px">[OLS与WLS比较--基于数值模拟](https://lizongzhang.github.io/emetrics26/wls_vs_ols.html){target="_blank"}
 
+<img src="img/link.png" style="width: 24px; height: 24px;margin-right: 10px">[White Robust Standard Errors](https://real-statistics.com/multiple-regression/robust-standard-errors/){target="_blank"}
+
+
+
+
 # 第1-13周学情分析
 
 <img src="img/link.png" style="width: 24px; height: 24px;margin-right: 10px">[24人力资源1-2班](https://lizongzhang.github.io/emetrics26/week14_24hr.html){target="_blank"}
