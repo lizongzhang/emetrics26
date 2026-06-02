@@ -1,0 +1,477 @@
+---
+title: "26春24工管1-2班学生课堂参与情况(第1-13周)"
+author: "Li Zongzhang"
+date: today
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    code-fold: true
+    fig-width: 9
+    fig-height: 5
+lang: zh
+---
+
+```{r}
+#| message: false
+#| warning: false
+#| include: false
+
+library(tidyverse)
+library(showtext)
+showtext_auto()
+```
+
+
+```{r}
+#| label: setup
+#| message: false
+#| warning: false
+
+library(tidyverse)
+library(gt)
+library(patchwork)
+library(ggrepel)
+
+# ── 读取数据 ──────────────────────────────────────────────
+library(readxl)
+raw <- read_excel("df_24ba.xlsx")
+
+# ── 清洗与整理 ────────────────────────────────────────────
+df <- raw |>
+  rename(
+    姓名       = 姓名,
+    学号       = 学号,
+    班级       = 所属行政班,
+    开课次数   = 开课次数,
+    签到次数   = 签到次数,
+    作业项数   = 作业和测验项数,
+    作业提交数 = 作业和测验提交项数
+  ) |>
+  mutate(
+    # 原始数据为 0–1，乘 100 转为百分制
+    签到率     = 签到率     * 100,
+    作业提交率 = 作业提交率 * 100,
+    班级简称 = case_when(
+      str_detect(班级, "1$") ~ "人力资源1班",
+      str_detect(班级, "2$") ~ "人力资源2班",
+      TRUE ~ 班级
+    ),
+    综合参与度 = (签到率 + 作业提交率) / 2,
+    预警等级 = case_when(
+      综合参与度 < 50 ~ "严重预警（<50%）",
+      综合参与度 < 70 ~ "中度预警（50–70%）",
+      综合参与度 < 85 ~ "轻度预警（70–85%）",
+      TRUE            ~ "正常（≥85%）"
+    ),
+    预警等级 = factor(预警等级, levels = c(
+      "严重预警（<50%）", "中度预警（50–70%）",
+      "轻度预警（70–85%）", "正常（≥85%）"
+    ))
+  )
+
+# 颜色方案（马卡龙色）
+col_warning <- c(
+  "严重预警（<50%）"   = "#F4A7B9",   # 玫瑰粉
+  "中度预警（50–70%）" = "#FDBF8B",   # 蜜桃橙
+  "轻度预警（70–85%）" = "#FFF0A0",   # 柠檬黄
+  "正常（≥85%）"       = "#A8D8B9"    # 薄荷绿
+)
+
+# gt 表格通用样式函数
+gt_style <- function(gt_tbl) {
+  gt_tbl |>
+    tab_options(
+      table.width                        = pct(100),
+      table.border.top.style             = "solid",
+      table.border.top.width             = px(2),
+      table.border.top.color             = "#4472C4",
+      table.border.bottom.style          = "solid",
+      table.border.bottom.width          = px(2),
+      table.border.bottom.color          = "#4472C4",
+      column_labels.border.bottom.width  = px(2),
+      column_labels.border.bottom.color  = "#4472C4",
+      data_row.padding                   = px(8),
+      table.font.size                    = px(13)
+    ) |>
+    tab_style(
+      style = list(
+        cell_fill(color = "#4472C4"),
+        cell_text(color = "white", weight = "bold", size = px(13))
+      ),
+      locations = cells_column_labels()
+    )
+}
+
+# 预警表格辅助函数
+make_warn_table <- function(data, header_color, row_color, title_text) {
+  if (nrow(data) == 0) {
+    cat("✅ 无此级别预警学生。")
+    return(invisible(NULL))
+  }
+  data |>
+    select(学号, 班级简称, 签到率, 作业提交率, 综合参与度) |>
+    arrange(综合参与度) |>
+    gt() |>
+    tab_header(title = title_text) |>
+    cols_label(
+      学号       = "学号",
+      班级简称   = "班级",
+      签到率     = "签到率",
+      作业提交率 = "作业提交率",
+      综合参与度 = "综合参与度"
+    ) |>
+    fmt_number(
+      columns  = c(签到率, 作业提交率, 综合参与度),
+      decimals = 1,
+      pattern  = "{x}%"
+    ) |>
+    cols_align(align = "center") |>
+    cols_align(align = "left", columns = 学号) |>
+    tab_style(
+      style = list(
+        cell_fill(color = header_color),
+        cell_text(color = "white", weight = "bold", size = px(13))
+      ),
+      locations = cells_column_labels()
+    ) |>
+    tab_style(
+      style = cell_fill(color = row_color),
+      locations = cells_body()
+    ) |>
+    tab_options(
+      table.width                       = pct(100),
+      table.border.top.style            = "solid",
+      table.border.top.width            = px(2),
+      table.border.top.color            = header_color,
+      table.border.bottom.style         = "solid",
+      table.border.bottom.width         = px(2),
+      table.border.bottom.color         = header_color,
+      column_labels.border.bottom.width = px(2),
+      column_labels.border.bottom.color = header_color,
+      data_row.padding                  = px(8),
+      table.font.size                   = px(13)
+    )
+}
+```
+
+## 1. 总体概况
+
+- 理论课签到：10次
+
+- 理论课发布作业和测验：13项
+
+- 实验课签到：8次
+
+- 实验发布作业：14项
+
+- 补交作业：61人次
+
+```{r}
+#| label: tbl-overview
+#| echo: false
+
+tibble(
+  指标 = c(
+    "总人数",
+    "平均签到率",
+    "平均作业提交率",
+    "平均综合参与度",
+    "签到率 ≥85% 人数",
+    "作业提交率 ≥85% 人数",
+    "综合参与度 <70% 人数（需关注）"
+  ),
+  数值 = c(
+    as.character(nrow(df)),
+    sprintf("%.1f%%", mean(df$签到率,     na.rm = TRUE)),
+    sprintf("%.1f%%", mean(df$作业提交率, na.rm = TRUE)),
+    sprintf("%.1f%%", mean(df$综合参与度, na.rm = TRUE)),
+    as.character(sum(df$签到率     >= 85, na.rm = TRUE)),
+    as.character(sum(df$作业提交率 >= 85, na.rm = TRUE)),
+    as.character(sum(df$综合参与度  < 70, na.rm = TRUE))
+  )
+) |>
+  gt() |>
+  tab_header(title = "全班总体参与情况汇总") |>
+  cols_label(指标 = "指标", 数值 = "数值") |>
+  cols_align(align = "left",  columns = 指标) |>
+  cols_align(align = "right", columns = 数值) |>
+  cols_width(指标 ~ px(300), 数值 ~ px(120)) |>
+  tab_style(
+    style = list(cell_fill(color = "#FADBD8"),
+                 cell_text(weight = "bold", color = "#C0392B")),
+    locations = cells_body(rows = 7)
+  ) |>
+  tab_style(
+    style = cell_fill(color = "#F2F6FC"),
+    locations = cells_body(rows = c(1, 3, 5))
+  ) |>
+  gt_style()
+```
+
+---
+
+## 2. 分班对比
+
+```{r}
+#| label: tbl-class
+#| echo: false
+#| warning: false
+
+df |>
+  group_by(班级简称) |>
+  summarise(
+    人数             = n(),
+    签到率均值       = mean(签到率,       na.rm = TRUE),
+    签到率中位数     = median(签到率,     na.rm = TRUE),
+    作业提交率均值   = mean(作业提交率,   na.rm = TRUE),
+    作业提交率中位数 = median(作业提交率, na.rm = TRUE),
+    综合参与度均值   = mean(综合参与度,   na.rm = TRUE),
+    .groups = "drop"
+  ) |>
+  gt() |>
+  tab_header(title = "两个行政班参与情况对比") |>
+  cols_label(
+    班级简称         = "班级",
+    人数             = "人数",
+    签到率均值       = "签到率均值",
+    签到率中位数     = "签到率中位数",
+    作业提交率均值   = "作业提交率均值",
+    作业提交率中位数 = "作业提交率中位数",
+    综合参与度均值   = "综合参与度均值"
+  ) |>
+  fmt_number(
+    columns = c(签到率均值, 签到率中位数,
+                作业提交率均值, 作业提交率中位数,
+                综合参与度均值),
+    decimals = 1,
+    pattern  = "{x}%"
+  ) |>
+  cols_align(align = "center") |>
+  cols_align(align = "left", columns = 班级简称) |>
+  gt_style()
+```
+
+```{r}
+#| label: fig-class-compare
+#| fig-cap: "两班签到率与作业提交率分布对比（箱线图）"
+
+df_long <- df |>
+  select(姓名, 班级简称, 签到率, 作业提交率) |>
+  pivot_longer(c(签到率, 作业提交率), names_to = "指标", values_to = "比率")
+
+ggplot(df_long, aes(x = 班级简称, y = 比率, fill = 班级简称)) +
+  geom_boxplot(alpha = 0.6, outlier.shape = 21, outlier.size = 2) +
+  geom_jitter(width = 0.15, alpha = 0.5, size = 1.5, color = "gray30") +
+  geom_hline(yintercept = 85, linetype = "dashed",
+             color = "steelblue", linewidth = 0.8) +
+  annotate("text", x = 0.6, y = 87, label = "85% 基准线",
+           color = "steelblue", size = 3.5) +
+  facet_wrap(~指标) +
+  scale_fill_manual(values = c("人力资源1班" = "#3498DB",
+                                "人力资源2班" = "#E74C3C")) +
+  scale_y_continuous(labels = \(x) paste0(x, "%"), limits = c(0, 110)) +
+  labs(title = "两班参与情况分布对比",
+       x = NULL, y = "比率", fill = "班级") +
+  theme_bw(base_size = 13) +
+  theme(legend.position = "top", strip.text = element_text(size = 12))
+```
+
+---
+
+## 3. 签到率与作业提交率散点图
+
+```{r}
+#| label: fig-scatter
+#| fig-cap: "签到率 vs. 作业提交率散点图。颜色表示预警等级，虚线为 85% 基准线；综合参与度 <70% 的学生已标注学号。"
+#| fig-height: 6
+
+ggplot(df, aes(x = 签到率, y = 作业提交率, color = 预警等级)) +
+  geom_vline(xintercept = 85, linetype = "dashed",
+             color = "gray50", linewidth = 0.7) +
+  geom_hline(yintercept = 85, linetype = "dashed",
+             color = "gray50", linewidth = 0.7) +
+  geom_point(aes(shape = 班级简称), size = 3, alpha = 0.85) +
+  geom_text_repel(
+    data = filter(df, 综合参与度 < 70),
+    aes(label = 学号), size = 2.8, show.legend = FALSE,
+    max.overlaps = 20, box.padding = 0.4
+  ) +
+  scale_color_manual(values = col_warning) +
+  scale_x_continuous(labels = \(x) paste0(x, "%"), limits = c(0, 110)) +
+  scale_y_continuous(labels = \(x) paste0(x, "%"), limits = c(0, 115)) +
+  labs(
+    title    = "签到率 vs. 作业提交率",
+    subtitle = "综合参与度 < 70% 的学生已标注学号",
+    x = "签到率", y = "作业提交率",
+    color = "预警等级", shape = "班级"
+  ) +
+  theme_bw(base_size = 13) +
+  theme(legend.position = "right")
+```
+
+---
+
+## 4. 全班排名（综合参与度）
+
+```{r}
+#| label: fig-ranking
+#| fig-cap: "全班综合参与度排名（签到率与作业提交率的平均值），颜色表示预警等级。"
+#| fig-height: 9
+
+df |>
+  arrange(desc(综合参与度)) |>                              # ← 改为降序
+  mutate(学号 = factor(学号, levels = rev(学号))) |>        # ← levels 取反，使最高分显示在顶部
+  ggplot(aes(x = 综合参与度, y = 学号, fill = 预警等级)) +
+  geom_col(alpha = 0.85) +
+  geom_vline(xintercept = 85, linetype = "dashed",
+             color = "gray30", linewidth = 0.7) +
+  geom_text(aes(label = sprintf("%.1f%%", 综合参与度)),
+            hjust = -0.15, size = 2.8, color = "gray20") +
+  scale_fill_manual(values = col_warning) +
+  scale_x_continuous(labels = \(x) paste0(x, "%"), limits = c(0, 115)) +
+  labs(
+    title = "全班综合参与度排名",
+    x = "综合参与度（签到率与作业提交率均值）",
+    y = NULL, fill = "预警等级"
+  ) +
+  theme_bw(base_size = 11) +
+  theme(legend.position = "top",
+        axis.text.y = element_text(size = 8))
+```
+
+---
+
+## 5. 预警名单
+
+### 5.1 严重预警（综合参与度 < 50%）
+
+```{r}
+#| label: tbl-warn-severe
+#| echo: false
+
+df |>
+  filter(综合参与度 < 50) |>
+  make_warn_table(
+    header_color = "#E07A9A",
+    row_color    = "#FADBD8",
+    title_text   = "严重预警学生名单（综合参与度 < 50%）"
+  )
+```
+
+### 5.2 中度预警（综合参与度 50–70%）
+
+```{r}
+#| label: tbl-warn-medium
+#| echo: false
+
+df |>
+  filter(综合参与度 >= 50, 综合参与度 < 70) |>
+  make_warn_table(
+    header_color = "#E8955A",
+    row_color    = "#FDEBD0",
+    title_text   = "中度预警学生名单（综合参与度 50–70%）"
+  )
+```
+
+### 5.3 轻度预警（综合参与度 70–85%）
+
+```{r}
+#| label: tbl-warn-light
+#| echo: false
+
+df |>
+  filter(综合参与度 >= 70, 综合参与度 < 85) |>
+  make_warn_table(
+    header_color = "#C8A830",
+    row_color    = "#FEF9E7",
+    title_text   = "轻度预警学生名单（综合参与度 70–85%）"
+  )
+```
+
+---
+
+## 6. 理论课与实验课参与情况对比
+
+```{r}
+#| label: fig-theory-lab
+#| fig-cap: "理论课签到率与实验课签到率对比。对角线表示两者相等；偏离较远的学生在某类课程参与明显不足，已标注学号。"
+
+df2 <- df |>
+  mutate(
+    理论课签到率 = round(理论课学生签到次数 / 理论课班级开课数 * 100, 1),
+    实验课签到率 = round(实验课学生签到次数 / 实验课班级开课数 * 100, 1)
+  ) |>
+  filter(!is.na(理论课签到率), !is.na(实验课签到率))
+
+ggplot(df2, aes(x = 理论课签到率, y = 实验课签到率, color = 预警等级)) +
+  geom_abline(slope = 1, intercept = 0,
+              linetype = "dashed", color = "gray50") +
+  geom_point(aes(shape = 班级简称), size = 3, alpha = 0.85) +
+  geom_text_repel(
+    data = filter(df2, abs(理论课签到率 - 实验课签到率) > 20 |
+                       综合参与度 < 60),
+    aes(label = 学号), size = 2.8, show.legend = FALSE,
+    max.overlaps = 15, box.padding = 0.4
+  ) +
+  scale_color_manual(values = col_warning) +
+  scale_x_continuous(labels = \(x) paste0(x, "%"), limits = c(0, 115)) +
+  scale_y_continuous(labels = \(x) paste0(x, "%"), limits = c(0, 115)) +
+  labs(
+    title    = "理论课签到率 vs. 实验课签到率",
+    subtitle = "虚线为理论课 = 实验课基准线；偏离较大或预警学生已标注学号",
+    x = "理论课签到率", y = "实验课签到率",
+    color = "预警等级", shape = "班级"
+  ) +
+  theme_bw(base_size = 13) +
+  theme(legend.position = "right")
+```
+
+---
+
+## 7. 完整数据表
+
+```{r}
+#| label: tbl-full
+#| echo: false
+
+df |>
+  arrange(desc(综合参与度)) |>
+  select(学号, 班级简称, 签到率, 作业提交率, 综合参与度, 预警等级) |>
+  gt() |>
+  tab_header(title = "全班学生参与情况完整数据（按综合参与度降序排列）") |>
+  cols_label(
+    学号       = "学号",
+    班级简称   = "班级",
+    签到率     = "签到率",
+    作业提交率 = "作业提交率",
+    综合参与度 = "综合参与度",
+    预警等级   = "预警等级"
+  ) |>
+  fmt_number(
+    columns  = c(签到率, 作业提交率, 综合参与度),
+    decimals = 1,
+    pattern  = "{x}%"
+  ) |>
+  cols_align(align = "center") |>
+  cols_align(align = "left", columns = c(学号, 班级简称, 预警等级)) |>
+  tab_style(
+    style = list(cell_fill(color = "#FADBD8"),
+                 cell_text(color = "#C0392B", weight = "bold")),
+    locations = cells_body(rows = 预警等级 == "严重预警（<50%）")
+  ) |>
+  tab_style(
+    style = list(cell_fill(color = "#FDEBD0"),
+                 cell_text(color = "#CA6F1E", weight = "bold")),
+    locations = cells_body(rows = 预警等级 == "中度预警（50–70%）")
+  ) |>
+  tab_style(
+    style = cell_fill(color = "#FEF9E7"),
+    locations = cells_body(rows = 预警等级 == "轻度预警（70–85%）")
+  ) |>
+  tab_style(
+    style = cell_fill(color = "#EAFAF1"),
+    locations = cells_body(rows = 预警等级 == "正常（≥85%）")
+  ) |>
+  gt_style()
+```
