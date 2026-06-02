@@ -1,0 +1,432 @@
+---
+title: "加权最小二乘法（WLS）与普通最小二乘法（OLS）的比较"
+author: "Li Zongzhang"
+date: today
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    code-fold: true
+    fig-width: 8
+    fig-height: 5
+lang: zh
+---
+
+```{r}
+#| message: false
+#| warning: false
+#| include: false
+
+library(tidyverse)
+library(showtext)
+showtext_auto()
+
+```
+
+## 1. 引言
+
+普通最小二乘法（OLS）在经典假设下是最优线性无偏估计量（BLUE）。然而，当误差项存在**异方差**（即误差方差随解释变量的变化而变化）时，OLS 估计量虽然仍然无偏，但**不再是有效的**——存在更好的估计方法。
+
+**加权最小二乘法（WLS）** 是处理异方差的经典方法：对每个观测值赋予不同的权重，方差较小的观测值获得更大的权重，从而提高估计效率。
+
+本文通过数值模拟，直观展示 OLS 与 WLS 的差异。
+
+---
+
+## 2. 模型设定
+
+考虑如下一元线性回归模型：
+
+$$
+y_i = \beta_0 + \beta_1 x_i + \varepsilon_i, \quad i = 1, 2, \ldots, n
+$$
+
+**异方差设定**：误差项的方差随 $x_i$ 剧烈变化：
+
+$$
+\varepsilon_i \sim N\left(0,\ \sigma^2 \cdot x_i^4\right)
+$$
+
+即标准差与 $x_i^2$ 成正比。当 $x_i = 1$ 时标准差约为 2.5，当 $x_i = 10$ 时标准差高达 250，最大与最小方差之比达到 $10^4$，异方差极为剧烈。
+
+**真实参数**：$\beta_0 = 2$，$\beta_1 = 3$，$\sigma = 2.5$，$n = 40$
+
+---
+
+## 3. 数值模拟
+
+### 3.1 生成模拟数据
+
+```{r}
+#| label: setup
+#| message: false
+#| warning: false
+
+library(tidyverse)
+library(broom)
+library(knitr)
+library(kableExtra)
+library(patchwork)
+
+# 设置随机种子，保证结果可复现
+set.seed(7)
+
+# 真实参数
+beta0 <- 2
+beta1 <- 3
+sigma <- 2.5   # 较大噪声，使异方差效果更显著
+n     <- 40    # 较小样本量，使单次估计波动更明显
+
+# 生成解释变量：在 [1, 10] 上均匀分布
+x <- runif(n, min = 1, max = 10)
+
+# 异方差误差：Var(εᵢ) = σ² · xᵢ⁴，即 sd = σ · xᵢ²
+# x=1 时 sd≈2.5，x=10 时 sd≈250，方差比高达 10000 倍
+epsilon <- rnorm(n, mean = 0, sd = sigma * x^2)
+
+# 生成因变量
+y <- beta0 + beta1 * x + epsilon
+
+# 整理为数据框
+df <- tibble(x = x, y = y)
+```
+
+### 3.2 散点图：观察异方差
+
+```{r}
+#| label: fig-scatter
+#| fig-cap: "散点图：随着 x 增大，y 的波动（方差）急剧增加，呈现极强的异方差现象。"
+
+ggplot(df, aes(x = x, y = y)) +
+  geom_point(alpha = 0.7, color = "steelblue", size = 2.5) +
+  geom_abline(intercept = beta0, slope = beta1,
+              color = "black", linewidth = 1.2, linetype = "dashed") +
+  annotate("text", x = 1.2, y = max(y) * 0.92,
+           label = "真实回归线", color = "black", size = 4, hjust = 0) +
+  labs(
+    title    = "模拟数据散点图（强异方差）",
+    subtitle = paste0("Var(εᵢ) = σ²·xᵢ⁴，n = ", n, "，σ = ", sigma),
+    x = "x", y = "y"
+  ) +
+  theme_bw(base_size = 13)
+```
+
+---
+
+## 4. OLS 与 WLS 估计
+
+### 4.1 OLS 估计
+
+OLS 对所有观测值赋予**相同权重**，最小化残差平方和：
+
+$$
+\hat{\boldsymbol{\beta}}_{OLS} = \arg\min \sum_{i=1}^n (y_i - \beta_0 - \beta_1 x_i)^2
+$$
+
+在强异方差情形下，右端（$x$ 大）的点波动极大，OLS 会被这些高方差点**过度影响**，导致估计偏离真实值。
+
+```{r}
+#| label: ols-fit
+#| code-fold: false
+
+fit_ols <- lm(y ~ x, data = df)
+summary(fit_ols)
+```
+
+### 4.2 WLS 估计
+
+WLS 对每个观测值赋予**不同权重**，最小化加权残差平方和：
+
+$$
+\hat{\boldsymbol{\beta}}_{WLS} = \arg\min \sum_{i=1}^n w_i (y_i - \beta_0 - \beta_1 x_i)^2
+$$
+
+已知方差结构 $\text{Var}(\varepsilon_i) = \sigma^2 x_i^4$，最优权重为：
+
+$$
+w_i = \frac{1}{\text{Var}(\varepsilon_i)} = \frac{1}{x_i^4}
+$$
+
+这样，右端高方差的点权重极小（不被过度利用），左端低方差的点权重大（充分利用可靠信息）。
+
+```{r}
+#| label: wls-fit
+#| code-fold: false
+
+# 最优权重：wᵢ = 1 / xᵢ⁴（与方差结构匹配）
+fit_wls <- lm(y ~ x, data = df, weights = 1 / x^4)
+summary(fit_wls)
+```
+
+### 4.3 单次估计系数对比
+
+```{r}
+#| label: tbl-coef-single
+#| tbl-cap: "单次模拟的 OLS 与 WLS 系数估计（真实值：β₀ = 2，β₁ = 3）"
+
+coef_ols <- tidy(fit_ols) |> mutate(方法 = "OLS")
+coef_wls <- tidy(fit_wls) |> mutate(方法 = "WLS")
+
+bind_rows(coef_ols, coef_wls) |>
+  mutate(
+    term   = recode(term, "(Intercept)" = "截距 β₀", "x" = "斜率 β₁"),
+    真实值 = ifelse(term == "截距 β₀", beta0, beta1),
+    偏差   = round(estimate - 真实值, 4)
+  ) |>
+  select(方法, 参数 = term, 真实值,
+         估计值 = estimate, 偏差,
+         标准误 = std.error,
+         t统计量 = statistic, p值 = p.value) |>
+  kable(digits = 4, align = "c") |>
+  kable_styling(
+    bootstrap_options = c("striped", "hover", "condensed"),
+    full_width = FALSE
+  ) |>
+  row_spec(0, bold = TRUE, background = "#4472C4", color = "white")
+```
+
+> **注意**：单次估计可能因随机波动出现 OLS 比 WLS 更准的情况。判断估计量优劣应依据**多次重复试验的平均表现**，见第 5 节蒙特卡洛模拟。
+
+---
+
+## 5. 蒙特卡洛模拟：评估估计量的有效性
+
+单次模拟带有随机性，无法准确反映估计量的统计性质。通过 **1000 次重复模拟**，我们可以系统评估两种估计量的无偏性与有效性。
+
+```{r}
+#| label: monte-carlo
+#| cache: true
+
+set.seed(2024)
+B <- 1000
+
+results <- map_dfr(1:B, function(b) {
+  x_b   <- runif(n, 1, 10)
+  eps_b <- rnorm(n, 0, sigma * x_b^2)
+  y_b   <- beta0 + beta1 * x_b + eps_b
+
+  ols_b <- lm(y_b ~ x_b)
+  wls_b <- lm(y_b ~ x_b, weights = 1 / x_b^4)
+
+  tibble(
+    sim    = b,
+    ols_b0 = coef(ols_b)[1],
+    ols_b1 = coef(ols_b)[2],
+    wls_b0 = coef(wls_b)[1],
+    wls_b1 = coef(wls_b)[2]
+  )
+})
+```
+
+### 5.1 拟合直线对比图（基于 1000 次模拟均值）
+
+单次估计可能因随机波动产生误导。这里用 1000 次模拟的**平均系数**画拟合线，能够客观反映两种方法的系统性差异。
+
+```{r}
+#| label: fig-fit
+#| fig-cap: "OLS 与 WLS 拟合直线对比（拟合线采用 1000 次模拟的平均系数）。OLS 平均斜率高估真实值；WLS 平均斜率更接近真实值 β₁ = 3，体现了 WLS 在异方差下的优越性。"
+
+# 使用蒙特卡洛平均系数，消除单次随机波动的影响
+b0_ols <- mean(results$ols_b0); b1_ols <- mean(results$ols_b1)
+b0_wls <- mean(results$wls_b0); b1_wls <- mean(results$wls_b1)
+
+ggplot(df, aes(x = x, y = y)) +
+  geom_point(alpha = 0.55, color = "gray50", size = 2) +
+  geom_abline(aes(intercept = beta0,  slope = beta1,
+                  color = "真实回归线", linetype = "真实回归线"),
+              linewidth = 1.3) +
+  geom_abline(aes(intercept = b0_ols, slope = b1_ols,
+                  color = "OLS", linetype = "OLS"),
+              linewidth = 1.1) +
+  geom_abline(aes(intercept = b0_wls, slope = b1_wls,
+                  color = "WLS", linetype = "WLS"),
+              linewidth = 1.1) +
+  annotate("text", x = 7.8, y = beta0 + beta1 * 7.8 + 100,
+           label = sprintf("真实值:   β₁ = %.2f", beta1),
+           color = "black",   size = 3.8, hjust = 0, fontface = "bold") +
+  annotate("text", x = 7.8, y = beta0 + beta1 * 7.8 + 60,
+           label = sprintf("OLS 均值: β₁ = %.2f", b1_ols),
+           color = "#E74C3C", size = 3.8, hjust = 0, fontface = "bold") +
+  annotate("text", x = 7.8, y = beta0 + beta1 * 7.8 + 20,
+           label = sprintf("WLS 均值: β₁ = %.2f", b1_wls),
+           color = "#27AE60", size = 3.8, hjust = 0, fontface = "bold") +
+  scale_color_manual(
+    name   = "方法",
+    values = c("真实回归线" = "black", "OLS" = "#E74C3C", "WLS" = "#27AE60"),
+    breaks = c("真实回归线", "OLS", "WLS")
+  ) +
+  scale_linetype_manual(
+    name   = "方法",
+    values = c("真实回归线" = "dashed", "OLS" = "solid", "WLS" = "solid"),
+    breaks = c("真实回归线", "OLS", "WLS")
+  ) +
+  labs(
+    title    = "OLS 与 WLS 拟合直线对比（基于 1000 次模拟均值）",
+    subtitle = "两者均无偏，但 OLS 斜率平均偏高；WLS 斜率平均更贴近真实值",
+    x = "x", y = "y"
+  ) +
+  theme_bw(base_size = 13) +
+  theme(legend.position = "top")
+```
+
+### 5.2 估计量分布对比（斜率 $\hat{\beta}_1$）
+
+```{r}
+#| label: fig-dist
+#| fig-cap: "1000 次模拟中 β₁ 的估计值分布。两种方法均无偏（分布中心都在真实值附近），但 WLS 的分布更集中（标准差更小），说明 WLS 更有效。"
+
+results_long <- results |>
+  select(sim, ols_b1, wls_b1) |>
+  pivot_longer(-sim, names_to = "method", values_to = "beta1_hat") |>
+  mutate(method = recode(method, "ols_b1" = "OLS", "wls_b1" = "WLS"))
+
+# 各方法标准差，用于图内标注
+sd_ols <- sd(results$ols_b1)
+sd_wls <- sd(results$wls_b1)
+
+ggplot(results_long, aes(x = beta1_hat, fill = method, color = method)) +
+  geom_density(alpha = 0.35, linewidth = 1) +
+  geom_vline(xintercept = beta1, linetype = "dashed",
+             linewidth = 1.1, color = "black") +
+  annotate("text", x = beta1 + 0.15, y = Inf,
+           label = paste0("真实值 β₁ = ", beta1),
+           vjust = 2, hjust = 0, size = 3.8, color = "black") +
+  annotate("text", x = beta1 + 2, y = 0.25,
+           label = sprintf("OLS SD = %.3f", sd_ols),
+           color = "#E74C3C", size = 3.8, hjust = 0) +
+  annotate("text", x = beta1 + 2, y = 0.20,
+           label = sprintf("WLS SD = %.3f", sd_wls),
+           color = "#27AE60", size = 3.8, hjust = 0) +
+  scale_fill_manual(values  = c("OLS" = "#E74C3C", "WLS" = "#27AE60")) +
+  scale_color_manual(values = c("OLS" = "#E74C3C", "WLS" = "#27AE60")) +
+  labs(
+    title    = "β₁ 估计量的抽样分布（1000 次模拟）",
+    subtitle = "两者均无偏，但 WLS 方差更小（分布更集中）",
+    x        = expression(hat(beta)[1]),
+    y        = "密度",
+    fill     = "方法",
+    color    = "方法"
+  ) +
+  theme_bw(base_size = 13) +
+  theme(legend.position = "top")
+```
+
+### 5.3 均值、标准差与均方误差（MSE）汇总
+
+```{r}
+#| label: tbl-mse
+#| tbl-cap: "1000 次模拟的估计量统计性质汇总（真实值：β₀ = 2，β₁ = 3）"
+
+summary_stats <- tibble(
+  方法        = c("OLS", "WLS"),
+  `β₀ 均值`  = c(mean(results$ols_b0), mean(results$wls_b0)),
+  `β₀ 标准差`= c(sd(results$ols_b0),   sd(results$wls_b0)),
+  `β₀ MSE`   = c(mean((results$ols_b0 - beta0)^2),
+                  mean((results$wls_b0 - beta0)^2)),
+  `β₁ 均值`  = c(mean(results$ols_b1), mean(results$wls_b1)),
+  `β₁ 标准差`= c(sd(results$ols_b1),   sd(results$wls_b1)),
+  `β₁ MSE`   = c(mean((results$ols_b1 - beta1)^2),
+                  mean((results$wls_b1 - beta1)^2))
+)
+
+kable(summary_stats, digits = 4, align = "c") |>
+  kable_styling(
+    bootstrap_options = c("striped", "hover"),
+    full_width = FALSE
+  ) |>
+  row_spec(0, bold = TRUE, background = "#4472C4", color = "white") |>
+  add_header_above(
+    c(" " = 1, "截距 β₀" = 3, "斜率 β₁" = 3),
+    bold = TRUE
+  )
+```
+
+> **解读**：两种方法的均值都非常接近真实参数（**无偏性**），但 WLS 的**标准差和 MSE 均明显小于 OLS**，印证了在异方差下 WLS 是更**有效**的估计量。
+
+---
+
+## 6. 残差分析
+
+异方差的重要诊断工具是**残差图**。
+
+```{r}
+#| label: fig-resid
+#| fig-cap: "残差诊断图。OLS 残差呈现典型「扇形」（方差随拟合值增大而增大）；WLS 加权残差则更为均匀，说明 WLS 成功矫正了异方差。"
+#| fig-height: 6
+
+p1 <- ggplot(
+  data.frame(fitted = fitted(fit_ols), resid = resid(fit_ols)),
+  aes(x = fitted, y = resid)
+) +
+  geom_point(alpha = 0.6, color = "#E74C3C", size = 2) +
+  geom_hline(yintercept = 0, linetype = "dashed", linewidth = 0.8) +
+  geom_smooth(se = FALSE, color = "darkred",
+              linewidth = 0.8, method = "loess", formula = y ~ x) +
+  labs(
+    title    = "OLS 残差图",
+    subtitle = "残差方差随拟合值增大（扇形）",
+    x = "拟合值", y = "残差"
+  ) +
+  theme_bw(base_size = 12)
+
+# WLS 加权残差 = 残差 / xᵢ²（还原为等方差尺度）
+p2 <- ggplot(
+  data.frame(fitted = fitted(fit_wls), resid = resid(fit_wls) / x^2),
+  aes(x = fitted, y = resid)
+) +
+  geom_point(alpha = 0.6, color = "#27AE60", size = 2) +
+  geom_hline(yintercept = 0, linetype = "dashed", linewidth = 0.8) +
+  geom_smooth(se = FALSE, color = "darkgreen",
+              linewidth = 0.8, method = "loess", formula = y ~ x) +
+  labs(
+    title    = "WLS 加权残差图",
+    subtitle = "加权残差分布均匀，异方差得到矫正",
+    x = "拟合值", y = "加权残差"
+  ) +
+  theme_bw(base_size = 12)
+
+p1 + p2
+```
+
+---
+
+## 7. 关键结论
+
+```{r}
+#| label: tbl-conclusion
+#| echo: false
+#| tbl-cap: "OLS 与 WLS 方法核心对比"
+
+tibble(
+  比较维度            = c("基本假设", "目标函数", "权重设定",
+                         "无偏性", "有效性（异方差下）", "适用场景"),
+  OLS                = c("同方差", "∑ εᵢ²", "全部为 1",
+                         "✓ 无偏", "✗ 非最有效",
+                         "误差方差恒定"),
+  WLS                = c("允许异方差", "∑ wᵢεᵢ²", "wᵢ = 1/σᵢ²",
+                         "✓ 无偏", "✓ 高斯-马尔科夫最优",
+                         "误差方差已知或可估计")
+) |>
+  kable(align = "c") |>
+  kable_styling(
+    bootstrap_options = c("striped", "hover"),
+    full_width = FALSE
+  ) |>
+  row_spec(0, bold = TRUE, background = "#4472C4", color = "white")
+```
+
+> **核心要点**：
+>
+> 1. **无偏性**：OLS 和 WLS 都是无偏估计量，在多次重复试验中均值都收敛到真实参数。
+> 2. **有效性**：在异方差存在时，WLS 的**方差（标准误）更小**，是更有效的估计量；OLS 被高方差的观测值"拖累"，估计的不确定性更大。
+> 3. **单次 vs. 平均**：单次模拟中 OLS 偶尔可能比 WLS 更接近真实值，这是正常的随机波动。判断估计量优劣的标准是**多次重复的平均表现（MSE）**，而非单次结果。
+> 4. **权重的作用**：WLS 通过给低方差点赋予更大权重，充分利用"可靠"的信息，降低了估计的不确定性。
+> 5. **实践中的挑战**：WLS 需要**正确知道方差结构**。
+
+---
+
+## 参考资料
+
+- Greene, W. H. (2018). *Econometric Analysis* (8th ed.). Pearson.
+- Wooldridge, J. M. (2020). *Introductory Econometrics: A Modern Approach* (7th ed.). Cengage.
+- R Core Team (2024). *R: A Language and Environment for Statistical Computing*.

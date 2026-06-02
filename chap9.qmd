@@ -85,3 +85,9 @@ title: "第9章"
 </details>    
 
 
+# 拓展资源
+
+<img src="img/link.png" style="width: 24px; height: 24px;margin-right: 10px">[OLS与WLS比较](https://lizongzhang.github.io/emetrics26/wls_vs_ols.html){target="_blank"}
+
+
+
