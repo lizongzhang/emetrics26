@@ -19,17 +19,13 @@ title: "第10章"
 
 # R教学视频
 
-<img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px">[回归模型的比较------受限模型的F检验](https://www.bilibili.com/video/BV1tg411a7ut){target="_blank"}
+<img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px">[自相关诊断：残差的图形诊断](https://www.bilibili.com/video/BV1NA411973f){target="_blank"}
 
-<img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px">[自相关的图形诊断]<to be updated>
+<img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px">[回归方程的自相关诊断：DW检验和BG检验](https://www.bilibili.com/video/BV1bV4y1w757/){target="_blank"}
 
-<img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px">[Durbin-Watson检验在R的实现]<to be updated>
+<img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px">[自相关的补救：广义差分方程的估计](https://www.bilibili.com/video/BV1z8411V7mc){target="_blank"}
 
-<img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px">[一阶差分在R的实现]<to be updated>
-
-<img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px">[广义差分在R的实现\]<to be updated>
-
-<img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px">[Newey-West校正后的标准误]<to be updated>
+<img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px">[Newey-West校正后的标准误](https://www.bilibili.com/video/BV1we4y1M7cs){target="_blank"}
 
 
 # 习题讲评视频

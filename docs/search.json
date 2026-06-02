@@ -711,7 +711,7 @@
     "href": "chap10.html",
     "title": "第10章",
     "section": "",
-    "text": "第10章 自相关\n讲义\n\n\nEviews操作\nEviews 自相关的图形诊断\nEviews 自相关LM检验\nEviews 广义差分变换\nEviews 自相关下标准误的Neway-West校正\n\n\nR教学视频\n回归模型的比较——受限模型的F检验\n[自相关的图形诊断]\n[Durbin-Watson检验在R的实现]\n[一阶差分在R的实现]\n[广义差分在R的实现]\n[Newey-West校正后的标准误]\n\n\n习题讲评视频\n教材习题10.10\n教材习题10.12\n教材习题10.13\n教材习题10.17\n教材习题10.21"
+    "text": "第10章 自相关\n讲义\n\n\nEviews操作\nEviews 自相关的图形诊断\nEviews 自相关LM检验\nEviews 广义差分变换\nEviews 自相关下标准误的Neway-West校正\n\n\nR教学视频\n自相关诊断：残差的图形诊断\n回归方程的自相关诊断：DW检验和BG检验\n自相关的补救：广义差分方程的估计\nNewey-West校正后的标准误\n\n\n习题讲评视频\n教材习题10.10\n教材习题10.12\n教材习题10.13\n教材习题10.17\n教材习题10.21"
   },
   {
     "objectID": "chap5slide.html",
