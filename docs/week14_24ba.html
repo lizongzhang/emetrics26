@@ -271,8 +271,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>    签到率     <span class="ot">=</span> 签到率     <span class="sc">*</span> <span class="dv">100</span>,</span>
 <span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>    作业提交率 <span class="ot">=</span> 作业提交率 <span class="sc">*</span> <span class="dv">100</span>,</span>
 <span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>    班级简称 <span class="ot">=</span> <span class="fu">case_when</span>(</span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>      <span class="fu">str_detect</span>(班级, <span class="st">"1$"</span>) <span class="sc">~</span> <span class="st">"人力资源1班"</span>,</span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>      <span class="fu">str_detect</span>(班级, <span class="st">"2$"</span>) <span class="sc">~</span> <span class="st">"人力资源2班"</span>,</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>      <span class="fu">str_detect</span>(班级, <span class="st">"1$"</span>) <span class="sc">~</span> <span class="st">"工商管理1班"</span>,</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>      <span class="fu">str_detect</span>(班级, <span class="st">"2$"</span>) <span class="sc">~</span> <span class="st">"工商管理2班"</span>,</span>
 <span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>      <span class="cn">TRUE</span> <span class="sc">~</span> 班级</span>
 <span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>    ),</span>
 <span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>    综合参与度 <span class="ot">=</span> (签到率 <span class="sc">+</span> 作业提交率) <span class="sc">/</span> <span class="dv">2</span>,</span>
@@ -384,23 +384,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 <div id="tbl-overview" class="cell anchored">
 <div class="cell-output-display">
-<div id="xdwtvokcyn" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#xdwtvokcyn table {
+<div id="zqtbmipnln" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#zqtbmipnln table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#xdwtvokcyn thead, #xdwtvokcyn tbody, #xdwtvokcyn tfoot, #xdwtvokcyn tr, #xdwtvokcyn td, #xdwtvokcyn th {
+#zqtbmipnln thead, #zqtbmipnln tbody, #zqtbmipnln tfoot, #zqtbmipnln tr, #zqtbmipnln td, #zqtbmipnln th {
   border-style: none;
 }
 
-#xdwtvokcyn p {
+#zqtbmipnln p {
   margin: 0;
   padding: 0;
 }
 
-#xdwtvokcyn .gt_table {
+#zqtbmipnln .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -426,12 +426,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-left-color: #D3D3D3;
 }
 
-#xdwtvokcyn .gt_caption {
+#zqtbmipnln .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#xdwtvokcyn .gt_title {
+#zqtbmipnln .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -443,7 +443,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-width: 0;
 }
 
-#xdwtvokcyn .gt_subtitle {
+#zqtbmipnln .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -455,7 +455,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-top-width: 0;
 }
 
-#xdwtvokcyn .gt_heading {
+#zqtbmipnln .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -467,13 +467,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#xdwtvokcyn .gt_bottom_border {
+#zqtbmipnln .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#xdwtvokcyn .gt_col_headings {
+#zqtbmipnln .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -488,7 +488,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#xdwtvokcyn .gt_col_heading {
+#zqtbmipnln .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -508,7 +508,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   overflow-x: hidden;
 }
 
-#xdwtvokcyn .gt_column_spanner_outer {
+#zqtbmipnln .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -520,15 +520,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 4px;
 }
 
-#xdwtvokcyn .gt_column_spanner_outer:first-child {
+#zqtbmipnln .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#xdwtvokcyn .gt_column_spanner_outer:last-child {
+#zqtbmipnln .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#xdwtvokcyn .gt_column_spanner {
+#zqtbmipnln .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #4472C4;
@@ -540,11 +540,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   width: 100%;
 }
 
-#xdwtvokcyn .gt_spanner_row {
+#zqtbmipnln .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#xdwtvokcyn .gt_group_heading {
+#zqtbmipnln .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -570,7 +570,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   text-align: left;
 }
 
-#xdwtvokcyn .gt_empty_group_heading {
+#zqtbmipnln .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -585,15 +585,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   vertical-align: middle;
 }
 
-#xdwtvokcyn .gt_from_md > :first-child {
+#zqtbmipnln .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#xdwtvokcyn .gt_from_md > :last-child {
+#zqtbmipnln .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#xdwtvokcyn .gt_row {
+#zqtbmipnln .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -612,7 +612,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   overflow-x: hidden;
 }
 
-#xdwtvokcyn .gt_stub {
+#zqtbmipnln .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -625,7 +625,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#xdwtvokcyn .gt_stub_row_group {
+#zqtbmipnln .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -639,15 +639,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   vertical-align: top;
 }
 
-#xdwtvokcyn .gt_row_group_first td {
+#zqtbmipnln .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#xdwtvokcyn .gt_row_group_first th {
+#zqtbmipnln .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#xdwtvokcyn .gt_summary_row {
+#zqtbmipnln .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -657,16 +657,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#xdwtvokcyn .gt_first_summary_row {
+#zqtbmipnln .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#xdwtvokcyn .gt_first_summary_row.thick {
+#zqtbmipnln .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#xdwtvokcyn .gt_last_summary_row {
+#zqtbmipnln .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -676,7 +676,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#xdwtvokcyn .gt_grand_summary_row {
+#zqtbmipnln .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -686,7 +686,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#xdwtvokcyn .gt_first_grand_summary_row {
+#zqtbmipnln .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -696,7 +696,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-top-color: #D3D3D3;
 }
 
-#xdwtvokcyn .gt_last_grand_summary_row_top {
+#zqtbmipnln .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -706,11 +706,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#xdwtvokcyn .gt_striped {
+#zqtbmipnln .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#xdwtvokcyn .gt_table_body {
+#zqtbmipnln .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -719,7 +719,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#xdwtvokcyn .gt_footnotes {
+#zqtbmipnln .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -733,7 +733,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#xdwtvokcyn .gt_footnote {
+#zqtbmipnln .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -742,7 +742,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#xdwtvokcyn .gt_sourcenotes {
+#zqtbmipnln .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -756,7 +756,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#xdwtvokcyn .gt_sourcenote {
+#zqtbmipnln .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -764,72 +764,72 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#xdwtvokcyn .gt_left {
+#zqtbmipnln .gt_left {
   text-align: left;
 }
 
-#xdwtvokcyn .gt_center {
+#zqtbmipnln .gt_center {
   text-align: center;
 }
 
-#xdwtvokcyn .gt_right {
+#zqtbmipnln .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#xdwtvokcyn .gt_font_normal {
+#zqtbmipnln .gt_font_normal {
   font-weight: normal;
 }
 
-#xdwtvokcyn .gt_font_bold {
+#zqtbmipnln .gt_font_bold {
   font-weight: bold;
 }
 
-#xdwtvokcyn .gt_font_italic {
+#zqtbmipnln .gt_font_italic {
   font-style: italic;
 }
 
-#xdwtvokcyn .gt_super {
+#zqtbmipnln .gt_super {
   font-size: 65%;
 }
 
-#xdwtvokcyn .gt_footnote_marks {
+#zqtbmipnln .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#xdwtvokcyn .gt_asterisk {
+#zqtbmipnln .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#xdwtvokcyn .gt_indent_1 {
+#zqtbmipnln .gt_indent_1 {
   text-indent: 5px;
 }
 
-#xdwtvokcyn .gt_indent_2 {
+#zqtbmipnln .gt_indent_2 {
   text-indent: 10px;
 }
 
-#xdwtvokcyn .gt_indent_3 {
+#zqtbmipnln .gt_indent_3 {
   text-indent: 15px;
 }
 
-#xdwtvokcyn .gt_indent_4 {
+#zqtbmipnln .gt_indent_4 {
   text-indent: 20px;
 }
 
-#xdwtvokcyn .gt_indent_5 {
+#zqtbmipnln .gt_indent_5 {
   text-indent: 25px;
 }
 
-#xdwtvokcyn .katex-display {
+#zqtbmipnln .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#xdwtvokcyn div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#zqtbmipnln div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -885,23 +885,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="分班对比">2. 分班对比</h2>
 <div id="tbl-class" class="cell anchored">
 <div class="cell-output-display">
-<div id="zrexfkcrlg" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#zrexfkcrlg table {
+<div id="hsxnfghzzj" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#hsxnfghzzj table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#zrexfkcrlg thead, #zrexfkcrlg tbody, #zrexfkcrlg tfoot, #zrexfkcrlg tr, #zrexfkcrlg td, #zrexfkcrlg th {
+#hsxnfghzzj thead, #hsxnfghzzj tbody, #hsxnfghzzj tfoot, #hsxnfghzzj tr, #hsxnfghzzj td, #hsxnfghzzj th {
   border-style: none;
 }
 
-#zrexfkcrlg p {
+#hsxnfghzzj p {
   margin: 0;
   padding: 0;
 }
 
-#zrexfkcrlg .gt_table {
+#hsxnfghzzj .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -927,12 +927,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-left-color: #D3D3D3;
 }
 
-#zrexfkcrlg .gt_caption {
+#hsxnfghzzj .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#zrexfkcrlg .gt_title {
+#hsxnfghzzj .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -944,7 +944,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-width: 0;
 }
 
-#zrexfkcrlg .gt_subtitle {
+#hsxnfghzzj .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -956,7 +956,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-top-width: 0;
 }
 
-#zrexfkcrlg .gt_heading {
+#hsxnfghzzj .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -968,13 +968,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#zrexfkcrlg .gt_bottom_border {
+#hsxnfghzzj .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#zrexfkcrlg .gt_col_headings {
+#hsxnfghzzj .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -989,7 +989,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#zrexfkcrlg .gt_col_heading {
+#hsxnfghzzj .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1009,7 +1009,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   overflow-x: hidden;
 }
 
-#zrexfkcrlg .gt_column_spanner_outer {
+#hsxnfghzzj .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1021,15 +1021,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 4px;
 }
 
-#zrexfkcrlg .gt_column_spanner_outer:first-child {
+#hsxnfghzzj .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#zrexfkcrlg .gt_column_spanner_outer:last-child {
+#hsxnfghzzj .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#zrexfkcrlg .gt_column_spanner {
+#hsxnfghzzj .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #4472C4;
@@ -1041,11 +1041,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   width: 100%;
 }
 
-#zrexfkcrlg .gt_spanner_row {
+#hsxnfghzzj .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#zrexfkcrlg .gt_group_heading {
+#hsxnfghzzj .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1071,7 +1071,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   text-align: left;
 }
 
-#zrexfkcrlg .gt_empty_group_heading {
+#hsxnfghzzj .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1086,15 +1086,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   vertical-align: middle;
 }
 
-#zrexfkcrlg .gt_from_md > :first-child {
+#hsxnfghzzj .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#zrexfkcrlg .gt_from_md > :last-child {
+#hsxnfghzzj .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#zrexfkcrlg .gt_row {
+#hsxnfghzzj .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1113,7 +1113,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   overflow-x: hidden;
 }
 
-#zrexfkcrlg .gt_stub {
+#hsxnfghzzj .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1126,7 +1126,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#zrexfkcrlg .gt_stub_row_group {
+#hsxnfghzzj .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1140,15 +1140,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   vertical-align: top;
 }
 
-#zrexfkcrlg .gt_row_group_first td {
+#hsxnfghzzj .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#zrexfkcrlg .gt_row_group_first th {
+#hsxnfghzzj .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#zrexfkcrlg .gt_summary_row {
+#hsxnfghzzj .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1158,16 +1158,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#zrexfkcrlg .gt_first_summary_row {
+#hsxnfghzzj .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#zrexfkcrlg .gt_first_summary_row.thick {
+#hsxnfghzzj .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#zrexfkcrlg .gt_last_summary_row {
+#hsxnfghzzj .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1177,7 +1177,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#zrexfkcrlg .gt_grand_summary_row {
+#hsxnfghzzj .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1187,7 +1187,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#zrexfkcrlg .gt_first_grand_summary_row {
+#hsxnfghzzj .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1197,7 +1197,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-top-color: #D3D3D3;
 }
 
-#zrexfkcrlg .gt_last_grand_summary_row_top {
+#hsxnfghzzj .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1207,11 +1207,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#zrexfkcrlg .gt_striped {
+#hsxnfghzzj .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#zrexfkcrlg .gt_table_body {
+#hsxnfghzzj .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1220,7 +1220,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#zrexfkcrlg .gt_footnotes {
+#hsxnfghzzj .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1234,7 +1234,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#zrexfkcrlg .gt_footnote {
+#hsxnfghzzj .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1243,7 +1243,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#zrexfkcrlg .gt_sourcenotes {
+#hsxnfghzzj .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1257,7 +1257,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#zrexfkcrlg .gt_sourcenote {
+#hsxnfghzzj .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1265,72 +1265,72 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#zrexfkcrlg .gt_left {
+#hsxnfghzzj .gt_left {
   text-align: left;
 }
 
-#zrexfkcrlg .gt_center {
+#hsxnfghzzj .gt_center {
   text-align: center;
 }
 
-#zrexfkcrlg .gt_right {
+#hsxnfghzzj .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#zrexfkcrlg .gt_font_normal {
+#hsxnfghzzj .gt_font_normal {
   font-weight: normal;
 }
 
-#zrexfkcrlg .gt_font_bold {
+#hsxnfghzzj .gt_font_bold {
   font-weight: bold;
 }
 
-#zrexfkcrlg .gt_font_italic {
+#hsxnfghzzj .gt_font_italic {
   font-style: italic;
 }
 
-#zrexfkcrlg .gt_super {
+#hsxnfghzzj .gt_super {
   font-size: 65%;
 }
 
-#zrexfkcrlg .gt_footnote_marks {
+#hsxnfghzzj .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#zrexfkcrlg .gt_asterisk {
+#hsxnfghzzj .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#zrexfkcrlg .gt_indent_1 {
+#hsxnfghzzj .gt_indent_1 {
   text-indent: 5px;
 }
 
-#zrexfkcrlg .gt_indent_2 {
+#hsxnfghzzj .gt_indent_2 {
   text-indent: 10px;
 }
 
-#zrexfkcrlg .gt_indent_3 {
+#hsxnfghzzj .gt_indent_3 {
   text-indent: 15px;
 }
 
-#zrexfkcrlg .gt_indent_4 {
+#hsxnfghzzj .gt_indent_4 {
   text-indent: 20px;
 }
 
-#zrexfkcrlg .gt_indent_5 {
+#hsxnfghzzj .gt_indent_5 {
   text-indent: 25px;
 }
 
-#zrexfkcrlg .katex-display {
+#hsxnfghzzj .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#zrexfkcrlg div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#hsxnfghzzj div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -1352,7 +1352,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </thead>
 <tbody class="gt_table_body">
 <tr class="odd">
-<td class="gt_row gt_left" headers="班级简称">人力资源1班</td>
+<td class="gt_row gt_left" headers="班级简称">工商管理1班</td>
 <td class="gt_row gt_center" headers="人数">33</td>
 <td class="gt_row gt_center" headers="签到率均值">89.2%</td>
 <td class="gt_row gt_center" headers="签到率中位数">94.4%</td>
@@ -1361,7 +1361,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td class="gt_row gt_center" headers="综合参与度均值">84.2%</td>
 </tr>
 <tr class="even">
-<td class="gt_row gt_left" headers="班级简称">人力资源2班</td>
+<td class="gt_row gt_left" headers="班级简称">工商管理2班</td>
 <td class="gt_row gt_center" headers="人数">29</td>
 <td class="gt_row gt_center" headers="签到率均值">87.4%</td>
 <td class="gt_row gt_center" headers="签到率中位数">88.9%</td>
@@ -1390,18 +1390,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x =</span> <span class="fl">0.6</span>, <span class="at">y =</span> <span class="dv">87</span>, <span class="at">label =</span> <span class="st">"85% 基准线"</span>,</span>
 <span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>           <span class="at">color =</span> <span class="st">"steelblue"</span>, <span class="at">size =</span> <span class="fl">3.5</span>) <span class="sc">+</span></span>
 <span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>指标) <span class="sc">+</span></span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"人力资源1班"</span> <span class="ot">=</span> <span class="st">"#3498DB"</span>,</span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>                                <span class="st">"人力资源2班"</span> <span class="ot">=</span> <span class="st">"#E74C3C"</span>)) <span class="sc">+</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"工商管理1班"</span> <span class="ot">=</span> <span class="st">"#3498DB"</span>,</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>                                <span class="st">"工商管理2班"</span> <span class="ot">=</span> <span class="st">"#E74C3C"</span>)) <span class="sc">+</span></span>
 <span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">labels =</span> \(x) <span class="fu">paste0</span>(x, <span class="st">"%"</span>), <span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">110</span>)) <span class="sc">+</span></span>
 <span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"两班参与情况分布对比"</span>,</span>
 <span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="cn">NULL</span>, <span class="at">y =</span> <span class="st">"比率"</span>, <span class="at">fill =</span> <span class="st">"班级"</span>) <span class="sc">+</span></span>
 <span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>(<span class="at">base_size =</span> <span class="dv">13</span>) <span class="sc">+</span></span>
 <span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"top"</span>, <span class="at">strip.text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">12</span>))</span></code><button title="复制到剪贴板" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: Removed 1 row containing missing values or values outside the scale range
-(`geom_point()`).</code></pre>
-</div>
 <div class="cell-output-display">
 <div id="fig-class-compare" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
@@ -1422,28 +1418,28 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell">
 <details class="code-fold">
 <summary>代码</summary>
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(df, <span class="fu">aes</span>(<span class="at">x =</span> 签到率, <span class="at">y =</span> 作业提交率, <span class="at">color =</span> 预警等级)) <span class="sc">+</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="dv">85</span>, <span class="at">linetype =</span> <span class="st">"dashed"</span>,</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>             <span class="at">color =</span> <span class="st">"gray50"</span>, <span class="at">linewidth =</span> <span class="fl">0.7</span>) <span class="sc">+</span></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="dv">85</span>, <span class="at">linetype =</span> <span class="st">"dashed"</span>,</span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>             <span class="at">color =</span> <span class="st">"gray50"</span>, <span class="at">linewidth =</span> <span class="fl">0.7</span>) <span class="sc">+</span></span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">shape =</span> 班级简称), <span class="at">size =</span> <span class="dv">3</span>, <span class="at">alpha =</span> <span class="fl">0.85</span>) <span class="sc">+</span></span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text_repel</span>(</span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">data =</span> <span class="fu">filter</span>(df, 综合参与度 <span class="sc">&lt;</span> <span class="dv">70</span>),</span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>    <span class="fu">aes</span>(<span class="at">label =</span> 学号), <span class="at">size =</span> <span class="fl">2.8</span>, <span class="at">show.legend =</span> <span class="cn">FALSE</span>,</span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">max.overlaps =</span> <span class="dv">20</span>, <span class="at">box.padding =</span> <span class="fl">0.4</span></span>
-<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
-<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> col_warning) <span class="sc">+</span></span>
-<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">labels =</span> \(x) <span class="fu">paste0</span>(x, <span class="st">"%"</span>), <span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">110</span>)) <span class="sc">+</span></span>
-<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">labels =</span> \(x) <span class="fu">paste0</span>(x, <span class="st">"%"</span>), <span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">115</span>)) <span class="sc">+</span></span>
-<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
-<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">title    =</span> <span class="st">"签到率 vs. 作业提交率"</span>,</span>
-<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="st">"综合参与度 &lt; 70% 的学生已标注学号"</span>,</span>
-<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"签到率"</span>, <span class="at">y =</span> <span class="st">"作业提交率"</span>,</span>
-<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>    <span class="at">color =</span> <span class="st">"预警等级"</span>, <span class="at">shape =</span> <span class="st">"班级"</span></span>
-<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
-<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>(<span class="at">base_size =</span> <span class="dv">13</span>) <span class="sc">+</span></span>
-<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"right"</span>)</span></code><button title="复制到剪贴板" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(df, <span class="fu">aes</span>(<span class="at">x =</span> 签到率, <span class="at">y =</span> 作业提交率, <span class="at">color =</span> 预警等级)) <span class="sc">+</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="dv">85</span>, <span class="at">linetype =</span> <span class="st">"dashed"</span>,</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>             <span class="at">color =</span> <span class="st">"gray50"</span>, <span class="at">linewidth =</span> <span class="fl">0.7</span>) <span class="sc">+</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="dv">85</span>, <span class="at">linetype =</span> <span class="st">"dashed"</span>,</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>             <span class="at">color =</span> <span class="st">"gray50"</span>, <span class="at">linewidth =</span> <span class="fl">0.7</span>) <span class="sc">+</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">shape =</span> 班级简称), <span class="at">size =</span> <span class="dv">3</span>, <span class="at">alpha =</span> <span class="fl">0.85</span>) <span class="sc">+</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text_repel</span>(</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">data =</span> <span class="fu">filter</span>(df, 综合参与度 <span class="sc">&lt;</span> <span class="dv">70</span>),</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>    <span class="fu">aes</span>(<span class="at">label =</span> 学号), <span class="at">size =</span> <span class="fl">2.8</span>, <span class="at">show.legend =</span> <span class="cn">FALSE</span>,</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">max.overlaps =</span> <span class="dv">20</span>, <span class="at">box.padding =</span> <span class="fl">0.4</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> col_warning) <span class="sc">+</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">labels =</span> \(x) <span class="fu">paste0</span>(x, <span class="st">"%"</span>), <span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">110</span>)) <span class="sc">+</span></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">labels =</span> \(x) <span class="fu">paste0</span>(x, <span class="st">"%"</span>), <span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">115</span>)) <span class="sc">+</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">title    =</span> <span class="st">"签到率 vs. 作业提交率"</span>,</span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="st">"综合参与度 &lt; 70% 的学生已标注学号"</span>,</span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"签到率"</span>, <span class="at">y =</span> <span class="st">"作业提交率"</span>,</span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>    <span class="at">color =</span> <span class="st">"预警等级"</span>, <span class="at">shape =</span> <span class="st">"班级"</span></span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>(<span class="at">base_size =</span> <span class="dv">13</span>) <span class="sc">+</span></span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"right"</span>)</span></code><button title="复制到剪贴板" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
 <div id="fig-scatter" class="quarto-float quarto-figure quarto-figure-center anchored">
@@ -1465,25 +1461,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell">
 <details class="code-fold">
 <summary>代码</summary>
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>df <span class="sc">|&gt;</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(综合参与度)) <span class="sc">|&gt;</span>                              <span class="co"># ← 改为降序</span></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(学号 <span class="ot">=</span> <span class="fu">factor</span>(学号, <span class="at">levels =</span> <span class="fu">rev</span>(学号))) <span class="sc">|&gt;</span>        <span class="co"># ← levels 取反，使最高分显示在顶部</span></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> 综合参与度, <span class="at">y =</span> 学号, <span class="at">fill =</span> 预警等级)) <span class="sc">+</span></span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>(<span class="at">alpha =</span> <span class="fl">0.85</span>) <span class="sc">+</span></span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="dv">85</span>, <span class="at">linetype =</span> <span class="st">"dashed"</span>,</span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>             <span class="at">color =</span> <span class="st">"gray30"</span>, <span class="at">linewidth =</span> <span class="fl">0.7</span>) <span class="sc">+</span></span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text</span>(<span class="fu">aes</span>(<span class="at">label =</span> <span class="fu">sprintf</span>(<span class="st">"%.1f%%"</span>, 综合参与度)),</span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>            <span class="at">hjust =</span> <span class="sc">-</span><span class="fl">0.15</span>, <span class="at">size =</span> <span class="fl">2.8</span>, <span class="at">color =</span> <span class="st">"gray20"</span>) <span class="sc">+</span></span>
-<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> col_warning) <span class="sc">+</span></span>
-<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">labels =</span> \(x) <span class="fu">paste0</span>(x, <span class="st">"%"</span>), <span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">115</span>)) <span class="sc">+</span></span>
-<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
-<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"全班综合参与度排名"</span>,</span>
-<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"综合参与度（签到率与作业提交率均值）"</span>,</span>
-<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="cn">NULL</span>, <span class="at">fill =</span> <span class="st">"预警等级"</span></span>
-<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
-<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>(<span class="at">base_size =</span> <span class="dv">11</span>) <span class="sc">+</span></span>
-<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"top"</span>,</span>
-<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>        <span class="at">axis.text.y =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">8</span>))</span></code><button title="复制到剪贴板" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>df <span class="sc">|&gt;</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(综合参与度)) <span class="sc">|&gt;</span>                              <span class="co"># ← 改为降序</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(学号 <span class="ot">=</span> <span class="fu">factor</span>(学号, <span class="at">levels =</span> <span class="fu">rev</span>(学号))) <span class="sc">|&gt;</span>        <span class="co"># ← levels 取反，使最高分显示在顶部</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> 综合参与度, <span class="at">y =</span> 学号, <span class="at">fill =</span> 预警等级)) <span class="sc">+</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>(<span class="at">alpha =</span> <span class="fl">0.85</span>) <span class="sc">+</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="dv">85</span>, <span class="at">linetype =</span> <span class="st">"dashed"</span>,</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>             <span class="at">color =</span> <span class="st">"gray30"</span>, <span class="at">linewidth =</span> <span class="fl">0.7</span>) <span class="sc">+</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text</span>(<span class="fu">aes</span>(<span class="at">label =</span> <span class="fu">sprintf</span>(<span class="st">"%.1f%%"</span>, 综合参与度)),</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>            <span class="at">hjust =</span> <span class="sc">-</span><span class="fl">0.15</span>, <span class="at">size =</span> <span class="fl">2.8</span>, <span class="at">color =</span> <span class="st">"gray20"</span>) <span class="sc">+</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> col_warning) <span class="sc">+</span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">labels =</span> \(x) <span class="fu">paste0</span>(x, <span class="st">"%"</span>), <span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">115</span>)) <span class="sc">+</span></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"全班综合参与度排名"</span>,</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"综合参与度（签到率与作业提交率均值）"</span>,</span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="cn">NULL</span>, <span class="at">fill =</span> <span class="st">"预警等级"</span></span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>(<span class="at">base_size =</span> <span class="dv">11</span>) <span class="sc">+</span></span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"top"</span>,</span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>        <span class="at">axis.text.y =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">8</span>))</span></code><button title="复制到剪贴板" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
 <div id="fig-ranking" class="quarto-float quarto-figure quarto-figure-center anchored">
@@ -1506,23 +1502,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h3 class="anchored" data-anchor-id="严重预警综合参与度-50">5.1 严重预警（综合参与度 &lt; 50%）</h3>
 <div id="tbl-warn-severe" class="cell anchored">
 <div class="cell-output-display">
-<div id="demepwukqp" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#demepwukqp table {
+<div id="vrhfcfwwkx" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#vrhfcfwwkx table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#demepwukqp thead, #demepwukqp tbody, #demepwukqp tfoot, #demepwukqp tr, #demepwukqp td, #demepwukqp th {
+#vrhfcfwwkx thead, #vrhfcfwwkx tbody, #vrhfcfwwkx tfoot, #vrhfcfwwkx tr, #vrhfcfwwkx td, #vrhfcfwwkx th {
   border-style: none;
 }
 
-#demepwukqp p {
+#vrhfcfwwkx p {
   margin: 0;
   padding: 0;
 }
 
-#demepwukqp .gt_table {
+#vrhfcfwwkx .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -1548,12 +1544,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-left-color: #D3D3D3;
 }
 
-#demepwukqp .gt_caption {
+#vrhfcfwwkx .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#demepwukqp .gt_title {
+#vrhfcfwwkx .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1565,7 +1561,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-width: 0;
 }
 
-#demepwukqp .gt_subtitle {
+#vrhfcfwwkx .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1577,7 +1573,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-top-width: 0;
 }
 
-#demepwukqp .gt_heading {
+#vrhfcfwwkx .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1589,13 +1585,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#demepwukqp .gt_bottom_border {
+#vrhfcfwwkx .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#demepwukqp .gt_col_headings {
+#vrhfcfwwkx .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1610,7 +1606,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#demepwukqp .gt_col_heading {
+#vrhfcfwwkx .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1630,7 +1626,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   overflow-x: hidden;
 }
 
-#demepwukqp .gt_column_spanner_outer {
+#vrhfcfwwkx .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1642,15 +1638,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 4px;
 }
 
-#demepwukqp .gt_column_spanner_outer:first-child {
+#vrhfcfwwkx .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#demepwukqp .gt_column_spanner_outer:last-child {
+#vrhfcfwwkx .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#demepwukqp .gt_column_spanner {
+#vrhfcfwwkx .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #E07A9A;
@@ -1662,11 +1658,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   width: 100%;
 }
 
-#demepwukqp .gt_spanner_row {
+#vrhfcfwwkx .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#demepwukqp .gt_group_heading {
+#vrhfcfwwkx .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1692,7 +1688,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   text-align: left;
 }
 
-#demepwukqp .gt_empty_group_heading {
+#vrhfcfwwkx .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1707,15 +1703,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   vertical-align: middle;
 }
 
-#demepwukqp .gt_from_md > :first-child {
+#vrhfcfwwkx .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#demepwukqp .gt_from_md > :last-child {
+#vrhfcfwwkx .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#demepwukqp .gt_row {
+#vrhfcfwwkx .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1734,7 +1730,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   overflow-x: hidden;
 }
 
-#demepwukqp .gt_stub {
+#vrhfcfwwkx .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1747,7 +1743,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#demepwukqp .gt_stub_row_group {
+#vrhfcfwwkx .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1761,15 +1757,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   vertical-align: top;
 }
 
-#demepwukqp .gt_row_group_first td {
+#vrhfcfwwkx .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#demepwukqp .gt_row_group_first th {
+#vrhfcfwwkx .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#demepwukqp .gt_summary_row {
+#vrhfcfwwkx .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1779,16 +1775,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#demepwukqp .gt_first_summary_row {
+#vrhfcfwwkx .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#demepwukqp .gt_first_summary_row.thick {
+#vrhfcfwwkx .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#demepwukqp .gt_last_summary_row {
+#vrhfcfwwkx .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1798,7 +1794,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#demepwukqp .gt_grand_summary_row {
+#vrhfcfwwkx .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1808,7 +1804,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#demepwukqp .gt_first_grand_summary_row {
+#vrhfcfwwkx .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1818,7 +1814,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-top-color: #D3D3D3;
 }
 
-#demepwukqp .gt_last_grand_summary_row_top {
+#vrhfcfwwkx .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1828,11 +1824,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#demepwukqp .gt_striped {
+#vrhfcfwwkx .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#demepwukqp .gt_table_body {
+#vrhfcfwwkx .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1841,7 +1837,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#demepwukqp .gt_footnotes {
+#vrhfcfwwkx .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1855,7 +1851,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#demepwukqp .gt_footnote {
+#vrhfcfwwkx .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1864,7 +1860,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#demepwukqp .gt_sourcenotes {
+#vrhfcfwwkx .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1878,7 +1874,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#demepwukqp .gt_sourcenote {
+#vrhfcfwwkx .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1886,72 +1882,72 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#demepwukqp .gt_left {
+#vrhfcfwwkx .gt_left {
   text-align: left;
 }
 
-#demepwukqp .gt_center {
+#vrhfcfwwkx .gt_center {
   text-align: center;
 }
 
-#demepwukqp .gt_right {
+#vrhfcfwwkx .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#demepwukqp .gt_font_normal {
+#vrhfcfwwkx .gt_font_normal {
   font-weight: normal;
 }
 
-#demepwukqp .gt_font_bold {
+#vrhfcfwwkx .gt_font_bold {
   font-weight: bold;
 }
 
-#demepwukqp .gt_font_italic {
+#vrhfcfwwkx .gt_font_italic {
   font-style: italic;
 }
 
-#demepwukqp .gt_super {
+#vrhfcfwwkx .gt_super {
   font-size: 65%;
 }
 
-#demepwukqp .gt_footnote_marks {
+#vrhfcfwwkx .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#demepwukqp .gt_asterisk {
+#vrhfcfwwkx .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#demepwukqp .gt_indent_1 {
+#vrhfcfwwkx .gt_indent_1 {
   text-indent: 5px;
 }
 
-#demepwukqp .gt_indent_2 {
+#vrhfcfwwkx .gt_indent_2 {
   text-indent: 10px;
 }
 
-#demepwukqp .gt_indent_3 {
+#vrhfcfwwkx .gt_indent_3 {
   text-indent: 15px;
 }
 
-#demepwukqp .gt_indent_4 {
+#vrhfcfwwkx .gt_indent_4 {
   text-indent: 20px;
 }
 
-#demepwukqp .gt_indent_5 {
+#vrhfcfwwkx .gt_indent_5 {
   text-indent: 25px;
 }
 
-#demepwukqp .katex-display {
+#vrhfcfwwkx .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#demepwukqp div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#vrhfcfwwkx div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -1972,28 +1968,28 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tbody class="gt_table_body">
 <tr class="odd">
 <td class="gt_row gt_left" headers="学号" style="background-color: #FADBD8">202423410222</td>
-<td class="gt_row gt_center" headers="班级简称" style="background-color: #FADBD8">人力资源2班</td>
+<td class="gt_row gt_center" headers="班级简称" style="background-color: #FADBD8">工商管理2班</td>
 <td class="gt_row gt_center" headers="签到率" style="background-color: #FADBD8">16.7%</td>
 <td class="gt_row gt_center" headers="作业提交率" style="background-color: #FADBD8">0.0%</td>
 <td class="gt_row gt_center" headers="综合参与度" style="background-color: #FADBD8">8.3%</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="学号" style="background-color: #FADBD8">202423410133</td>
-<td class="gt_row gt_center" headers="班级简称" style="background-color: #FADBD8">人力资源1班</td>
+<td class="gt_row gt_center" headers="班级简称" style="background-color: #FADBD8">工商管理1班</td>
 <td class="gt_row gt_center" headers="签到率" style="background-color: #FADBD8">5.6%</td>
 <td class="gt_row gt_center" headers="作业提交率" style="background-color: #FADBD8">18.5%</td>
 <td class="gt_row gt_center" headers="综合参与度" style="background-color: #FADBD8">12.0%</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="学号" style="background-color: #FADBD8">202423410127</td>
-<td class="gt_row gt_center" headers="班级简称" style="background-color: #FADBD8">人力资源1班</td>
+<td class="gt_row gt_center" headers="班级简称" style="background-color: #FADBD8">工商管理1班</td>
 <td class="gt_row gt_center" headers="签到率" style="background-color: #FADBD8">50.0%</td>
 <td class="gt_row gt_center" headers="作业提交率" style="background-color: #FADBD8">11.1%</td>
 <td class="gt_row gt_center" headers="综合参与度" style="background-color: #FADBD8">30.6%</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="学号" style="background-color: #FADBD8">202423410210</td>
-<td class="gt_row gt_center" headers="班级简称" style="background-color: #FADBD8">人力资源2班</td>
+<td class="gt_row gt_center" headers="班级简称" style="background-color: #FADBD8">工商管理2班</td>
 <td class="gt_row gt_center" headers="签到率" style="background-color: #FADBD8">55.6%</td>
 <td class="gt_row gt_center" headers="作业提交率" style="background-color: #FADBD8">29.6%</td>
 <td class="gt_row gt_center" headers="综合参与度" style="background-color: #FADBD8">42.6%</td>
@@ -2009,23 +2005,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h3 class="anchored" data-anchor-id="中度预警综合参与度-5070">5.2 中度预警（综合参与度 50–70%）</h3>
 <div id="tbl-warn-medium" class="cell anchored">
 <div class="cell-output-display">
-<div id="jmtgvplovm" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#jmtgvplovm table {
+<div id="einrduhhad" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#einrduhhad table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#jmtgvplovm thead, #jmtgvplovm tbody, #jmtgvplovm tfoot, #jmtgvplovm tr, #jmtgvplovm td, #jmtgvplovm th {
+#einrduhhad thead, #einrduhhad tbody, #einrduhhad tfoot, #einrduhhad tr, #einrduhhad td, #einrduhhad th {
   border-style: none;
 }
 
-#jmtgvplovm p {
+#einrduhhad p {
   margin: 0;
   padding: 0;
 }
 
-#jmtgvplovm .gt_table {
+#einrduhhad .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -2051,12 +2047,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-left-color: #D3D3D3;
 }
 
-#jmtgvplovm .gt_caption {
+#einrduhhad .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#jmtgvplovm .gt_title {
+#einrduhhad .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -2068,7 +2064,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-width: 0;
 }
 
-#jmtgvplovm .gt_subtitle {
+#einrduhhad .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -2080,7 +2076,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-top-width: 0;
 }
 
-#jmtgvplovm .gt_heading {
+#einrduhhad .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -2092,13 +2088,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#jmtgvplovm .gt_bottom_border {
+#einrduhhad .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#jmtgvplovm .gt_col_headings {
+#einrduhhad .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2113,7 +2109,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#jmtgvplovm .gt_col_heading {
+#einrduhhad .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2133,7 +2129,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   overflow-x: hidden;
 }
 
-#jmtgvplovm .gt_column_spanner_outer {
+#einrduhhad .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2145,15 +2141,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 4px;
 }
 
-#jmtgvplovm .gt_column_spanner_outer:first-child {
+#einrduhhad .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#jmtgvplovm .gt_column_spanner_outer:last-child {
+#einrduhhad .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#jmtgvplovm .gt_column_spanner {
+#einrduhhad .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #E8955A;
@@ -2165,11 +2161,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   width: 100%;
 }
 
-#jmtgvplovm .gt_spanner_row {
+#einrduhhad .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#jmtgvplovm .gt_group_heading {
+#einrduhhad .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2195,7 +2191,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   text-align: left;
 }
 
-#jmtgvplovm .gt_empty_group_heading {
+#einrduhhad .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -2210,15 +2206,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   vertical-align: middle;
 }
 
-#jmtgvplovm .gt_from_md > :first-child {
+#einrduhhad .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#jmtgvplovm .gt_from_md > :last-child {
+#einrduhhad .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#jmtgvplovm .gt_row {
+#einrduhhad .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2237,7 +2233,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   overflow-x: hidden;
 }
 
-#jmtgvplovm .gt_stub {
+#einrduhhad .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2250,7 +2246,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#jmtgvplovm .gt_stub_row_group {
+#einrduhhad .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2264,15 +2260,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   vertical-align: top;
 }
 
-#jmtgvplovm .gt_row_group_first td {
+#einrduhhad .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#jmtgvplovm .gt_row_group_first th {
+#einrduhhad .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#jmtgvplovm .gt_summary_row {
+#einrduhhad .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2282,16 +2278,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#jmtgvplovm .gt_first_summary_row {
+#einrduhhad .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#jmtgvplovm .gt_first_summary_row.thick {
+#einrduhhad .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#jmtgvplovm .gt_last_summary_row {
+#einrduhhad .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2301,7 +2297,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#jmtgvplovm .gt_grand_summary_row {
+#einrduhhad .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2311,7 +2307,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#jmtgvplovm .gt_first_grand_summary_row {
+#einrduhhad .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2321,7 +2317,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-top-color: #D3D3D3;
 }
 
-#jmtgvplovm .gt_last_grand_summary_row_top {
+#einrduhhad .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2331,11 +2327,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#jmtgvplovm .gt_striped {
+#einrduhhad .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#jmtgvplovm .gt_table_body {
+#einrduhhad .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2344,7 +2340,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#jmtgvplovm .gt_footnotes {
+#einrduhhad .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2358,7 +2354,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#jmtgvplovm .gt_footnote {
+#einrduhhad .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -2367,7 +2363,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#jmtgvplovm .gt_sourcenotes {
+#einrduhhad .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2381,7 +2377,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#jmtgvplovm .gt_sourcenote {
+#einrduhhad .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -2389,72 +2385,72 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#jmtgvplovm .gt_left {
+#einrduhhad .gt_left {
   text-align: left;
 }
 
-#jmtgvplovm .gt_center {
+#einrduhhad .gt_center {
   text-align: center;
 }
 
-#jmtgvplovm .gt_right {
+#einrduhhad .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#jmtgvplovm .gt_font_normal {
+#einrduhhad .gt_font_normal {
   font-weight: normal;
 }
 
-#jmtgvplovm .gt_font_bold {
+#einrduhhad .gt_font_bold {
   font-weight: bold;
 }
 
-#jmtgvplovm .gt_font_italic {
+#einrduhhad .gt_font_italic {
   font-style: italic;
 }
 
-#jmtgvplovm .gt_super {
+#einrduhhad .gt_super {
   font-size: 65%;
 }
 
-#jmtgvplovm .gt_footnote_marks {
+#einrduhhad .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#jmtgvplovm .gt_asterisk {
+#einrduhhad .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#jmtgvplovm .gt_indent_1 {
+#einrduhhad .gt_indent_1 {
   text-indent: 5px;
 }
 
-#jmtgvplovm .gt_indent_2 {
+#einrduhhad .gt_indent_2 {
   text-indent: 10px;
 }
 
-#jmtgvplovm .gt_indent_3 {
+#einrduhhad .gt_indent_3 {
   text-indent: 15px;
 }
 
-#jmtgvplovm .gt_indent_4 {
+#einrduhhad .gt_indent_4 {
   text-indent: 20px;
 }
 
-#jmtgvplovm .gt_indent_5 {
+#einrduhhad .gt_indent_5 {
   text-indent: 25px;
 }
 
-#jmtgvplovm .katex-display {
+#einrduhhad .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#jmtgvplovm div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#einrduhhad div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -2475,42 +2471,42 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tbody class="gt_table_body">
 <tr class="odd">
 <td class="gt_row gt_left" headers="学号" style="background-color: #FDEBD0">202423410224</td>
-<td class="gt_row gt_center" headers="班级简称" style="background-color: #FDEBD0">人力资源2班</td>
+<td class="gt_row gt_center" headers="班级简称" style="background-color: #FDEBD0">工商管理2班</td>
 <td class="gt_row gt_center" headers="签到率" style="background-color: #FDEBD0">83.3%</td>
 <td class="gt_row gt_center" headers="作业提交率" style="background-color: #FDEBD0">18.5%</td>
 <td class="gt_row gt_center" headers="综合参与度" style="background-color: #FDEBD0">50.9%</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="学号" style="background-color: #FDEBD0">202423410113</td>
-<td class="gt_row gt_center" headers="班级简称" style="background-color: #FDEBD0">人力资源1班</td>
+<td class="gt_row gt_center" headers="班级简称" style="background-color: #FDEBD0">工商管理1班</td>
 <td class="gt_row gt_center" headers="签到率" style="background-color: #FDEBD0">88.9%</td>
 <td class="gt_row gt_center" headers="作业提交率" style="background-color: #FDEBD0">14.8%</td>
 <td class="gt_row gt_center" headers="综合参与度" style="background-color: #FDEBD0">51.9%</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="学号" style="background-color: #FDEBD0">202423410225</td>
-<td class="gt_row gt_center" headers="班级简称" style="background-color: #FDEBD0">人力资源2班</td>
+<td class="gt_row gt_center" headers="班级简称" style="background-color: #FDEBD0">工商管理2班</td>
 <td class="gt_row gt_center" headers="签到率" style="background-color: #FDEBD0">83.3%</td>
 <td class="gt_row gt_center" headers="作业提交率" style="background-color: #FDEBD0">25.9%</td>
 <td class="gt_row gt_center" headers="综合参与度" style="background-color: #FDEBD0">54.6%</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="学号" style="background-color: #FDEBD0">202423410231</td>
-<td class="gt_row gt_center" headers="班级简称" style="background-color: #FDEBD0">人力资源2班</td>
+<td class="gt_row gt_center" headers="班级简称" style="background-color: #FDEBD0">工商管理2班</td>
 <td class="gt_row gt_center" headers="签到率" style="background-color: #FDEBD0">66.7%</td>
 <td class="gt_row gt_center" headers="作业提交率" style="background-color: #FDEBD0">55.6%</td>
 <td class="gt_row gt_center" headers="综合参与度" style="background-color: #FDEBD0">61.1%</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="学号" style="background-color: #FDEBD0">202423410233</td>
-<td class="gt_row gt_center" headers="班级简称" style="background-color: #FDEBD0">人力资源2班</td>
+<td class="gt_row gt_center" headers="班级简称" style="background-color: #FDEBD0">工商管理2班</td>
 <td class="gt_row gt_center" headers="签到率" style="background-color: #FDEBD0">83.3%</td>
 <td class="gt_row gt_center" headers="作业提交率" style="background-color: #FDEBD0">48.1%</td>
 <td class="gt_row gt_center" headers="综合参与度" style="background-color: #FDEBD0">65.7%</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="学号" style="background-color: #FDEBD0">202423410134</td>
-<td class="gt_row gt_center" headers="班级简称" style="background-color: #FDEBD0">人力资源1班</td>
+<td class="gt_row gt_center" headers="班级简称" style="background-color: #FDEBD0">工商管理1班</td>
 <td class="gt_row gt_center" headers="签到率" style="background-color: #FDEBD0">61.1%</td>
 <td class="gt_row gt_center" headers="作业提交率" style="background-color: #FDEBD0">77.8%</td>
 <td class="gt_row gt_center" headers="综合参与度" style="background-color: #FDEBD0">69.4%</td>
@@ -2526,23 +2522,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h3 class="anchored" data-anchor-id="轻度预警综合参与度-7085">5.3 轻度预警（综合参与度 70–85%）</h3>
 <div id="tbl-warn-light" class="cell anchored">
 <div class="cell-output-display">
-<div id="hulyfmxtkj" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#hulyfmxtkj table {
+<div id="dbfhfqqxgq" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#dbfhfqqxgq table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#hulyfmxtkj thead, #hulyfmxtkj tbody, #hulyfmxtkj tfoot, #hulyfmxtkj tr, #hulyfmxtkj td, #hulyfmxtkj th {
+#dbfhfqqxgq thead, #dbfhfqqxgq tbody, #dbfhfqqxgq tfoot, #dbfhfqqxgq tr, #dbfhfqqxgq td, #dbfhfqqxgq th {
   border-style: none;
 }
 
-#hulyfmxtkj p {
+#dbfhfqqxgq p {
   margin: 0;
   padding: 0;
 }
 
-#hulyfmxtkj .gt_table {
+#dbfhfqqxgq .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -2568,12 +2564,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-left-color: #D3D3D3;
 }
 
-#hulyfmxtkj .gt_caption {
+#dbfhfqqxgq .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#hulyfmxtkj .gt_title {
+#dbfhfqqxgq .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -2585,7 +2581,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-width: 0;
 }
 
-#hulyfmxtkj .gt_subtitle {
+#dbfhfqqxgq .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -2597,7 +2593,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-top-width: 0;
 }
 
-#hulyfmxtkj .gt_heading {
+#dbfhfqqxgq .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -2609,13 +2605,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#hulyfmxtkj .gt_bottom_border {
+#dbfhfqqxgq .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#hulyfmxtkj .gt_col_headings {
+#dbfhfqqxgq .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2630,7 +2626,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#hulyfmxtkj .gt_col_heading {
+#dbfhfqqxgq .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2650,7 +2646,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   overflow-x: hidden;
 }
 
-#hulyfmxtkj .gt_column_spanner_outer {
+#dbfhfqqxgq .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2662,15 +2658,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 4px;
 }
 
-#hulyfmxtkj .gt_column_spanner_outer:first-child {
+#dbfhfqqxgq .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#hulyfmxtkj .gt_column_spanner_outer:last-child {
+#dbfhfqqxgq .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#hulyfmxtkj .gt_column_spanner {
+#dbfhfqqxgq .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #C8A830;
@@ -2682,11 +2678,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   width: 100%;
 }
 
-#hulyfmxtkj .gt_spanner_row {
+#dbfhfqqxgq .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#hulyfmxtkj .gt_group_heading {
+#dbfhfqqxgq .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2712,7 +2708,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   text-align: left;
 }
 
-#hulyfmxtkj .gt_empty_group_heading {
+#dbfhfqqxgq .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -2727,15 +2723,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   vertical-align: middle;
 }
 
-#hulyfmxtkj .gt_from_md > :first-child {
+#dbfhfqqxgq .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#hulyfmxtkj .gt_from_md > :last-child {
+#dbfhfqqxgq .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#hulyfmxtkj .gt_row {
+#dbfhfqqxgq .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2754,7 +2750,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   overflow-x: hidden;
 }
 
-#hulyfmxtkj .gt_stub {
+#dbfhfqqxgq .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2767,7 +2763,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#hulyfmxtkj .gt_stub_row_group {
+#dbfhfqqxgq .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2781,15 +2777,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   vertical-align: top;
 }
 
-#hulyfmxtkj .gt_row_group_first td {
+#dbfhfqqxgq .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#hulyfmxtkj .gt_row_group_first th {
+#dbfhfqqxgq .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#hulyfmxtkj .gt_summary_row {
+#dbfhfqqxgq .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2799,16 +2795,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#hulyfmxtkj .gt_first_summary_row {
+#dbfhfqqxgq .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#hulyfmxtkj .gt_first_summary_row.thick {
+#dbfhfqqxgq .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#hulyfmxtkj .gt_last_summary_row {
+#dbfhfqqxgq .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2818,7 +2814,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#hulyfmxtkj .gt_grand_summary_row {
+#dbfhfqqxgq .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2828,7 +2824,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#hulyfmxtkj .gt_first_grand_summary_row {
+#dbfhfqqxgq .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2838,7 +2834,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-top-color: #D3D3D3;
 }
 
-#hulyfmxtkj .gt_last_grand_summary_row_top {
+#dbfhfqqxgq .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2848,11 +2844,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#hulyfmxtkj .gt_striped {
+#dbfhfqqxgq .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#hulyfmxtkj .gt_table_body {
+#dbfhfqqxgq .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2861,7 +2857,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#hulyfmxtkj .gt_footnotes {
+#dbfhfqqxgq .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2875,7 +2871,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#hulyfmxtkj .gt_footnote {
+#dbfhfqqxgq .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -2884,7 +2880,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#hulyfmxtkj .gt_sourcenotes {
+#dbfhfqqxgq .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2898,7 +2894,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#hulyfmxtkj .gt_sourcenote {
+#dbfhfqqxgq .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -2906,72 +2902,72 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#hulyfmxtkj .gt_left {
+#dbfhfqqxgq .gt_left {
   text-align: left;
 }
 
-#hulyfmxtkj .gt_center {
+#dbfhfqqxgq .gt_center {
   text-align: center;
 }
 
-#hulyfmxtkj .gt_right {
+#dbfhfqqxgq .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#hulyfmxtkj .gt_font_normal {
+#dbfhfqqxgq .gt_font_normal {
   font-weight: normal;
 }
 
-#hulyfmxtkj .gt_font_bold {
+#dbfhfqqxgq .gt_font_bold {
   font-weight: bold;
 }
 
-#hulyfmxtkj .gt_font_italic {
+#dbfhfqqxgq .gt_font_italic {
   font-style: italic;
 }
 
-#hulyfmxtkj .gt_super {
+#dbfhfqqxgq .gt_super {
   font-size: 65%;
 }
 
-#hulyfmxtkj .gt_footnote_marks {
+#dbfhfqqxgq .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#hulyfmxtkj .gt_asterisk {
+#dbfhfqqxgq .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#hulyfmxtkj .gt_indent_1 {
+#dbfhfqqxgq .gt_indent_1 {
   text-indent: 5px;
 }
 
-#hulyfmxtkj .gt_indent_2 {
+#dbfhfqqxgq .gt_indent_2 {
   text-indent: 10px;
 }
 
-#hulyfmxtkj .gt_indent_3 {
+#dbfhfqqxgq .gt_indent_3 {
   text-indent: 15px;
 }
 
-#hulyfmxtkj .gt_indent_4 {
+#dbfhfqqxgq .gt_indent_4 {
   text-indent: 20px;
 }
 
-#hulyfmxtkj .gt_indent_5 {
+#dbfhfqqxgq .gt_indent_5 {
   text-indent: 25px;
 }
 
-#hulyfmxtkj .katex-display {
+#dbfhfqqxgq .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#hulyfmxtkj div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#dbfhfqqxgq div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -2992,63 +2988,63 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tbody class="gt_table_body">
 <tr class="odd">
 <td class="gt_row gt_left" headers="学号" style="background-color: #FEF9E7">202423410124</td>
-<td class="gt_row gt_center" headers="班级简称" style="background-color: #FEF9E7">人力资源1班</td>
+<td class="gt_row gt_center" headers="班级简称" style="background-color: #FEF9E7">工商管理1班</td>
 <td class="gt_row gt_center" headers="签到率" style="background-color: #FEF9E7">88.9%</td>
 <td class="gt_row gt_center" headers="作业提交率" style="background-color: #FEF9E7">51.9%</td>
 <td class="gt_row gt_center" headers="综合参与度" style="background-color: #FEF9E7">70.4%</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="学号" style="background-color: #FEF9E7">202423410125</td>
-<td class="gt_row gt_center" headers="班级简称" style="background-color: #FEF9E7">人力资源1班</td>
+<td class="gt_row gt_center" headers="班级简称" style="background-color: #FEF9E7">工商管理1班</td>
 <td class="gt_row gt_center" headers="签到率" style="background-color: #FEF9E7">88.9%</td>
 <td class="gt_row gt_center" headers="作业提交率" style="background-color: #FEF9E7">51.9%</td>
 <td class="gt_row gt_center" headers="综合参与度" style="background-color: #FEF9E7">70.4%</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="学号" style="background-color: #FEF9E7">202423410111</td>
-<td class="gt_row gt_center" headers="班级简称" style="background-color: #FEF9E7">人力资源1班</td>
+<td class="gt_row gt_center" headers="班级简称" style="background-color: #FEF9E7">工商管理1班</td>
 <td class="gt_row gt_center" headers="签到率" style="background-color: #FEF9E7">94.4%</td>
 <td class="gt_row gt_center" headers="作业提交率" style="background-color: #FEF9E7">48.1%</td>
 <td class="gt_row gt_center" headers="综合参与度" style="background-color: #FEF9E7">71.3%</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="学号" style="background-color: #FEF9E7">202423410116</td>
-<td class="gt_row gt_center" headers="班级简称" style="background-color: #FEF9E7">人力资源1班</td>
+<td class="gt_row gt_center" headers="班级简称" style="background-color: #FEF9E7">工商管理1班</td>
 <td class="gt_row gt_center" headers="签到率" style="background-color: #FEF9E7">83.3%</td>
 <td class="gt_row gt_center" headers="作业提交率" style="background-color: #FEF9E7">66.7%</td>
 <td class="gt_row gt_center" headers="综合参与度" style="background-color: #FEF9E7">75.0%</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="学号" style="background-color: #FEF9E7">202423410108</td>
-<td class="gt_row gt_center" headers="班级简称" style="background-color: #FEF9E7">人力资源1班</td>
+<td class="gt_row gt_center" headers="班级简称" style="background-color: #FEF9E7">工商管理1班</td>
 <td class="gt_row gt_center" headers="签到率" style="background-color: #FEF9E7">94.4%</td>
 <td class="gt_row gt_center" headers="作业提交率" style="background-color: #FEF9E7">59.3%</td>
 <td class="gt_row gt_center" headers="综合参与度" style="background-color: #FEF9E7">76.9%</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="学号" style="background-color: #FEF9E7">202423410201</td>
-<td class="gt_row gt_center" headers="班级简称" style="background-color: #FEF9E7">人力资源2班</td>
+<td class="gt_row gt_center" headers="班级简称" style="background-color: #FEF9E7">工商管理2班</td>
 <td class="gt_row gt_center" headers="签到率" style="background-color: #FEF9E7">61.1%</td>
 <td class="gt_row gt_center" headers="作业提交率" style="background-color: #FEF9E7">96.3%</td>
 <td class="gt_row gt_center" headers="综合参与度" style="background-color: #FEF9E7">78.7%</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="学号" style="background-color: #FEF9E7">202423410123</td>
-<td class="gt_row gt_center" headers="班级简称" style="background-color: #FEF9E7">人力资源1班</td>
+<td class="gt_row gt_center" headers="班级简称" style="background-color: #FEF9E7">工商管理1班</td>
 <td class="gt_row gt_center" headers="签到率" style="background-color: #FEF9E7">83.3%</td>
 <td class="gt_row gt_center" headers="作业提交率" style="background-color: #FEF9E7">77.8%</td>
 <td class="gt_row gt_center" headers="综合参与度" style="background-color: #FEF9E7">80.6%</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="学号" style="background-color: #FEF9E7">202423410213</td>
-<td class="gt_row gt_center" headers="班级简称" style="background-color: #FEF9E7">人力资源2班</td>
+<td class="gt_row gt_center" headers="班级简称" style="background-color: #FEF9E7">工商管理2班</td>
 <td class="gt_row gt_center" headers="签到率" style="background-color: #FEF9E7">83.3%</td>
 <td class="gt_row gt_center" headers="作业提交率" style="background-color: #FEF9E7">77.8%</td>
 <td class="gt_row gt_center" headers="综合参与度" style="background-color: #FEF9E7">80.6%</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="学号" style="background-color: #FEF9E7">202423410118</td>
-<td class="gt_row gt_center" headers="班级简称" style="background-color: #FEF9E7">人力资源1班</td>
+<td class="gt_row gt_center" headers="班级简称" style="background-color: #FEF9E7">工商管理1班</td>
 <td class="gt_row gt_center" headers="签到率" style="background-color: #FEF9E7">77.8%</td>
 <td class="gt_row gt_center" headers="作业提交率" style="background-color: #FEF9E7">88.9%</td>
 <td class="gt_row gt_center" headers="综合参与度" style="background-color: #FEF9E7">83.3%</td>
@@ -3067,34 +3063,34 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell">
 <details class="code-fold">
 <summary>代码</summary>
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>df2 <span class="ot">&lt;-</span> df <span class="sc">|&gt;</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    理论课签到率 <span class="ot">=</span> <span class="fu">round</span>(理论课学生签到次数 <span class="sc">/</span> 理论课班级开课数 <span class="sc">*</span> <span class="dv">100</span>, <span class="dv">1</span>),</span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    实验课签到率 <span class="ot">=</span> <span class="fu">round</span>(实验课学生签到次数 <span class="sc">/</span> 实验课班级开课数 <span class="sc">*</span> <span class="dv">100</span>, <span class="dv">1</span>)</span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(理论课签到率), <span class="sc">!</span><span class="fu">is.na</span>(实验课签到率))</span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(df2, <span class="fu">aes</span>(<span class="at">x =</span> 理论课签到率, <span class="at">y =</span> 实验课签到率, <span class="at">color =</span> 预警等级)) <span class="sc">+</span></span>
-<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_abline</span>(<span class="at">slope =</span> <span class="dv">1</span>, <span class="at">intercept =</span> <span class="dv">0</span>,</span>
-<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>              <span class="at">linetype =</span> <span class="st">"dashed"</span>, <span class="at">color =</span> <span class="st">"gray50"</span>) <span class="sc">+</span></span>
-<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">shape =</span> 班级简称), <span class="at">size =</span> <span class="dv">3</span>, <span class="at">alpha =</span> <span class="fl">0.85</span>) <span class="sc">+</span></span>
-<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text_repel</span>(</span>
-<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">data =</span> <span class="fu">filter</span>(df2, <span class="fu">abs</span>(理论课签到率 <span class="sc">-</span> 实验课签到率) <span class="sc">&gt;</span> <span class="dv">20</span> <span class="sc">|</span></span>
-<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>                       综合参与度 <span class="sc">&lt;</span> <span class="dv">60</span>),</span>
-<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>    <span class="fu">aes</span>(<span class="at">label =</span> 学号), <span class="at">size =</span> <span class="fl">2.8</span>, <span class="at">show.legend =</span> <span class="cn">FALSE</span>,</span>
-<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">max.overlaps =</span> <span class="dv">15</span>, <span class="at">box.padding =</span> <span class="fl">0.4</span></span>
-<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
-<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> col_warning) <span class="sc">+</span></span>
-<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">labels =</span> \(x) <span class="fu">paste0</span>(x, <span class="st">"%"</span>), <span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">115</span>)) <span class="sc">+</span></span>
-<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">labels =</span> \(x) <span class="fu">paste0</span>(x, <span class="st">"%"</span>), <span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">115</span>)) <span class="sc">+</span></span>
-<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
-<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a>    <span class="at">title    =</span> <span class="st">"理论课签到率 vs. 实验课签到率"</span>,</span>
-<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="st">"虚线为理论课 = 实验课基准线；偏离较大或预警学生已标注学号"</span>,</span>
-<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"理论课签到率"</span>, <span class="at">y =</span> <span class="st">"实验课签到率"</span>,</span>
-<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a>    <span class="at">color =</span> <span class="st">"预警等级"</span>, <span class="at">shape =</span> <span class="st">"班级"</span></span>
-<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
-<span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>(<span class="at">base_size =</span> <span class="dv">13</span>) <span class="sc">+</span></span>
-<span id="cb6-28"><a href="#cb6-28" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"right"</span>)</span></code><button title="复制到剪贴板" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>df2 <span class="ot">&lt;-</span> df <span class="sc">|&gt;</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    理论课签到率 <span class="ot">=</span> <span class="fu">round</span>(理论课学生签到次数 <span class="sc">/</span> 理论课班级开课数 <span class="sc">*</span> <span class="dv">100</span>, <span class="dv">1</span>),</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    实验课签到率 <span class="ot">=</span> <span class="fu">round</span>(实验课学生签到次数 <span class="sc">/</span> 实验课班级开课数 <span class="sc">*</span> <span class="dv">100</span>, <span class="dv">1</span>)</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(理论课签到率), <span class="sc">!</span><span class="fu">is.na</span>(实验课签到率))</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(df2, <span class="fu">aes</span>(<span class="at">x =</span> 理论课签到率, <span class="at">y =</span> 实验课签到率, <span class="at">color =</span> 预警等级)) <span class="sc">+</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_abline</span>(<span class="at">slope =</span> <span class="dv">1</span>, <span class="at">intercept =</span> <span class="dv">0</span>,</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>              <span class="at">linetype =</span> <span class="st">"dashed"</span>, <span class="at">color =</span> <span class="st">"gray50"</span>) <span class="sc">+</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">shape =</span> 班级简称), <span class="at">size =</span> <span class="dv">3</span>, <span class="at">alpha =</span> <span class="fl">0.85</span>) <span class="sc">+</span></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text_repel</span>(</span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">data =</span> <span class="fu">filter</span>(df2, <span class="fu">abs</span>(理论课签到率 <span class="sc">-</span> 实验课签到率) <span class="sc">&gt;</span> <span class="dv">20</span> <span class="sc">|</span></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>                       综合参与度 <span class="sc">&lt;</span> <span class="dv">60</span>),</span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>    <span class="fu">aes</span>(<span class="at">label =</span> 学号), <span class="at">size =</span> <span class="fl">2.8</span>, <span class="at">show.legend =</span> <span class="cn">FALSE</span>,</span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">max.overlaps =</span> <span class="dv">15</span>, <span class="at">box.padding =</span> <span class="fl">0.4</span></span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> col_warning) <span class="sc">+</span></span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">labels =</span> \(x) <span class="fu">paste0</span>(x, <span class="st">"%"</span>), <span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">115</span>)) <span class="sc">+</span></span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">labels =</span> \(x) <span class="fu">paste0</span>(x, <span class="st">"%"</span>), <span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">115</span>)) <span class="sc">+</span></span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>    <span class="at">title    =</span> <span class="st">"理论课签到率 vs. 实验课签到率"</span>,</span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="st">"虚线为理论课 = 实验课基准线；偏离较大或预警学生已标注学号"</span>,</span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"理论课签到率"</span>, <span class="at">y =</span> <span class="st">"实验课签到率"</span>,</span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a>    <span class="at">color =</span> <span class="st">"预警等级"</span>, <span class="at">shape =</span> <span class="st">"班级"</span></span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>(<span class="at">base_size =</span> <span class="dv">13</span>) <span class="sc">+</span></span>
+<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"right"</span>)</span></code><button title="复制到剪贴板" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
 <div id="fig-theory-lab" class="quarto-float quarto-figure quarto-figure-center anchored">
@@ -3115,23 +3111,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="完整数据表">7. 完整数据表</h2>
 <div id="tbl-full" class="cell anchored">
 <div class="cell-output-display">
-<div id="zccceyycrr" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#zccceyycrr table {
+<div id="xfaihjoatc" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#xfaihjoatc table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#zccceyycrr thead, #zccceyycrr tbody, #zccceyycrr tfoot, #zccceyycrr tr, #zccceyycrr td, #zccceyycrr th {
+#xfaihjoatc thead, #xfaihjoatc tbody, #xfaihjoatc tfoot, #xfaihjoatc tr, #xfaihjoatc td, #xfaihjoatc th {
   border-style: none;
 }
 
-#zccceyycrr p {
+#xfaihjoatc p {
   margin: 0;
   padding: 0;
 }
 
-#zccceyycrr .gt_table {
+#xfaihjoatc .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -3157,12 +3153,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-left-color: #D3D3D3;
 }
 
-#zccceyycrr .gt_caption {
+#xfaihjoatc .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#zccceyycrr .gt_title {
+#xfaihjoatc .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -3174,7 +3170,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-width: 0;
 }
 
-#zccceyycrr .gt_subtitle {
+#xfaihjoatc .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -3186,7 +3182,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-top-width: 0;
 }
 
-#zccceyycrr .gt_heading {
+#xfaihjoatc .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -3198,13 +3194,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#zccceyycrr .gt_bottom_border {
+#xfaihjoatc .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#zccceyycrr .gt_col_headings {
+#xfaihjoatc .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -3219,7 +3215,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#zccceyycrr .gt_col_heading {
+#xfaihjoatc .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3239,7 +3235,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   overflow-x: hidden;
 }
 
-#zccceyycrr .gt_column_spanner_outer {
+#xfaihjoatc .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3251,15 +3247,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 4px;
 }
 
-#zccceyycrr .gt_column_spanner_outer:first-child {
+#xfaihjoatc .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#zccceyycrr .gt_column_spanner_outer:last-child {
+#xfaihjoatc .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#zccceyycrr .gt_column_spanner {
+#xfaihjoatc .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #4472C4;
@@ -3271,11 +3267,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   width: 100%;
 }
 
-#zccceyycrr .gt_spanner_row {
+#xfaihjoatc .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#zccceyycrr .gt_group_heading {
+#xfaihjoatc .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3301,7 +3297,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   text-align: left;
 }
 
-#zccceyycrr .gt_empty_group_heading {
+#xfaihjoatc .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -3316,15 +3312,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   vertical-align: middle;
 }
 
-#zccceyycrr .gt_from_md > :first-child {
+#xfaihjoatc .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#zccceyycrr .gt_from_md > :last-child {
+#xfaihjoatc .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#zccceyycrr .gt_row {
+#xfaihjoatc .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3343,7 +3339,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   overflow-x: hidden;
 }
 
-#zccceyycrr .gt_stub {
+#xfaihjoatc .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3356,7 +3352,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#zccceyycrr .gt_stub_row_group {
+#xfaihjoatc .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3370,15 +3366,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   vertical-align: top;
 }
 
-#zccceyycrr .gt_row_group_first td {
+#xfaihjoatc .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#zccceyycrr .gt_row_group_first th {
+#xfaihjoatc .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#zccceyycrr .gt_summary_row {
+#xfaihjoatc .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -3388,16 +3384,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#zccceyycrr .gt_first_summary_row {
+#xfaihjoatc .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#zccceyycrr .gt_first_summary_row.thick {
+#xfaihjoatc .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#zccceyycrr .gt_last_summary_row {
+#xfaihjoatc .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3407,7 +3403,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#zccceyycrr .gt_grand_summary_row {
+#xfaihjoatc .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -3417,7 +3413,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#zccceyycrr .gt_first_grand_summary_row {
+#xfaihjoatc .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3427,7 +3423,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-top-color: #D3D3D3;
 }
 
-#zccceyycrr .gt_last_grand_summary_row_top {
+#xfaihjoatc .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3437,11 +3433,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#zccceyycrr .gt_striped {
+#xfaihjoatc .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#zccceyycrr .gt_table_body {
+#xfaihjoatc .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -3450,7 +3446,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#zccceyycrr .gt_footnotes {
+#xfaihjoatc .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -3464,7 +3460,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#zccceyycrr .gt_footnote {
+#xfaihjoatc .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -3473,7 +3469,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#zccceyycrr .gt_sourcenotes {
+#xfaihjoatc .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -3487,7 +3483,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#zccceyycrr .gt_sourcenote {
+#xfaihjoatc .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -3495,72 +3491,72 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#zccceyycrr .gt_left {
+#xfaihjoatc .gt_left {
   text-align: left;
 }
 
-#zccceyycrr .gt_center {
+#xfaihjoatc .gt_center {
   text-align: center;
 }
 
-#zccceyycrr .gt_right {
+#xfaihjoatc .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#zccceyycrr .gt_font_normal {
+#xfaihjoatc .gt_font_normal {
   font-weight: normal;
 }
 
-#zccceyycrr .gt_font_bold {
+#xfaihjoatc .gt_font_bold {
   font-weight: bold;
 }
 
-#zccceyycrr .gt_font_italic {
+#xfaihjoatc .gt_font_italic {
   font-style: italic;
 }
 
-#zccceyycrr .gt_super {
+#xfaihjoatc .gt_super {
   font-size: 65%;
 }
 
-#zccceyycrr .gt_footnote_marks {
+#xfaihjoatc .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#zccceyycrr .gt_asterisk {
+#xfaihjoatc .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#zccceyycrr .gt_indent_1 {
+#xfaihjoatc .gt_indent_1 {
   text-indent: 5px;
 }
 
-#zccceyycrr .gt_indent_2 {
+#xfaihjoatc .gt_indent_2 {
   text-indent: 10px;
 }
 
-#zccceyycrr .gt_indent_3 {
+#xfaihjoatc .gt_indent_3 {
   text-indent: 15px;
 }
 
-#zccceyycrr .gt_indent_4 {
+#xfaihjoatc .gt_indent_4 {
   text-indent: 20px;
 }
 
-#zccceyycrr .gt_indent_5 {
+#xfaihjoatc .gt_indent_5 {
   text-indent: 25px;
 }
 
-#zccceyycrr .katex-display {
+#xfaihjoatc .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#zccceyycrr div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#xfaihjoatc div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -3582,7 +3578,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tbody class="gt_table_body">
 <tr class="odd">
 <td class="gt_row gt_left" headers="学号" style="background-color: #EAFAF1">202423410103</td>
-<td class="gt_row gt_left" headers="班级简称" style="background-color: #EAFAF1">人力资源1班</td>
+<td class="gt_row gt_left" headers="班级简称" style="background-color: #EAFAF1">工商管理1班</td>
 <td class="gt_row gt_center" headers="签到率" style="background-color: #EAFAF1">100.0%</td>
 <td class="gt_row gt_center" headers="作业提交率" style="background-color: #EAFAF1">100.0%</td>
 <td class="gt_row gt_center" headers="综合参与度" style="background-color: #EAFAF1">100.0%</td>
@@ -3590,7 +3586,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="学号" style="background-color: #EAFAF1">202423410114</td>
-<td class="gt_row gt_left" headers="班级简称" style="background-color: #EAFAF1">人力资源1班</td>
+<td class="gt_row gt_left" headers="班级简称" style="background-color: #EAFAF1">工商管理1班</td>
 <td class="gt_row gt_center" headers="签到率" style="background-color: #EAFAF1">100.0%</td>
 <td class="gt_row gt_center" headers="作业提交率" style="background-color: #EAFAF1">100.0%</td>
 <td class="gt_row gt_center" headers="综合参与度" style="background-color: #EAFAF1">100.0%</td>
@@ -3598,7 +3594,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="学号" style="background-color: #EAFAF1">202423410119</td>
-<td class="gt_row gt_left" headers="班级简称" style="background-color: #EAFAF1">人力资源1班</td>
+<td class="gt_row gt_left" headers="班级简称" style="background-color: #EAFAF1">工商管理1班</td>
 <td class="gt_row gt_center" headers="签到率" style="background-color: #EAFAF1">100.0%</td>
 <td class="gt_row gt_center" headers="作业提交率" style="background-color: #EAFAF1">100.0%</td>
 <td class="gt_row gt_center" headers="综合参与度" style="background-color: #EAFAF1">100.0%</td>
@@ -3606,7 +3602,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="学号" style="background-color: #EAFAF1">202423410121</td>
-<td class="gt_row gt_left" headers="班级简称" style="background-color: #EAFAF1">人力资源1班</td>
+<td class="gt_row gt_left" headers="班级简称" style="background-color: #EAFAF1">工商管理1班</td>
 <td class="gt_row gt_center" headers="签到率" style="background-color: #EAFAF1">100.0%</td>
 <td class="gt_row gt_center" headers="作业提交率" style="background-color: #EAFAF1">100.0%</td>
 <td class="gt_row gt_center" headers="综合参与度" style="background-color: #EAFAF1">100.0%</td>
@@ -3614,7 +3610,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="学号" style="background-color: #EAFAF1">202423410203</td>
-<td class="gt_row gt_left" headers="班级简称" style="background-color: #EAFAF1">人力资源2班</td>
+<td class="gt_row gt_left" headers="班级简称" style="background-color: #EAFAF1">工商管理2班</td>
 <td class="gt_row gt_center" headers="签到率" style="background-color: #EAFAF1">100.0%</td>
 <td class="gt_row gt_center" headers="作业提交率" style="background-color: #EAFAF1">100.0%</td>
 <td class="gt_row gt_center" headers="综合参与度" style="background-color: #EAFAF1">100.0%</td>
@@ -3622,7 +3618,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="学号" style="background-color: #EAFAF1">202423410206</td>
-<td class="gt_row gt_left" headers="班级简称" style="background-color: #EAFAF1">人力资源2班</td>
+<td class="gt_row gt_left" headers="班级简称" style="background-color: #EAFAF1">工商管理2班</td>
 <td class="gt_row gt_center" headers="签到率" style="background-color: #EAFAF1">100.0%</td>
 <td class="gt_row gt_center" headers="作业提交率" style="background-color: #EAFAF1">100.0%</td>
 <td class="gt_row gt_center" headers="综合参与度" style="background-color: #EAFAF1">100.0%</td>
@@ -3630,7 +3626,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="学号" style="background-color: #EAFAF1">202423410216</td>
-<td class="gt_row gt_left" headers="班级简称" style="background-color: #EAFAF1">人力资源2班</td>
+<td class="gt_row gt_left" headers="班级简称" style="background-color: #EAFAF1">工商管理2班</td>
 <td class="gt_row gt_center" headers="签到率" style="background-color: #EAFAF1">100.0%</td>
 <td class="gt_row gt_center" headers="作业提交率" style="background-color: #EAFAF1">100.0%</td>
 <td class="gt_row gt_center" headers="综合参与度" style="background-color: #EAFAF1">100.0%</td>
@@ -3638,7 +3634,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="学号" style="background-color: #EAFAF1">202423410217</td>
-<td class="gt_row gt_left" headers="班级简称" style="background-color: #EAFAF1">人力资源2班</td>
+<td class="gt_row gt_left" headers="班级简称" style="background-color: #EAFAF1">工商管理2班</td>
 <td class="gt_row gt_center" headers="签到率" style="background-color: #EAFAF1">100.0%</td>
 <td class="gt_row gt_center" headers="作业提交率" style="background-color: #EAFAF1">100.0%</td>
 <td class="gt_row gt_center" headers="综合参与度" style="background-color: #EAFAF1">100.0%</td>
@@ -3646,7 +3642,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="学号" style="background-color: #EAFAF1">202423410226</td>
-<td class="gt_row gt_left" headers="班级简称" style="background-color: #EAFAF1">人力资源2班</td>
+<td class="gt_row gt_left" headers="班级简称" style="background-color: #EAFAF1">工商管理2班</td>
 <td class="gt_row gt_center" headers="签到率" style="background-color: #EAFAF1">100.0%</td>
 <td class="gt_row gt_center" headers="作业提交率" style="background-color: #EAFAF1">100.0%</td>
 <td class="gt_row gt_center" headers="综合参与度" style="background-color: #EAFAF1">100.0%</td>
@@ -3654,7 +3650,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="学号" style="background-color: #EAFAF1">202423410227</td>
-<td class="gt_row gt_left" headers="班级简称" style="background-color: #EAFAF1">人力资源2班</td>
+<td class="gt_row gt_left" headers="班级简称" style="background-color: #EAFAF1">工商管理2班</td>
 <td class="gt_row gt_center" headers="签到率" style="background-color: #EAFAF1">100.0%</td>
 <td class="gt_row gt_center" headers="作业提交率" style="background-color: #EAFAF1">100.0%</td>
 <td class="gt_row gt_center" headers="综合参与度" style="background-color: #EAFAF1">100.0%</td>
@@ -3662,7 +3658,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="学号" style="background-color: #EAFAF1">202423410232</td>
-<td class="gt_row gt_left" headers="班级简称" style="background-color: #EAFAF1">人力资源2班</td>
+<td class="gt_row gt_left" headers="班级简称" style="background-color: #EAFAF1">工商管理2班</td>
 <td class="gt_row gt_center" headers="签到率" style="background-color: #EAFAF1">100.0%</td>
 <td class="gt_row gt_center" headers="作业提交率" style="background-color: #EAFAF1">100.0%</td>
 <td class="gt_row gt_center" headers="综合参与度" style="background-color: #EAFAF1">100.0%</td>
@@ -3670,7 +3666,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="学号" style="background-color: #EAFAF1">202423410110</td>
-<td class="gt_row gt_left" headers="班级简称" style="background-color: #EAFAF1">人力资源1班</td>
+<td class="gt_row gt_left" headers="班级简称" style="background-color: #EAFAF1">工商管理1班</td>
 <td class="gt_row gt_center" headers="签到率" style="background-color: #EAFAF1">100.0%</td>
 <td class="gt_row gt_center" headers="作业提交率" style="background-color: #EAFAF1">96.3%</td>
 <td class="gt_row gt_center" headers="综合参与度" style="background-color: #EAFAF1">98.1%</td>
@@ -3678,7 +3674,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="学号" style="background-color: #EAFAF1">202423410131</td>
-<td class="gt_row gt_left" headers="班级简称" style="background-color: #EAFAF1">人力资源1班</td>
+<td class="gt_row gt_left" headers="班级简称" style="background-color: #EAFAF1">工商管理1班</td>
 <td class="gt_row gt_center" headers="签到率" style="background-color: #EAFAF1">100.0%</td>
 <td class="gt_row gt_center" headers="作业提交率" style="background-color: #EAFAF1">96.3%</td>
 <td class="gt_row gt_center" headers="综合参与度" style="background-color: #EAFAF1">98.1%</td>
@@ -3686,7 +3682,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="学号" style="background-color: #EAFAF1">202423410132</td>
-<td class="gt_row gt_left" headers="班级简称" style="background-color: #EAFAF1">人力资源1班</td>
+<td class="gt_row gt_left" headers="班级简称" style="background-color: #EAFAF1">工商管理1班</td>
 <td class="gt_row gt_center" headers="签到率" style="background-color: #EAFAF1">100.0%</td>
 <td class="gt_row gt_center" headers="作业提交率" style="background-color: #EAFAF1">96.3%</td>
 <td class="gt_row gt_center" headers="综合参与度" style="background-color: #EAFAF1">98.1%</td>
@@ -3694,7 +3690,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="学号" style="background-color: #EAFAF1">202423410218</td>
-<td class="gt_row gt_left" headers="班级简称" style="background-color: #EAFAF1">人力资源2班</td>
+<td class="gt_row gt_left" headers="班级简称" style="background-color: #EAFAF1">工商管理2班</td>
 <td class="gt_row gt_center" headers="签到率" style="background-color: #EAFAF1">100.0%</td>
 <td class="gt_row gt_center" headers="作业提交率" style="background-color: #EAFAF1">96.3%</td>
 <td class="gt_row gt_center" headers="综合参与度" style="background-color: #EAFAF1">98.1%</td>
@@ -3702,7 +3698,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="学号" style="background-color: #EAFAF1">202423410112</td>
-<td class="gt_row gt_left" headers="班级简称" style="background-color: #EAFAF1">人力资源1班</td>
+<td class="gt_row gt_left" headers="班级简称" style="background-color: #EAFAF1">工商管理1班</td>
 <td class="gt_row gt_center" headers="签到率" style="background-color: #EAFAF1">94.4%</td>
 <td class="gt_row gt_center" headers="作业提交率" style="background-color: #EAFAF1">100.0%</td>
 <td class="gt_row gt_center" headers="综合参与度" style="background-color: #EAFAF1">97.2%</td>
@@ -3710,7 +3706,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="学号" style="background-color: #EAFAF1">202423410130</td>
-<td class="gt_row gt_left" headers="班级简称" style="background-color: #EAFAF1">人力资源1班</td>
+<td class="gt_row gt_left" headers="班级简称" style="background-color: #EAFAF1">工商管理1班</td>
 <td class="gt_row gt_center" headers="签到率" style="background-color: #EAFAF1">94.4%</td>
 <td class="gt_row gt_center" headers="作业提交率" style="background-color: #EAFAF1">100.0%</td>
 <td class="gt_row gt_center" headers="综合参与度" style="background-color: #EAFAF1">97.2%</td>
@@ -3718,7 +3714,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="学号" style="background-color: #EAFAF1">202423410220</td>
-<td class="gt_row gt_left" headers="班级简称" style="background-color: #EAFAF1">人力资源2班</td>
+<td class="gt_row gt_left" headers="班级简称" style="background-color: #EAFAF1">工商管理2班</td>
 <td class="gt_row gt_center" headers="签到率" style="background-color: #EAFAF1">94.4%</td>
 <td class="gt_row gt_center" headers="作业提交率" style="background-color: #EAFAF1">100.0%</td>
 <td class="gt_row gt_center" headers="综合参与度" style="background-color: #EAFAF1">97.2%</td>
@@ -3726,7 +3722,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="学号" style="background-color: #EAFAF1">202423410229</td>
-<td class="gt_row gt_left" headers="班级简称" style="background-color: #EAFAF1">人力资源2班</td>
+<td class="gt_row gt_left" headers="班级简称" style="background-color: #EAFAF1">工商管理2班</td>
 <td class="gt_row gt_center" headers="签到率" style="background-color: #EAFAF1">94.4%</td>
 <td class="gt_row gt_center" headers="作业提交率" style="background-color: #EAFAF1">100.0%</td>
 <td class="gt_row gt_center" headers="综合参与度" style="background-color: #EAFAF1">97.2%</td>
@@ -3734,7 +3730,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="学号" style="background-color: #EAFAF1">202324111012</td>
-<td class="gt_row gt_left" headers="班级简称" style="background-color: #EAFAF1">人力资源1班</td>
+<td class="gt_row gt_left" headers="班级简称" style="background-color: #EAFAF1">工商管理1班</td>
 <td class="gt_row gt_center" headers="签到率" style="background-color: #EAFAF1">100.0%</td>
 <td class="gt_row gt_center" headers="作业提交率" style="background-color: #EAFAF1">92.6%</td>
 <td class="gt_row gt_center" headers="综合参与度" style="background-color: #EAFAF1">96.3%</td>
@@ -3742,7 +3738,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="学号" style="background-color: #EAFAF1">202423410129</td>
-<td class="gt_row gt_left" headers="班级简称" style="background-color: #EAFAF1">人力资源1班</td>
+<td class="gt_row gt_left" headers="班级简称" style="background-color: #EAFAF1">工商管理1班</td>
 <td class="gt_row gt_center" headers="签到率" style="background-color: #EAFAF1">100.0%</td>
 <td class="gt_row gt_center" headers="作业提交率" style="background-color: #EAFAF1">92.6%</td>
 <td class="gt_row gt_center" headers="综合参与度" style="background-color: #EAFAF1">96.3%</td>
@@ -3750,7 +3746,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="学号" style="background-color: #EAFAF1">202423410208</td>
-<td class="gt_row gt_left" headers="班级简称" style="background-color: #EAFAF1">人力资源2班</td>
+<td class="gt_row gt_left" headers="班级简称" style="background-color: #EAFAF1">工商管理2班</td>
 <td class="gt_row gt_center" headers="签到率" style="background-color: #EAFAF1">100.0%</td>
 <td class="gt_row gt_center" headers="作业提交率" style="background-color: #EAFAF1">92.6%</td>
 <td class="gt_row gt_center" headers="综合参与度" style="background-color: #EAFAF1">96.3%</td>
@@ -3758,7 +3754,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="学号" style="background-color: #EAFAF1">202423410221</td>
-<td class="gt_row gt_left" headers="班级简称" style="background-color: #EAFAF1">人力资源2班</td>
+<td class="gt_row gt_left" headers="班级简称" style="background-color: #EAFAF1">工商管理2班</td>
 <td class="gt_row gt_center" headers="签到率" style="background-color: #EAFAF1">100.0%</td>
 <td class="gt_row gt_center" headers="作业提交率" style="background-color: #EAFAF1">92.6%</td>
 <td class="gt_row gt_center" headers="综合参与度" style="background-color: #EAFAF1">96.3%</td>
@@ -3766,7 +3762,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="学号" style="background-color: #EAFAF1">202423410101</td>
-<td class="gt_row gt_left" headers="班级简称" style="background-color: #EAFAF1">人力资源1班</td>
+<td class="gt_row gt_left" headers="班级简称" style="background-color: #EAFAF1">工商管理1班</td>
 <td class="gt_row gt_center" headers="签到率" style="background-color: #EAFAF1">94.4%</td>
 <td class="gt_row gt_center" headers="作业提交率" style="background-color: #EAFAF1">96.3%</td>
 <td class="gt_row gt_center" headers="综合参与度" style="background-color: #EAFAF1">95.4%</td>
@@ -3774,7 +3770,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="学号" style="background-color: #EAFAF1">202423410207</td>
-<td class="gt_row gt_left" headers="班级简称" style="background-color: #EAFAF1">人力资源2班</td>
+<td class="gt_row gt_left" headers="班级简称" style="background-color: #EAFAF1">工商管理2班</td>
 <td class="gt_row gt_center" headers="签到率" style="background-color: #EAFAF1">94.4%</td>
 <td class="gt_row gt_center" headers="作业提交率" style="background-color: #EAFAF1">96.3%</td>
 <td class="gt_row gt_center" headers="综合参与度" style="background-color: #EAFAF1">95.4%</td>
@@ -3782,7 +3778,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="学号" style="background-color: #EAFAF1">202423410128</td>
-<td class="gt_row gt_left" headers="班级简称" style="background-color: #EAFAF1">人力资源1班</td>
+<td class="gt_row gt_left" headers="班级简称" style="background-color: #EAFAF1">工商管理1班</td>
 <td class="gt_row gt_center" headers="签到率" style="background-color: #EAFAF1">100.0%</td>
 <td class="gt_row gt_center" headers="作业提交率" style="background-color: #EAFAF1">88.9%</td>
 <td class="gt_row gt_center" headers="综合参与度" style="background-color: #EAFAF1">94.4%</td>
@@ -3790,7 +3786,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="学号" style="background-color: #EAFAF1">202423410228</td>
-<td class="gt_row gt_left" headers="班级简称" style="background-color: #EAFAF1">人力资源2班</td>
+<td class="gt_row gt_left" headers="班级简称" style="background-color: #EAFAF1">工商管理2班</td>
 <td class="gt_row gt_center" headers="签到率" style="background-color: #EAFAF1">100.0%</td>
 <td class="gt_row gt_center" headers="作业提交率" style="background-color: #EAFAF1">88.9%</td>
 <td class="gt_row gt_center" headers="综合参与度" style="background-color: #EAFAF1">94.4%</td>
@@ -3798,7 +3794,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="学号" style="background-color: #EAFAF1">202423820227</td>
-<td class="gt_row gt_left" headers="班级简称" style="background-color: #EAFAF1">人力资源1班</td>
+<td class="gt_row gt_left" headers="班级简称" style="background-color: #EAFAF1">工商管理1班</td>
 <td class="gt_row gt_center" headers="签到率" style="background-color: #EAFAF1">100.0%</td>
 <td class="gt_row gt_center" headers="作业提交率" style="background-color: #EAFAF1">88.9%</td>
 <td class="gt_row gt_center" headers="综合参与度" style="background-color: #EAFAF1">94.4%</td>
@@ -3806,7 +3802,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="学号" style="background-color: #EAFAF1">202423410109</td>
-<td class="gt_row gt_left" headers="班级简称" style="background-color: #EAFAF1">人力资源1班</td>
+<td class="gt_row gt_left" headers="班级简称" style="background-color: #EAFAF1">工商管理1班</td>
 <td class="gt_row gt_center" headers="签到率" style="background-color: #EAFAF1">94.4%</td>
 <td class="gt_row gt_center" headers="作业提交率" style="background-color: #EAFAF1">92.6%</td>
 <td class="gt_row gt_center" headers="综合参与度" style="background-color: #EAFAF1">93.5%</td>
@@ -3814,7 +3810,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="学号" style="background-color: #EAFAF1">202423410105</td>
-<td class="gt_row gt_left" headers="班级简称" style="background-color: #EAFAF1">人力资源1班</td>
+<td class="gt_row gt_left" headers="班级简称" style="background-color: #EAFAF1">工商管理1班</td>
 <td class="gt_row gt_center" headers="签到率" style="background-color: #EAFAF1">88.9%</td>
 <td class="gt_row gt_center" headers="作业提交率" style="background-color: #EAFAF1">96.3%</td>
 <td class="gt_row gt_center" headers="综合参与度" style="background-color: #EAFAF1">92.6%</td>
@@ -3822,7 +3818,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="学号" style="background-color: #EAFAF1">202423410202</td>
-<td class="gt_row gt_left" headers="班级简称" style="background-color: #EAFAF1">人力资源2班</td>
+<td class="gt_row gt_left" headers="班级简称" style="background-color: #EAFAF1">工商管理2班</td>
 <td class="gt_row gt_center" headers="签到率" style="background-color: #EAFAF1">88.9%</td>
 <td class="gt_row gt_center" headers="作业提交率" style="background-color: #EAFAF1">96.3%</td>
 <td class="gt_row gt_center" headers="综合参与度" style="background-color: #EAFAF1">92.6%</td>
@@ -3830,7 +3826,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="学号" style="background-color: #EAFAF1">202423410212</td>
-<td class="gt_row gt_left" headers="班级简称" style="background-color: #EAFAF1">人力资源2班</td>
+<td class="gt_row gt_left" headers="班级简称" style="background-color: #EAFAF1">工商管理2班</td>
 <td class="gt_row gt_center" headers="签到率" style="background-color: #EAFAF1">88.9%</td>
 <td class="gt_row gt_center" headers="作业提交率" style="background-color: #EAFAF1">96.3%</td>
 <td class="gt_row gt_center" headers="综合参与度" style="background-color: #EAFAF1">92.6%</td>
@@ -3838,7 +3834,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="学号" style="background-color: #EAFAF1">202423410219</td>
-<td class="gt_row gt_left" headers="班级简称" style="background-color: #EAFAF1">人力资源2班</td>
+<td class="gt_row gt_left" headers="班级简称" style="background-color: #EAFAF1">工商管理2班</td>
 <td class="gt_row gt_center" headers="签到率" style="background-color: #EAFAF1">88.9%</td>
 <td class="gt_row gt_center" headers="作业提交率" style="background-color: #EAFAF1">96.3%</td>
 <td class="gt_row gt_center" headers="综合参与度" style="background-color: #EAFAF1">92.6%</td>
@@ -3846,7 +3842,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="学号" style="background-color: #EAFAF1">202423410107</td>
-<td class="gt_row gt_left" headers="班级简称" style="background-color: #EAFAF1">人力资源1班</td>
+<td class="gt_row gt_left" headers="班级简称" style="background-color: #EAFAF1">工商管理1班</td>
 <td class="gt_row gt_center" headers="签到率" style="background-color: #EAFAF1">94.4%</td>
 <td class="gt_row gt_center" headers="作业提交率" style="background-color: #EAFAF1">88.9%</td>
 <td class="gt_row gt_center" headers="综合参与度" style="background-color: #EAFAF1">91.7%</td>
@@ -3854,7 +3850,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="学号" style="background-color: #EAFAF1">202423410117</td>
-<td class="gt_row gt_left" headers="班级简称" style="background-color: #EAFAF1">人力资源1班</td>
+<td class="gt_row gt_left" headers="班级简称" style="background-color: #EAFAF1">工商管理1班</td>
 <td class="gt_row gt_center" headers="签到率" style="background-color: #EAFAF1">100.0%</td>
 <td class="gt_row gt_center" headers="作业提交率" style="background-color: #EAFAF1">81.5%</td>
 <td class="gt_row gt_center" headers="综合参与度" style="background-color: #EAFAF1">90.7%</td>
@@ -3862,7 +3858,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="学号" style="background-color: #EAFAF1">202423410209</td>
-<td class="gt_row gt_left" headers="班级简称" style="background-color: #EAFAF1">人力资源2班</td>
+<td class="gt_row gt_left" headers="班级简称" style="background-color: #EAFAF1">工商管理2班</td>
 <td class="gt_row gt_center" headers="签到率" style="background-color: #EAFAF1">88.9%</td>
 <td class="gt_row gt_center" headers="作业提交率" style="background-color: #EAFAF1">92.6%</td>
 <td class="gt_row gt_center" headers="综合参与度" style="background-color: #EAFAF1">90.7%</td>
@@ -3870,7 +3866,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="学号" style="background-color: #EAFAF1">202423410215</td>
-<td class="gt_row gt_left" headers="班级简称" style="background-color: #EAFAF1">人力资源2班</td>
+<td class="gt_row gt_left" headers="班级简称" style="background-color: #EAFAF1">工商管理2班</td>
 <td class="gt_row gt_center" headers="签到率" style="background-color: #EAFAF1">88.9%</td>
 <td class="gt_row gt_center" headers="作业提交率" style="background-color: #EAFAF1">92.6%</td>
 <td class="gt_row gt_center" headers="综合参与度" style="background-color: #EAFAF1">90.7%</td>
@@ -3878,7 +3874,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="学号" style="background-color: #EAFAF1">202423410122</td>
-<td class="gt_row gt_left" headers="班级简称" style="background-color: #EAFAF1">人力资源1班</td>
+<td class="gt_row gt_left" headers="班级简称" style="background-color: #EAFAF1">工商管理1班</td>
 <td class="gt_row gt_center" headers="签到率" style="background-color: #EAFAF1">94.4%</td>
 <td class="gt_row gt_center" headers="作业提交率" style="background-color: #EAFAF1">85.2%</td>
 <td class="gt_row gt_center" headers="综合参与度" style="background-color: #EAFAF1">89.8%</td>
@@ -3886,7 +3882,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="学号" style="background-color: #EAFAF1">202423410211</td>
-<td class="gt_row gt_left" headers="班级简称" style="background-color: #EAFAF1">人力资源2班</td>
+<td class="gt_row gt_left" headers="班级简称" style="background-color: #EAFAF1">工商管理2班</td>
 <td class="gt_row gt_center" headers="签到率" style="background-color: #EAFAF1">83.3%</td>
 <td class="gt_row gt_center" headers="作业提交率" style="background-color: #EAFAF1">96.3%</td>
 <td class="gt_row gt_center" headers="综合参与度" style="background-color: #EAFAF1">89.8%</td>
@@ -3894,7 +3890,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="学号" style="background-color: #EAFAF1">202426110113</td>
-<td class="gt_row gt_left" headers="班级简称" style="background-color: #EAFAF1">人力资源1班</td>
+<td class="gt_row gt_left" headers="班级简称" style="background-color: #EAFAF1">工商管理1班</td>
 <td class="gt_row gt_center" headers="签到率" style="background-color: #EAFAF1">94.4%</td>
 <td class="gt_row gt_center" headers="作业提交率" style="background-color: #EAFAF1">85.2%</td>
 <td class="gt_row gt_center" headers="综合参与度" style="background-color: #EAFAF1">89.8%</td>
@@ -3902,7 +3898,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="学号" style="background-color: #EAFAF1">202423410214</td>
-<td class="gt_row gt_left" headers="班级简称" style="background-color: #EAFAF1">人力资源2班</td>
+<td class="gt_row gt_left" headers="班级简称" style="background-color: #EAFAF1">工商管理2班</td>
 <td class="gt_row gt_center" headers="签到率" style="background-color: #EAFAF1">88.9%</td>
 <td class="gt_row gt_center" headers="作业提交率" style="background-color: #EAFAF1">88.9%</td>
 <td class="gt_row gt_center" headers="综合参与度" style="background-color: #EAFAF1">88.9%</td>
@@ -3910,7 +3906,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="学号" style="background-color: #EAFAF1">202423410104</td>
-<td class="gt_row gt_left" headers="班级简称" style="background-color: #EAFAF1">人力资源1班</td>
+<td class="gt_row gt_left" headers="班级简称" style="background-color: #EAFAF1">工商管理1班</td>
 <td class="gt_row gt_center" headers="签到率" style="background-color: #EAFAF1">88.9%</td>
 <td class="gt_row gt_center" headers="作业提交率" style="background-color: #EAFAF1">85.2%</td>
 <td class="gt_row gt_center" headers="综合参与度" style="background-color: #EAFAF1">87.0%</td>
@@ -3918,7 +3914,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="学号" style="background-color: #EAFAF1">202423410102</td>
-<td class="gt_row gt_left" headers="班级简称" style="background-color: #EAFAF1">人力资源1班</td>
+<td class="gt_row gt_left" headers="班级简称" style="background-color: #EAFAF1">工商管理1班</td>
 <td class="gt_row gt_center" headers="签到率" style="background-color: #EAFAF1">88.9%</td>
 <td class="gt_row gt_center" headers="作业提交率" style="background-color: #EAFAF1">81.5%</td>
 <td class="gt_row gt_center" headers="综合参与度" style="background-color: #EAFAF1">85.2%</td>
@@ -3926,7 +3922,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="学号" style="background-color: #FEF9E7">202423410118</td>
-<td class="gt_row gt_left" headers="班级简称" style="background-color: #FEF9E7">人力资源1班</td>
+<td class="gt_row gt_left" headers="班级简称" style="background-color: #FEF9E7">工商管理1班</td>
 <td class="gt_row gt_center" headers="签到率" style="background-color: #FEF9E7">77.8%</td>
 <td class="gt_row gt_center" headers="作业提交率" style="background-color: #FEF9E7">88.9%</td>
 <td class="gt_row gt_center" headers="综合参与度" style="background-color: #FEF9E7">83.3%</td>
@@ -3934,7 +3930,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="学号" style="background-color: #FEF9E7">202423410123</td>
-<td class="gt_row gt_left" headers="班级简称" style="background-color: #FEF9E7">人力资源1班</td>
+<td class="gt_row gt_left" headers="班级简称" style="background-color: #FEF9E7">工商管理1班</td>
 <td class="gt_row gt_center" headers="签到率" style="background-color: #FEF9E7">83.3%</td>
 <td class="gt_row gt_center" headers="作业提交率" style="background-color: #FEF9E7">77.8%</td>
 <td class="gt_row gt_center" headers="综合参与度" style="background-color: #FEF9E7">80.6%</td>
@@ -3942,7 +3938,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="学号" style="background-color: #FEF9E7">202423410213</td>
-<td class="gt_row gt_left" headers="班级简称" style="background-color: #FEF9E7">人力资源2班</td>
+<td class="gt_row gt_left" headers="班级简称" style="background-color: #FEF9E7">工商管理2班</td>
 <td class="gt_row gt_center" headers="签到率" style="background-color: #FEF9E7">83.3%</td>
 <td class="gt_row gt_center" headers="作业提交率" style="background-color: #FEF9E7">77.8%</td>
 <td class="gt_row gt_center" headers="综合参与度" style="background-color: #FEF9E7">80.6%</td>
@@ -3950,7 +3946,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="学号" style="background-color: #FEF9E7">202423410201</td>
-<td class="gt_row gt_left" headers="班级简称" style="background-color: #FEF9E7">人力资源2班</td>
+<td class="gt_row gt_left" headers="班级简称" style="background-color: #FEF9E7">工商管理2班</td>
 <td class="gt_row gt_center" headers="签到率" style="background-color: #FEF9E7">61.1%</td>
 <td class="gt_row gt_center" headers="作业提交率" style="background-color: #FEF9E7">96.3%</td>
 <td class="gt_row gt_center" headers="综合参与度" style="background-color: #FEF9E7">78.7%</td>
@@ -3958,7 +3954,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="学号" style="background-color: #FEF9E7">202423410108</td>
-<td class="gt_row gt_left" headers="班级简称" style="background-color: #FEF9E7">人力资源1班</td>
+<td class="gt_row gt_left" headers="班级简称" style="background-color: #FEF9E7">工商管理1班</td>
 <td class="gt_row gt_center" headers="签到率" style="background-color: #FEF9E7">94.4%</td>
 <td class="gt_row gt_center" headers="作业提交率" style="background-color: #FEF9E7">59.3%</td>
 <td class="gt_row gt_center" headers="综合参与度" style="background-color: #FEF9E7">76.9%</td>
@@ -3966,7 +3962,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="学号" style="background-color: #FEF9E7">202423410116</td>
-<td class="gt_row gt_left" headers="班级简称" style="background-color: #FEF9E7">人力资源1班</td>
+<td class="gt_row gt_left" headers="班级简称" style="background-color: #FEF9E7">工商管理1班</td>
 <td class="gt_row gt_center" headers="签到率" style="background-color: #FEF9E7">83.3%</td>
 <td class="gt_row gt_center" headers="作业提交率" style="background-color: #FEF9E7">66.7%</td>
 <td class="gt_row gt_center" headers="综合参与度" style="background-color: #FEF9E7">75.0%</td>
@@ -3974,7 +3970,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="学号" style="background-color: #FEF9E7">202423410111</td>
-<td class="gt_row gt_left" headers="班级简称" style="background-color: #FEF9E7">人力资源1班</td>
+<td class="gt_row gt_left" headers="班级简称" style="background-color: #FEF9E7">工商管理1班</td>
 <td class="gt_row gt_center" headers="签到率" style="background-color: #FEF9E7">94.4%</td>
 <td class="gt_row gt_center" headers="作业提交率" style="background-color: #FEF9E7">48.1%</td>
 <td class="gt_row gt_center" headers="综合参与度" style="background-color: #FEF9E7">71.3%</td>
@@ -3982,7 +3978,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="学号" style="background-color: #FEF9E7">202423410124</td>
-<td class="gt_row gt_left" headers="班级简称" style="background-color: #FEF9E7">人力资源1班</td>
+<td class="gt_row gt_left" headers="班级简称" style="background-color: #FEF9E7">工商管理1班</td>
 <td class="gt_row gt_center" headers="签到率" style="background-color: #FEF9E7">88.9%</td>
 <td class="gt_row gt_center" headers="作业提交率" style="background-color: #FEF9E7">51.9%</td>
 <td class="gt_row gt_center" headers="综合参与度" style="background-color: #FEF9E7">70.4%</td>
@@ -3990,7 +3986,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="学号" style="background-color: #FEF9E7">202423410125</td>
-<td class="gt_row gt_left" headers="班级简称" style="background-color: #FEF9E7">人力资源1班</td>
+<td class="gt_row gt_left" headers="班级简称" style="background-color: #FEF9E7">工商管理1班</td>
 <td class="gt_row gt_center" headers="签到率" style="background-color: #FEF9E7">88.9%</td>
 <td class="gt_row gt_center" headers="作业提交率" style="background-color: #FEF9E7">51.9%</td>
 <td class="gt_row gt_center" headers="综合参与度" style="background-color: #FEF9E7">70.4%</td>
@@ -3998,7 +3994,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="学号" style="background-color: #FDEBD0; color: #CA6F1E; font-weight: bold">202423410134</td>
-<td class="gt_row gt_left" headers="班级简称" style="background-color: #FDEBD0; color: #CA6F1E; font-weight: bold">人力资源1班</td>
+<td class="gt_row gt_left" headers="班级简称" style="background-color: #FDEBD0; color: #CA6F1E; font-weight: bold">工商管理1班</td>
 <td class="gt_row gt_center" headers="签到率" style="background-color: #FDEBD0; color: #CA6F1E; font-weight: bold">61.1%</td>
 <td class="gt_row gt_center" headers="作业提交率" style="background-color: #FDEBD0; color: #CA6F1E; font-weight: bold">77.8%</td>
 <td class="gt_row gt_center" headers="综合参与度" style="background-color: #FDEBD0; color: #CA6F1E; font-weight: bold">69.4%</td>
@@ -4006,7 +4002,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="学号" style="background-color: #FDEBD0; color: #CA6F1E; font-weight: bold">202423410233</td>
-<td class="gt_row gt_left" headers="班级简称" style="background-color: #FDEBD0; color: #CA6F1E; font-weight: bold">人力资源2班</td>
+<td class="gt_row gt_left" headers="班级简称" style="background-color: #FDEBD0; color: #CA6F1E; font-weight: bold">工商管理2班</td>
 <td class="gt_row gt_center" headers="签到率" style="background-color: #FDEBD0; color: #CA6F1E; font-weight: bold">83.3%</td>
 <td class="gt_row gt_center" headers="作业提交率" style="background-color: #FDEBD0; color: #CA6F1E; font-weight: bold">48.1%</td>
 <td class="gt_row gt_center" headers="综合参与度" style="background-color: #FDEBD0; color: #CA6F1E; font-weight: bold">65.7%</td>
@@ -4014,7 +4010,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="学号" style="background-color: #FDEBD0; color: #CA6F1E; font-weight: bold">202423410231</td>
-<td class="gt_row gt_left" headers="班级简称" style="background-color: #FDEBD0; color: #CA6F1E; font-weight: bold">人力资源2班</td>
+<td class="gt_row gt_left" headers="班级简称" style="background-color: #FDEBD0; color: #CA6F1E; font-weight: bold">工商管理2班</td>
 <td class="gt_row gt_center" headers="签到率" style="background-color: #FDEBD0; color: #CA6F1E; font-weight: bold">66.7%</td>
 <td class="gt_row gt_center" headers="作业提交率" style="background-color: #FDEBD0; color: #CA6F1E; font-weight: bold">55.6%</td>
 <td class="gt_row gt_center" headers="综合参与度" style="background-color: #FDEBD0; color: #CA6F1E; font-weight: bold">61.1%</td>
@@ -4022,7 +4018,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="学号" style="background-color: #FDEBD0; color: #CA6F1E; font-weight: bold">202423410225</td>
-<td class="gt_row gt_left" headers="班级简称" style="background-color: #FDEBD0; color: #CA6F1E; font-weight: bold">人力资源2班</td>
+<td class="gt_row gt_left" headers="班级简称" style="background-color: #FDEBD0; color: #CA6F1E; font-weight: bold">工商管理2班</td>
 <td class="gt_row gt_center" headers="签到率" style="background-color: #FDEBD0; color: #CA6F1E; font-weight: bold">83.3%</td>
 <td class="gt_row gt_center" headers="作业提交率" style="background-color: #FDEBD0; color: #CA6F1E; font-weight: bold">25.9%</td>
 <td class="gt_row gt_center" headers="综合参与度" style="background-color: #FDEBD0; color: #CA6F1E; font-weight: bold">54.6%</td>
@@ -4030,7 +4026,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="学号" style="background-color: #FDEBD0; color: #CA6F1E; font-weight: bold">202423410113</td>
-<td class="gt_row gt_left" headers="班级简称" style="background-color: #FDEBD0; color: #CA6F1E; font-weight: bold">人力资源1班</td>
+<td class="gt_row gt_left" headers="班级简称" style="background-color: #FDEBD0; color: #CA6F1E; font-weight: bold">工商管理1班</td>
 <td class="gt_row gt_center" headers="签到率" style="background-color: #FDEBD0; color: #CA6F1E; font-weight: bold">88.9%</td>
 <td class="gt_row gt_center" headers="作业提交率" style="background-color: #FDEBD0; color: #CA6F1E; font-weight: bold">14.8%</td>
 <td class="gt_row gt_center" headers="综合参与度" style="background-color: #FDEBD0; color: #CA6F1E; font-weight: bold">51.9%</td>
@@ -4038,7 +4034,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="学号" style="background-color: #FDEBD0; color: #CA6F1E; font-weight: bold">202423410224</td>
-<td class="gt_row gt_left" headers="班级简称" style="background-color: #FDEBD0; color: #CA6F1E; font-weight: bold">人力资源2班</td>
+<td class="gt_row gt_left" headers="班级简称" style="background-color: #FDEBD0; color: #CA6F1E; font-weight: bold">工商管理2班</td>
 <td class="gt_row gt_center" headers="签到率" style="background-color: #FDEBD0; color: #CA6F1E; font-weight: bold">83.3%</td>
 <td class="gt_row gt_center" headers="作业提交率" style="background-color: #FDEBD0; color: #CA6F1E; font-weight: bold">18.5%</td>
 <td class="gt_row gt_center" headers="综合参与度" style="background-color: #FDEBD0; color: #CA6F1E; font-weight: bold">50.9%</td>
@@ -4046,7 +4042,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="学号" style="background-color: #FADBD8; color: #C0392B; font-weight: bold">202423410210</td>
-<td class="gt_row gt_left" headers="班级简称" style="background-color: #FADBD8; color: #C0392B; font-weight: bold">人力资源2班</td>
+<td class="gt_row gt_left" headers="班级简称" style="background-color: #FADBD8; color: #C0392B; font-weight: bold">工商管理2班</td>
 <td class="gt_row gt_center" headers="签到率" style="background-color: #FADBD8; color: #C0392B; font-weight: bold">55.6%</td>
 <td class="gt_row gt_center" headers="作业提交率" style="background-color: #FADBD8; color: #C0392B; font-weight: bold">29.6%</td>
 <td class="gt_row gt_center" headers="综合参与度" style="background-color: #FADBD8; color: #C0392B; font-weight: bold">42.6%</td>
@@ -4054,7 +4050,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="学号" style="background-color: #FADBD8; color: #C0392B; font-weight: bold">202423410127</td>
-<td class="gt_row gt_left" headers="班级简称" style="background-color: #FADBD8; color: #C0392B; font-weight: bold">人力资源1班</td>
+<td class="gt_row gt_left" headers="班级简称" style="background-color: #FADBD8; color: #C0392B; font-weight: bold">工商管理1班</td>
 <td class="gt_row gt_center" headers="签到率" style="background-color: #FADBD8; color: #C0392B; font-weight: bold">50.0%</td>
 <td class="gt_row gt_center" headers="作业提交率" style="background-color: #FADBD8; color: #C0392B; font-weight: bold">11.1%</td>
 <td class="gt_row gt_center" headers="综合参与度" style="background-color: #FADBD8; color: #C0392B; font-weight: bold">30.6%</td>
@@ -4062,7 +4058,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="学号" style="background-color: #FADBD8; color: #C0392B; font-weight: bold">202423410133</td>
-<td class="gt_row gt_left" headers="班级简称" style="background-color: #FADBD8; color: #C0392B; font-weight: bold">人力资源1班</td>
+<td class="gt_row gt_left" headers="班级简称" style="background-color: #FADBD8; color: #C0392B; font-weight: bold">工商管理1班</td>
 <td class="gt_row gt_center" headers="签到率" style="background-color: #FADBD8; color: #C0392B; font-weight: bold">5.6%</td>
 <td class="gt_row gt_center" headers="作业提交率" style="background-color: #FADBD8; color: #C0392B; font-weight: bold">18.5%</td>
 <td class="gt_row gt_center" headers="综合参与度" style="background-color: #FADBD8; color: #C0392B; font-weight: bold">12.0%</td>
@@ -4070,7 +4066,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="学号" style="background-color: #FADBD8; color: #C0392B; font-weight: bold">202423410222</td>
-<td class="gt_row gt_left" headers="班级简称" style="background-color: #FADBD8; color: #C0392B; font-weight: bold">人力资源2班</td>
+<td class="gt_row gt_left" headers="班级简称" style="background-color: #FADBD8; color: #C0392B; font-weight: bold">工商管理2班</td>
 <td class="gt_row gt_center" headers="签到率" style="background-color: #FADBD8; color: #C0392B; font-weight: bold">16.7%</td>
 <td class="gt_row gt_center" headers="作业提交率" style="background-color: #FADBD8; color: #C0392B; font-weight: bold">0.0%</td>
 <td class="gt_row gt_center" headers="综合参与度" style="background-color: #FADBD8; color: #C0392B; font-weight: bold">8.3%</td>

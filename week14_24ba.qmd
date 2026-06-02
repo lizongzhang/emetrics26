@@ -53,8 +53,8 @@ df <- raw |>
     签到率     = 签到率     * 100,
     作业提交率 = 作业提交率 * 100,
     班级简称 = case_when(
-      str_detect(班级, "1$") ~ "人力资源1班",
-      str_detect(班级, "2$") ~ "人力资源2班",
+      str_detect(班级, "1$") ~ "工商管理1班",
+      str_detect(班级, "2$") ~ "工商管理2班",
       TRUE ~ 班级
     ),
     综合参与度 = (签到率 + 作业提交率) / 2,
@@ -216,6 +216,7 @@ tibble(
 ```{r}
 #| label: tbl-class
 #| echo: false
+#| message: false
 #| warning: false
 
 df |>
@@ -254,7 +255,8 @@ df |>
 
 ```{r}
 #| label: fig-class-compare
-#| fig-cap: "两班签到率与作业提交率分布对比（箱线图）"
+#| warning: false
+#| fig-cap: 两班签到率与作业提交率分布对比（箱线图）
 
 df_long <- df |>
   select(姓名, 班级简称, 签到率, 作业提交率) |>
@@ -268,8 +270,8 @@ ggplot(df_long, aes(x = 班级简称, y = 比率, fill = 班级简称)) +
   annotate("text", x = 0.6, y = 87, label = "85% 基准线",
            color = "steelblue", size = 3.5) +
   facet_wrap(~指标) +
-  scale_fill_manual(values = c("人力资源1班" = "#3498DB",
-                                "人力资源2班" = "#E74C3C")) +
+  scale_fill_manual(values = c("工商管理1班" = "#3498DB",
+                                "工商管理2班" = "#E74C3C")) +
   scale_y_continuous(labels = \(x) paste0(x, "%"), limits = c(0, 110)) +
   labs(title = "两班参与情况分布对比",
        x = NULL, y = "比率", fill = "班级") +
