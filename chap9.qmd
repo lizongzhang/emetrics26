@@ -6,6 +6,30 @@ title: "第9章"
 
 <img src="img/teacher.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[讲义](https://lizongzhang.github.io/emetrics26/chap9slide.html){target="_blank"}
 
+# 课堂练习
+
+<details>
+  <summary>习题1</summary>
+
+
+![](img/chap9ex1.png){.lightbox} 
+![](img/chap9ex2.png){.lightbox} 
+
+1. 写出怀特异方差检验的原假设和备择假设。
+
+2. 写出怀特异方差检验中辅助回归方程的形式。
+
+3. 怀特异方差检验统计量的理论分布是什么？
+
+4. 怀特异方差检验统计量的值是什么？写出其计算表达式。 
+
+5. 怀特异方差检验的P值是多少？解释其含义。
+
+6. 怀特异方差检验的结论是什么？
+
+</details>
+
+
 
 
 # Eviews教学视频

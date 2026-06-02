@@ -41,6 +41,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap-c73e22a146e553504ccbb400724ccee0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="site_libs/bootstrap/bootstrap-dark-d31e2d5893b162c0cee6a66cf29c1b11.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -160,6 +163,7 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#第9章-异方差" id="toc-第9章-异方差" class="nav-link active" data-scroll-target="#第9章-异方差">第9章 异方差</a></li>
+  <li><a href="#课堂练习" id="toc-课堂练习" class="nav-link" data-scroll-target="#课堂练习">课堂练习</a></li>
   <li><a href="#eviews教学视频" id="toc-eviews教学视频" class="nav-link" data-scroll-target="#eviews教学视频">Eviews教学视频</a></li>
   <li><a href="#r教学视频" id="toc-r教学视频" class="nav-link" data-scroll-target="#r教学视频">R教学视频</a></li>
   <li><a href="#习题讲评视频" id="toc-习题讲评视频" class="nav-link" data-scroll-target="#习题讲评视频">习题讲评视频</a></li>
@@ -192,6 +196,23 @@ ul.task-list li input[type="checkbox"] {
 <section id="第9章-异方差" class="level1">
 <h1>第9章 异方差</h1>
 <p><img src="img/teacher.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px"><a href="https://lizongzhang.github.io/emetrics26/chap9slide.html" target="_blank">讲义</a></p>
+</section>
+<section id="课堂练习" class="level1">
+<h1>课堂练习</h1>
+<details>
+<summary>
+习题1
+</summary>
+<p><a href="img/chap9ex1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="img/chap9ex1.png" class="img-fluid"></a> <a href="img/chap9ex2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="img/chap9ex2.png" class="img-fluid"></a></p>
+<ol type="1">
+<li><p>写出怀特异方差检验的原假设和备择假设。</p></li>
+<li><p>写出怀特异方差检验中辅助回归方程的形式。</p></li>
+<li><p>怀特异方差检验统计量的理论分布是什么？</p></li>
+<li><p>怀特异方差检验统计量的值是什么？写出其计算表达式。</p></li>
+<li><p>怀特异方差检验的P值是多少？解释其含义。</p></li>
+<li><p>怀特异方差检验的结论是什么？</p></li>
+</ol>
+</details>
 </section>
 <section id="eviews教学视频" class="level1">
 <h1>Eviews教学视频</h1>
@@ -813,6 +834,38 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>
   </div>
 </footer>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 
