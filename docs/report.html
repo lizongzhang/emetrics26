@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Li Zongzhang">
-<meta name="dcterms.date" content="2026-06-09">
+<meta name="dcterms.date" content="2026-06-16">
 
 <title>实验报告 – Econometrics26</title>
 <style>
@@ -230,7 +230,7 @@ window.Quarto = {
   </ul></li>
   <li><a href="#等级换算表" id="toc-等级换算表" class="nav-link" data-scroll-target="#等级换算表">等级换算表</a></li>
   </ul></li>
-  <li><a href="#实验报告常见问题" id="toc-实验报告常见问题" class="nav-link" data-scroll-target="#实验报告常见问题">实验报告常见问题</a></li>
+  <li><a href="#实验报告汇报常见问题" id="toc-实验报告汇报常见问题" class="nav-link" data-scroll-target="#实验报告汇报常见问题">实验报告、汇报常见问题</a></li>
   </ul>
 </nav>
     </div>
@@ -256,7 +256,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">2026-06-09</p>
+      <p class="date">2026-06-16</p>
     </div>
   </div>
   
@@ -553,8 +553,8 @@ window.Quarto = {
 <hr>
 </section>
 </section>
-<section id="实验报告常见问题" class="level1">
-<h1>实验报告常见问题</h1>
+<section id="实验报告汇报常见问题" class="level1">
+<h1>实验报告、汇报常见问题</h1>
 <ul>
 <li><p>数据概况中只需报告模型中使用的变量，模型尝试阶段使用的变量无需报告。</p></li>
 <li><p>模型设定：总体回归函数的表达式，不要将估计的系数值代入。</p></li>
@@ -562,7 +562,61 @@ window.Quarto = {
 <li><p>截距项的含义、不显著的系数的含义无需解释。 可以讨论系数不显著的原因。</p></li>
 <li><p>若模型中引入了X的平方项，需要讨论拐点，及拐点两侧X与Y的关系。</p></li>
 <li><p>若模型中引入了交互项X1*X2，那模型中必须要引入X1、X2作为解释变量。也需要讨论交互项的含义。</p></li>
+<li><p>虚拟变量系数的解释</p></li>
 </ul>
+<p><span class="math display">\[\ln(Y) = B_1 + B_2 \ln(X) + B_3 D + u\]</span></p>
+<details>
+<summary>
+点击展开
+</summary>
+<p>其中： * <span class="math inline">\(Y\)</span> 为被解释变量（如：薪资、商品支出）； * <span class="math inline">\(X\)</span> 为连续型解释变量（如：工作年限、可支配收入）； * <span class="math inline">\(D\)</span> 为虚拟变量（Dummy Variable），取值为 <span class="math inline">\(0\)</span> 或 <span class="math inline">\(1\)</span>（如：<span class="math inline">\(1\)</span> 代表女性，<span class="math inline">\(0\)</span> 代表男性）。</p>
+<p>当 <span class="math inline">\(D = 1\)</span> 时： <span class="math display">\[\ln(Y_{D=1}) = B_1 + B_2 \ln(X) + B_3 + u\]</span></p>
+<p>当 <span class="math inline">\(D = 0\)</span> 时： <span class="math display">\[\ln(Y_{D=0}) = B_1 + B_2 \ln(X) + u\]</span></p>
+<p>两式相减，消去共同项，得到对数层面的差额： <span class="math display">\[\ln(Y_{D=1}) - \ln(Y_{D=0}) = B_3\]</span></p>
+<p>利用对数的数学性质 <span class="math inline">\(\ln(a) - \ln(b) = \ln(a/b)\)</span>： <span class="math display">\[\ln\left(\frac{Y_{D=1}}{Y_{D=0}}\right) = B_3\]</span></p>
+<p>方程两边同时取指数（Exponential）： <span class="math display">\[\frac{Y_{D=1}}{Y_{D=0}} = e^{B_3}\]</span></p>
+<p>为了得到 <span class="math inline">\(Y\)</span> 从基准组（<span class="math inline">\(D=0\)</span>）变动到特定组（<span class="math inline">\(D=1\)</span>）的<strong>相对百分比变化</strong>，我们两边同时减去 <span class="math inline">\(1\)</span>： <span class="math display">\[\frac{Y_{D=1} - Y_{D=0}}{Y_{D=0}} = e^{B_3} - 1\]</span></p>
+<blockquote class="blockquote">
+<p><strong>虚拟变量 <span class="math inline">\(D\)</span> 的含义：</strong></p>
+<p>在控制了其他解释变量 <span class="math inline">\(X\)</span> 的情况下，<strong><span class="math inline">\(D=1\)</span> 的组别与 <span class="math inline">\(D=0\)</span> 的基准组别相比，被解释变量 <span class="math inline">\(Y\)</span> 的平均相对差距（百分比）</strong>为：</p>
+<p><span class="math display">\[\% \Delta Y = (e^{B_3} - 1) \times 100\%\]</span></p>
+</blockquote>
+</details>
+<hr>
+<ul>
+<li>演示文稿最后一页</li>
+</ul>
+<details>
+<summary>
+点击展开
+</summary>
+<ul>
+<li><strong>“感谢聆听”在汉语礼仪中犯了“敬谦不分”的错误</strong>
+<ul>
+<li>“聆听”是敬词，特指下级听上级、晚辈听长辈恭敬地听。</li>
+<li>演讲结束时说“感谢聆听”，在学术和社交逻辑上，等于你在台上面自封为长辈或上级，要求台下的听众恭敬地听你训话，这属于严重的礼仪失误。</li>
+</ul></li>
+<li><strong>通用社交场合</strong>
+<ul>
+<li>“谢谢大家!”</li>
+</ul></li>
+<li><strong>学术汇报与答辩</strong>
+<ul>
+<li>“敬请各位老师批评指正！”</li>
+<li>“感谢大家，欢迎提问与讨论。”</li>
+</ul></li>
+<li><strong>商务场合</strong>
+<ul>
+<li>拓展型：感谢语 + 主讲人姓名/职称 + 邮箱/电话 + 公司官网或二维码</li>
+<li>互动型：简洁的公司Logo + 问答提示语</li>
+<li>愿景型：商务标语（Slogan）
+<ul>
+<li>“沟通共赢，共创未来。”</li>
+<li>“智造未来，携手同行。”</li>
+</ul></li>
+</ul></li>
+</ul>
+</details>
 
 
 </section>
