@@ -41,6 +41,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap-c73e22a146e553504ccbb400724ccee0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="site_libs/bootstrap/bootstrap-dark-d31e2d5893b162c0cee6a66cf29c1b11.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -164,6 +167,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#r教学视频" id="toc-r教学视频" class="nav-link" data-scroll-target="#r教学视频">R教学视频</a></li>
   <li><a href="#习题答案" id="toc-习题答案" class="nav-link" data-scroll-target="#习题答案">习题答案</a></li>
   <li><a href="#习题讲评视频" id="toc-习题讲评视频" class="nav-link" data-scroll-target="#习题讲评视频">习题讲评视频</a></li>
+  <li><a href="#第5-6章测验第11-13题答案" id="toc-第5-6章测验第11-13题答案" class="nav-link" data-scroll-target="#第5-6章测验第11-13题答案">第5-6章测验第11-13题答案</a></li>
   </ul>
 </nav>
     </div>
@@ -231,6 +235,15 @@ ul.task-list li input[type="checkbox"] {
 <p><img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px"><a href="https://www.bilibili.com/video/BV1ey4y1W75g" target="_blank">教材习题6.11-6.12</a></p>
 <p><img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px"><a href="https://www.bilibili.com/video/BV1ey4y1W75g" target="_blank">教材习题6.27</a></p>
 <p><img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px"><a href="https://www.bilibili.com/video/BV1ey4y1W75g" target="_blank">教材习题6.28</a></p>
+</section>
+<section id="第5-6章测验第11-13题答案" class="level1">
+<h1>第5-6章测验第11-13题答案</h1>
+<details>
+<summary>
+点击展开
+</summary>
+<p><a href="img/quiz6_q11.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="img/quiz6_q11.png" class="img-fluid"></a> <a href="img/quiz6_q12.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="img/quiz6_q12.png" class="img-fluid"></a> <a href="img/quiz6_q13.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="img/quiz6_q13.png" class="img-fluid"></a></p>
+</details>
 
 
 </section>
@@ -811,6 +824,38 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>
   </div>
 </footer>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 

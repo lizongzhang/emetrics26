@@ -53,5 +53,19 @@ title: "第6章"
 
 
 <img src="img/video.png" style="width: 24px; height: 24px;margin-right: 10px">[教材习题6.28](https://www.bilibili.com/video/BV1ey4y1W75g){target="_blank"}
+
+
+# 第5-6章测验第11-13题答案
+
+<details>
+  <summary>点击展开</summary>
+
+
+![](img/quiz6_q11.png){.lightbox} 
+![](img/quiz6_q12.png){.lightbox}
+![](img/quiz6_q13.png){.lightbox} 
+
+
+</details>
     
 
