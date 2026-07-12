@@ -96,9 +96,9 @@ title: "第9章"
 
 # 第1-13周学情分析
 
-<img src="img/link.png" style="width: 24px; height: 24px;margin-right: 10px">[24人力资源1-2班](https://lizongzhang.github.io/emetrics26/week14_24hr.html){target="_blank"}
+<img src="img/link.png" style="width: 24px; height: 24px;margin-right: 10px">[24人力资源1-2班](https://lizongzhang.github.io/emetrics26/week14_24hr_0.html){target="_blank"}
 
-<img src="img/link.png" style="width: 24px; height: 24px;margin-right: 10px">[24工商管理1-2班](https://lizongzhang.github.io/emetrics26/week14_24ba.html){target="_blank"}
+<img src="img/link.png" style="width: 24px; height: 24px;margin-right: 10px">[24工商管理1-2班](https://lizongzhang.github.io/emetrics26/week14_24ba_0.html){target="_blank"}
 
 
 
